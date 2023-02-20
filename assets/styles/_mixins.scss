@@ -1,0 +1,73 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       idProtect_1.0.0.0
+ *
+ */
+
+/* Responsive */
+@mixin breakpoint($device) {
+    @if $device == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $device == laptop {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $device == tablet {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $device == phablet {
+        @media screen and (min-width: 451px) {
+            @content;
+        }
+    }
+    @else if $device == mobile {
+        @media screen and (max-width: 450px) {
+            @content;
+        }
+    }
+}
+
+/* HEADINGS
+/––––––––––––––––––––––––*/
+// Create a step size
+/* This is the percentage each heading will be reduced by. */
+$step-size-heading: 0.33333;
+
+/* Amplifier value */
+$amplifier-heading: 1.5;
+
+/* The mixin */
+@mixin heading-size($size) {
+    font-size: $size * $step-size-heading * $amplifier-heading + rem;
+}
+
+// Transitions
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: #{$transition};
+    -moz-transition: #{$transition};
+    -o-transition: #{$transition};
+    transition: #{$transition};
+}
+
+@mixin transition-delay($transition-delay) {
+    -webkit-transition-delay: #{$transition-delay};
+    -moz-transition-delay: #{$transition-delay};
+    -o-transition-delay: #{$transition-delay};
+    transition-delay: #{$transition-delay};
+}

@@ -1,0 +1,71 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       idProtect_1.0.0.0
+ *
+ */
+
+.footer {
+    width: 100vw;
+    margin-top: auto;
+    color: $color-grey;
+    background: $color-dark;
+
+    ul, li {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__rs {
+        text-align: center;
+        display: flex;
+        gap: 5px;
+
+        &__item {
+            margin-right: .5rem;
+
+            a {
+                color: $color-grey1;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__contact {
+        color: $color-grey1;
+    }
+
+    &__inner {
+        display: flex;
+        padding: 1.5rem 0;
+        font-size: 0.8rem;
+        justify-content: space-between;
+    }
+
+    &__credits {
+        background-color: $color-black;
+        color: $color-grey2;
+        text-align: center;
+
+        a {
+            color: $color-grey2;
+        }
+    }
+
+    /*----------  Widgets  ----------*/
+
+    .widget-title {
+        color: $color-grey1;
+        margin-bottom: 1rem;
+    }
+
+    .nav {
+        padding: 0;
+
+        .nav-link {
+            color: $color-light;
+            padding: 0 0 0.5rem 0;
+        }
+    }
+}

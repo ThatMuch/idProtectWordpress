@@ -1,0 +1,31 @@
+.page-title {
+    text-transform: capitalize;
+}
+
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       idProtect_1.0.0.0
+ *
+ */
+
+//=> templates/wp-page.php
+main#page {
+    section {
+        .element.teaser {
+            width: 100%;
+            max-width: 100%;
+            height: 25rem;
+            padding: 0;
+
+            img,
+            .modernizr-of {
+                width: 100%;
+                height: 100%;
+                background-size: cover; // modernizr
+                object-fit: cover;
+            }
+        }
+    }
+}
