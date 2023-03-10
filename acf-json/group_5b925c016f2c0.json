@@ -1,28 +1,12 @@
 {
     "key": "group_5b925c016f2c0",
     "title": "Coordonées",
-    "location": [
-        [
-            {
-                "param": "options_page",
-                "operator": "==",
-                "value": "acf-options"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
     "fields": [
         {
             "key": "field_5b925c22860f8",
             "label": "Adresse",
             "name": "adress",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -42,6 +26,7 @@
             "key": "field_5b925c39860f9",
             "label": "Email de contact",
             "name": "contact_mail",
+            "aria-label": "",
             "type": "email",
             "instructions": "",
             "required": 0,
@@ -60,6 +45,7 @@
             "key": "field_5b925c49860fa",
             "label": "Numéro de téléphone",
             "name": "phone",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -79,6 +65,7 @@
             "key": "field_5b928b701bd43",
             "label": "Horaires",
             "name": "hours",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -98,6 +85,7 @@
             "key": "field_5b925d042c0a7",
             "label": "Réseaux sociaux",
             "name": "rs",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -113,6 +101,7 @@
                     "key": "field_5b925d192c0a8",
                     "label": "Twitter",
                     "name": "twitter",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -129,6 +118,7 @@
                     "key": "field_5b925d232c0a9",
                     "label": "Facebook",
                     "name": "facebook",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -145,6 +135,7 @@
                     "key": "field_5b925d2d2c0aa",
                     "label": "Linkedin",
                     "name": "linkedin",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -161,6 +152,7 @@
                     "key": "field_5b952b32cc454",
                     "label": "Instagram",
                     "name": "instagram",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -177,6 +169,7 @@
                     "key": "field_5b952b4fcc455",
                     "label": "Youtube",
                     "name": "youtube",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -192,5 +185,23 @@
             ]
         }
     ],
-    "modified": false
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1676890787
 }

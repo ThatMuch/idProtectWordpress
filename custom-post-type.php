@@ -92,27 +92,27 @@ $args = array(
 register_post_type( "testimonials", $args );
 
 /**
- * Post Type: Projets.
+ * Post Type: services.
  */
 
 $labels = array(
-    "name" => __( "Projets", "" ),
-    "singular_name" => __( "Projet", "" ),
-    "menu_name" => __( "Projet", "" ),
-    "all_items" => __( "Tous les projets", "" ),
-    "add_new" => __( "Ajouter un projet", "" ),
-    "add_new_item" => __( "Ajouter un nouveau projet", "" ),
-    "edit_item" => __( "Modifier un projet", "" ),
-    "new_item" => __( "Nouveau projet", "" ),
-    "view_item" => __( "Voir le projet", "" ),
-    "view_items" => __( "Voir les projets", "" ),
-    "search_items" => __( "Chercher un projet", "" ),
+    "name" => __( "Services", "" ),
+    "singular_name" => __( "Service", "" ),
+    "menu_name" => __( "Service", "" ),
+    "all_items" => __( "Tous les services", "" ),
+    "add_new" => __( "Ajouter un service", "" ),
+    "add_new_item" => __( "Ajouter un nouveau service", "" ),
+    "edit_item" => __( "Modifier un service", "" ),
+    "new_item" => __( "Nouveau service", "" ),
+    "view_item" => __( "Voir le service", "" ),
+    "view_items" => __( "Voir les services", "" ),
+    "search_items" => __( "Chercher un service", "" ),
     "not_found" => __( "Rien trouvé", "" ),
     "not_found_in_trash" => __( "Rien n'a été trouvé dans la corbeille", "" ),
 );
 
 $args = array(
-    "label" => __( "Projets", "" ),
+    "label" => __( "Services", "" ),
     "labels" => $labels,
     "description" => "",
     "public" => true,

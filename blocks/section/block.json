@@ -1,0 +1,22 @@
+{
+	"name": "section",
+	"title": "Section",
+	"description": "Une section avec une image en bandeau",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": {
+		"src": "../icon.svg"
+	},
+	"keywords": [
+		"Id Protect",
+		"section",
+		"image"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full"
+}

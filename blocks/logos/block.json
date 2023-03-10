@@ -1,0 +1,21 @@
+{
+	"name": "logos",
+	"title": "Liste de logo",
+	"description": "Un block pour faire défiler une liste de logos",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"image",
+		"logo",
+		"list"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full"
+}

@@ -1,0 +1,21 @@
+{
+	"name": "link",
+	"title": "Lien",
+	"description": "Un block pour mettre en avant un lien",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"lien",
+		"link",
+		"theme"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./template.php"
+	},
+	"align": "full"
+}

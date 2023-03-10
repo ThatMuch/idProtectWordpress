@@ -1,0 +1,10 @@
+.block__link {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.block__link p {
+    color: #fff;
+}

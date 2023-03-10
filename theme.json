@@ -1,0 +1,190 @@
+{
+	"version": 2,
+	"settings": {
+		"layout": {
+			"contentSize": "800px",
+			"wideSize": "1000px"
+		},
+		"color": {
+			"defaultPalette": false,
+			"custom": false,
+			"palette": [
+				{
+					"slug": "primary_40",
+					"color": "#1956A8",
+					"name": "primary_40"
+				},
+				{
+					"slug": "primary_50",
+					"color": "#5E89C2",
+					"name": "primary_50"
+				},
+				{
+					"slug": "primary_60",
+					"color": "#A3BBDC",
+					"name": "primary_60"
+				},
+				{
+					"slug": "primary_30",
+					"color": "#144586",
+					"name": "primary_30"
+				},
+				{
+					"slug": "primary_20",
+					"color": "#0F3465",
+					"name": "primary_20"
+				},
+				{
+					"slug": "secondary_20",
+					"color": "#0C0E30",
+					"name": "secondary_20"
+				},
+				{
+					"slug": "secondary_30",
+					"color": "#12164D",
+					"name": "secondary_30"
+				},
+				{
+					"slug": "secondary_40",
+					"color": "#171C60",
+					"name": "secondary_40"
+				},
+				{
+					"slug": "secondary_50",
+					"color": "#454980",
+					"name": "secondary_50"
+				},
+				{
+					"slug": "secondary_60",
+					"color": "#8B8EB0",
+					"name": "secondary_60"
+				},
+				{
+					"slug": "secondary_70",
+					"color": "#E8E8EF",
+					"name": "secondary_70"
+				},
+				{
+					"slug": "ACCENT_20",
+					"color": "#80441A",
+					"name": "ACCENT_20"
+				},
+				{
+					"slug": "ACCENT_30",
+					"color": "#CC6D29",
+					"name": "ACCENT_30"
+				},
+				{
+					"slug": "ACCENT_40",
+					"color": "#FF8833",
+					"name": "ACCENT_40"
+				},
+				{
+					"slug": "ACCENT_50",
+					"color": "#FFA05C",
+					"name": "ACCENT_50"
+				},
+				{
+					"slug": "ACCENT_60",
+					"color": "#FFC499",
+					"name": "ACCENT_60"
+				},
+				{
+					"slug": "ACCENT_70",
+					"color": "#FFF3EB",
+					"name": "ACCENT_70"
+				},
+				{
+					"slug": "error_20",
+					"color": "#802A13",
+					"name": "error_20"
+				},
+				{
+					"slug": "error_30",
+					"color": "#CC421E",
+					"name": "error_30"
+				},
+				{
+					"slug": "error_40",
+					"color": "#FF5326",
+					"name": "error_40"
+				},
+				{
+					"slug": "error_50",
+					"color": "#FF7551",
+					"name": "error_50"
+				},
+				{
+					"slug": "error_60",
+					"color": "#FFA993",
+					"name": "error_60"
+				},
+				{
+					"slug": "error_70",
+					"color": "#FFEEE9",
+					"name": "error_70"
+				},
+				{
+					"slug": "success_20",
+					"color": "#0C763D",
+					"name": "success_20"
+				},
+				{
+					"slug": "success_30",
+					"color": "#12BC61",
+					"name": "success_30"
+				},
+				{
+					"slug": "success_40",
+					"color": "#17EB79",
+					"name": "success_40"
+				},
+				{
+					"slug": "success_50",
+					"color": "#45EF94",
+					"name": "success_50"
+				},
+				{
+					"slug": "success_60",
+					"color": "#8BF5BC",
+					"name": "success_60"
+				},
+				{
+					"slug": "success_70",
+					"color": "#E8FDF2",
+					"name": "success_70"
+				},
+				{
+					"slug": "neutral_20",
+					"color": "#152235",
+					"name": "neutral_20"
+				},
+				{
+					"slug": "neutral_30",
+					"color": "#384050",
+					"name": "neutral_30"
+				},
+				{
+					"slug": "neutral_40",
+					"color": "#919AA3",
+					"name": "neutral_40"
+				},
+				{
+					"slug": "neutral_50",
+					"color": "#D3D6DA",
+					"name": "neutral_50"
+				},
+				{
+					"slug": "neutral_60",
+					"color": "#ECEDEF",
+					"name": "neutral_60"
+				},
+				{
+					"slug": "neutral_70",
+					"color": "#F6F7F9",
+					"name": "neutral_70"
+				}
+			]
+		}
+	}
+}
