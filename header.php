@@ -15,7 +15,13 @@
     <!--=== OPEN-GRAPH TAGS ===-->
     <?php idProtect_ogtags() ?>
     <!--=== PRELOAD FONTS ===-->
-    <?php  idProtect_preload_fonts() ?>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Rubik:wght@500;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/inc/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/inc/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/inc/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/inc/assets/css/normalize.css">
     <!--=== WP HEAD ===-->
     <?php wp_head(); ?>
   </head>
@@ -26,35 +32,39 @@
      <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
         $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
 
-<nav class="navbar bg-light">
-  <div class="container">
+<nav class="header__area navbar sticky-top navbar-expand-lg">
+  <div class="container align-items-center">
   <a class="navbar-brand" href="<?php echo site_url(); ?>">
-	<img src="<?php if($image[0]): echo $image[0]; else: echo get_template_directory_uri()?>/assets/images/stanlee_logo_texte.png<?endif; ?>" alt="">
+	<img src="<?php if($image[0]): echo $image[0]; else: echo get_template_directory_uri()?>/assets/images/stanlee_logo_texte.png<?endif; ?>" alt="ID Protect">ID Protect
   </a>
-	<div>
-    <button class="burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
-        <span></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbar-content">
+    <div class="collapse navbar-collapse" id="navbar">
         <?php
         wp_nav_menu( array(
             'theme_location' => 'mainmenu', // Defined when registering the menu
             'menu_id'        => 'menu-main',
             'container'      => false,
             'depth'          => 2,
-            'menu_class'     => 'navbar-nav ms-auto',
+            'menu_class'     => 'navbar-nav mx-auto',
             'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
             'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
         ) );
         ?>
     </div>
-	</div>
-
+		<a class="header__link" href="#">
+				<span>se connecter</span>
+				<img class="eye" src="<?php  echo get_template_directory_uri()?>/assets/images/eye.svg" alt="Oeil">
+				<img class="eye-hover" src="<?php  echo get_template_directory_uri()?>/assets/images/eye-hover.svg" alt="Oeil">
+		</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+				aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+		</button>
   </div>
 </nav>
+
 <?php if ( is_home()): ?>
-            <header>
+          <header>
                 <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
             </header>
 <?php endif; ?>
@@ -75,4 +85,4 @@
     </h1>
   </header>
 <?php endif; ?>
-    <div id="content" class="site-content">
+    <div id="content" class="section__area">

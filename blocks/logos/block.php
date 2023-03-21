@@ -19,7 +19,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Block classes
-$class_name = 'block-logos';
+$class_name = 'block-logos sponsor';
 if( !empty($block['class_name']) ) {
     $class_name .= ' ' . $block['class_name'];
 }

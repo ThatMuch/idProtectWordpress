@@ -1,0 +1,136 @@
+.promotion {
+    min-height: 573px;
+}
+
+@media only screen and (max-width: 767px) {
+    .promotion {
+        min-height: 300px;
+    }
+}
+
+.promotion__area {
+    position: relative;
+    z-index: 3;
+    margin: 200px 0 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 991px) {
+    .promotion__area {
+        margin: 110px 0 180px;
+    }
+}
+
+
+.promotion__area .container {
+    position: relative;
+}
+
+.promotion__head {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: -120px;
+}
+
+@media only screen and (max-width: 767px) {
+    .promotion__head {
+        right: 25px;
+        top: -95px;
+    }
+}
+
+.promotion__head h3 {
+    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    border-radius: 100px 0px 0px 100px;
+    background: #FFFFFF;
+    padding: 10px 30px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+    .promotion__head h3 {
+        font-size: 25px;
+        line-height: 38px;
+        display: block;
+    }
+}
+
+.promotion__head h3::before {
+    content: "";
+    background: url(../img/angle-1.svg) no-repeat scroll 0 (0 / cover);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -17px;
+    right: -17px;
+}
+
+.promotion__head h2 {
+    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    border-radius: 100px 0px 0px 100px;
+    background: #FFFFFF;
+    padding: 10px 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 72px;
+}
+
+@media only screen and (max-width: 767px) {
+    .promotion__head h2 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .promotion__head h2 {
+        font-size: 50px;
+    }
+}
+
+.promotion__bottom {
+    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    border-radius: 16px;
+    background: #FFFFFF;
+    padding: 36px 40px;
+    max-width: 315px;
+    position: absolute;
+    bottom: -165px;
+}
+
+.promotion__bottom h2 {
+    color: #0f3465;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+}
+
+.promotion__bottom p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #152235;
+    margin-bottom: 30px;
+}
+
+.promotion__bottom .btn__white {
+    color: var(--blue);
+}
+
+.promotion__bottom .btn__white:hover {
+    color: #fff;
+}

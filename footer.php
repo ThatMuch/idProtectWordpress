@@ -6,86 +6,37 @@
  */
 ?>
 	</div><!-- #content -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-       <?php if(is_active_sidebar('footer-1')){
-      dynamic_sidebar('footer-1');
-        } ?>
-				<div class="footer__contact">
-					<?php if (get_field('adress', 'options')) : ?>
-					<p><?php the_field('adress', 'options');?></p>
-					<?php endif;?>
-					<?php if (get_field('contact_mail', 'options')) : ?>
-					<p><?php the_field('contact_mail', 'options');?></p>
-					<?php endif;?>
-					<?php if (get_field('phone', 'options')) : ?>
-					<p><?php the_field('phone', 'options');?></p>
-					<?php endif;?>
-					<?php if (get_field('hours', 'options')) : ?>
-					<p><?php the_field('hours', 'options');?></p>
-					<?php endif;?>
-					<?php if (have_rows('rs', 'options')) : ?>
-						<div>
-							<ul class="footer__rs">
-								<?php while ( have_rows('rs', 'options') ) : the_row(); ?>
-									<?php if (get_sub_field('facebook') ) : ?>
-											<li class="footer__rs__item">
-												<a href="<?php the_sub_field('facebook');?>">
-													<i class="fab fa-facebook" aria-hidden="true"></i>
-												</a>
-											</li>
-										<?php endif; ?>
-									<?php if (get_sub_field('twitter') ) : ?>
-											<li class="footer__rs__item">
-												<a href="<?php the_sub_field('twitter');?>">
-													<i class="fab fa-twitter" aria-hidden="true"></i>
-												</a>
-											</li>
-										<?php endif; ?>
-									<?php if (get_sub_field('instagram') ) : ?>
-											<li class="footer__rs__item">
-												<a href="<?php the_sub_field('instagram');?>">
-													<i class="fab fa-instagram" aria-hidden="true"></i>
-												</a>
-											</li>
-										<?php endif; ?>
-									<?php if (get_sub_field('google') ) : ?>
-											<li class="footer__rs__item">
-												<a href="<?php the_sub_field('google');?>">
-													<i class="fab fa-google" aria-hidden="true"></i>
-												</a>
-											</li>
-										<?php endif; ?>
-									<?php if (get_sub_field('linkedin') ) : ?>
-											<li class="footer__rs__item">
-												<a href="<?php the_sub_field('linkedin');?>">
-													<i class="fab fa-linkedin" aria-hidden="true"></i>
-												</a>
-											</li>
-										<?php endif; ?>
-									<?php if (get_sub_field('youtube') ) : ?>
-											<li class="footer__rs__item">
-												<a href="<?php the_sub_field('youtube');?>">
-													<i class="fab fa-youtube" aria-hidden="true"></i>
-												</a>
-											</li>
-										<?php endif; ?>
-								<?php endwhile;?>
-							</ul>
-						</div>
-					<?php endif;?>
-				</div>
+
+	<div class="footer__area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <img src="<?php echo get_template_directory_uri()?>/assets/images/logo-white.svg" alt="ID Protect">
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__menu">
+
+                        <?php
+				wp_nav_menu(array(
+					'theme_location' => 'submenu', // Defined when registering the menu
+					'menu_id'        => 'sub-main',
+					'container'      => false,
+					'depth'          => 2,
+					'menu_class'     => '',
+					'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
+					'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
+				));
+				?>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="copyright">
+                        © 2021 ID PROTECT tout droits réservés
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    <div class="footer__credits">
-      <div class="container">
-      <div class="footer__inner">
-      Un site crée par <a href="https://_a.fr" target="_blank" rel="noopener noreferrer"><strong>_a</strong></a>
-      </div>
-      </div>
     </div>
-    </footer>
     <?php wp_footer() ?>
   </body>
 </html>

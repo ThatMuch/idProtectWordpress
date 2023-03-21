@@ -22,7 +22,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Block classes
-$class_name = 'block__service';
+$class_name = 'block__service card__box';
 if( !empty($block['class_name']) ) {
     $class_name .= ' ' . $block['class_name'];
 }

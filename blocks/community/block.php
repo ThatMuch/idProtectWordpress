@@ -6,6 +6,7 @@
 // $data is what we're going to expose to our render template
 $data = array(
 	'title' => get_field( 'title' ),
+	'image' => get_field( 'image' ),
 	'card_1' => get_field( 'card_1' ),
 	'card_2' => get_field( 'card_2' ),
 );

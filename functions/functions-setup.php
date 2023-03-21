@@ -51,7 +51,7 @@ $typekit_id = '';
 // set $preload_fonts to false to not preload fonts
 $preload_fonts = true;
 // define font-names and font-formats for all fonts that need preloading (usally the same as in assets/styles/fonts.scss)
-$font_names = ['Raleway-Regular','Raleway-Italic','Raleway-Bold'];
+$font_names = ['Raleway-Regular','Raleway-Italic','Raleway-Bold','Rubik-Medium','Rubik-Bold','Rubik-ExtraBold'];
 $font_formats = ['ttf'];
 
 
