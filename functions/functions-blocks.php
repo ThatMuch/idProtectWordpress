@@ -43,5 +43,9 @@ register_block_type( get_template_directory() . '/blocks/community/block.json' ,
 array(
 	    'icon'  => $icon,
 	),);
+register_block_type( get_template_directory() . '/blocks/widgetSidebar/block.json' ,
+array(
+	    'icon'  => $icon,
+	),);
 
 ?>

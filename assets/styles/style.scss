@@ -1148,7 +1148,7 @@ hr.custom {
     font-family: "Raleway", sans-serif;
 }
 
-.blog__featured__text h2 {
+.blog__featured__text h2, .blog__featured__text h1 {
     font-weight: 800;
     font-size: 40px;
     line-height: 48px;
@@ -1157,7 +1157,7 @@ hr.custom {
 }
 
 @media only screen and (max-width: 767px) {
-    .blog__featured__text h2 {
+    .blog__featured__text h2, .blog__featured__text h1 {
         font-size: 25px;
         line-height: 30px;
     }
@@ -1413,10 +1413,15 @@ hr.custom {
     line-height: 24px;
     color: #152235;
     text-transform: uppercase;
+
+    a {
+        padding: 0;
+    }
 }
 
 .article__body a {
     color: #152235;
+    padding: 0;
 }
 
 .article__box {
@@ -1424,6 +1429,19 @@ hr.custom {
     border-radius: 16px;
     padding: 36px 40px;
     color: #F6F7F9;
+}
+
+.wp-block-latest-posts__post-category {
+    display: inline;
+}
+
+.wp-block-latest-posts__post-category::before {
+    content: 'Category: ';
+}
+
+.wp-block-latest-posts__post-category a {
+    text-decoration: none;
+    color: inherit;
 }
 
 @media only screen and (max-width: 767px) {

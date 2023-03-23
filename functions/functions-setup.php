@@ -98,13 +98,31 @@ add_action( 'init', 'stanlee_register_theme_menus');
 
 function stanlee_widgets_init() {
   register_sidebar( array(
-      'name'          => esc_html__( 'Sidebar', 'stanlee' ),
-      'id'            => 'sidebar-1',
-      'description'   => esc_html__( 'Add widgets here.', 'stanlee' ),
-      'before_widget' => '<section id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h3 class="widget-title">',
-      'after_title'   => '</h3>',
+      'name'          => esc_html__( 'Sidebar par defaut', 'IdProtect' ),
+      'id'            => 'sidebar-default',
+      'description'   => esc_html__( 'Add widgets here.', 'IdProtect' ),
+      'before_widget' => '<aside id="%1$s" class="%2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>',
+  ) );
+  register_sidebar( array(
+      'name'          => esc_html__( 'Sidebar particuliers', 'IdProtect' ),
+      'id'            => 'sidebar-particuliers',
+      'description'   => esc_html__( 'Add widgets here.', 'IdProtect' ),
+      'before_widget' => '<aside id="%1$s" class="%2$s article__sidebar sidebar-part">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>',
+  ) );
+  register_sidebar( array(
+      'name'          => esc_html__( 'Sidebar professionnels', 'IdProtect' ),
+      'id'            => 'sidebar-professionnels',
+      'description'   => esc_html__( 'Add widgets here.', 'IdProtect' ),
+      'before_widget' => '<aside id="%1$s" class="%2$s article__sidebar sidebar-pro">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>',
   ) );
   register_sidebar( array(
       'name'          => esc_html__( 'Footer 1', 'stanlee' ),
@@ -117,8 +135,6 @@ function stanlee_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'stanlee_widgets_init' );
-
-
 // Custom search widget
  function my_search_form( $form ) {
   $form = '<form role="search" method="get" id="searchform" class="search-form" action="' . home_url( '/' ) . '" >
@@ -132,4 +148,6 @@ add_action( 'widgets_init', 'stanlee_widgets_init' );
 }
 
 add_filter( 'get_search_form', 'my_search_form', 100 );
+
+
 ?>
