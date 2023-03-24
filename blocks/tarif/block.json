@@ -1,0 +1,28 @@
+{
+	"name": "tarif",
+	"title": "Tarif",
+	"description": "Une section pour affiche les tarifs",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"keywords": [
+		"Id Protect",
+		"service"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		}
+	}
+}

@@ -75,7 +75,8 @@
     border-radius: 16px;
 }
 
-.testimonial__left a {
+.testimonial__left button {
+	border: none;
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -99,11 +100,11 @@
     transition: 0.2s;
 }
 
-.testimonial__left a:hover {
+.testimonial__left button:hover {
     opacity: 0.9;
 }
 
-.testimonial__left a img {
+.testimonial__left button img {
     width: 60px;
 }
 

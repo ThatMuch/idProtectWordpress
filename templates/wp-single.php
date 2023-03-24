@@ -44,6 +44,19 @@ if ( ! empty( $categories ) ) {
 				<?php get_sidebar();?>
 			</div>
 		</div>
+		<!-- Get the content of a specific block type -->
+		<?php
+			$blocks = parse_blocks( get_the_content() );
+			foreach ( $blocks as $block ) {
+				if ( $block['blockName'] === 'temoignage' ) {
+					$testimonial = $block['attrs']['data'];
+				}
+			}
+		?>
+		<!-- Display the content -->
+		<?php if ( $testimonial ) : ?>
+
+		<?php endif; ?>
 	</div>
 </div>
 <?php get_footer(); ?>

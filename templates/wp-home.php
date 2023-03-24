@@ -70,7 +70,11 @@ $the_queryPro = new WP_Query($argsPro);
 						<div class="blog__left">
 							<div class="blog__box">
 									<h2>Particuliers</h2>
-									<p>protégez votre identité : nos experts id Protect suivent l’ actualités</p>
+									<!-- Get the description of the category -->
+									<?php
+										$category_description = category_description( get_category_by_slug( 'particulier' ) );
+									?>
+									<p><?php echo $category_description; ?></p>
 							</div>
 
 							<a href="<?php echo site_url();  ?>/category/particulier" class="btn btn__orange blue text-uppercase">Tous les articles</a>
@@ -80,24 +84,7 @@ $the_queryPro = new WP_Query($argsPro);
 						<div class="blog__list owl-carousel">
 							<?php if ( $the_queryParticulier->have_posts() ) : ?>
 								<?php while ( $the_queryParticulier->have_posts() ) : $the_queryParticulier->the_post(); ?>
-								<div class="blog__item">
-									<div class="blog__item__image">
-											<?php the_post_thumbnail('medium'); ?>
-											<a href="<?php the_permalink()?>" class="blog__link"><img src="<?php echo get_template_directory_uri()?>/assets/images/arrow-right.svg" alt="Lire l'article"></a>
-									</div>
-									<div class="blog__item__text">
-										<?php
-										// Get the post's categories
-										$categories = get_the_category();
-
-										if ( ! empty( $categories ) ) :
-											 $category_name = esc_html( $categories[0]->name );
-										?>
-											<h5><a href="<?php echo site_url();  ?>/category/particulier">• <?php echo $category_name; ?></a></h5>
-										<?php endif; ?>
-											<h2><a href="<?php the_permalink()?>"><?php the_title();?></a></h2>
-									</div>
-								</div>
+								<?php get_template_part('templates/wp', 'post'); ?>
 								<?php endwhile; ?>
 								<?php	wp_reset_postdata(); ?>
 							<?php endif; ?>
@@ -111,7 +98,10 @@ $the_queryPro = new WP_Query($argsPro);
 						<div class="blog__left">
 							<div class="blog__box dark">
 									<h2>Professionnels</h2>
-                  <p>luttez contre la fraude grâce à nos experts ID protect</p>
+									<?php
+										$category_description = category_description( get_category_by_slug( 'particulier' ) );
+									?>
+									<p><?php echo $category_description; ?></p>
 							</div>
 							<a href="<?php echo site_url();  ?>/category/professionnel" class="btn btn__orange blue dark text-uppercase">Tous les articles</a>
 						</div> <!-- end blog left -->
@@ -120,24 +110,7 @@ $the_queryPro = new WP_Query($argsPro);
 						<div class="blog__list owl-carousel">
 							<?php if ( $the_queryPro->have_posts() ) : ?>
 								<?php while ( $the_queryPro->have_posts() ) : $the_queryPro->the_post(); ?>
-								<div class="blog__item">
-									<div class="blog__item__image">
-											<?php the_post_thumbnail('medium'); ?>
-											<a href="<?php the_permalink()?>" class="blog__link"><img src="<?php echo get_template_directory_uri()?>/assets/images/arrow-right.svg" alt="Lire l'article"></a>
-									</div>
-									<div class="blog__item__text">
-											<?php
-										// Get the post's categories
-										$categories = get_the_category();
-
-										if ( ! empty( $categories ) ) :
-											 $category_name = esc_html( $categories[0]->name );
-										?>
-											<h5><a href="<?php echo site_url();  ?>/category/professionnel" >• <?php echo $category_name; ?></a></h5>
-										<?php endif; ?>
-											<h2><a href="<?php the_permalink()?>"><?php the_title();?></a></h2>
-									</div>
-								</div>
+								<?php get_template_part('templates/wp', 'post'); ?>
 								<?php endwhile; ?>
 								<?php	wp_reset_postdata(); ?>
 							<?php endif; ?>

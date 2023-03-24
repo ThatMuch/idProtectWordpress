@@ -37,6 +37,31 @@
             </div>
         </div>
     </div>
+	<?php
+	$block = find_block_by_name( 'acf/temoignage', $post->ID );
+	echo $post->ID;
+	if($block) :
+		 $field_value = $block['attrs']['data']["video_preview_video"]; ?>
+	<!-- Modal bootstrap -->
+	<div
+	class="modal fade"
+	id="videoModal"
+	tabindex="-1"
+	aria-labelledby="videoModalLabel"
+	aria-hidden="true"
+	>
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="oembed-container">
+					<?php echo wp_oembed_get($field_value); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php endif;?>
+
     <?php wp_footer() ?>
   </body>
 </html>

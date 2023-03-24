@@ -64,13 +64,15 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .footer__menu ul li a{color:#e8effb;text-transform:uppercase;font-weight:500;font-size:14px;line-height:26px;text-decoration:none;margin:0 10px}
 .footer__menu ul li a:hover{text-decoration:underline}
 .section__area{padding:80px 0;position:relative;z-index:2;overflow:hidden}
-.section__area::after{content:"";background:url(../images/line.svg) no-repeat scroll 0 0/100% 100%;position:absolute;top:10%;height:100%;left:0;width:100%;z-index:-1}
+.home .section__area::after{content:"";background:url(../images/line.svg) no-repeat scroll 0 0/100% 100%;position:absolute;top:10%;height:100%;left:0;width:100%;z-index:-1}
 .section__area .container{position:relative;z-index:3}
 .promotion__area.service{background:-webkit-gradient(linear,left bottom,left top,from(rgba(23,28,96,0.5)),to(rgba(23,28,96,0.5))),url(../images/bg-4.jpg) no-repeat scroll center center/cover;background:linear-gradient(0,rgba(23,28,96,0.5),rgba(23,28,96,0.5)),url(../images/bg-4.jpg) no-repeat scroll center center/cover}
 .promotion__area.service .promotion{min-height:312px}
 .promotion__area.service .promotion__head h3::before{display:none}
 .promotion__area.service .promotion__bottom{max-width:474px;bottom:-315px}
 .community__info{background:#1956a8;border-radius:16px;padding:36px 40px;color:#fff;max-width:575px;margin-left:auto}
+.community__info a{background-color:#fff;height:64px;width:64px;border-radius:64px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.community__info a i{font-size:24px}
 .community__info h2{font-weight:800;font-size:40px;line-height:48px;text-transform:uppercase;color:#f6f7f9;margin:0 0 20px}
 .community__info p{font-weight:700;font-size:20px;line-height:40px;text-transform:uppercase}
 .community__info ul{margin:30px 0 0;padding:0;list-style:none;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
@@ -78,7 +80,13 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .community__info ul li a:hover{opacity:.6}
 .community__form{background:#fff3eb;padding:36px 40px;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:16px;margin-bottom:20px}
 .community__form h2{color:#f83;text-transform:uppercase;font-weight:700;font-size:24px;line-height:30px;margin:0 0 10px}
-.community__form input,.community__form textarea{border-width:0 0 1px;border-style:solid;border-color:#384050;background:transparent;color:#384050;font-weight:600;font-size:16px;line-height:19px;font-family:"Raleway",sans-serif;width:100%;padding:3px 0;margin:10px 0 0}
+.form-control{border-radius:0}
+::-webkit-input-placeholder{font-weight:normal}
+::-moz-placeholder{font-weight:normal}
+:-ms-input-placeholder{font-weight:normal}
+::-ms-input-placeholder{font-weight:normal}
+::placeholder{font-weight:normal}
+.community__form input:not([type="submit"]),.community__form textarea{border-width:0 0 1px;border-style:solid;border-color:#384050;background:transparent;color:#384050;font-weight:600;font-size:16px;line-height:19px;font-family:"Raleway",sans-serif;width:100%;padding:3px 0;margin:10px 0 0}
 .community__form textarea{resize:none;height:120px}
 .community__form p.note{color:#384050;font-weight:400;font-size:12px;line-height:14px;font-family:"Raleway",sans-serif;margin:10px 0 0}
 .page__area{padding:50px 0}
@@ -183,6 +191,8 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .price__footer a:hover img{-webkit-filter:brightness(10);filter:brightness(10)}
 .bg_PRIMARY_40{background-color:var(--blue) !important}
 .bg_secondary_40{background-color:#171c60 !important}
+.oembed-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%}
+.oembed-container iframe,.oembed-container object,.oembed-container embed{position:absolute;top:0;left:0;width:100%;height:100%}
 @media only screen and (max-width:1200px){.footer__area .copyright{font-size:10px}
 .footer__menu ul li a{font-size:10px;margin:0 5px}
 .footer__menu ul li a{font-size:10px;margin:0 10px}
@@ -200,7 +210,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .header__link{margin-left:auto;margin-right:15px}
 .footer__area{text-align:center}
 .footer__area .copyright{text-align:center}
-.section__area::after{display:none}
+.home .section__area::after{display:none}
 .promotion__area.service{margin-top:200px}
 .community__info{max-width:100%}
 .page__hero__image{width:230px}

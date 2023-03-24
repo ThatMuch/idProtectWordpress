@@ -149,5 +149,18 @@ add_action( 'widgets_init', 'stanlee_widgets_init' );
 
 add_filter( 'get_search_form', 'my_search_form', 100 );
 
+// Register categories for pages
+function add_categories_to_pages() {
+    register_taxonomy_for_object_type( 'category', 'page' );
+}
+add_action( 'init', 'add_categories_to_pages' );
+
+// Ensure that pages are included in category archives
+function display_pages_in_category_archives( $query ) {
+    if ( $query->is_category() && $query->is_main_query() ) {
+        $query->set( 'post_type', array( 'post', 'page' ) );
+    }
+}
+add_action( 'pre_get_posts', 'display_pages_in_category_archives' );
 
 ?>

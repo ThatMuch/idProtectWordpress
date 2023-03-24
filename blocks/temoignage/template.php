@@ -34,10 +34,12 @@ $class_name = $args['class_name'];
 								<?php $image_2 = get_sub_field( 'image_1' ); ?>
 								<?php if ( $image_2 ) : ?>
 									<img src="<?php echo esc_url( $image_2['url'] ); ?>" alt="<?php echo esc_attr( $image_2['alt'] ); ?>" />
+
 								<?php endif; ?>
 							<?php endwhile; ?>
 						<?php endif; ?>
-						<a href="#"><img src="<?php echo get_template_directory_uri()?>/assets/images/arrow-right-white.svg" alt="Flèche vers la droite"></a>
+						<button type="button" data-bs-toggle="modal" data-bs-target="#videoModal"><img src="<?php echo get_template_directory_uri()?>/assets/images/arrow-right-white.svg" alt="Flèche vers la droite"></button>
+
 					</div>
 				</div>
 			</div>
@@ -46,12 +48,13 @@ $class_name = $args['class_name'];
 					<?php echo $data['subtitle'];?>
 					<p><?php echo $data['description'];?></p>
 					<a href="#" class="btn btn__orange">voir l'article</a>
+
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-	<?php //the_sub_field( 'video' ); ?>
+
 
 

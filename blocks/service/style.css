@@ -101,6 +101,10 @@
     background: #171C60;
 }
 
+.professionnel .card__text__box {
+	background: #171C60;
+}
+
 @media only screen and (max-width: 767px) {
     .card__text__box {
         padding: 20px;

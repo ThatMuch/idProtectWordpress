@@ -33,7 +33,17 @@ if(function_exists('acf_add_options_page') ) {
     acf_add_options_page();
 }
 
+function find_block_by_name( $block_name, $post_id ) {
+    $blocks = parse_blocks( get_post_field( 'post_content', $post_id ) );
 
+    foreach ( $blocks as $block ) {
+        if ( $block['blockName'] === $block_name ) {
+            return $block;
+        }
+    }
+
+    return null;
+}
 
 
 

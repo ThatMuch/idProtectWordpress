@@ -1,0 +1,28 @@
+{
+	"name": "steps",
+	"title": "Steps",
+	"description": "Une section pour décrire des étapes",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"keywords": [
+		"Id Protect",
+		"service"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		}
+	}
+}
