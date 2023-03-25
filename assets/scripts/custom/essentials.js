@@ -72,6 +72,7 @@ $('.block__service').each(function (index) {
 
 		$(document).ready(function ($) {
 
+
 			$('.blog__list').owlCarousel({
 				margin: 15,
 				loop: true,

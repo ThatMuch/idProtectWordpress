@@ -5,6 +5,11 @@
  * @since       idProtect_1.0.0
  */
 ?>
+<!-- If the page is not the home page display the widget from the sidebar footer-1 -->
+	<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+		<?php dynamic_sidebar( 'footer-1' ); ?>
+	<?php endif; ?>
+
 	</div><!-- #content -->
 
 	<div class="footer__area">
@@ -39,7 +44,6 @@
     </div>
 	<?php
 	$block = find_block_by_name( 'acf/temoignage', $post->ID );
-	echo $post->ID;
 	if($block) :
 		 $field_value = $block['attrs']['data']["video_preview_video"]; ?>
 	<!-- Modal bootstrap -->
@@ -61,7 +65,6 @@
 		</div>
 	</div>
 	<?php endif;?>
-
     <?php wp_footer() ?>
   </body>
 </html>

@@ -946,7 +946,7 @@ hr.custom {
     }
 }
 
-.page__header h3 {
+.page__header h3, .page__header__title {
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 100px 16px 16px 100px;
@@ -996,10 +996,8 @@ hr.custom {
 }
 
 .page__header__area {
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(23, 28, 96, 0.5)), to(rgba(23, 28, 96, 0.5))), url(../images/privacy.jpg) no-repeat scroll center (center / cover);
-    background: linear-gradient(0deg, rgba(23, 28, 96, 0.5), rgba(23, 28, 96, 0.5)), url(../images/privacy.jpg) no-repeat scroll center (center / cover);
     min-height: 312px;
-    margin-top: 150px;
+    background-position: center;
 }
 
 .page__header__area.contact {
@@ -1291,6 +1289,10 @@ hr.custom {
     width: fit-content;
     margin-left: auto;
     display: block;
+}
+
+.blog__item {
+    margin-bottom: 50px;
 }
 
 .blog__item__image {

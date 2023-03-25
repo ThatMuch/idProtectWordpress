@@ -1,5 +1,6 @@
 .testimonial {
     margin-top: 200px;
+	margin-bottom: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9,7 +10,7 @@
 }
 
 .blog .testimonial {
-        margin-top: 0;
+        margin-top: 50px;
     }
 
 
