@@ -99,7 +99,7 @@ $the_queryPro = new WP_Query($argsPro);
 						<div class="blog__box dark">
 							<h2>Professionnels</h2>
 							<?php
-							$category_description = category_description(get_category_by_slug('particulier'));
+							$category_description = category_description(get_category_by_slug('professionnel'));
 							?>
 							<p><?php echo $category_description; ?></p>
 						</div>
