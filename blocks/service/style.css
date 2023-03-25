@@ -1,0 +1,294 @@
+.card__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto 80px;
+    gap: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__box {
+        display: block;
+    }
+}
+
+.card__box .title {
+    font-weight: 800;
+    font-size: 37px;
+    line-height: 48px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .card__box .title {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .card__box .title {
+        font-size: 22px;
+        padding: 15px 20px;
+    }
+}
+
+.card__box.right .card__icon {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.card__box.right .card__text {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+    text-align: right;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__box.right .card__text {
+        text-align: left;
+    }
+}
+
+.card__box.right .title {
+    border-radius: 100px 16px 16px 100px;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__box.right .title {
+        border-radius: 16px 100px 100px 16px;
+    }
+}
+
+.card__icon {
+    width: 250px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .card__icon {
+        width: 120px;
+    }
+}
+
+.card__text {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__text {
+        text-align: left;
+    }
+}
+
+.card__text__box {
+    background: #1956A8;
+    padding: 36px 40px;
+    color: #fff;
+    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    border-radius: 16px;
+    min-height: 100%;
+}
+
+.card__text__box.dark {
+    background: #171C60;
+}
+
+.professionnel .card__text__box {
+	background: #171C60;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__text__box {
+        padding: 20px;
+    }
+}
+
+.card__text__box ul {
+    margin: 0 0 50px;
+    padding: 0 25px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.card__text__box ul.small {
+    font-size: 18px;
+}
+
+.card__text__box h2 {
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.card__text__box h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__text__box h3 {
+        font-size: 20px;
+    }
+
+    .card__text__box h3 br {
+        display: none;
+    }
+}
+
+.card__text__box h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+.card__text__box p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+}
+
+.card__text__image {
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 9px;
+    position: relative;
+    max-width: 371px;
+}
+
+@media only screen and (max-width: 991px) {
+    .card__text__image {
+        max-width: 100%;
+    }
+
+    .card__text__image img {
+        width: 100%;
+    }
+}
+
+.card__text__image::before {
+    content: "";
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(57, 99, 171, 0.33)), to(rgba(57, 99, 171, 0.33)));
+    background: linear-gradient(0deg, rgba(57, 99, 171, 0.33), rgba(57, 99, 171, 0.33));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 100%;
+}
+
+.card__text__body {
+    background: #E8EFFB;
+    padding: 36px 40px;
+    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    border-radius: 16px;
+}
+
+.card__text__body.gray {
+    background: #E8E8EF;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__text__body {
+        padding: 20px;
+    }
+}
+
+.card__text__body h2 {
+    text-transform: uppercase;
+    color: #152235;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__text__body h2 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.card__text__body p {
+    color: #384050;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__text__body p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.card__text__body p:last-child {
+    margin-bottom: 0;
+}
+
+.card__title {
+    margin-top: 150px;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__title {
+        margin-top: 50px;
+    }
+}
+
+.card__title h3 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #152235;
+}
+
+.card__title .title {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 15px;
+    border-radius: 14px 100px 100px 14px;
+}
+
+@media only screen and (max-width: 767px) {
+    .card__title .title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+
+.card__title.right {
+    margin-bottom: 50px;
+}
+
+.card__title.right .title {
+    margin-left: auto;
+    border-radius: 100px 16px 16px 100px;
+}

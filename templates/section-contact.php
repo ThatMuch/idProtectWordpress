@@ -1,4 +1,5 @@
 <?
+
 /**
  * Contact Block
  * This is a (very basic) default ACF-Block using the "Flexible Element" field-type
@@ -9,106 +10,106 @@
  * @since       idProtect_1.0.0
  *
  */
- ?>
+?>
 <?php $background = get_sub_field('background'); ?>
-  <section class="section section-contact <?php echo  $background == "Couleur" ? "bg-primary" : ($background == "Gris" ? "bg-light" : "bg-white") ?>">
-    <!-- Section background: image -->
-      <?php if(get_sub_field('background') == "Image"):?>
-      <div class="section__background-image"  style="
-            <?php if(get_sub_field('image')):?>
+<section class="section section-contact <?php echo  $background == "Couleur" ? "bg-primary" : ($background == "Gris" ? "bg-light" : "bg-white") ?>">
+	<!-- Section background: image -->
+	<?php if (get_sub_field('background') == "Image") : ?>
+		<div class="section__background-image" style="
+            <?php if (get_sub_field('image')) : ?>
             background-image:url(<?php echo the_sub_field('image') ?>);
-            <?php endif;?>"></div>
-      <?php endif;?>
-    <!-- Section background: image -->
-    <div class="container">
-      <!-- Title -->
-      <?php if(get_sub_field('title') ) : ?>
-  <h2 class="section__title text-center"><?php echo get_sub_field('title'); ?></h2>
-<?php endif; ?>
-<!-- Title -->
-<div class="row">
-<?php if (get_sub_field('contact_infos') == "Oui"): ?>
-  <div class="col-sm-6">
-    <ul class="section-contact__infos">
-      <li class="section-contact__infos__phone">
-        <i class="fas fa-mobile fa-2x me-2"></i>
-        <?php if (get_field('phone', 'option') ) : ?>
-          <span><?php echo get_field('phone','option'); ?></span>
-        <?php endif; ?>
-      </li>
-      <li class="section-contact__infos__address">
-        <i class="fas fa-map-marker-alt fa-2x me-2"></i>
-          <?php if (get_field('adress', 'option') ) : ?>
-            <span><?php echo get_field('adress','option'); ?></span>
-          <?php endif; ?>
-      </li>
-      <li class="section-contact__infos__hours">
-        <i class="far fa-clock fa-2x me-2"></i>
-        <?php if (get_field('hours', 'option') ) : ?>
-          <span><?php echo get_field('hours','option'); ?></span>
-        <?php endif; ?>
-      </li>
-    </ul>
-    <?php if (have_rows('rs', 'options')) : ?>
-      <ul class="section-contact__infos__rs">
-        <?php while ( have_rows('rs', 'options') ) : the_row(); ?>
-          <?php if (get_sub_field('facebook') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('facebook');?>">
-                  <i class="fab fa-facebook" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('twitter') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('twitter');?>">
-                  <i class="fab fa-twitter" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('instagram') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('instagram');?>">
-                  <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('google') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('google');?>">
-                  <i class="fab fa-google" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('linkedin') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('linkedin');?>">
-                  <i class="fab fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('youtube') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('youtube');?>">
-                  <i class="fab fa-youtube" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-        <?php endwhile;?>
-      </ul>
-    <?php endif;?>
-  </div>
-<?php endif;?>
-  <div class="section-contact__form <?php if (get_sub_field('contact_infos') == "Oui"): ?> col-sm-6 <?php else : ?> col-sm-12 full-width<?endif; ?>">
-    <!-- Contact form -->
-    <?php $form = get_sub_field('contact_form');?>
-    <?php if($form) : ?>
+            <?php endif; ?>"></div>
+	<?php endif; ?>
+	<!-- Section background: image -->
+	<div class="container">
+		<!-- Title -->
+		<?php if (get_sub_field('title')) : ?>
+			<h2 class="section__title text-center"><?php echo get_sub_field('title'); ?></h2>
+		<?php endif; ?>
+		<!-- Title -->
+		<div class="row">
+			<?php if (get_sub_field('contact_infos') == "Oui") : ?>
+				<div class="col-sm-6">
+					<ul class="section-contact__infos">
+						<li class="section-contact__infos__phone">
+							<i class="fas fa-mobile fa-2x me-2"></i>
+							<?php if (get_field('phone', 'option')) : ?>
+								<span><?php echo get_field('phone', 'option'); ?></span>
+							<?php endif; ?>
+						</li>
+						<li class="section-contact__infos__address">
+							<i class="fas fa-map-marker-alt fa-2x me-2"></i>
+							<?php if (get_field('adress', 'option')) : ?>
+								<span><?php echo get_field('adress', 'option'); ?></span>
+							<?php endif; ?>
+						</li>
+						<li class="section-contact__infos__hours">
+							<i class="far fa-clock fa-2x me-2"></i>
+							<?php if (get_field('hours', 'option')) : ?>
+								<span><?php echo get_field('hours', 'option'); ?></span>
+							<?php endif; ?>
+						</li>
+					</ul>
+					<?php if (have_rows('rs', 'options')) : ?>
+						<ul class="section-contact__infos__rs">
+							<?php while (have_rows('rs', 'options')) : the_row(); ?>
+								<?php if (get_sub_field('facebook')) : ?>
+									<li>
+										<a href="<?php the_sub_field('facebook'); ?>">
+											<i class="fab fa-facebook" aria-hidden="true"></i>
+										</a>
+									</li>
+								<?php endif; ?>
+								<?php if (get_sub_field('twitter')) : ?>
+									<li>
+										<a href="<?php the_sub_field('twitter'); ?>">
+											<i class="fab fa-twitter" aria-hidden="true"></i>
+										</a>
+									</li>
+								<?php endif; ?>
+								<?php if (get_sub_field('instagram')) : ?>
+									<li>
+										<a href="<?php the_sub_field('instagram'); ?>">
+											<i class="fab fa-instagram" aria-hidden="true"></i>
+										</a>
+									</li>
+								<?php endif; ?>
+								<?php if (get_sub_field('google')) : ?>
+									<li>
+										<a href="<?php the_sub_field('google'); ?>">
+											<i class="fab fa-google" aria-hidden="true"></i>
+										</a>
+									</li>
+								<?php endif; ?>
+								<?php if (get_sub_field('linkedin')) : ?>
+									<li>
+										<a href="<?php the_sub_field('linkedin'); ?>">
+											<i class="fab fa-linkedin" aria-hidden="true"></i>
+										</a>
+									</li>
+								<?php endif; ?>
+								<?php if (get_sub_field('youtube')) : ?>
+									<li>
+										<a href="<?php the_sub_field('youtube'); ?>">
+											<i class="fab fa-youtube" aria-hidden="true"></i>
+										</a>
+									</li>
+								<?php endif; ?>
+							<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
+			<div class="section-contact__form <?php if (get_sub_field('contact_infos') == "Oui") : ?> col-sm-6 <?php else : ?> col-sm-12 full-width<? endif; ?>">
+				<!-- Contact form -->
+				<?php $form = get_sub_field('contact_form'); ?>
+				<?php if ($form) : ?>
 
-          <?php echo $form; ?>
+					<?php echo $form; ?>
 
-    <?php endif; ?>
-    <!-- Contact form -->
-  </div>
-</div>
-    </div>
- </section>
+				<?php endif; ?>
+				<!-- Contact form -->
+			</div>
+		</div>
+	</div>
+</section>

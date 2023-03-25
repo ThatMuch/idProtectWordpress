@@ -1,0 +1,102 @@
+.promo {
+    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    border-radius: 16px;
+    padding: 53px 15px;
+    position: relative;
+    margin-bottom: 80px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.promo::before {
+    content: "";
+    background: url(img/bg-line-0.png) no-repeat scroll left top;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 30%;
+	    background-size: cover;
+}
+
+@media only screen and (max-width: 991px) {
+    .promo::before {
+        display: none;
+    }
+}
+
+.promo::after {
+    content: "";
+    background: url(img/bg-line-1.png) no-repeat scroll right top;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 30%;
+	    background-size: cover;
+}
+
+@media only screen and (max-width: 991px) {
+    .promo::after {
+        display: none;
+    }
+}
+
+.promo__text {
+    color: #fff;
+    max-width: 433px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.promo__text h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+@media only screen and (max-width: 767px) {
+    .promo__text h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+.promo__text p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Raleway", sans-serif;
+}
+
+.promo.professionnels {
+    background-image: url(../img/bg-2.jpg);
+    padding: 102px 15px;
+    margin-top: 50px;
+}
+
+.promo.professionnels::before {
+    background-image: url(../img/bg-line-2.svg);
+    left: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .promo.professionnels::before {
+        left: -70px;
+    }
+}
+
+.promo.professionnels::after {
+    background-image: url(../img/bg-line-3.svg);
+    right: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .promo.professionnels::after {
+        right: -70px;
+    }
+}

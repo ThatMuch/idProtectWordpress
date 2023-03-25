@@ -1,0 +1,20 @@
+{
+	"name": "temoignage",
+	"title": "Temoignage",
+	"description": "Une section pour afficher un témoignage",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"keywords": [
+		"Id Protect",
+		"image",
+		"temoignage",
+		"video"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full"
+}

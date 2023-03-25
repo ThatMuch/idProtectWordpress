@@ -1,0 +1,17 @@
+{
+	"name": "widgetSidebar",
+	"title": "Widget Sidebar",
+	"description": "Une section pour afficher un widget",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"keywords": [
+		"Id Protect"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full"
+}

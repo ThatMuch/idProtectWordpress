@@ -51,7 +51,7 @@ $typekit_id = '';
 // set $preload_fonts to false to not preload fonts
 $preload_fonts = true;
 // define font-names and font-formats for all fonts that need preloading (usally the same as in assets/styles/fonts.scss)
-$font_names = ['Raleway-Regular','Raleway-Italic','Raleway-Bold'];
+$font_names = ['Raleway-Regular','Raleway-Italic','Raleway-Bold','Rubik-Medium','Rubik-Bold','Rubik-ExtraBold'];
 $font_formats = ['ttf'];
 
 
@@ -98,13 +98,31 @@ add_action( 'init', 'stanlee_register_theme_menus');
 
 function stanlee_widgets_init() {
   register_sidebar( array(
-      'name'          => esc_html__( 'Sidebar', 'stanlee' ),
-      'id'            => 'sidebar-1',
-      'description'   => esc_html__( 'Add widgets here.', 'stanlee' ),
-      'before_widget' => '<section id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h3 class="widget-title">',
-      'after_title'   => '</h3>',
+      'name'          => esc_html__( 'Sidebar par defaut', 'IdProtect' ),
+      'id'            => 'sidebar-default',
+      'description'   => esc_html__( 'Add widgets here.', 'IdProtect' ),
+      'before_widget' => '<aside id="%1$s" class="%2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>',
+  ) );
+  register_sidebar( array(
+      'name'          => esc_html__( 'Sidebar particuliers', 'IdProtect' ),
+      'id'            => 'sidebar-particuliers',
+      'description'   => esc_html__( 'Add widgets here.', 'IdProtect' ),
+      'before_widget' => '<aside id="%1$s" class="%2$s article__sidebar sidebar-part">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>',
+  ) );
+  register_sidebar( array(
+      'name'          => esc_html__( 'Sidebar professionnels', 'IdProtect' ),
+      'id'            => 'sidebar-professionnels',
+      'description'   => esc_html__( 'Add widgets here.', 'IdProtect' ),
+      'before_widget' => '<aside id="%1$s" class="%2$s article__sidebar sidebar-pro">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>',
   ) );
   register_sidebar( array(
       'name'          => esc_html__( 'Footer 1', 'stanlee' ),
@@ -117,8 +135,6 @@ function stanlee_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'stanlee_widgets_init' );
-
-
 // Custom search widget
  function my_search_form( $form ) {
   $form = '<form role="search" method="get" id="searchform" class="search-form" action="' . home_url( '/' ) . '" >
@@ -132,4 +148,19 @@ add_action( 'widgets_init', 'stanlee_widgets_init' );
 }
 
 add_filter( 'get_search_form', 'my_search_form', 100 );
+
+// Register categories for pages
+function add_categories_to_pages() {
+    register_taxonomy_for_object_type( 'category', 'page' );
+}
+add_action( 'init', 'add_categories_to_pages' );
+
+// Ensure that pages are included in category archives
+function display_pages_in_category_archives( $query ) {
+    if ( $query->is_category() && $query->is_main_query() ) {
+        $query->set( 'post_type', array( 'post', 'page' ) );
+    }
+}
+add_action( 'pre_get_posts', 'display_pages_in_category_archives' );
+
 ?>

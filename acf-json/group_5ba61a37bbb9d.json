@@ -1,28 +1,12 @@
 {
     "key": "group_5ba61a37bbb9d",
     "title": "Informations",
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "team"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
     "fields": [
         {
             "key": "field_5ba61a9963d92",
             "label": "Poste",
             "name": "job",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -42,6 +26,7 @@
             "key": "field_5ba61b7cec587",
             "label": "Description",
             "name": "description",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "Courte description limitée à 160 charactères",
             "required": 0,
@@ -53,7 +38,7 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "160",
+            "maxlength": 160,
             "rows": "",
             "new_lines": ""
         },
@@ -61,6 +46,7 @@
             "key": "field_5ba61aac63d93",
             "label": "Liens",
             "name": "links",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -76,6 +62,7 @@
                     "key": "field_5ba61ac463d94",
                     "label": "Site",
                     "name": "website",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -92,6 +79,7 @@
                     "key": "field_5ba61acc63d95",
                     "label": "Facebook",
                     "name": "facebook",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -108,6 +96,7 @@
                     "key": "field_5ba61ade63d96",
                     "label": "Twitter",
                     "name": "twitter",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -124,6 +113,7 @@
                     "key": "field_5ba61ae663d97",
                     "label": "Instagram",
                     "name": "instagram",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -140,6 +130,7 @@
                     "key": "field_5ba61aef63d98",
                     "label": "Google+",
                     "name": "google",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -156,6 +147,7 @@
                     "key": "field_5ba61afb63d99",
                     "label": "Linkedin",
                     "name": "linkedin",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -171,5 +163,23 @@
             ]
         }
     ],
-    "modified": false
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "team"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1676890796
 }

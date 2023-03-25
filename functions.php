@@ -31,6 +31,7 @@ require('functions/functions-settings.php');
 // Sections using the ACF Flexible Content
 // » https://www.advancedcustomfields.com/resources/flexible-content/
 require('functions/functions-sections.php');
+require('functions/functions-blocks.php');
 //require('acf.php');
 
 
@@ -45,4 +46,3 @@ require_once get_stylesheet_directory() . '/inc/plugin-activation.php';
 
 // Post Types
 require('custom-post-type.php');
-?>
