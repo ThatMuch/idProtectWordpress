@@ -27,7 +27,7 @@ $queryPro = new WP_Query($argsPro);
 	<div class="row">
 		<div class="col-lg-4">
 			<div class="mega__menu__item">
-				<h2>Professionnel</h2>
+				<h2>Particulier</h2>
 				<ul>
 					<?php
 					if ($query->have_posts()) :
@@ -44,7 +44,7 @@ $queryPro = new WP_Query($argsPro);
 		</div>
 		<div class="col-lg-4">
 			<div class="mega__menu__item">
-				<h2>particulier</h2>
+				<h2>Professionnel</h2>
 				<ul>
 					<?php
 					if ($queryPro->have_posts()) :
