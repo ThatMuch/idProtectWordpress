@@ -46,4 +46,3 @@ require_once get_stylesheet_directory() . '/inc/plugin-activation.php';
 
 // Post Types
 require('custom-post-type.php');
-?>

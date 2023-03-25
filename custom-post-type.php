@@ -137,5 +137,3 @@ register_post_type( "portfolio", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
-
-?>

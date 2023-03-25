@@ -1,4 +1,5 @@
 <?
+
 /**
  * Template for ACF flexible elements
  *
@@ -15,10 +16,11 @@
 
 <main id="sections">
 
-  <?php if (have_posts()): while (have_posts()): the_post() ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post() ?>
 
-    <?php stanlee_sections() ?>
-  <?php endwhile; endif ?>
+			<?php stanlee_sections() ?>
+	<?php endwhile;
+	endif ?>
 
 </main>
 

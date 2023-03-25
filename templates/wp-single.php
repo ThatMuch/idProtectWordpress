@@ -1,4 +1,5 @@
 <?
+
 /**
  * The template for displaying all single posts and attachments
  *
@@ -7,14 +8,14 @@
  * @since       idProtect_1.0.0
  */
 
- // Get the post's categories
+// Get the post's categories
 $categories = get_the_category();
 $category_name = '';
 
 // Check if the post has any categories
-if ( ! empty( $categories ) ) {
-    // Get the first category's name (you can change this to adapt to your needs)
-    $category_name = strtolower( $categories[0]->name );
+if (!empty($categories)) {
+	// Get the first category's name (you can change this to adapt to your needs)
+	$category_name = strtolower($categories[0]->name);
 }
 ?>
 
@@ -34,27 +35,28 @@ if ( ! empty( $categories ) ) {
 		</div>
 		<div class="row g-3">
 			<div class="col-lg-8">
-				<?php if (have_posts() ) : while (have_posts()) : the_post(); ?>
-					<div class="article__text">
-						<?php the_content(); ?>
-					</div>
-				<?php endwhile; endif; ?>
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<div class="article__text">
+							<?php the_content(); ?>
+						</div>
+				<?php endwhile;
+				endif; ?>
 			</div>
 			<div class="col-lg-4">
-				<?php get_sidebar();?>
+				<?php get_sidebar(); ?>
 			</div>
 		</div>
 		<!-- Get the content of a specific block type -->
 		<?php
-			$blocks = parse_blocks( get_the_content() );
-			foreach ( $blocks as $block ) {
-				if ( $block['blockName'] === 'temoignage' ) {
-					$testimonial = $block['attrs']['data'];
-				}
+		$blocks = parse_blocks(get_the_content());
+		foreach ($blocks as $block) {
+			if ($block['blockName'] === 'temoignage') {
+				$testimonial = $block['attrs']['data'];
 			}
+		}
 		?>
 		<!-- Display the content -->
-		<?php if ( $testimonial ) : ?>
+		<?php if ($testimonial) : ?>
 
 		<?php endif; ?>
 	</div>

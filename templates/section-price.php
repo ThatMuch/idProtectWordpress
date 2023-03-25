@@ -1,4 +1,5 @@
 <?
+
 /**
  * Price Block
  * This is a (very basic) default ACF-Block using the "Flexible Element" field-type
@@ -9,45 +10,47 @@
  * @since       idProtect_1.0.0
  *
  */
- ?>
+?>
 <?php $background = get_sub_field('background'); ?>
-  <section class="section section-price <?php echo  $background == "Couleur" ? "bg-primary" : ($background == "Gris" ? "bg-light" : "bg-white") ?>">
-    <!-- Section background: image -->
-      <?php if(get_sub_field('background') == "Image"):?>
-      <div class="section__background-image"  style="
-            <?php if(get_sub_field('image')):?>
+<section class="section section-price <?php echo  $background == "Couleur" ? "bg-primary" : ($background == "Gris" ? "bg-light" : "bg-white") ?>">
+	<!-- Section background: image -->
+	<?php if (get_sub_field('background') == "Image") : ?>
+		<div class="section__background-image" style="
+            <?php if (get_sub_field('image')) : ?>
             background-image:url(<?php echo the_sub_field('image') ?>);
-            <?php endif;?>"></div>
-      <?php endif;?>
-    <!-- Section background: image -->
-        <div class="container">
-            <!-- Title -->
-            <?php if(get_sub_field('title') ) : ?>
-                  <h2 class="section__title"><?php echo get_sub_field('title'); ?></h2>
-            <?php endif; ?>
-            <!-- Title -->
-            <!-- Count columns -->
-            <?
-            $count = 0;
-            $colonne = get_sub_field('colonne');
-            if (is_array($colonne)){$count = count($colonne);}
-            ?>
-                  <?php if (have_rows('colonne') ) :
-                  ?>
-            <div class="d-flex">
-			<?php while(have_rows('colonne')) : the_row();  ?>
-				<?php if( get_sub_field('title') ) : ?>
-                        	<div class="section-price__column">
+            <?php endif; ?>"></div>
+	<?php endif; ?>
+	<!-- Section background: image -->
+	<div class="container">
+		<!-- Title -->
+		<?php if (get_sub_field('title')) : ?>
+			<h2 class="section__title"><?php echo get_sub_field('title'); ?></h2>
+		<?php endif; ?>
+		<!-- Title -->
+		<!-- Count columns -->
+		<?
+		$count = 0;
+		$colonne = get_sub_field('colonne');
+		if (is_array($colonne)) {
+			$count = count($colonne);
+		}
+		?>
+		<?php if (have_rows('colonne')) :
+		?>
+			<div class="d-flex">
+				<?php while (have_rows('colonne')) : the_row();  ?>
+					<?php if (get_sub_field('title')) : ?>
+						<div class="section-price__column">
 							<!-- Title -->
-							<?php if( get_sub_field('title') ) : ?>
-							<h3 class="section-price__column__title">  <?php echo get_sub_field('title'); ?> </h3>
+							<?php if (get_sub_field('title')) : ?>
+								<h3 class="section-price__column__title"> <?php echo get_sub_field('title'); ?> </h3>
 							<?php endif; ?>
 							<!-- Title -->
 							<!-- Price -->
-							<?php if( get_sub_field('prix') ) : ?>
+							<?php if (get_sub_field('prix')) : ?>
 								<p class="section-price__column__price">
 									<!-- Devise -->
-									<?php if( get_sub_field('devise') ) : ?>
+									<?php if (get_sub_field('devise')) : ?>
 										<span class="section-price__column__devise"><?php echo get_sub_field('devise'); ?></span>
 									<?php endif; ?>
 									<!-- Devise -->
@@ -55,10 +58,10 @@
 								</p>
 							<?php endif; ?>
 							<!-- Price -->
-							<?php if ( have_rows('services') ) : ?>
+							<?php if (have_rows('services')) : ?>
 								<ul>
-									<?php while (have_rows('services')) : the_row()?>
-										<?php if( get_sub_field('text') ) : ?>
+									<?php while (have_rows('services')) : the_row() ?>
+										<?php if (get_sub_field('text')) : ?>
 											<li class="section-price__column__service"><?php echo get_sub_field('text'); ?></li>
 										<?php endif; ?>
 									<?php endwhile; ?>
@@ -66,17 +69,17 @@
 							<?php endif; ?>
 							<!-- Button -->
 							<?php if (have_rows('button')) : ?>
-								<?php while ( have_rows('button') ) : the_row(); ?>
-								<?php if (get_sub_field('label') ) : ?>
-									<a href="<?php the_sub_field('link'); ?>" class="btn btn-primary btn-block"><?php the_sub_field('label'); ?></a>
-								<?php endif; ?>
+								<?php while (have_rows('button')) : the_row(); ?>
+									<?php if (get_sub_field('label')) : ?>
+										<a href="<?php the_sub_field('link'); ?>" class="btn btn-primary btn-block"><?php the_sub_field('label'); ?></a>
+									<?php endif; ?>
 								<?php endwhile; ?>
 							<?php endif; ?>
 							<!-- Button -->
-                        </div>
-                        <?php endif; ?>
-                        <?php endwhile; ?>
-            </div>
-                  <?php endif; ?>
-        </div>
- </section>
+						</div>
+					<?php endif; ?>
+				<?php endwhile; ?>
+			</div>
+		<?php endif; ?>
+	</div>
+</section>
