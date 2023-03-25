@@ -1,5 +1,5 @@
 /**
- * StanLee Configuration File
+ * ID Protect Configuration File
  *
  * 1. Edit the variables as per your project requirements.
  * 2. In paths you can add <<glob or array of globs>>.

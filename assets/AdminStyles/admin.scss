@@ -1,3 +1,7 @@
 @import "../styles/_mixins.scss";
 @import "../styles/_vars.scss";
 @import "./_acf.scss";
+
+a {
+    color: $color-primary;
+}
