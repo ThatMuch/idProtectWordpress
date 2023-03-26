@@ -50,16 +50,14 @@ function find_block_by_name($block_name, $post_id)
 }
 
 function custom_menu_item($items, $args)
+
 {
 	if ($args->theme_location == 'mainmenu') {
-		$items .= '<li class="menu-item menu-item-has-children nav-item dropdown">';
-		$items .= '<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button">Services</a>';
 		ob_start();
 		include(locate_template('templates/dropdown-menu.php'));
 		$custom_content = ob_get_clean();
-		$items .= $custom_content;
-		$items .= '</li>';
+		$menu = $custom_content . $items;
 	}
-	return $items;
+	return $menu;
 }
 add_filter('wp_nav_menu_items', 'custom_menu_item', 10, 2);

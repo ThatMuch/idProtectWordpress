@@ -23,49 +23,53 @@ $argsPro = array(
 );
 $queryPro = new WP_Query($argsPro);
 ?>
-<div class="dropdown-menu mega__menu">
-	<div class="row">
-		<div class="col-lg-4">
-			<div class="mega__menu__item">
-				<h2>Particulier</h2>
-				<ul>
-					<?php
-					if ($query->have_posts()) :
-						while ($query->have_posts()) : $query->the_post();
-					?>
-							<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
-					<?php
-						endwhile;
-						wp_reset_postdata();
-					endif;
-					?>
-				</ul>
+
+<li class="menu-item menu-item-has-children nav-item dropdown">
+	<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button">Services</a>
+	<div class="dropdown-menu mega__menu">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="mega__menu__item">
+					<h2>Particulier</h2>
+					<ul>
+						<?php
+						if ($query->have_posts()) :
+							while ($query->have_posts()) : $query->the_post();
+						?>
+								<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+						<?php
+							endwhile;
+							wp_reset_postdata();
+						endif;
+						?>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="col-lg-4">
-			<div class="mega__menu__item">
-				<h2>Professionnel</h2>
-				<ul>
-					<?php
-					if ($queryPro->have_posts()) :
-						while ($queryPro->have_posts()) : $queryPro->the_post();
-					?>
-							<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
-					<?php
-						endwhile;
-						wp_reset_postdata();
-					endif;
-					?>
-				</ul>
+			<div class="col-lg-4">
+				<div class="mega__menu__item">
+					<h2>Professionnel</h2>
+					<ul>
+						<?php
+						if ($queryPro->have_posts()) :
+							while ($queryPro->have_posts()) : $queryPro->the_post();
+						?>
+								<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+						<?php
+							endwhile;
+							wp_reset_postdata();
+						endif;
+						?>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="col-lg-4">
-			<div class="mega__menu__item">
-				<h2>api</h2>
-				<ul>
-					<li><a href="#">documentation api</a></li>
-				</ul>
+			<div class="col-lg-4">
+				<div class="mega__menu__item">
+					<h2>api</h2>
+					<ul>
+						<li><a href="#">documentation api</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</li>
