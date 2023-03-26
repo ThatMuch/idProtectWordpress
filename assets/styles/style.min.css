@@ -104,9 +104,9 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .page__hero{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .page__hero__area{padding:100px 0 150px}
 .page__hero__image{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;width:375px}
-.page__hero__text{text-transform:uppercase;text-align:right;padding-right:50px}
-.page__hero__text__title{font-weight:800;font-size:60px;line-height:72px;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:100px 16px 16px 100px;background:#fff;padding:10px 40px;margin-bottom:20px;max-width:685px}
-.page__hero__text__subtitle{font-weight:800;font-size:60px;line-height:72px;max-width:600px}
+.page__hero__text{text-transform:uppercase;text-align:right;padding-right:50px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:end;-ms-flex-align:end;align-items:end}
+.page__hero__text__title{font-weight:800;font-size:60px;line-height:72px;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:100px 16px 16px 100px;background:#fff;padding:10px 40px;margin-bottom:20px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}
+.page__hero__text__subtitle{font-weight:800;font-size:40px;line-height:55px}
 .page__hero__text__subtitle .small{font-size:24px;color:#1956a8}
 .page__hero__text h6{color:#1956a8;font-weight:700;font-size:24px;line-height:30px}
 .blog__featured{height:500px;position:relative;border-radius:16px;overflow:hidden;color:#fff;margin-bottom:50px}
@@ -222,7 +222,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .community__info{max-width:100%}
 .page__hero__image{width:230px}
 .page__hero__text__title{font-size:30px;line-height:40px}
-.page__hero__text__subtitle{font-size:30px;line-height:40px}
+.page__hero__text__subtitle{font-size:20px;line-height:40px}
 .blog__box{padding:15px 25px}
 }@media only screen and (max-width:767px){.header__link{width:46px}
 .header__link span{display:none}

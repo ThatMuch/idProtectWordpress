@@ -1065,6 +1065,9 @@ hr.custom {
     text-transform: uppercase;
     text-align: right;
     padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1083,7 +1086,7 @@ hr.custom {
     background: #FFFFFF;
     padding: 10px 40px;
     margin-bottom: 20px;
-    max-width: 685px;
+    width: fit-content;
 }
 
 @media only screen and (max-width: 991px) {
@@ -1095,9 +1098,8 @@ hr.custom {
 
 .page__hero__text__subtitle {
     font-weight: 800;
-    font-size: 60px;
-    line-height: 72px;
-    max-width: 600px;
+    font-size: 40px;
+    line-height: 55px;
 
     .small {
         font-size: 24px;
@@ -1107,7 +1109,7 @@ hr.custom {
 
 @media only screen and (max-width: 991px) {
     .page__hero__text__subtitle {
-        font-size: 30px;
+        font-size: 20px;
         line-height: 40px;
     }
 }
