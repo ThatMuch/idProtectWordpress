@@ -47,7 +47,7 @@ $class_name = $args['class_name'];
 				<div class="testimonial__details">
 					<?php echo $data['subtitle']; ?>
 					<p><?php echo $data['description']; ?></p>
-					<a href="<?php echo $data['link']; ?>" class="btn btn__orange">voir l'article</a>
+					<a href="<?php echo esc_url($data['link']['url']); ?>" class="btn btn__orange">voir l'article</a>
 				</div>
 			</div>
 		</div>
