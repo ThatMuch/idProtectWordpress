@@ -172,6 +172,8 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .step__list.service ul.nav-tabs li a{color:#152235}
 .step__list.service ul.nav-tabs li a:hover,.step__list.service ul.nav-tabs li a.active{color:#fff}
 .price__table{-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:16px;background:#fff}
+.price__table:nth-child(2){background:#e8effb}
+.price__table:nth-child(2) .price__body{background:#e8effb}
 .price__table.premium{background:#e8effb}
 .price__table.premium .price__body{background:#e8effb}
 .price__head{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:36px 40px 0}

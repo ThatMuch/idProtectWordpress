@@ -1667,6 +1667,14 @@ hr.custom {
     background: #FFFFFF;
 }
 
+.price__table:nth-child(2) {
+    background: #E8EFFB;
+
+    .price__body {
+        background: #E8EFFB;
+    }
+}
+
 .price__table.premium {
     background: #E8EFFB;
 }
