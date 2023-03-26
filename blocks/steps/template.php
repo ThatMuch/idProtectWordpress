@@ -13,13 +13,15 @@ $class_name = $args['class_name'];
 ?>
 <div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card__title right">
-					<?php echo $data['title'] ?>
+		<?php if ($data['title']) : ?>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card__title right">
+						<?php echo $data['title'] ?>
+					</div>
 				</div>
 			</div>
-		</div>
+		<?php endif; ?>
 		<div class="row g-5 align-items-center">
 			<div class="col-lg-5">
 				<?php $image = $data['image'];  ?>
