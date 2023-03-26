@@ -199,6 +199,7 @@
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 16px;
+	height: 100%;
 }
 
 .card__text__body.gray {
