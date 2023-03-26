@@ -53,13 +53,13 @@ get_header(); ?>
 </div>
 <!-- Page Hero Area End -->
 <div class="section__area pt-0 <?php echo $category_slug; ?>">
+	<!-- Display content or the page -->
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php the_content(); ?>
+	<?php endwhile;
+	endif; ?>
+	<!-- Articles -->
 	<div class="container">
-		<!-- Display content or the page -->
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<?php the_content(); ?>
-		<?php endwhile;
-		endif; ?>
-		<!-- Articles -->
 		<div class="row mt-5 g-3">
 			<div class="col-lg-4">
 				<div class="blog__left">
@@ -91,8 +91,8 @@ get_header(); ?>
 				</div> <!-- end blog list -->
 			</div> <!-- end col -->
 		</div>
-		<!-- Articles end -->
 	</div>
+	<!-- Articles end -->
 </div>
 
 <?php get_footer(); ?>
