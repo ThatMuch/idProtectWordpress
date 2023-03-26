@@ -69,10 +69,10 @@
         },
         {
             "key": "field_641b1e90e4a7e",
-            "label": "Fichier",
+            "label": "Lien",
             "name": "file",
             "aria-label": "",
-            "type": "file",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -81,11 +81,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
+            "return_format": "array"
         }
     ],
     "location": [
@@ -106,5 +102,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679498964
+    "modified": 1679850963
 }
