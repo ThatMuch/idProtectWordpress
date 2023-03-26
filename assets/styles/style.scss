@@ -1512,6 +1512,10 @@ hr.custom {
     display: block;
 }
 
+.professionnel .step__list ul.nav-tabs li a {
+    color: #171C60;
+}
+
 .step__list ul.nav-tabs li a {
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
@@ -1620,6 +1624,10 @@ hr.custom {
 .step__list ul.nav-tabs li a:hover, .step__list ul.nav-tabs li a.active {
     color: #fff;
     background: #1956A8;
+}
+
+.professionnel .step__list ul.nav-tabs li a:hover, .professionnel .step__list ul.nav-tabs li a.active {
+    background: #171C60;
 }
 
 .step__list ul.nav-tabs li a:hover .text::before, .step__list ul.nav-tabs li a.active .text::before {

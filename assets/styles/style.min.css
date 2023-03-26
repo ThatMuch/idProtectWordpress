@@ -159,6 +159,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .step__image img{width:100%}
 .step__list ul{border:0}
 .step__list ul.nav-tabs{display:block}
+.professionnel .step__list ul.nav-tabs li a{color:#171c60}
 .step__list ul.nav-tabs li a{-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:16px;background:#fff;padding:36px 40px;margin-bottom:15px;display:block;font-weight:700;font-size:24px;line-height:30px;text-transform:uppercase;-webkit-transition:.2s;transition:.2s;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .step__list ul.nav-tabs li a .text{font-weight:700;font-size:24px;line-height:30px;width:64px;height:64px;border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-right:20px;position:relative;overflow:hidden}
 .step__list ul.nav-tabs li a .text::before{content:"";background:#fff;top:5px;bottom:5px;left:5px;right:5px;position:absolute;z-index:1;border-radius:100%}
@@ -167,6 +168,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .step__list ul.nav-tabs li a .text__body{font-weight:500;font-size:24px;line-height:35px;font-family:"Raleway";-webkit-box-flex:1;-ms-flex:1;flex:1;text-transform:none}
 .step__list ul.nav-tabs li a .text__body .head{display:block;font-weight:700;font-family:"Rubik";text-transform:uppercase}
 .step__list ul.nav-tabs li a:hover,.step__list ul.nav-tabs li a.active{color:#fff;background:#1956a8}
+.professionnel .step__list ul.nav-tabs li a:hover,.professionnel .step__list ul.nav-tabs li a.active{background:#171c60}
 .step__list ul.nav-tabs li a:hover .text::before,.step__list ul.nav-tabs li a.active .text::before{content:"";top:0;bottom:0;left:0;right:0;background:transparent;border:5px solid #fff}
 .step__list ul.nav-tabs li a:hover .text span,.step__list ul.nav-tabs li a.active .text span{color:#fff;background:transparent;-webkit-text-fill-color:#fff}
 .step__list ul.nav-tabs li:last-child a{margin-bottom:0}
