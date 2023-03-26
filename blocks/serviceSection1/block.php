@@ -1,11 +1,13 @@
 <?php
+
 /**
  * My First Block
  */
 // $data is what we're going to expose to our render template
 $data = array(
-	'card1' => get_field( 'card1' ),
-    'card2' => get_field( 'card2' ),
+	'card1' => get_field('card1'),
+	'card2' => get_field('card2'),
+	'title' => get_field('title'),
 );
 
 // Dynamic block ID
@@ -14,14 +16,14 @@ $block_id = 'service' . $block['id'];
 
 
 // Check if a custom ID is set in the block editor
-if( !empty($block['anchor']) ) {
-    $block_id = $block['anchor'];
+if (!empty($block['anchor'])) {
+	$block_id = $block['anchor'];
 }
 
 // Block classes
 $class_name = 'block__service card__box';
-if( !empty($block['class_name']) ) {
-    $class_name .= ' ' . $block['class_name'];
+if (!empty($block['class_name'])) {
+	$class_name .= ' ' . $block['class_name'];
 }
 
 /**
@@ -36,7 +38,7 @@ get_template_part(
 		'post_id'    => $post_id,
 
 		'data'       => $data,
-        'class_name' => $class_name,
-        'block_id'   => $block_id,
+		'class_name' => $class_name,
+		'block_id'   => $block_id,
 	)
 );

@@ -11,19 +11,19 @@ $block_id = $args['block_id'];
 // The block class names
 $class_name = $args['class_name'];
 ?>
-
-<div class="row g-3 align-items-end mb-5
-<?php if (have_rows('card_2')) {
-	while (have_rows('card_2')) {
-		the_row();
-		if (empty(get_sub_field('image'))) {
-			echo 'align-items-stretch';
-		}
-	}
-}; ?>">
+<?php if ($data['title']) : ?>
+	<div class="row mb-5">
+		<div class="col-md-12">
+			<div class="card__title">
+				<?php echo $data['title']; ?>
+			</div>
+		</div>
+	</div>
+<?php endif; ?>
+<div class="row g-3 align-items-end mb-5">
 	<?php if (have_rows('card_1')) : ?>
 		<?php while (have_rows('card_1')) : the_row(); ?>
-			<div class="col-xl-4 col-lg-6">
+			<div class="col-xl-4 col-lg-6 align-self-stretch">
 				<div class="card__text__box">
 					<?php $image = get_sub_field('image');  ?>
 					<?php if (!empty($image)) : ?>
@@ -45,8 +45,8 @@ $class_name = $args['class_name'];
 
 	<?php if (have_rows('card_2')) : ?>
 		<?php while (have_rows('card_2')) : the_row(); ?>
-			<div class="col-xl-8 col-lg-6">
-				<?php $image = get_sub_field('image');  ?>
+			<?php $image = get_sub_field('image');  ?>
+			<div class="col-xl-8 col-lg-6 <?php echo empty($image) ? 'align-self-stretch' : ''; ?>">
 				<?php if (!empty($image)) : ?>
 					<div class="card__text__image">
 						<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
