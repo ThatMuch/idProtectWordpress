@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+	min-height: 365px;
 }
 
 .promo::before {
@@ -74,13 +75,12 @@
 }
 
 .promo.professionnels {
-    background-image: url(../img/bg-2.jpg);
     padding: 102px 15px;
     margin-top: 50px;
 }
 
 .promo.professionnels::before {
-    background-image: url(../img/bg-line-2.svg);
+    background-image: url(img/bg-line-2.svg);
     left: 25px;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .promo.professionnels::after {
-    background-image: url(../img/bg-line-3.svg);
+    background-image: url(img/bg-line-3.svg);
     right: 25px;
 }
 
