@@ -41,10 +41,9 @@ get_header(); ?>
 						<?php the_post_thumbnail('large', array()); ?>
 					</div>
 					<div class="page__hero__text">
-						<h3><span class="g-text"><?php the_title(); ?></span></h3>
-						<h2><span class="g-text">L'expertise d'ID </span> <br><span class="g-text">Protect pour
-							</span> <br><span class="g-text">faire cesser</span></h2>
-						<h6>l’usurpation d’identité</h6>
+						<h1 class="page__hero__text__title"><span class="g-text"><?php the_title(); ?></span></h1>
+						<?php the_field('headline'); ?>
+
 					</div>
 				</div>
 			</div>

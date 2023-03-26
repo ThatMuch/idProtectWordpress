@@ -249,7 +249,7 @@ hr.custom {
 }
 
 .text__orange {
-    color: var(--orange);
+    color: var(--orange) !important;
 }
 
 .text__blue {
@@ -1073,7 +1073,7 @@ hr.custom {
     }
 }
 
-.page__hero__text h3 {
+.page__hero__text__title {
     font-weight: 800;
     font-size: 60px;
     line-height: 72px;
@@ -1083,23 +1083,30 @@ hr.custom {
     background: #FFFFFF;
     padding: 10px 40px;
     margin-bottom: 20px;
+    max-width: 685px;
 }
 
 @media only screen and (max-width: 991px) {
-    .page__hero__text h3 {
+    .page__hero__text__title {
         font-size: 30px;
         line-height: 40px;
     }
 }
 
-.page__hero__text h2 {
+.page__hero__text__subtitle {
     font-weight: 800;
     font-size: 60px;
     line-height: 72px;
+    max-width: 600px;
+
+    .small {
+        font-size: 24px;
+        color: #1956A8;
+    }
 }
 
 @media only screen and (max-width: 991px) {
-    .page__hero__text h2 {
+    .page__hero__text__subtitle {
         font-size: 30px;
         line-height: 40px;
     }
