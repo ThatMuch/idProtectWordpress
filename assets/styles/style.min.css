@@ -120,6 +120,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .blog__link:hover{opacity:.5}
 .blog__link img{width:30px}
 .blog__box{background:#1956a8;border-radius:16px;padding:36px 40px;color:#f6f7f9;margin:0 0 20px}
+.professionnel .blog__box{background:#171c60}
 .blog__box.dark{background:#171c60}
 .blog__box h2{font-weight:800;font-size:38px;line-height:48px;color:#f6f7f9;text-transform:uppercase;margin:0 0 25px}
 .blog__box p{font-weight:700;font-size:22px;line-height:36px;text-transform:uppercase;color:#f6f7f9;margin:0}
