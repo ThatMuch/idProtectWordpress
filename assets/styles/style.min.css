@@ -31,7 +31,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .text__blue{color:#1956a8}
 .text__dark{color:#171c60}
 .header__area{background:#fff;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1)}
-.header__area .navbar-brand{width:12rem;height:3rem}
+.header__area .navbar-brand{height:7rem}
 .header__area .navbar-brand img{height:100%;width:100%;-o-object-fit:contain;object-fit:contain}
 .header__area .nav-link{letter-spacing:.5px;text-transform:uppercase;font-weight:700;font-size:13px;line-height:16px;font-family:"Raleway",sans-serif;color:var(--blue);margin:0 30px;isolation:isolate}
 .header__area .nav-link:hover{color:var(--orange);-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:7px;background:#fff}
@@ -64,7 +64,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .footer__menu ul{margin:0;padding:0;list-style:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .footer__menu ul li a{color:#e8effb;text-transform:uppercase;font-weight:500;font-size:14px;line-height:26px;text-decoration:none;margin:0 10px}
 .footer__menu ul li a:hover{text-decoration:underline}
-.section__area{padding:80px 0;position:relative;z-index:2;overflow:hidden}
+.section__area{padding:50px 0;position:relative;z-index:2;overflow:hidden}
 .home .section__area::after{content:"";background:url(../images/line.svg) no-repeat scroll 0 0/100% 100%;position:absolute;top:10%;height:100%;left:0;width:100%;z-index:-1}
 .section__area .container{position:relative;z-index:3}
 .promotion__area.service{background:-webkit-gradient(linear,left bottom,left top,from(rgba(23,28,96,0.5)),to(rgba(23,28,96,0.5))),url(../images/bg-4.jpg) no-repeat scroll center center/cover;background:linear-gradient(0,rgba(23,28,96,0.5),rgba(23,28,96,0.5)),url(../images/bg-4.jpg) no-repeat scroll center center/cover}

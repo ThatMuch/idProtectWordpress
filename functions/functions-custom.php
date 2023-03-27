@@ -52,6 +52,8 @@ function find_block_by_name($block_name, $post_id)
 function custom_menu_item($items, $args)
 
 {
+	// Create an empty array
+	$menu = array();
 	if ($args->theme_location == 'mainmenu') {
 		ob_start();
 		include(locate_template('templates/dropdown-menu.php'));
