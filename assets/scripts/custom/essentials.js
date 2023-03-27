@@ -16,16 +16,16 @@
 
 /* Viewport Width
 /––––––––––––––––––––––––*/
-var $vpWidth = jQuery( window ).width();
+var $vpWidth = jQuery(window).width();
 
 /* Touch Device
 /––––––––––––––––––––––––*/
-var $root = $( 'html' );
+var $root = $('html');
 var isTouch = 'ontouchstart' in document.documentElement;
-if ( isTouch ) {
-	$root.attr( 'data-touch', 'true' );
+if (isTouch) {
+	$root.attr('data-touch','true');
 } else {
-	$root.attr( 'data-touch', 'false' );
+	$root.attr('data-touch','false');
 }
 
 
@@ -37,22 +37,22 @@ if ( isTouch ) {
 //   // function stuff
 // }, 250);
 // window.addEventListener('resize', myfunction);
-function debouncer( func, wait, immediate ) {
+function debouncer(func,wait,immediate) {
 	var timeout;
-	return function() {
+	return function () {
 		var context = this,
 			args = arguments;
-		var later = function() {
+		var later = function () {
 			timeout = null;
-			if ( ! immediate ) {
-				func.apply( context, args );
+			if (!immediate) {
+				func.apply(context,args);
 			}
 		};
-		var callNow = immediate && ! timeout;
-		clearTimeout( timeout );
-		timeout = setTimeout( later, wait );
-		if ( callNow ) {
-			func.apply( context, args );
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later,wait);
+		if (callNow) {
+			func.apply(context,args);
 		}
 	};
 }
@@ -65,39 +65,38 @@ $('.burger').click(function () {
 
 // Get all the elements with the class "block__service"
 $('.block__service').each(function (index) {
-	 if(index % 2 == 1) {
-    $(this).addClass('right');
-  }
+	if (index % 2 == 1) {
+		$(this).addClass('right');
+	}
 })
 
-		$(document).ready(function ($) {
+$(document).ready(function ($) {
 
-
-			$('.blog__list').owlCarousel({
-				margin: 15,
-				loop: true,
-				dots: false,
-				autoplay: true,
-				autoplayHoverPause: true,
-				stagePadding: 100,
-				responsive: {
-					0: {
-						items: 1
-					},
-					768: {
-						items: 2
-					}
-				}
-			});
-		});
+	$('.blog__list').owlCarousel({
+		margin: 15,
+		loop: true,
+		dots: false,
+		autoplay: true,
+		autoplayHoverPause: true,
+		stagePadding: 100,
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			}
+		}
+	});
+});
 
 // replace the class "nav-item" for every <li> element inside the element with the class "article__list"
 $('.article__list li').each(function () {
 	$(this).removeClass('nav-item').addClass('article__item');
-}	);
+});
 $('.article__item .wp-block-latest-posts__featured-image').each(function () {
 	$(this).removeClass('wp-block-latest-posts__featured-image').addClass('article__image');
-}	);
+});
 $('.article__item .wp-block-latest-posts__post-title').each(function () {
 	$(this).wrap('<div class="article__body"><h2></h2></div>');
 });
@@ -109,10 +108,10 @@ var url = url[0] + '//' + url[2] + '/';
 
 // add the category in a h6 element before the title
 $('.sidebar-pro .article__item .article__body h2').each(function () {
-	$(this).before('<h6><a href="' + url +'category/professionnel">• Professionnel</a></h6>');
+	$(this).before('<h6><a href="' + url + 'category/professionnel">• Professionnel</a></h6>');
 });
 $('.sidebar-part .article__item .article__body h2').each(function () {
-	$(this).before('<h6><a href="' + url +'category/particulier">• Particulier</a></h6>');
+	$(this).before('<h6><a href="' + url + 'category/particulier">• Particulier</a></h6>');
 });
 
 // add the category link after the article__list

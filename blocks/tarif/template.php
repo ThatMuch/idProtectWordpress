@@ -24,7 +24,7 @@ $class_name = $args['class_name'];
 			<!-- Display the group field tarif_card1 -->
 			<?php if (have_rows('tarif_card')) : ?>
 				<?php while (have_rows('tarif_card')) : the_row(); ?>
-					<div class="col-lg-5">
+					<div class="col-lg">
 						<div class="price__table <?php echo get_sub_field('offer'); ?>">
 							<div class="price__head">
 								<div class="price__head__left">
