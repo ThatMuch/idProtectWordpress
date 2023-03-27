@@ -2,7 +2,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 auto 80px;
+    margin: 0 auto 50px;
     gap: 30px;
 }
 
@@ -270,7 +270,7 @@
     font-weight: 800;
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     border-radius: 14px 100px 100px 14px;
 }
 

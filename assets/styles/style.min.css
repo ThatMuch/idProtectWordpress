@@ -90,7 +90,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .community__form input:not([type="submit"]),.community__form textarea{border-width:0 0 1px;border-style:solid;border-color:#384050;background:transparent;color:#384050;font-weight:600;font-size:16px;line-height:19px;font-family:"Raleway",sans-serif;width:100%;padding:3px 0;margin:10px 0 0}
 .community__form textarea{resize:none;height:120px}
 .community__form p.note{color:#384050;font-weight:400;font-size:12px;line-height:14px;font-family:"Raleway",sans-serif;margin:10px 0 0}
-.page__area{padding:50px 0}
+.page__area{padding:30px 0}
 .page__text{font-family:"Raleway",sans-serif}
 .page__text h1,.page__text h2,.page__text h3,.page__text h4,.page__text h5,.page__text h6{font-family:"Rubik",sans-serif;text-transform:uppercase;font-weight:700;margin-bottom:30px}
 .page__text h2{color:#152235;text-transform:uppercase;font-weight:800;font-size:40px;line-height:48px;margin-bottom:40px;font-family:"Rubik",sans-serif}
@@ -103,7 +103,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .page__header__area.contact{background:-webkit-gradient(linear,left bottom,left top,from(rgba(255,136,51,0.5)),to(rgba(255,136,51,0.5))),url(../images/contact.jpg) no-repeat scroll center center/cover;background:linear-gradient(0,rgba(255,136,51,0.5),rgba(255,136,51,0.5)),url(../images/contact.jpg) no-repeat scroll center center/cover;margin-top:90px}
 .page__header__area .container{position:relative}
 .page__hero{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-.page__hero__area{padding:100px 0 150px}
+.page__hero__area{margin-bottom:50px}
 .page__hero__image{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;width:375px}
 .page__hero__text{text-transform:uppercase;text-align:right;padding-right:50px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:end;-ms-flex-align:end;align-items:end}
 .page__hero__text__title{font-weight:800;font-size:60px;line-height:72px;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:100px 16px 16px 100px;background:#fff;padding:10px 40px;margin-bottom:20px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}

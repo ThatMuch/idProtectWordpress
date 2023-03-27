@@ -43,7 +43,10 @@ get_header(); ?>
 					<div class="page__hero__text">
 						<h1 class="page__hero__text__title"><span class="g-text"><?php the_title(); ?></span></h1>
 						<?php the_field('headline'); ?>
-
+						<?php $link = get_field('link'); ?>
+						<?php if ($link) : ?>
+							<a href="<?php echo esc_url($link['url']); ?>" class="btn btn__orange blue text-uppercase" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?></a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

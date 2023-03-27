@@ -14,7 +14,7 @@ $class_name = $args['class_name'];
 <div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
 		<?php if ($data['title']) : ?>
-			<div class="row mb-5">
+			<div class="row mb-3">
 				<div class="col-md-12">
 					<div class="card__title">
 						<?php echo $data['title']; ?>
