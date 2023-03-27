@@ -1122,6 +1122,12 @@ hr.custom {
     line-height: 30px;
 }
 
+.block__service.right {
+    .row {
+        flex-direction: row-reverse;
+    }
+}
+
 .blog__featured {
     height: 500px;
     position: relative;

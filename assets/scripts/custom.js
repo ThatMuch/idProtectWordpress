@@ -110,6 +110,10 @@ $('.sidebar-pro .article__item .article__body h2').each(function () {
 $('.sidebar-part .article__item .article__body h2').each(function () {
   $(this).before('<h6><a href="' + url + 'category/particulier">• Particulier</a></h6>');
 });
+
+// add the category link after the article__list
+$('.sidebar-pro .article__list').after('<a href="' + url + 'category/professionnel" class="btn btn__orange blue dark text-uppercase mb-3">Tous les articles</a>');
+$('.sidebar-part .article__list').after('<a href="' + url + 'category/particulier" class="btn btn__orange blue text-uppercase mb-3">Tous les articles</a>');
 "use strict";
 
 /* eslint-disable no-undef */

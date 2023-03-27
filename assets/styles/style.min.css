@@ -110,6 +110,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .page__hero__text__subtitle{font-weight:800;font-size:40px;line-height:55px}
 .page__hero__text__subtitle .small{font-size:24px;color:#1956a8}
 .page__hero__text h6{color:#1956a8;font-weight:700;font-size:24px;line-height:30px}
+.block__service.right .row{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .blog__featured{height:500px;position:relative;border-radius:16px;overflow:hidden;color:#fff;margin-bottom:50px}
 .blog__featured::after{content:"";background:-webkit-gradient(linear,left top,left bottom,from(rgba(21,34,53,0)),to(#152235));background:linear-gradient(180deg,rgba(21,34,53,0) 0,#152235 100%);position:absolute;bottom:0;width:100%;height:50%;left:0}
 .blog__featured .blog__image{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}

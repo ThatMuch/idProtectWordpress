@@ -49,6 +49,7 @@ if (!empty($categories)) {
 		<!-- Get the content of a specific block type -->
 		<?php
 		$blocks = parse_blocks(get_the_content());
+		$testimonial = null;
 		foreach ($blocks as $block) {
 			if ($block['blockName'] === 'temoignage') {
 				$testimonial = $block['attrs']['data'];
@@ -57,6 +58,7 @@ if (!empty($categories)) {
 		?>
 		<!-- Display the content -->
 		<?php if ($testimonial) : ?>
+
 
 		<?php endif; ?>
 	</div>
