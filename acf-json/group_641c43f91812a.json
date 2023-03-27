@@ -23,7 +23,7 @@
 			"delay": 0
 		},
 		{
-			"key": "field_641c43fa56c2e",
+			"key": "field_641c43fa96c2e",
 			"label": "Card 1",
 			"name": "card_1",
 			"aria-label": "",
@@ -122,7 +122,7 @@
 			]
 		},
 		{
-			"key": "field_641c43fa56p2e",
+			"key": "field_641c43fa56c2e",
 			"label": "Card 2",
 			"name": "card_2",
 			"aria-label": "",
@@ -187,7 +187,7 @@
 					"label": "Texte",
 					"name": "text",
 					"aria-label": "",
-					"type": "textarea",
+					"type": "wysiwyg",
 					"instructions": "",
 					"required": 0,
 					"conditional_logic": 0,
@@ -197,10 +197,10 @@
 						"id": ""
 					},
 					"default_value": "",
-					"maxlength": "",
-					"rows": "",
-					"placeholder": "",
-					"new_lines": ""
+					"tabs": "all",
+					"toolbar": "full",
+					"media_upload": 1,
+					"delay": 0
 				}
 			]
 		}
@@ -223,5 +223,5 @@
 	"active": true,
 	"description": "",
 	"show_in_rest": 0,
-	"modified": 1679840838
+	"modified": 1679926136
 }
