@@ -53,13 +53,14 @@ function custom_menu_item($items, $args)
 
 {
 	// Create an empty array
-	$menu = array();
+	// $menu = array();
 	if ($args->theme_location == 'mainmenu') {
 		ob_start();
 		include(locate_template('templates/dropdown-menu.php'));
 		$custom_content = ob_get_clean();
 		$menu = $custom_content . $items;
+		return $menu;
 	}
-	return $menu;
+	return $items;
 }
 add_filter('wp_nav_menu_items', 'custom_menu_item', 10, 2);
