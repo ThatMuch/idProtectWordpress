@@ -60,7 +60,7 @@
 		<div class="container align-items-center">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
-							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect">ID Protect
+							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect">
 			</a>
 
 			<div class="collapse navbar-collapse" id="navbar">

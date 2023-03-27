@@ -31,7 +31,8 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .text__blue{color:#1956a8}
 .text__dark{color:#171c60}
 .header__area{background:#fff;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1)}
-.header__area .navbar-brand{text-transform:uppercase;color:var(--blue);font-family:"Raleway",sans-serif;font-weight:500;font-size:16px;line-height:24px}
+.header__area .navbar-brand{text-transform:uppercase;color:var(--blue);font-family:"Raleway",sans-serif;font-weight:500;font-size:16px;line-height:24px;width:12rem;height:3rem}
+.header__area .navbar-brand img{height:100%;width:100%;-o-object-fit:contain;object-fit:contain}
 .header__area .nav-link{letter-spacing:.5px;text-transform:uppercase;font-weight:700;font-size:13px;line-height:16px;font-family:"Raleway",sans-serif;color:var(--blue);margin:0 30px;isolation:isolate}
 .header__area .nav-link:hover{color:var(--orange);-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:7px;background:#fff}
 .header__area .dropdown-item{letter-spacing:.5px;text-transform:uppercase;font-weight:700;font-size:13px;line-height:16px;font-family:"Raleway",sans-serif;color:var(--blue)}
