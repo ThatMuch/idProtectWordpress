@@ -23,8 +23,9 @@ $class_name = $args['class_name'];
 		<div class="row justify-content-center">
 			<!-- Display the group field tarif_card1 -->
 			<?php if (have_rows('tarif_card')) : ?>
+				<?php $i = 0; ?>
 				<?php while (have_rows('tarif_card')) : the_row(); ?>
-					<div class="col-lg">
+					<div class="col-lg-<?php echo $i <= 2 ? '5' : '4'; ?>">
 						<div class="price__table <?php echo get_sub_field('offer'); ?>">
 							<div class="price__head">
 								<div class="price__head__left">
@@ -68,7 +69,8 @@ $class_name = $args['class_name'];
 							</div>
 						</div>
 					</div>
-				<?php endwhile; ?>
+				<?php $i++;
+				endwhile; ?>
 			<?php endif; ?>
 		</div>
 	</div>
