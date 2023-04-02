@@ -1267,6 +1267,10 @@ hr.custom {
     background: #171C60;
 }
 
+.blog__box.orange {
+    background: #FF8833;
+}
+
 .blog__box h2 {
     font-weight: 800;
     font-size: 38px;
@@ -1346,8 +1350,7 @@ hr.custom {
 
 .blog__item__image .blog__link img {
     width: 15px;
-    -o-object-fit: none;
-    object-fit: none;
+    object-fit: contain;
 }
 
 .blog__item__text {

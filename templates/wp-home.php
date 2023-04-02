@@ -37,6 +37,13 @@ $argsPro = array(
 
 );
 $the_queryPro = new WP_Query($argsPro);
+
+$argsTem = array(
+	'category_name' => 'temoignage',
+	'posts_per_page' => 4,
+
+);
+$the_queryTem = new WP_Query($argsTem);
 ?>
 
 
@@ -51,7 +58,7 @@ $the_queryPro = new WP_Query($argsPro);
 						<div class="col-md-12">
 							<div class="blog__featured">
 								<?php the_post_thumbnail('large', array('class' => 'blog__image')); ?>
-								<a href="<?php the_permalink() ?>" class="blog__link"><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Lire l'article"></a>
+								<a href="<?php the_permalink() ?>" class="blog__link"><img src="<?php echo get_template_directory_uri() ?>/assets/images/eye-blue.svg" alt="Lire l'article"></a>
 								<div class="blog__featured__text">
 									<h4>À la une</h4>
 									<h2><?php the_title(); ?></h2>
@@ -125,6 +132,33 @@ $the_queryPro = new WP_Query($argsPro);
 					the_content();
 				}
 			} ?>
+
+			<!-- Temoignages -->
+			<div class="row g-3 mt-4">
+				<div class="col-lg-4">
+					<div class="blog__left">
+						<div class="blog__box orange">
+							<h2>Temoignages</h2>
+							<?php
+							$category_description = category_description(get_category_by_slug('temoignage'));
+							?>
+							<p><?php echo $category_description; ?></p>
+						</div>
+						<a href="<?php echo site_url();  ?>/category/temoignage" class="btn btn__orange text-uppercase">Tous les articles</a>
+					</div> <!-- end blog left -->
+				</div>
+				<div class="col-lg-8">
+					<div class="blog__list owl-carousel">
+						<?php if ($the_queryTem->have_posts()) : ?>
+							<?php while ($the_queryTem->have_posts()) : $the_queryTem->the_post(); ?>
+								<?php get_template_part('templates/wp', 'post'); ?>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+					</div> <!-- end blog list -->
+				</div> <!-- end col -->
+			</div> <!-- end row -->
+			<!-- End of Temoignages -->
 		</div> <!-- end container -->
 
 	</main>

@@ -26,8 +26,9 @@ $queryAll = new WP_Query($argsAll);
 				<div class="col-lg-4">
 					<div class="blog__left">
 						<div class="blog__box
-						<?php echo $term->slug === "professionnel" ?
-							'dark' : ''; ?>">
+						<?php echo
+						$term->slug === "professionnel" ?
+							'dark' : ($term->slug === "temoignage" ? 'orange' : ''); ?>">
 							<h2><?php single_cat_title(); ?></h2>
 							<?php
 
