@@ -89,7 +89,7 @@
 
 .card__text__box {
     background: #1956A8;
-    padding: 36px 40px;
+    padding: 30px 36px;
     color: #fff;
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
@@ -126,16 +126,16 @@
 
 .card__text__box h2 {
     font-weight: 800;
-    font-size: 35px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 42px;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 .card__text__box h3 {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 24px;
     text-transform: uppercase;
 }
 
@@ -154,7 +154,6 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 40px;
-    margin-bottom: 40px;
 }
 
 .card__text__box p {

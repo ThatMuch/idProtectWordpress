@@ -31,8 +31,8 @@ $class_name = $args['class_name'];
 							<?php if (!empty($image)) : ?>
 								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 							<?php endif; ?>
-							<h2 class="mt-5"><?php echo get_sub_field('title'); ?></h2>
-							<h4><?php echo get_sub_field('text'); ?></h4>
+							<h2 class="mt-3"><?php echo get_sub_field('title'); ?></h2>
+							<?php echo get_sub_field('text'); ?>
 							<!-- get link -->
 							<?php $link = get_sub_field('link'); ?>
 							<?php if ($link) : ?>
