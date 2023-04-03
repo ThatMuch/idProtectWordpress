@@ -100,7 +100,7 @@
     align-items: flex-start;
 }
 
-.card__icon {
+.card__icon__top {
 	height: 64px;
 	width: 64px;
 }

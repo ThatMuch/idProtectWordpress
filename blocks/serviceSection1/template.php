@@ -29,7 +29,7 @@ $class_name = $args['class_name'];
 						<div class="card__text__box">
 							<?php $image = get_sub_field('image');  ?>
 							<?php if (!empty($image)) : ?>
-								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="card__icon" />
+								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="card__icon__top" />
 							<?php endif; ?>
 							<h2 class="mt-3"><?php echo get_sub_field('title'); ?></h2>
 							<?php echo get_sub_field('text'); ?>
