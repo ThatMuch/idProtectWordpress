@@ -29,14 +29,14 @@ $class_name = $args['class_name'];
 						<div class="card__text__box">
 							<?php $image = get_sub_field('image');  ?>
 							<?php if (!empty($image)) : ?>
-								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="card__icon" />
 							<?php endif; ?>
 							<h2 class="mt-3"><?php echo get_sub_field('title'); ?></h2>
 							<?php echo get_sub_field('text'); ?>
 							<!-- get link -->
 							<?php $link = get_sub_field('link'); ?>
 							<?php if ($link) : ?>
-								<a class="btn btn__white" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?>
+								<a class="btn btn__white mt-auto" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?>
 									<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
 								</a>
 							<?php endif; ?>
