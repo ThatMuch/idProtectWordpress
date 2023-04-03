@@ -56,7 +56,7 @@ $class_name = $args['class_name'];
 						<?php endif; ?>
 						<div class="card__text__body">
 							<?php echo get_sub_field('title'); ?>
-							<p><?php echo get_sub_field('text'); ?></p>
+							<?php echo get_sub_field('text'); ?>
 						</div>
 					</div>
 				<?php endwhile; ?>
