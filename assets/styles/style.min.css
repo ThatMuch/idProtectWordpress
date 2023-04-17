@@ -59,7 +59,17 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .header__link:hover span{background:#fff;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:100px 0 0 100px}
 .header__link:hover .eye-hover{opacity:1}
 .header__link:hover .eye{opacity:0}
-.footer__area{background:linear-gradient(278.49deg,#1956a8 0,#171c60 88.22%);-webkit-box-shadow:0 4px 4px rgba(0,0,0,0.25);box-shadow:0 4px 4px rgba(0,0,0,0.25);border-radius:16px 16px 0 0;padding:10px 0}
+.footer__area{background:linear-gradient(278.49deg,#1956a8 0,#171c60 88.22%);-webkit-box-shadow:0 4px 4px rgba(0,0,0,0.25);box-shadow:0 4px 4px rgba(0,0,0,0.25);border-radius:16px 16px 0 0;padding:30px;color:#a3bbdc}
+.footer__area__sponso{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:0;gap:10px}
+.footer__area__sponso img{mix-blend-mode:luminosity}
+.footer__area__rs{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;padding:10px;gap:10px}
+.footer__area__rs .fab{font-size:30px}
+.footer__area .wp-block-heading{color:#fff;text-transform:uppercase}
+.footer__area ul,.footer__area li{list-style:none;padding:0}
+.footer__area li{margin-bottom:10px}
+.footer__area a{color:#a3bbdc;padding:0}
+.footer__area a:hover{color:#fff}
+.footer__area__logo{max-width:100%;-webkit-filter:invert(1) brightness(100);filter:invert(1) brightness(100)}
 .footer__area .copyright{color:#e8effb;letter-spacing:.5px;font-weight:500;font-size:13px;line-height:16px;font-family:"Raleway",sans-serif;text-align:right}
 .footer__menu ul{margin:0;padding:0;list-style:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .footer__menu ul li a{color:#e8effb;text-transform:uppercase;font-weight:500;font-size:14px;line-height:26px;text-decoration:none;margin:0 10px}

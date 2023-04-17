@@ -540,7 +540,64 @@ hr.custom {
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px 16px 0px 0px;
-    padding: 10px 0px;
+    padding: 30px;
+    color: #A3BBDC;
+
+    &__sponso {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0px;
+        gap: 10px;
+
+        img {
+            mix-blend-mode: luminosity;
+        }
+    }
+
+    &__rs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 10px;
+
+        .fab {
+            font-size: 30px;
+        }
+    }
+
+    .wp-block-heading {
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    ul, li {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: #A3BBDC;
+        padding: 0;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__logo {
+        max-width: 100%;
+
+        // Transform the image to white
+        filter: invert(1) brightness(100);
+    }
 }
 
 @media only screen and (max-width: 991px) {

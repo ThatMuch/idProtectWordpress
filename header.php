@@ -53,8 +53,10 @@
 	<!-- End Google Tag Manager (noscript) -->
 	<?php idProtect_gtm('body') ?>
 
-	<?php $custom_logo_id = get_theme_mod('custom_logo');
-	$image = wp_get_attachment_image_src($custom_logo_id, 'full'); ?>
+	<?php
+	$custom_logo_id = get_theme_mod('custom_logo');
+	$image = wp_get_attachment_image_src($custom_logo_id, 'full');
+	?>
 
 	<nav class="header__area navbar sticky-top navbar-expand-lg">
 		<div class="container align-items-center">
