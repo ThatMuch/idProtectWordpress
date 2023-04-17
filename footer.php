@@ -97,6 +97,10 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 		<?php endif; ?>
 
 	</div>
+	<div class="footer__area__bottom">
+		<?php $year = date('Y'); ?>
+		<p class="text-center"> © <?php echo $year ?> ID PROTECT tout droits réservés</p>
+	</div>
 </div>
 <?php
 $block = find_block_by_name('acf/temoignage', $post->ID);
