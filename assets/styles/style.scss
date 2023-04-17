@@ -593,7 +593,8 @@ hr.custom {
     }
 
     &__logo {
-        max-width: 100%;
+        margin: 0 auto;
+        display: block;
         width: 160px;
 
         // Transform the image to white
