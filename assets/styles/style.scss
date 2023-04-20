@@ -840,16 +840,9 @@ hr.custom {
 
 .community__info p {
     font-weight: 700;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 28px;
     text-transform: uppercase;
-}
-
-@media only screen and (max-width: 767px) {
-    .community__info p {
-        font-size: 18px;
-        line-height: 25px;
-    }
 }
 
 .community__info ul {
@@ -1036,8 +1029,8 @@ hr.custom {
 
 @media only screen and (max-width: 767px) {
     .page__header h3 {
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 18px;
+        line-height: 28px;
         padding: 10px 15px;
     }
 }
@@ -1371,7 +1364,7 @@ hr.custom {
 @media only screen and (max-width: 1200px) {
     .blog__box p {
         font-size: 16px;
-        line-height: 25px;
+        line-height: 28px;
     }
 }
 
@@ -1801,8 +1794,8 @@ hr.custom {
 .price__head h4 {
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
     margin: 0 0 20px;
 }
 

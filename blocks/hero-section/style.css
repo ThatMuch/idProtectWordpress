@@ -76,7 +76,7 @@ margin-bottom: 30px;
     }
 }
 
-.hero__box h4 {
+.hero__box h2 {
     color: var(--blue);
     font-weight: 700;
     font-size: 24px;

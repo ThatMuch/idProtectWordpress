@@ -87,7 +87,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .community__info a{background-color:#fff;height:64px;width:64px;border-radius:64px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .community__info a i{font-size:24px}
 .community__info h2{font-weight:800;font-size:40px;line-height:48px;text-transform:uppercase;color:#f6f7f9;margin:0 0 20px}
-.community__info p{font-weight:700;font-size:20px;line-height:40px;text-transform:uppercase}
+.community__info p{font-weight:700;font-size:18px;line-height:28px;text-transform:uppercase}
 .community__info ul{margin:30px 0 0;padding:0;list-style:none;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .community__info ul li a{-webkit-transition:.2s;transition:.2s}
 .community__info ul li a:hover{opacity:.6}
@@ -196,7 +196,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .price__table.premium{background:#e8effb}
 .price__table.premium .price__body{background:#e8effb}
 .price__head{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:36px 40px 0}
-.price__head h4{text-transform:uppercase;font-weight:800;font-size:20px;line-height:24px;margin:0 0 20px}
+.price__head h4{text-transform:uppercase;font-weight:800;font-size:18px;line-height:28px;margin:0 0 20px}
 .price__head h2{font-weight:800;font-size:60px;line-height:72px;margin:0}
 .price__body{padding:36px 40px;border-radius:0 0 16px 16px;position:relative;z-index:2;background:#fff}
 .price__body h2{font-weight:700;font-size:16px;line-height:24px;color:#152235;text-transform:uppercase;max-width:346px;margin:0 0 20px}
@@ -220,7 +220,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .footer__menu ul li a{font-size:10px;margin:0 10px}
 .promotion__area.service{margin-bottom:350px}
 .blog__box h2{font-size:25px;line-height:35px;margin:0 0 10px}
-.blog__box p{font-size:16px;line-height:25px}
+.blog__box p{font-size:16px;line-height:28px}
 .blog__item__image{height:205px}
 .price__head h2{font-size:50px;line-height:62px}
 }@media only screen and (max-width:991px){.mb-100{margin-bottom:50px !important}
@@ -249,12 +249,11 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .promotion__area.service .promotion__bottom{max-width:none;bottom:-315px;left:10px;padding:30px 20px 10px;right:10px}
 .community__info{padding:20px}
 .community__info h2{font-size:30px;line-height:40px}
-.community__info p{font-size:18px;line-height:25px}
 .community__form{padding:20px}
 .community__form h2{font-size:20px}
 .page__text h2{font-size:26px;line-height:30px}
 .page__header{top:-75px;min-height:110px}
-.page__header h3{font-size:20px;line-height:25px;padding:10px 15px}
+.page__header h3{font-size:18px;line-height:28px;padding:10px 15px}
 .page__header h2{font-size:30px;line-height:40px;padding:10px 15px}
 .page__header__area{margin-top:100px;min-height:200}
 .page__hero{display:block}

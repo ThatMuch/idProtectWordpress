@@ -11,7 +11,7 @@ $description = get_field('description');
 				<div class="hero__text">
 					<?php echo $title; ?>
 					<div class="hero__box">
-						<h4><?php echo $subtitle; ?></h4>
+						<h2><?php echo $subtitle; ?></h2>
 						<p>ID Protect prévient l’usurpation d’identité grâce à des outils innovants. </p>
 						<ul>
 							<li>Particuliers, protégez vos documents et facilitez vos démarches en ligne . </li>
