@@ -3,61 +3,27 @@
 margin-bottom: 30px;
     position: relative;
     z-index: 5;
+
 }
-
-
-
-.hero__image {
-    position: absolute;
-    right: 0;
-    width: 40%;
-    top: 30px;
-    bottom: 17%;
-}
-
-@media only screen and (min-width: 2100px) {
-    .hero__image {
-        width: 44%;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .hero__image {
-        position: relative;
-        border: 0;
-        top: 0;
-        width: 100%;
-        padding: 0 30px 30px;
-    }
-}
-
-@media only screen and (min-width: 2600px) {
-    .hero__image {
-        width: 46%;
-    }
-}
-
-.hero__image img {
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    -o-object-position: center;
-    object-position: center;
+.hero__area:after {
+	display: block;
+	content: "";
+	position: absolute;
+	width: 1540.64px;
+	height: 2327.64px;
+	left: 50%;
+	top: -50px;
+	opacity: 0.65;
+	background-image: url(./backgroundHero.png);
+	background-repeat: no-repeat;
+	z-index: -1;
 }
 
 .hero__text {
     position: relative;
     z-index: 2;
-    padding-left: 205px;
-    padding-top: 90px;
 }
 
-@media only screen and (max-width: 1200px) {
-    .hero__text {
-        padding-left: 100px;
-    }
-}
 
 @media only screen and (max-width: 991px) {
     .hero__text {
@@ -68,84 +34,33 @@ margin-bottom: 30px;
 
 .hero__text h1 {
     font-weight: 800;
-    font-size: 60px;
-    line-height: 72px;
+    font-size: 40px;
+    line-height: 55px;
     text-align: right;
     text-transform: uppercase;
-    margin: 0 95px 5px 0;
 }
-
-@media only screen and (max-width: 1200px) {
-    .hero__text h1 {
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
-        margin-right: 0;
-    }
+.hero__area .title {
+	color: #FF8833;
+}
+.hero__area .top {
+	padding-right: 30%;
+	margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 767px) {
     .hero__text h1 {
-        font-size: 30px;
-        line-height: 35px;
-    }
-}
-
-.hero__text h2 {
-    color: var(--orange);
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
-    margin: 0 0 15px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .hero__text h2 {
-        font-size: 30px;
-        line-height: 40px;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .hero__text h2 {
-        text-align: center;
-        margin: 0 0 20px;
-    }
-}
-
-.hero__text h3 {
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 72px;
-    margin-left: 25px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .hero__text h3 {
-        font-size: 40px;
-        line-height: 50px;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .hero__text h3 {
         font-size: 30px;
         line-height: 35px;
     }
 }
 
 .hero__box {
-    background: #FFFFFF;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 16px;
-    padding: 36px 40px;
-    margin-left: 25px;
+	margin: 30px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
     font-family: "Raleway", sans-serif;
+	padding: 36px 40px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -218,7 +133,9 @@ margin-bottom: 30px;
     font-weight: 700;
     font-size: 13px;
     line-height: 16px;
-    color: #1956A8;
+    color: #ffff;
+	border-radius: 50px;
+    background-color: #1956A8;
     font-family: "Raleway", sans-serif;
     margin-right: 30px;
     min-width: 185px;
@@ -230,6 +147,7 @@ margin-bottom: 30px;
     justify-content: space-between;
     -webkit-transition: 0.2s;
     transition: 0.2s;
+	height: 40px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -251,11 +169,12 @@ margin-bottom: 30px;
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 100px 0px 0px 100px;
-    background: #fff;
+
 }
 
 .hero__box__button a:nth-child(2) {
-    color: #171C60;
+    color: #fff;
+    background-color: #171C60;
     margin-right: 0;
 }
 
