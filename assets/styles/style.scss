@@ -29,7 +29,8 @@
 // @import "./atoms/_badges";
 // @import "./atoms/_buttons";
 // @import "./atoms/_dividers";
-// @import "./atoms/_headings";
+@import "./atoms/_headings";
+
 // @import "./atoms/_images";
 // @import "./atoms/_inputs";
 // @import "./atoms/_labels";
@@ -73,10 +74,8 @@ body {
     font-family: "Raleway", sans-serif;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.99%, #E8EFFB), color-stop(49.58%, #FFFFFF));
     background: linear-gradient(180deg, #E8EFFB -2.99%, #FFFFFF 49.58%);
-}
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Rubik", sans-serif;
+    @include responsive-font-size(16, 24);
 }
 
 img {
@@ -162,8 +161,9 @@ hr.custom {
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+
+    @include responsive-font-size(13, 16, null);
+
     font-family: "Raleway", sans-serif;
     color: var(--blue);
     padding: 10px 15px;
@@ -197,9 +197,9 @@ hr.custom {
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+
+    @include responsive-font-size(13, 16, 700);
+
     font-family: "Raleway", sans-serif;
 }
 
@@ -279,9 +279,9 @@ hr.custom {
 .header__area .nav-link {
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+
+    @include responsive-font-size(13, 16, 700);
+
     font-family: "Raleway", sans-serif;
     color: var(--blue);
     margin: 0 30px;
@@ -299,9 +299,9 @@ hr.custom {
 .header__area .dropdown-item {
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+
+    @include responsive-font-size(13, 16, 700);
+
     font-family: "Raleway", sans-serif;
     color: var(--blue);
 }
@@ -389,9 +389,9 @@ hr.custom {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+
+    @include responsive-font-size(16, 24, 700);
+
     text-transform: uppercase;
     margin: 0 0 10px;
 }
@@ -406,9 +406,9 @@ hr.custom {
     color: var(--blue);
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+
+    @include responsive-font-size(13, 16, 700);
+
     font-family: "Raleway";
     text-decoration: none;
     display: inline-block;
@@ -461,9 +461,9 @@ hr.custom {
     color: var(--orange);
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+
+    @include responsive-font-size(13, 16, 700);
+
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     display: -webkit-box;
@@ -565,7 +565,7 @@ hr.custom {
         gap: 10px;
 
         .fab {
-            font-size: 30px;
+            @include responsive-font-size(30, 1);
         }
     }
 
@@ -622,9 +622,9 @@ hr.custom {
 .footer__area .copyright {
     color: #E8EFFB;
     letter-spacing: 0.5px;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
+
+    @include responsive-font-size(13, 16, 500);
+
     font-family: "Raleway", sans-serif;
     text-align: right;
 }
@@ -667,9 +667,9 @@ hr.custom {
 .footer__menu ul li a {
     color: #E8EFFB;
     text-transform: uppercase;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 26px;
+
+    @include responsive-font-size(14, 26, 500);
+
     text-decoration: none;
     margin: 0 10px;
 }
@@ -766,8 +766,8 @@ hr.custom {
 
 @media only screen and (max-width: 767px) {
     .promotion__area.service .promotion__head h2 {
-        font-size: 25px;
-        line-height: 30px;
+        @include responsive-font-size(25, 30);
+
         letter-spacing: 0;
     }
 }
@@ -805,7 +805,7 @@ hr.custom {
         justify-content: center;
 
         i {
-            font-size: 24px;
+            @include responsive-font-size(24);
         }
     }
 }
@@ -823,9 +823,8 @@ hr.custom {
 }
 
 .community__info h2 {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
+    @include responsive-font-size(40, 48, 800);
+
     text-transform: uppercase;
     color: #F6F7F9;
     margin: 0 0 20px;
@@ -833,15 +832,13 @@ hr.custom {
 
 @media only screen and (max-width: 767px) {
     .community__info h2 {
-        font-size: 30px;
-        line-height: 40px;
+        @include responsive-font-size(30, 40);
     }
 }
 
 .community__info p {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
+    @include responsive-font-size(18, 28, 700);
+
     text-transform: uppercase;
 }
 
@@ -886,15 +883,15 @@ hr.custom {
 .community__form h2 {
     color: #FF8833;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+
+    @include responsive-font-size(24, 30, 700);
+
     margin: 0 0 10px;
 }
 
 @media only screen and (max-width: 767px) {
     .community__form h2 {
-        font-size: 20px;
+        @include responsive-font-size(20);
     }
 }
 
@@ -913,9 +910,9 @@ hr.custom {
     border-color: #384050;
     background: transparent;
     color: #384050;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
+
+    @include responsive-font-size(16, 19, 500);
+
     font-family: "Raleway", sans-serif;
     width: 100%;
     padding: 3px 0;
@@ -929,9 +926,9 @@ hr.custom {
 
 .community__form p.note {
     color: #384050;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+
+    @include responsive-font-size(12, 14, 400);
+
     font-family: "Raleway", sans-serif;
     margin: 10px 0 0;
 }
@@ -959,25 +956,24 @@ hr.custom {
 .page__text h2 {
     color: #152235;
     text-transform: uppercase;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
+
+    @include responsive-font-size(40, 48, 800);
+
     margin-bottom: 40px;
     font-family: "Rubik", sans-serif;
 }
 
 @media only screen and (max-width: 767px) {
     .page__text h2 {
-        font-size: 26px;
-        line-height: 30px;
+        @include responsive-font-size(26, 30);
     }
 }
 
 .page__text p {
     color: #152235;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+
+    @include responsive-font-size(16, 26, 500);
+
     margin-bottom: 25px;
 }
 
@@ -1017,9 +1013,9 @@ hr.custom {
     background: #FFFFFF;
     color: #152235;
     text-transform: uppercase;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
+
+    @include responsive-font-size(40, 48, 800);
+
     padding: 10px 30px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -1029,16 +1025,15 @@ hr.custom {
 
 @media only screen and (max-width: 767px) {
     .page__header h3 {
-        font-size: 18px;
-        line-height: 28px;
+        @include responsive-font-size(18, 28);
+
         padding: 10px 15px;
     }
 }
 
 .page__header h2 {
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 72px;
+    @include responsive-font-size(60, 72, 800);
+
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 100px 16px 16px 100px;
@@ -1053,8 +1048,8 @@ hr.custom {
 
 @media only screen and (max-width: 767px) {
     .page__header h2 {
-        font-size: 30px;
-        line-height: 40px;
+        @include responsive-font-size(30, 40, 800);
+
         padding: 10px 15px;
     }
 }
@@ -1141,9 +1136,8 @@ hr.custom {
 }
 
 .page__hero__text__title {
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 72px;
+    @include responsive-font-size(60, 72, 800);
+
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 100px 16px 16px 100px;
@@ -1155,34 +1149,30 @@ hr.custom {
 
 @media only screen and (max-width: 991px) {
     .page__hero__text__title {
-        font-size: 30px;
-        line-height: 40px;
+        @include responsive-font-size(30, 40);
     }
 }
 
 .page__hero__text__subtitle {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 55px;
+    @include responsive-font-size(40, 55, 800);
 
     .small {
-        font-size: 24px;
+        @include responsive-font-size(24);
+
         color: #1956A8;
     }
 }
 
 @media only screen and (max-width: 991px) {
     .page__hero__text__subtitle {
-        font-size: 20px;
-        line-height: 40px;
+        @include responsive-font-size(20, 40);
     }
 }
 
 .page__hero__text h6 {
     color: #1956A8;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+
+    @include responsive-font-size(24, 30, 700);
 }
 
 .block__service.right {
@@ -1241,31 +1231,27 @@ hr.custom {
 }
 
 .blog__featured__text h4 {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+    @include responsive-font-size(16, 26, 600);
+
     font-family: "Raleway", sans-serif;
 }
 
 .blog__featured__text h2, .blog__featured__text h1 {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
+    @include responsive-font-size(40, 48, 800);
+
     text-transform: uppercase;
     margin-bottom: 25px;
 }
 
 @media only screen and (max-width: 767px) {
     .blog__featured__text h2, .blog__featured__text h1 {
-        font-size: 25px;
-        line-height: 30px;
+        @include responsive-font-size(25, 30);
     }
 }
 
 .blog__featured__text p {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+    @include responsive-font-size(16, 26, 500);
+
     font-family: "Raleway", sans-serif;
     max-width: 500px;
 }
@@ -1336,9 +1322,8 @@ hr.custom {
 }
 
 .blog__box h2 {
-    font-weight: 800;
-    font-size: 38px;
-    line-height: 48px;
+    @include responsive-font-size(38, 48, 600);
+
     color: #F6F7F9;
     text-transform: uppercase;
     margin: 0 0 25px;
@@ -1346,16 +1331,15 @@ hr.custom {
 
 @media only screen and (max-width: 1200px) {
     .blog__box h2 {
-        font-size: 25px;
-        line-height: 35px;
+        @include responsive-font-size(25, 35, 600);
+
         margin: 0 0 10px;
     }
 }
 
 .blog__box p {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 36px;
+    @include responsive-font-size(22, 36, 700);
+
     text-transform: uppercase;
     color: #F6F7F9;
     margin: 0;
@@ -1363,8 +1347,7 @@ hr.custom {
 
 @media only screen and (max-width: 1200px) {
     .blog__box p {
-        font-size: 16px;
-        line-height: 28px;
+        @include responsive-font-size(16, 28);
     }
 }
 
@@ -1422,9 +1405,8 @@ hr.custom {
 }
 
 .blog__item__text h5 {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 26px;
+    @include responsive-font-size(14, 26, 700);
+
     margin: 0 0 5px;
 }
 
@@ -1432,9 +1414,8 @@ hr.custom {
     text-transform: uppercase;
     color: #152235;
     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+
+    @include responsive-font-size(16, 24, 700);
 }
 
 .blog__item__text h2 a {
@@ -1447,9 +1428,9 @@ hr.custom {
 
 .article__text {
     color: #152235;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+
+    @include responsive-font-size(16, 26, 500);
+
     font-family: "Raleway";
 }
 
@@ -1459,9 +1440,8 @@ hr.custom {
 }
 
 .article__text h3 {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    @include responsive-font-size(24, 30, 700);
+
     text-transform: uppercase;
     margin: 0 0 20px;
     font-family: "Rubik";
@@ -1470,9 +1450,8 @@ hr.custom {
 .article__text h4 {
     font-family: "Rubik";
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+
+    @include responsive-font-size(16, 24, 700);
 }
 
 .article__text p {
@@ -1510,17 +1489,15 @@ hr.custom {
 }
 
 .article__body h6 {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 26px;
+    @include responsive-font-size(14, 26, 700);
+
     font-family: "Raleway";
     margin: 0;
 }
 
 .article__body h2 {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+    @include responsive-font-size(16, 24, 700);
+
     color: #152235;
     text-transform: uppercase;
 
@@ -1565,17 +1542,14 @@ hr.custom {
 }
 
 .article__box h2 {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    @include responsive-font-size(24, 30, 700);
+
     text-transform: uppercase;
     margin: 30px 0;
 }
 
 .article__box p {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 40px;
+    @include responsive-font-size(16, 40, 700);
 }
 
 .article__box .btn {
@@ -1606,9 +1580,9 @@ hr.custom {
     padding: 36px 40px;
     margin-bottom: 15px;
     display: block;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+
+    @include responsive-font-size(24, 30, 700);
+
     text-transform: uppercase;
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -1622,16 +1596,15 @@ hr.custom {
 
 @media only screen and (max-width: 767px) {
     .step__list ul.nav-tabs li a {
-        font-size: 16px;
-        line-height: 24px;
+        @include responsive-font-size(16, 24);
+
         padding: 20px;
     }
 }
 
 .step__list ul.nav-tabs li a .text {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    @include responsive-font-size(24, 30, 700);
+
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -1653,8 +1626,8 @@ hr.custom {
     .step__list ul.nav-tabs li a .text {
         width: 40px;
         height: 40px;
-        font-size: 16px;
-        line-height: 30px;
+
+        @include responsive-font-size(16, 30);
     }
 }
 
@@ -1686,9 +1659,8 @@ hr.custom {
 }
 
 .step__list ul.nav-tabs li a .text__body {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 35px;
+    @include responsive-font-size(24, 35, 500);
+
     font-family: "Raleway";
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -1744,8 +1716,9 @@ hr.custom {
     .step__list.service ul.nav-tabs li a .text {
         width: 60px;
         height: 60px;
-        font-size: 25px;
-        line-height: 30px;
+
+        @include responsive-font-size(25, 30);
+
         margin-bottom: 20px;
     }
 }
@@ -1793,30 +1766,27 @@ hr.custom {
 
 .price__head h4 {
     text-transform: uppercase;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 28px;
+
+    @include responsive-font-size(18, 28, 800);
+
     margin: 0 0 20px;
 }
 
 .price__head h2 {
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 72px;
+    @include responsive-font-size(60, 72, 800);
+
     margin: 0;
 }
 
 @media only screen and (max-width: 1200px) {
     .price__head h2 {
-        font-size: 50px;
-        line-height: 62px;
+        @include responsive-font-size(50, 62);
     }
 }
 
 @media only screen and (max-width: 767px) {
     .price__head h2 {
-        font-size: 40px;
-        line-height: 45px;
+        @include responsive-font-size(40, 45);
     }
 }
 
@@ -1829,9 +1799,8 @@ hr.custom {
 }
 
 .price__body h2 {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+    @include responsive-font-size(16, 24, 700);
+
     color: #152235;
     text-transform: uppercase;
     max-width: 346px;
@@ -1839,9 +1808,8 @@ hr.custom {
 }
 
 .price__body p {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+    @include responsive-font-size(16, 26, 500);
+
     font-family: "Raleway";
     color: #000000;
 }
@@ -1850,9 +1818,9 @@ hr.custom {
     margin: 30px 0 0;
     padding: 0;
     list-style: none;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+
+    @include responsive-font-size(16, 26, 500);
+
     font-family: "Raleway";
     color: #152235;
 }
@@ -1894,9 +1862,9 @@ hr.custom {
     background: #FFFFFF;
     border-radius: 7px;
     font-family: "Raleway";
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 16px;
+
+    @include responsive-font-size(21, 16, 700);
+
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;

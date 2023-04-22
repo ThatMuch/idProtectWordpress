@@ -26,8 +26,7 @@
 .community__head h3 {
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 2.5rem;
     color: #fff;
     margin: 10px 0 0;
 	font-family: "Rubik",sans-serif;
@@ -35,15 +34,14 @@
 
 @media only screen and (max-width: 1200px) {
     .community__head h3 {
-        font-size: 30px;
-        line-height: 45px;
+        font-size: 1.875rem;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .community__head h3 {
-        font-size:18px;
-        line-height: 28px;
+        font-size:1.125;
+
     }
 }
 
@@ -51,8 +49,8 @@
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 40px;
+    font-size:1.125;
+
 	font-family: "Rubik", sans-serif;
 }
 
@@ -92,16 +90,16 @@
     color: #FF8833;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5;
+
 	font-family: "Rubik", sans-serif;
 }
 
 .community__body p {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+
     color: #152235;
 }
 
@@ -114,8 +112,8 @@
 	    color: #FF8833;
 		font-family: "Rubik",sans-serif;
     font-weight: 800;
-    font-size: 60px;
-    line-height: 72px;
+    font-size: 3.75;
+
     border-radius: 100px 16px 16px 100px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -133,8 +131,8 @@
 
 @media only screen and (max-width: 1200px) {
     .community__title {
-        font-size: 40px;
-        line-height: 60px;
+        font-size: 2.5;
+
     }
 }
 

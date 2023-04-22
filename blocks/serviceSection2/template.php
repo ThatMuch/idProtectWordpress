@@ -21,17 +21,11 @@ $class_name = $args['class_name'];
 				</div>
 			</div>
 		</div>
-		<div class="row g-3 mt-3 align-items-end">
+		<div class="row g-3 mt-3 align-items-start mb-5">
 			<?php if (have_rows('section2_card_1')) : ?>
 				<?php while (have_rows('section2_card_1')) : the_row(); ?>
 					<div class="col-lg-5">
-						<div class="card__text__image ms-auto">
-							<?php $image = get_sub_field('image');  ?>
-							<?php if (!empty($image)) : ?>
-								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-							<?php endif; ?>
-						</div>
-						<div class="card__text__box">
+						<div class="card__text__box mb-3">
 							<?php $image = get_sub_field('icon');  ?>
 							<?php if (!empty($image)) : ?>
 								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
@@ -45,6 +39,13 @@ $class_name = $args['class_name'];
 								</a>
 							<?php endif; ?>
 						</div>
+						<div class="card__text__image full-width">
+							<?php $image = get_sub_field('image');  ?>
+							<?php if (!empty($image)) : ?>
+								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="w-100" />
+							<?php endif; ?>
+						</div>
+
 					</div>
 				<?php endwhile; ?>
 			<?php endif; ?>

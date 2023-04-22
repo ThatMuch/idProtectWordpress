@@ -67,6 +67,8 @@ $('.burger').click(function () {
 $('.block__service').each(function (index) {
 	if (index % 2 == 1) {
 		$(this).addClass('right');
+		// Add the class right to the element with the class "card__title"
+		$(this).find('.card__title').addClass('right');
 	}
 })
 

@@ -38,15 +38,32 @@
 /* HEADINGS
 /––––––––––––––––––––––––*/
 // Create a step size
-/* This is the percentage each heading will be reduced by. */
-$step-size-heading: 0.33333;
+// Mixin pour gérer les tailles de texte responsives
+@mixin responsive-font-size($size, $line-height: null, $weight: null) {
+    font-size: $size / 16 * 1rem; // Convertit les pixels en rem
+    @if $line-height != null {
+        line-height: $line-height / $size;
+    }
 
-/* Amplifier value */
-$amplifier-heading: 1.5;
+    @if $weight != null {
+        font-weight: $weight;
+    }
 
-/* The mixin */
-@mixin heading-size($size) {
-    font-size: $size * $step-size-heading * $amplifier-heading + rem;
+    // Media Queries pour les écrans plus petits
+    @media (max-width: 768px) {
+        font-size: $size / 16 * 0.875 * 1rem; // Réduit la taille de police pour les écrans plus petits
+        @if $line-height != null {
+            line-height: $line-height / $size * 1.2; // Ajuste la hauteur de ligne pour les écrans plus petits
+        }
+    }
+
+    // Media Queries pour les écrans encore plus petits
+    @media (max-width: 480px) {
+        font-size: $size / 16 * 0.75 * 1rem; // Réduit la taille de police pour les écrans encore plus petits
+        @if $line-height != null {
+            line-height: $line-height / $size * 1.4; // Ajuste la hauteur de ligne pour les écrans encore plus petits
+        }
+    }
 }
 
 // Transitions

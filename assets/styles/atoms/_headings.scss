@@ -5,30 +5,31 @@
  * @since       idProtect_1.0.0.0
  *
  */
-h1 {
-    @include heading-size(6);
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Rubik", sans-serif;
 }
 
-h2 {
-    @include heading-size(5);
+h1, .h1 {
+    @include responsive-font-size(48, 60, bold);
 }
 
-h3 {
-    @include heading-size(4);
+h2, .h2 {
+    @include responsive-font-size(36, 48, bold);
 }
 
-h4 {
-    @include heading-size(3);
+h3, .h3 {
+    @include responsive-font-size(24, 36, bold);
 }
 
-h5 {
-    @include heading-size(2);
-
-    letter-spacing: 1px;
+h4, .h4 {
+    @include responsive-font-size(20, 30, null);
 }
 
-h6 {
-    @include heading-size(1);
+h5, .h5 {
+    @include responsive-font-size(18, 24, null);
+}
 
-    letter-spacing: 1px;
+h6, .h6 {
+    @include responsive-font-size(16, 24, null);
 }
