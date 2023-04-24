@@ -41,18 +41,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    /* display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-gap: 15px; */
 }
 
 @media only screen and (max-width: 1200px) {
@@ -65,6 +53,8 @@ gap: 15px; */
 }
 .sponsor ul li img {
 		max-width: 200px;
+		height: 45px;
+		object-fit: contain;
 	}
 @media only screen and (max-width: 767px) {
 
@@ -74,7 +64,6 @@ gap: 15px; */
 }
 .carousel-logo {
   position: relative;
-  /* overflow: hidden; */
 }
 
 .carousel-wrapper-logo {
