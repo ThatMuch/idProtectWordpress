@@ -13,7 +13,7 @@ $class_name = $args['class_name'];
 
 $size = 'medium'; // (thumbnail, medium, large, full or custom size)
 ?>
-<div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
+<div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> community">
 	<div class="container">
 		<div class="row align-items-end mb-5">
 			<div class="col-lg-5">
