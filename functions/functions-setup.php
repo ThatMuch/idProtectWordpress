@@ -137,6 +137,13 @@ function stanlee_widgets_init()
 		'after_title'   => '</h4>',
 	));
 	register_sidebar(array(
+		'name'          => esc_html__('Footer Partenaires', 'IdProtect'),
+		'id'            => 'footer-partenaires',
+		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'before_widget' => '<div id="%1$s" class=" widget footer__area__sponso %2$s">',
+		'after_widget'  => '</div>'
+	));
+	register_sidebar(array(
 		'name'          => esc_html__('Footer Particulier', 'IdProtect'),
 		'id'            => 'footer-par',
 		'description'   => esc_html__('Add widgets here.', 'IdProtect'),

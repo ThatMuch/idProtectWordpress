@@ -62,7 +62,7 @@ get_header(); ?>
 	endif; ?>
 	<!-- Articles -->
 	<div class="container">
-		<div class="row mt-5 g-3">
+		<div class="row g-3">
 			<div class="col-lg-4">
 				<div class="blog__left">
 					<div class="blog__box">

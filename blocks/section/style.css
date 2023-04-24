@@ -1,5 +1,5 @@
 .promotion {
-    min-height: 573px;
+    min-height: 312px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -14,6 +14,7 @@
     margin: 200px 0 300px;
     background-repeat: no-repeat;
     background-size: cover;
+	background-position: center;
 
 }
 

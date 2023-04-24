@@ -57,10 +57,7 @@ if (!empty($categories)) {
 		}
 		?>
 		<!-- Display the content -->
-		<?php if ($testimonial) : ?>
 
-
-		<?php endif; ?>
 	</div>
 </div>
 <?php get_footer(); ?>

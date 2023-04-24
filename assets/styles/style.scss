@@ -554,6 +554,10 @@ hr.custom {
         img {
             mix-blend-mode: luminosity;
         }
+
+        .wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img {
+            object-fit: contain;
+        }
     }
 
     &__rs {
@@ -1922,4 +1926,8 @@ hr.custom {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.sidebar-pro .article__box {
+    background-color: #171C60;
 }

@@ -73,10 +73,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 						<?php endif; ?>
 					<?php endwhile; ?>
 				</ul>
-				<div class="footer__area__sponso">
-					<img src="<?php echo get_template_directory_uri() ?>/assets/images/frenchtouch.png" alt="French Tech">
-					<img src="<?php echo get_template_directory_uri() ?>/assets/images/stationF.png" alt="French Tech">
-				</div>
+				<?php dynamic_sidebar('footer-partenaires'); ?>
 			<?php endif; ?>
 
 		</div>

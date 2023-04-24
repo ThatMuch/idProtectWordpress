@@ -22,7 +22,7 @@ $class_name = $args['class_name'];
 				</div>
 			</div>
 		<?php endif; ?>
-		<div class="row g-3 align-items-end mb-5">
+		<div class="row g-3 align-items-end">
 			<?php if (have_rows('card_1')) : ?>
 				<?php while (have_rows('card_1')) : the_row(); ?>
 					<div class="col-xl-4 col-lg-6 align-self-stretch">

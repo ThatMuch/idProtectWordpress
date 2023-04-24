@@ -1,3 +1,7 @@
 .block__price {
-	margin-bottom: 50px;
+	margin-bottom: 80px;
+}
+.price__head__right {
+	    height: 64px;
+    width: 64px;
 }

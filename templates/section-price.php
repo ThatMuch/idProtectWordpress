@@ -15,8 +15,7 @@
 <section class="section section-price <?php echo  $background == "Couleur" ? "bg-primary" : ($background == "Gris" ? "bg-light" : "bg-white") ?>">
 	<!-- Section background: image -->
 	<?php if (get_sub_field('background') == "Image") : ?>
-		<div class="section__background-image" style="
-            <?php if (get_sub_field('image')) : ?>
+		<div class="section__background-image" style="<?php if (get_sub_field('image')) : ?>
             background-image:url(<?php echo the_sub_field('image') ?>);
             <?php endif; ?>"></div>
 	<?php endif; ?>
@@ -55,6 +54,8 @@
 									<?php endif; ?>
 									<!-- Devise -->
 									<?php echo get_sub_field('prix'); ?>
+
+
 								</p>
 							<?php endif; ?>
 							<!-- Price -->

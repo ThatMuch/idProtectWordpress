@@ -223,6 +223,27 @@
                     },
                     "return_format": "array",
                     "parent_repeater": "field_641c92a30fe7c"
+                },
+                {
+                    "key": "field_64441f751f972",
+                    "label": "Texte supplémentaire",
+                    "name": "text_add",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "\/mois",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_641c92a30fe7c"
                 }
             ]
         }
@@ -245,5 +266,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679594570
+    "modified": 1682186194
 }

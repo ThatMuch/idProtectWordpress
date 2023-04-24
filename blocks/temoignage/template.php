@@ -38,7 +38,7 @@ $class_name = $args['class_name'];
 								<?php endif; ?>
 							<?php endwhile; ?>
 						<?php endif; ?>
-						<button type="button" data-bs-toggle="modal" data-bs-target="#videoModal"><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right-white.svg" alt="Flèche vers la droite"></button>
+						<button id="temoignageYoutube" type="button" data-bs-toggle="modal" data-bs-target="#videoModal"><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right-white.svg" alt="Flèche vers la droite"></button>
 
 					</div>
 				</div>

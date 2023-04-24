@@ -31,6 +31,9 @@ $class_name = $args['class_name'];
 								<div class="price__head__left">
 									<h4><?php echo get_sub_field('offer'); ?></h4>
 									<h2><span class="g-text"><?php echo get_sub_field('price'); ?>€</span></h2>
+									<?php if (get_sub_field('text_add')) : ?>
+										<span class="section-price__column__text-add"><?php echo get_sub_field('text_add'); ?></span>
+									<?php endif; ?>
 								</div>
 								<div class="price__head__right">
 									<?php $image = get_sub_field('image');  ?>

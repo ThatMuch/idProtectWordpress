@@ -13,7 +13,7 @@ $class_name = $args['class_name'];
 ?>
 <div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<div class="row align-items-end">
+		<div class="row align-items-start">
 			<div class="col-lg-5 order-lg-1">
 				<h3 class="title text__orange community__title"><?php echo $data['title']; ?></h3>
 				<div class="community__image">

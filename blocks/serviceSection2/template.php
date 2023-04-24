@@ -21,7 +21,7 @@ $class_name = $args['class_name'];
 				</div>
 			</div>
 		</div>
-		<div class="row g-3 mt-3 align-items-start mb-5">
+		<div class="row g-3 mt-3 align-items-start">
 			<?php if (have_rows('section2_card_1')) : ?>
 				<?php while (have_rows('section2_card_1')) : the_row(); ?>
 					<div class="col-lg-5">
