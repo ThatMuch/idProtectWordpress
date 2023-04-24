@@ -569,7 +569,12 @@ hr.custom {
         gap: 10px;
 
         .fab {
-            @include responsive-font-size(30, 1);
+            @include responsive-font-size(30);
+        }
+
+        .footer__rs__item {
+            margin: 0;
+            padding: 0;
         }
     }
 
