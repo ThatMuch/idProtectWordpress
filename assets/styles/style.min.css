@@ -71,7 +71,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .footer__area__sponso .wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img{-o-object-fit:contain;object-fit:contain}
 .footer__area__rs{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;padding:10px;gap:10px}
 .footer__area__rs .fab{font-size:1.875rem;line-height:.0333333333}
-.footer__area .wp-block-heading{color:#fff;text-transform:uppercase}
+.footer__area .wp-block-heading,.footer__area h4{color:#fff;text-transform:uppercase}
 .footer__area ul,.footer__area li{list-style:none;padding:0}
 .footer__area li{margin-bottom:10px}
 .footer__area a{color:#a3bbdc;padding:0}
