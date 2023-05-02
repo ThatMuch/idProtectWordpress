@@ -306,7 +306,7 @@ hr.custom { border-color: #1956A8; opacity: 1; margin: 50px auto; max-width: 85%
 
 @media only screen and (max-width: 1200px) { .footer__menu ul li a { font-size: 10px; margin: 0 10px; } }
 
-.section__area { padding: 50px 0; position: relative; z-index: 2; overflow: hidden; }
+.section__area { padding: 30px 0; position: relative; z-index: 2; overflow: hidden; }
 
 @media only screen and (max-width: 767px) { .section__area { padding: 30px 0; } }
 

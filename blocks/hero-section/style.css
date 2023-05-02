@@ -17,9 +17,13 @@ margin-bottom: 30px;
 	background-repeat: no-repeat;
 	z-index: -1;
 }
-.hero__area__row {
-	height: 70vh;
+@media only screen and (max-height: 768px) {
+	.hero__area__row {
+		height: 80vh;
+	}
 }
+
+
 .hero__text {
     position: relative;
     z-index: 2;
