@@ -6,8 +6,8 @@ $description = get_field('description');
 ?>
 <div class="hero__area">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-7">
+		<div class="row hero__area__row">
+			<div class="col-lg-7 h-100">
 				<div class="hero__text">
 					<?php echo $title; ?>
 					<div class="hero__box">
@@ -31,9 +31,9 @@ $description = get_field('description');
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-5 d-flex">
+			<div class="col-lg-5 d-flex h-100">
 				<?php if ($image) : ?>
-					<div class="hero__image mt-auto">
+					<div class="hero__image mt-auto mb-auto">
 						<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
 					</div>
 				<?php endif; ?>
