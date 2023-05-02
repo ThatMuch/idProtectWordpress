@@ -35,9 +35,7 @@
 }
 
 .card__box.right .card__icon {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+        margin-left: auto;
 }
 
 .card__box.right .card__text {
