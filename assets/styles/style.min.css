@@ -244,7 +244,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .header__area .mega__menu{min-width:auto;position:relative;margin:0;-webkit-transform:none;transform:none;background:transparent;padding:10px 26px;-webkit-box-shadow:0 0;box-shadow:0 0}
 .header__area .mega__menu::before{display:none}
 .header__area .mega__menu [class*=col-] .mega__menu__item{border-right:0;border-bottom:1px solid #d3d6da;padding:10px 0}
-.header__area .navbar-collapse{position:absolute;background:#fff;top:87px;left:0;right:0;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1)}
+.header__area .navbar-collapse{position:absolute;background:#fff;top:64px;left:0;right:0;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1)}
 .header__link{margin-left:auto;margin-right:15px}
 .footer__area{text-align:center}
 .footer__area .copyright{text-align:center}

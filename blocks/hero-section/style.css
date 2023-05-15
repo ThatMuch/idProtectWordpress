@@ -17,11 +17,11 @@ margin-bottom: 30px;
 	background-repeat: no-repeat;
 	z-index: -1;
 }
-@media only screen and (max-height: 768px) {
+/* @media only screen and (max-height: 665px) {
 	.hero__area__row {
 		height: 80vh;
 	}
-}
+} */
 
 
 .hero__text {
@@ -58,7 +58,7 @@ margin-bottom: 30px;
 }
 @media only screen and (max-width: 768px) {
     .hero__text h1 {
-        font-size: 1.65rem;
+        line-height: 1.65rem;
     }
 }
 @media only screen and (max-width: 450px) {
