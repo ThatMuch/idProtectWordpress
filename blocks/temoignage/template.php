@@ -16,7 +16,7 @@ $class_name = $args['class_name'];
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-7">
-				<div class="testimonial">
+				<div class="testimonial mb-0">
 					<div class="testimonial__right order-md-1">
 						<h4 class="title text__orange"><?php echo $data['title']; ?></h4>
 						<?php if (have_rows('video_preview')) : ?>

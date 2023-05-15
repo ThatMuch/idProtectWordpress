@@ -24,7 +24,7 @@ $class_name = $args['class_name'];
 				</div>
 			</div>
 			<div class="col-lg-7 order-lg-0">
-				<div class="community">
+				<div>
 					<?php if (have_rows('card_1')) : ?>
 						<div class="community__head">
 							<?php while (have_rows('card_1')) : the_row(); ?>

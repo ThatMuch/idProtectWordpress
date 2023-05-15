@@ -1,23 +1,17 @@
 .testimonial {
-	margin-bottom: 50px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: end;
 	-ms-flex-align: end;
 	align-items: flex-end;
+	margin-bottom: 50px;
 }
 
 .blog .testimonial {
 	margin-top: 50px;
 }
 
-
-@media only screen and (max-width: 991px) {
-	.testimonial {
-		margin-top: 50px;
-	}
-}
 
 @media only screen and (max-width: 767px) {
 	.testimonial {
