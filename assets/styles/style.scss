@@ -152,15 +152,15 @@ hr.custom {
     flex-wrap: wrap;
     gap: .5rem;
     padding: 10px 30px;
-    border-radius: 100px;
+    border-radius: 16px 100px 100px 16px;
     justify-content: center;
     display: inline-block;
 
-    @include breakpoint(laptop) {
-        border-radius: 16px 100px 100px 16px;
-        padding: 10px 20px;
-        justify-content: start;
-    }
+    // @include breakpoint(laptop) {
+    //     border-radius: 16px 100px 100px 16px;
+    //     padding: 10px 20px;
+    //     justify-content: start;
+    // }
 }
 
 .btn__white {
@@ -1194,9 +1194,7 @@ hr.custom {
 }
 
 .block__service.right {
-    .row {
-        flex-direction: row-reverse;
-    }
+    flex-direction: row-reverse;
 }
 
 .blog__featured {

@@ -1,15 +1,15 @@
-
 .hero__area {
-margin-bottom: 30px;
-    position: relative;
-    z-index: 5;
+	margin-bottom: 30px;
+	position: relative;
+	z-index: 5;
 }
+
 .hero__area:after {
 	display: block;
 	content: "";
 	position: absolute;
-	width: 1540.64px;
-	height: 2327.64px;
+	width: 100%;
+	height: 100%;
 	left: 50%;
 	top: -50px;
 	opacity: 0.65;
@@ -17,91 +17,110 @@ margin-bottom: 30px;
 	background-repeat: no-repeat;
 	z-index: -1;
 }
+
+.hero__area__row {
+	align-items: center;
+}
+
 /* @media only screen and (max-height: 665px) {
 	.hero__area__row {
 		height: 80vh;
 	}
 } */
+@media only screen and (max-width: 991px) {
+	.hero__area .title {
+		border-radius: 100px;
+		padding: 10px 20px;
+		justify-content: start;
+	}
+}
+
+
 
 
 .hero__text {
-    position: relative;
-    z-index: 2;
+	position: relative;
+	z-index: 2;
 }
 
 
 @media only screen and (max-width: 991px) {
-    .hero__text {
-        text-align: center;
-        padding: 0;
-    }
+	.hero__text {
+		text-align: center;
+		padding: 0;
+	}
 }
+
 .hero__area .title {
 	color: #FF8833;
 }
+
 .hero__area .top {
 	margin-bottom: 15px;
 }
 
 
 .hero__text h1 {
-    font-weight: 800;
-    font-size: 2.5rem;
-    line-height: 1.375;
-    text-transform: uppercase;
+	font-weight: 800;
+	font-size: 2.5rem;
+	line-height: 1.375;
+	text-transform: uppercase;
 }
 
 @media only screen and (max-width: 1199px) {
-    .hero__text h1 {
-        font-size: 2.2rem;
-    }
+	.hero__text h1 {
+		font-size: 2.2rem;
+	}
 }
+
 @media only screen and (max-width: 768px) {
-    .hero__text h1 {
-        line-height: 1.65rem;
-    }
+	.hero__text h1 {
+		line-height: 1.65rem;
+	}
 }
+
 @media only screen and (max-width: 450px) {
-    .hero__text h1 {
-        font-size: 1.3rem;
-        line-height: 1.65;
-    }
+	.hero__text h1 {
+		font-size: 1.3rem;
+		line-height: 1.65;
+	}
 }
 
 .hero__box {
 	margin: 30px 0;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.625;
-    font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.625;
+	font-family: "Raleway", sans-serif;
 	padding: 36px 40px;
 }
 
 @media only screen and (max-width: 991px) {
-    .hero__box {
-        margin-left: 0;
-    }
+	.hero__box {
+		margin-left: 0;
+	}
 }
 
 @media only screen and (max-width: 767px) {
-    .hero__box {
-        padding: 25px;
-        text-align: left;
-    }
+	.hero__box {
+		padding: 25px;
+		text-align: left;
+	}
 }
+
 @media only screen and (max-width: 450px) {
-    .hero__box {
-    margin: 0;
-    }
+	.hero__box {
+		margin: 0;
+	}
 }
 
 .hero__box h2 {
-    color: var(--blue);
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1.25;
-    text-transform: uppercase;
-    font-family: "Rubik", sans-serif;
+	color: var(--blue);
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.25;
+	text-transform: uppercase;
+	font-family: "Rubik", sans-serif;
 }
 
 @media screen and (max-width: 450px) {
@@ -112,103 +131,103 @@ margin-bottom: 30px;
 
 
 .hero__box p {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .hero__box ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .hero__box ul li::before {
-    content: "\f061";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    margin-right: 8px;
+	content: "\f061";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	margin-right: 8px;
 }
 
 .hero__box__button {
-    margin-top: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+	margin-top: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 @media only screen and (max-width: 991px) {
-    .hero__box__button {
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
+	.hero__box__button {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
 }
 
 @media only screen and (max-width: 767px) {
-    .hero__box__button {
-        display: block;
-    }
+	.hero__box__button {
+		display: block;
+	}
 }
 
 .hero__box__button a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    font-size: 0.813rem;
-    line-height: 0.825;
-    color: #ffff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-weight: 700;
+	font-size: 0.813rem;
+	line-height: 0.825;
+	color: #ffff;
 	border-radius: 50px;
-    background-color: #1956A8;
-    font-family: "Raleway", sans-serif;
-    margin-right: 30px;
-    min-width: 185px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+	background-color: #1956A8;
+	font-family: "Raleway", sans-serif;
+	margin-right: 30px;
+	min-width: 185px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
 	height: 40px;
 }
 
 @media only screen and (max-width: 767px) {
-    .hero__box__button a {
-        margin: 20px 0;
-    }
+	.hero__box__button a {
+		margin: 20px 0;
+	}
 }
 
 .hero__box__button a span {
-    padding: 10px 15px;
-    display: block;
+	padding: 10px 15px;
+	display: block;
 }
 
 .hero__box__button a:hover img {
-    background-color: var(--orange);
+	background-color: var(--orange);
 }
 
 .hero__box__button a:hover span {
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 100px 0px 0px 100px;
+	-webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+	box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+	border-radius: 100px 0px 0px 100px;
 
 }
 
 .hero__box__button a:nth-child(2) {
-    color: #fff;
-    background-color: #171C60;
-    margin-right: 0;
+	color: #fff;
+	background-color: #171C60;
+	margin-right: 0;
 }
 
 .hero__box__button a img {
-    -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
-    border-radius: 7.78px;
-    background-color: #fff;
-    -webkit-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease;
+	-webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
+	border-radius: 7.78px;
+	background-color: #fff;
+	-webkit-transition: background-color 0.5s ease;
+	transition: background-color 0.5s ease;
 }
