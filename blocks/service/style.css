@@ -33,7 +33,9 @@
         padding: 15px 20px;
     }
 }
-
+.card__box.right {
+	    flex-direction: column;
+}
 .card__box.right .card__icon {
         margin-left: auto;
 }
