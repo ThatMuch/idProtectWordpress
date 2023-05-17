@@ -32,7 +32,7 @@ $queryVer = new WP_Query($argsVer);
 ?>
 
 <li class="menu-item menu-item-has-children nav-item dropdown">
-	<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button">Services</a>
+	<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button">Particulier</a>
 	<div class="dropdown-menu mega__menu">
 		<div class="row">
 			<div class="col-lg-4">
