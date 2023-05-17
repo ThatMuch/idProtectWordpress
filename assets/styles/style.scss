@@ -184,6 +184,12 @@ hr.custom {
     align-items: center;
 }
 
+.btn__primary {
+	@extend .btn__white;
+	background: var(--blue);
+	color: #fff;
+}
+
 .btn__white:hover {
     background: var(--blue);
 }

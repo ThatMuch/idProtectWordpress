@@ -19,10 +19,11 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .mh-100{min-height:100% !important}
 .g-text{background:linear-gradient(278.49deg,#1956a8 0,#171c60 88.22%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .title{-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);text-transform:uppercase;background:#fff;-ms-flex-wrap:wrap;flex-wrap:wrap;gap:.5rem;padding:10px 30px;border-radius:16px 100px 100px 16px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;display:inline-block}
-.btn__white{background:#fff;border-radius:7px;letter-spacing:.5px;text-transform:uppercase;text-align:center;font-weight:700;font-size:.8125rem;line-height:1.2307692308;font-family:"Raleway",sans-serif;color:var(--blue);padding:10px 15px;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.btn__white:hover{background:var(--blue)}
-.btn__white:hover img{-webkit-filter:brightness(10);filter:brightness(10)}
-.btn__white img{margin-left:6px;width:16px}
+.btn__white,.btn__primary{background:#fff;border-radius:7px;letter-spacing:.5px;text-transform:uppercase;text-align:center;font-weight:700;font-size:.8125rem;line-height:1.2307692308;font-family:"Raleway",sans-serif;color:var(--blue);padding:10px 15px;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.btn__primary{background:var(--blue);color:#fff}
+.btn__white:hover,.btn__primary:hover{background:var(--blue)}
+.btn__white:hover img,.btn__primary:hover img{-webkit-filter:brightness(10);filter:brightness(10)}
+.btn__white img,.btn__primary img{margin-left:6px;width:16px}
 .btn__orange{border:2px solid #f83;border-radius:5px;padding:13px 12px;color:#f83;text-align:center;letter-spacing:.5px;text-transform:uppercase;font-size:.8125rem;line-height:1.2307692308;font-weight:700;font-family:"Raleway",sans-serif}
 .btn__orange:hover{color:#fff;background:#f83}
 .btn__orange.solid{background:#f83;color:#fff}
@@ -265,7 +266,7 @@ h4,.h4{font-size:1.09375rem;line-height:1.8}
 h5,.h5{font-size:.984375rem;line-height:1.6}
 h6,.h6{font-size:.875rem;line-height:1.8}
 body{font-size:.875rem;line-height:1.8}
-.btn__white{font-size:.7109375rem;line-height:1.4769230769}
+.btn__white,.btn__primary{font-size:.7109375rem;line-height:1.4769230769}
 .btn__orange{font-size:.7109375rem;line-height:1.4769230769}
 .header__area .nav-link{font-size:.7109375rem;line-height:1.4769230769}
 .header__area .dropdown-item{font-size:.7109375rem;line-height:1.4769230769}
@@ -369,7 +370,7 @@ h4,.h4{font-size:.9375rem;line-height:2.1}
 h5,.h5{font-size:.84375rem;line-height:1.8666666667}
 h6,.h6{font-size:.75rem;line-height:2.1}
 body{font-size:.75rem;line-height:2.1}
-.btn__white{font-size:.609375rem;line-height:1.7230769231}
+.btn__white,.btn__primary{font-size:.609375rem;line-height:1.7230769231}
 .btn__orange{font-size:.609375rem;line-height:1.7230769231}
 .header__area .nav-link{font-size:.609375rem;line-height:1.7230769231}
 .header__area .dropdown-item{font-size:.609375rem;line-height:1.7230769231}

@@ -23,8 +23,8 @@ $description = get_field('description');
 									$cta_primary = get_sub_field('primary_cta');
 									$cta_secondary = get_sub_field('secondary_cta');
 								?>
-									<a href="<?php echo esc_url($cta_primary['url']); ?>" target="<?php echo esc_attr($cta_primary['target']); ?>"><span><?php echo esc_html($cta_primary['title']); ?></span><img src="<?php echo get_template_directory_uri() ?>/assets/images/icon-1.svg" alt="Particulier"></a>
-									<a href="<?php echo esc_url($cta_secondary['url']); ?>" target="<?php echo esc_attr($cta_secondary['target']); ?>"><span><?php echo esc_html($cta_secondary['title']); ?></span><img src="<?php echo get_template_directory_uri() ?>/assets/images/icon-2.svg" alt="Professionnel"></a>
+									<a class="btn btn__primary" href="<?php echo esc_url($cta_primary['url']); ?>"><span><?php echo esc_html($cta_primary['title']); ?></span></a>
+									<a class="btn btn__orange blue text-uppercase" href="<?php echo esc_url($cta_secondary['url']); ?>"><span><?php echo esc_html($cta_secondary['title']); ?></span></a>
 								<?php endwhile; ?>
 							</div>
 						<?php endif; ?>
