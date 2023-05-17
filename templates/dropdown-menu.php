@@ -12,16 +12,23 @@ $args = array(
 	'post_type' => 'page',
 	'post_parent' => 0,
 	'posts_per_page' => -1,
-	'category_name' => 'particulier',
+	'category_name' => 'victime-usurpation',
 );
 $query = new WP_Query($args);
 $argsPro = array(
 	'post_type' => 'page',
 	'post_parent' => 0,
 	'posts_per_page' => -1,
-	'category_name' => 'professionnel',
+	'category_name' => 'prevention',
 );
 $queryPro = new WP_Query($argsPro);
+$argsVer = array(
+	'post_type' => 'page',
+	'post_parent' => 0,
+	'posts_per_page' => -1,
+	'category_name' => 'verification',
+);
+$queryVer = new WP_Query($argsVer);
 ?>
 
 <li class="menu-item menu-item-has-children nav-item dropdown">
@@ -30,7 +37,7 @@ $queryPro = new WP_Query($argsPro);
 		<div class="row">
 			<div class="col-lg-4">
 				<div class="mega__menu__item">
-					<h2>Particulier</h2>
+					<h2>Victime d'usurpation d'identité ?</h2>
 					<ul>
 						<?php
 						if ($query->have_posts()) :
@@ -47,7 +54,7 @@ $queryPro = new WP_Query($argsPro);
 			</div>
 			<div class="col-lg-4">
 				<div class="mega__menu__item">
-					<h2>Professionnel</h2>
+					<h2>Prévenir l'usurpation d'identité</h2>
 					<ul>
 						<?php
 						if ($queryPro->have_posts()) :
@@ -64,9 +71,18 @@ $queryPro = new WP_Query($argsPro);
 			</div>
 			<div class="col-lg-4">
 				<div class="mega__menu__item">
-					<h2>api</h2>
+					<h2>Verification</h2>
 					<ul>
-						<li><a href="https://api.prod.idprotect.fr/service/docs/">documentation api</a></li>
+						<?php
+						if ($queryVer->have_posts()) :
+							while ($queryVer->have_posts()) : $queryVer->the_post();
+						?>
+								<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+						<?php
+							endwhile;
+							wp_reset_postdata();
+						endif;
+						?>
 					</ul>
 				</div>
 			</div>

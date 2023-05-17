@@ -46,7 +46,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .header__area .dropdown-toggle:hover::after{background-image:url(../images/arrow-down-orange.svg)}
 .header__area .dropdown-toggle.show{color:var(--orange);-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:7px;background:#fff}
 .header__area .dropdown-toggle.show::after{background-image:url(../images/arrow-down-orange.svg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}
-.header__area .mega__menu{background:#fff;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:16px;border:0;min-width:682px;padding:40px 20px 20px;-webkit-transform:translate(-25%,13px);transform:translate(-25%,13px)}
+.header__area .mega__menu{background:#fff;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:16px;border:0;width:900px;padding:40px 20px 20px;-webkit-transform:translate(-25%,13px);transform:translate(-29.5%,13px)}
 .header__area .mega__menu::before{content:"";width:13px;height:9px;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:13px solid #fff;position:absolute;top:-12px;left:50%;margin-left:-110px}
 .header__area .mega__menu__item{height:100%}
 .header__area .mega__menu__item h2{background:linear-gradient(278.49deg,#1956a8 0,#171c60 88.22%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:1rem;line-height:1.5;font-weight:700;text-transform:uppercase;margin:0 0 10px}
