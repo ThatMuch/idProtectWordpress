@@ -27,15 +27,13 @@ foreach ($parent_categories as $parent_category) {
 						'post_type' => 'page',
 						'post_parent' => 0,
 						'posts_per_page' => -1,
+						'order' => 'ASC',
 					);
 
 					$query = new WP_Query($query_args);
 				?>
 					<div class="col-lg-4">
 						<div class="mega__menu__item">
-
-
-
 							<h2><?php
 								//get the description of the $subcategory
 								echo $subcategory->description; ?></h2>
