@@ -13,6 +13,8 @@ foreach ($parent_categories as $parent_category) {
 
 	$args = array(
 		'child_of' => $parent_id,
+		'orderby' => 'slug',
+		'order' => 'ASC'
 	);
 
 	$subcategories = get_categories($args); ?>
@@ -27,8 +29,7 @@ foreach ($parent_categories as $parent_category) {
 						'post_type' => 'page',
 						'post_parent' => 0,
 						'posts_per_page' => -1,
-						'orderby' => 'slug',
-						'order' => 'ASC'
+
 					);
 
 					$query = new WP_Query($query_args);
