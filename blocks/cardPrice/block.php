@@ -28,7 +28,7 @@ if (!empty($block['class_name'])) {
  * Pass the block data into the template part
  */
 get_template_part(
-	'blocks/tarif/template',
+	'blocks/cardPrice/template',
 	null,
 	array(
 		'block'      => $block,

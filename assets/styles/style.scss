@@ -184,10 +184,41 @@ hr.custom {
     align-items: center;
 }
 
-.btn__primary {
-	@extend .btn__white;
-	background: var(--blue);
-	color: #fff;
+.btn {
+    background: #FFFFFF;
+    border-radius: 7px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+
+    @include responsive-font-size(13, 16, null);
+
+    font-family: "Raleway", sans-serif;
+    color: var(--blue);
+    padding: 10px 15px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.btn.btn__primary {
+    background: var(--blue);
+    color: #fff;
+
+    img {
+        -webkit-filter: brightness(100);
+        filter: brightness(100);
+        margin-left: 8px;
+    }
+
+    &:hover, &:active, &:focus {
+        color: #fff;
+        background-color: $color-primary-darker;
+    }
 }
 
 .btn__white:hover {
@@ -1813,7 +1844,7 @@ hr.custom {
 }
 
 .price__body {
-    padding: 36px 40px;
+    padding: 15px 40px 36px 40px;
     border-radius: 0 0 16px 16px;
     position: relative;
     z-index: 2;

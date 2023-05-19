@@ -21,13 +21,3 @@ button, .btn, input[type="submit"] {
         background-color: grey;
     }
 }
-
-.btn.btn-primary {
-    background-color: $color-primary;
-    color: #000;
-
-    &:hover, &:active, &:focus {
-        color: #000;
-        background-color: darken($color-primary, 10);
-    }
-}
