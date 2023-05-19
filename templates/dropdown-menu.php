@@ -50,9 +50,20 @@ foreach ($parent_categories as $parent_category) {
 									wp_reset_postdata();
 								endif;
 								?>
+
 							</ul>
 						</div>
 					</div>
+					<?php if ($parent_category === "professionnel") : ?>
+						<div class="col-lg-4">
+							<div class="mega__menu__item">
+								<h2>API</h2>
+								<ul>
+									<li><a href="https://api.prod.idprotect.fr/service/docs/" target="_blank">API</a></li>
+								</ul>
+							</div>
+						</div>
+					<?php endif; ?>
 				<?php	}; ?>
 
 
