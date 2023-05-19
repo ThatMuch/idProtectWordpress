@@ -92,6 +92,11 @@
     $('.sidebar-part .article__list').after('<a href="' + url + 'category/particulier" class="btn btn__orange blue text-uppercase mb-3">Tous les articles</a>');
   }
 
+  // Find every link with the class "wp-block-button__link wp-element-button" and replace it by a link with the class "btn btn__outlined"
+  $('.wp-block-button__link.wp-element-button').each(function () {
+    $(this).removeClass('wp-block-button__link wp-element-button').addClass('btn btn__orange blue');
+  });
+
   //==================================================================================
   // Initialization
   //==================================================================================

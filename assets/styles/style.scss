@@ -151,16 +151,16 @@ hr.custom {
     background: #FFFFFF;
     flex-wrap: wrap;
     gap: .5rem;
-    padding: 10px 30px;
-    border-radius: 16px 100px 100px 16px;
-    justify-content: center;
+    border-radius: 100px;
+    padding: 10px 20px;
+    justify-content: start;
     display: inline-block;
 
-    // @include breakpoint(laptop) {
-    //     border-radius: 16px 100px 100px 16px;
-    //     padding: 10px 20px;
-    //     justify-content: start;
-    // }
+    @include breakpoint(laptop) {
+        padding: 10px 30px;
+        border-radius: 16px 100px 100px 16px;
+        justify-content: center;
+    }
 }
 
 .btn__white {
@@ -748,7 +748,7 @@ hr.custom {
 }
 
 .section__area {
-    padding: 30px 0;
+    padding: 50px 0;
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -1132,61 +1132,45 @@ hr.custom {
 }
 
 .page__hero {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
+    display: block;
     justify-content: center;
-}
+    gap: 24px;
 
-@media only screen and (max-width: 767px) {
-    .page__hero {
-        display: block;
+    @include breakpoint(tablet) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
     }
-}
 
-.page__hero__area {
-    margin-bottom: 50px;
-}
 
-@media only screen and (max-width: 767px) {
-    .page__hero__area {
-        padding: 50px 0 70px;
+    &__area {
+        margin-bottom: 50px;
     }
-}
 
-.page__hero__image {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-    width: 375px;
-}
-
-@media only screen and (max-width: 991px) {
-    .page__hero__image {
-        width: 230px;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .page__hero__image {
+    &__image {
         margin: 0 auto 30px;
+        width: 150px;
+
+        @include breakpoint(laptop) {
+            width: 170px;
+            margin: 0;
+        }
     }
 }
 
 .page__hero__text {
     text-transform: uppercase;
-    text-align: right;
-    padding-right: 50px;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: start;
 }
 
 @media only screen and (max-width: 767px) {
     .page__hero__text {
         padding-right: 0;
+        align-items: center;
     }
 }
 
@@ -1209,18 +1193,17 @@ hr.custom {
 }
 
 .page__hero__text__subtitle {
-    @include responsive-font-size(40, 55, 800);
+    @include responsive-font-size(24, 30);
+
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
+
 
     .small {
         @include responsive-font-size(24);
 
         color: #1956A8;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .page__hero__text__subtitle {
-        @include responsive-font-size(20, 40);
     }
 }
 
