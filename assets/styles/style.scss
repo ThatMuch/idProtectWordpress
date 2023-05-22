@@ -665,6 +665,16 @@ hr.custom {
         p {
             margin-bottom: 0;
         }
+
+        img {
+            width: 100px;
+            opacity: .3;
+            transition-duration: .5s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 }
 

@@ -84,6 +84,8 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .footer__area__logo{margin:0 auto;display:block;width:160px;-webkit-filter:invert(1) brightness(100);filter:invert(1) brightness(100)}
 .footer__area__bottom{margin-top:15px;border-top:1px solid #5e89c2;color:#5e89c2;padding-top:15px}
 .footer__area__bottom p{margin-bottom:0}
+.footer__area__bottom img{width:100px;opacity:.3;-webkit-transition-duration:.5s;transition-duration:.5s}
+.footer__area__bottom img:hover{opacity:1}
 .footer__area .copyright{color:#e8effb;letter-spacing:.5px;font-size:.8125rem;line-height:1.2307692308;font-weight:500;font-family:"Raleway",sans-serif;text-align:right}
 .footer__menu ul{margin:0;padding:0;list-style:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .footer__menu ul li a{color:#e8effb;text-transform:uppercase;font-size:.875rem;line-height:1.8571428571;font-weight:500;text-decoration:none;margin:0 10px}

@@ -94,9 +94,15 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 		<?php endif; ?>
 
 	</div>
-	<div class="footer__area__bottom">
-		<?php $year = date('Y'); ?>
-		<p class="text-center"> © <?php echo $year ?> ID PROTECT tout droits réservés</p>
+	<div class="footer__area__bottom d-flex justify-content-between">
+		<div></div>
+		<div>
+			<?php $year = date('Y'); ?>
+			<p class="text-center"> © <?php echo $year ?> ID PROTECT tout droits réservés</p>
+		</div>
+		<a class="footer__credits__thatmuch" href="https://thatmuch.fr" target="_blank" rel="noopener noreferrer">
+			<img src="<?php echo get_template_directory_uri() ?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
+		</a>
 	</div>
 </div>
 <?php
