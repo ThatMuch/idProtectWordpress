@@ -69,8 +69,5 @@ foreach ($parent_categories as $parent_category) {
 
 			</div>
 		</div>
-	<?php
-
-}
-	?>
+	<?php } ?>
 	</li>
