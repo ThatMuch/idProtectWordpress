@@ -244,7 +244,7 @@ hr.custom {
     letter-spacing: 0.5px;
     text-transform: uppercase;
 
-    @include responsive-font-size(13, 16, 700);
+    @include responsive-font-size(16, 20, 700);
 
     font-family: "Raleway", sans-serif;
 }
