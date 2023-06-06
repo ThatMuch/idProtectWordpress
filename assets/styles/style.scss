@@ -1122,6 +1122,8 @@ hr.custom {
 .page__header__area {
     min-height: 312px;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .page__header__area.contact {
