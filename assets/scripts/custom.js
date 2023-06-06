@@ -96,10 +96,9 @@
   $('.wp-block-button__link.wp-element-button').each(function () {
     $(this).removeClass('wp-block-button__link wp-element-button').addClass('btn btn__orange blue');
   });
-	$('.wp-block-file').each(function () {
-		// Get the link in this div and add a class
-		$(this).find('a').addClass('btn btn__orange blue');
-		console.log("toto")
+  $('.wp-block-file').each(function () {
+    // Get the link in this div and add a class
+    $(this).find('a').addClass('btn btn__orange blue');
   });
 
   //==================================================================================
