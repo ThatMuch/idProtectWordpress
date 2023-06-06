@@ -192,7 +192,7 @@ hr.custom {
     text-align: center;
     font-weight: 700;
 
-    @include responsive-font-size(13, 16, null);
+    @include responsive-font-size(16, 20, null);
 
     font-family: "Raleway", sans-serif;
     color: var(--blue);
