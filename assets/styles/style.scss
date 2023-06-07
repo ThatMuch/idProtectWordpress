@@ -27,7 +27,8 @@
 /*=====  Atoms  ======*/
 // @import "./atoms/_alerts";
 // @import "./atoms/_badges";
-// @import "./atoms/_buttons";
+@import "./atoms/_buttons";
+
 // @import "./atoms/_dividers";
 @import "./atoms/_headings";
 
@@ -163,135 +164,6 @@ hr.custom {
     }
 }
 
-.btn__white {
-    background: #FFFFFF;
-    border-radius: 7px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-
-    @include responsive-font-size(13, 16, null);
-
-    font-family: "Raleway", sans-serif;
-    color: var(--blue);
-    padding: 10px 15px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.btn {
-    background: #FFFFFF;
-    border-radius: 7px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-
-    @include responsive-font-size(16, 20, null);
-
-    font-family: "Raleway", sans-serif;
-    color: var(--blue);
-    padding: 10px 15px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.btn.btn__primary {
-    background: var(--blue);
-    color: #fff;
-
-    img {
-        -webkit-filter: brightness(100);
-        filter: brightness(100);
-        margin-left: 8px;
-    }
-
-    &:hover, &:active, &:focus {
-        color: #fff;
-        background-color: $color-primary-darker;
-    }
-}
-
-.btn__white:hover {
-    background: var(--blue);
-}
-
-.btn__white:hover img {
-    -webkit-filter: brightness(10);
-    filter: brightness(10);
-}
-
-.btn__white img {
-    margin-left: 6px;
-    width: 16px;
-}
-
-.btn__orange {
-    border: 2px solid #FF8833;
-    border-radius: 7px;
-    padding: 13px 12px;
-    color: #FF8833;
-    text-align: center;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-
-    @include responsive-font-size(16, 20, 700);
-
-    font-family: "Raleway", sans-serif;
-}
-
-.btn__orange:hover {
-    color: #fff;
-    background: #FF8833;
-}
-
-.btn__orange.solid {
-    background: #FF8833;
-    color: #fff;
-}
-
-.btn__orange.solid:hover {
-    background: var(--blue);
-}
-
-.btn__orange.blue {
-    border-color: #1956A8;
-    color: #1956A8;
-}
-
-.btn__orange.blue:hover {
-    background: #1956A8;
-    color: #fff;
-}
-
-.btn__orange.dark {
-    border-color: #171C60;
-    color: #171C60;
-}
-
-.btn__orange.dark:hover {
-    background: #171C60;
-    color: #fff;
-}
-
-.btn__orange.white {
-    border-color: #fff;
-    color: #fff;
-}
-
-.btn__orange.white:hover {
-    background: #fff;
-    color: #171C60;
-}
 
 .text__orange {
     color: var(--orange) !important;
