@@ -78,7 +78,7 @@
 				));
 				?>
 			</div>
-			<a class="header__link" href="http://app.idprotect.fr/">
+			<a class="header__link" href="http://app.idprotect.fr/particuliers/login">
 				<span>se connecter</span>
 				<img class="eye" src="<?php echo get_template_directory_uri() ?>/assets/images/icon-1-orange.svg" alt="Oeil">
 				<img class="eye-hover" src="<?php echo get_template_directory_uri() ?>/assets/images/icon-1-orange.svg" alt="User">
