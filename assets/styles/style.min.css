@@ -1,4 +1,4 @@
-.btn{-ms-flex-align:center;-webkit-box-align:center;align-items:center;background:#fff;border-radius:7px;color:var(--blue);display:-ms-inline-flexbox;display:-webkit-inline-box;display:inline-flex;font-family:"Raleway",sans-serif;font-size:14px;font-weight:700;letter-spacing:.5px;padding:10px 15px;text-align:center;text-transform:uppercase}
+.btn{-ms-flex-align:center;-webkit-box-align:center;align-items:center;background:#fff;border-radius:7px;color:var(--blue);display:-ms-inline-flexbox;display:-webkit-inline-box;display:inline-flex;font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;padding:10px 15px;text-align:center;text-transform:uppercase}
 .btn.btn__primary{background:var(--blue);color:#fff}
 .btn.btn__primary img{-webkit-filter:brightness(100);filter:brightness(100);margin-left:8px}
 .btn.btn__primary:hover,.btn.btn__primary:active,.btn.btn__primary:focus{color:#fff;background-color:#0f3465}
@@ -24,7 +24,8 @@ h4,.h4{font-size:1.25rem;line-height:1.5}
 h5,.h5{font-size:1.125rem;line-height:1.3333333333}
 h6,.h6{font-size:1rem;line-height:1.5}
 :root{--blue:#1956a8;--orange:#f83}
-body{font-family:"Raleway",sans-serif;background:-webkit-gradient(linear,left top,left bottom,color-stop(-2.99%,#e8effb),color-stop(49.58%,#fff));background:linear-gradient(180deg,#e8effb -2.99%,#fff 49.58%);font-size:1rem;line-height:1.5}
+html{font-size:16px}
+body{font-family:"Raleway",sans-serif;background:-webkit-gradient(linear,left top,left bottom,color-stop(-2.99%,#e8effb),color-stop(49.58%,#fff));background:linear-gradient(180deg,#e8effb -2.99%,#fff 49.58%);font-size:1rem}
 img{max-width:100%}
 a{text-decoration:none;color:var(--blue)}
 input:focus,button:focus,a:focus,textarea:focus{outline:0}
@@ -43,9 +44,9 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .header__area{padding:0;background:#fff;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1)}
 .header__area .navbar-brand{height:4rem}
 .header__area .navbar-brand img{height:100%;width:100%;-o-object-fit:contain;object-fit:contain}
-.header__area .nav-link{letter-spacing:.5px;text-transform:uppercase;font-size:.8125rem;line-height:1.2307692308;font-weight:700;font-family:"Raleway",sans-serif;color:var(--blue);margin:0 30px;isolation:isolate}
+.header__area .nav-link{letter-spacing:.5px;text-transform:uppercase;font-family:"Raleway",sans-serif;color:var(--blue);margin:0 30px;isolation:isolate;font-size:.85rem}
 .header__area .nav-link:hover{color:var(--orange);-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:7px;background:#fff}
-.header__area .dropdown-item{letter-spacing:.5px;text-transform:uppercase;font-size:.8125rem;line-height:1.2307692308;font-weight:700;font-family:"Raleway",sans-serif;color:var(--blue)}
+.header__area .dropdown-item{letter-spacing:.5px;text-transform:uppercase;font-family:"Raleway",sans-serif;color:var(--blue)}
 .header__area .dropdown-toggle::after{background:url(../images/arrow-down.svg) no-repeat scroll 0 0/100%;border:0;width:10px;height:6px;vertical-align:2px;margin-left:10px;-webkit-transition:.2s;transition:.2s}
 .header__area .dropdown-toggle:hover::after{background-image:url(../images/arrow-down-orange.svg)}
 .header__area .dropdown-toggle.show{color:var(--orange);-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:7px;background:#fff}
@@ -53,9 +54,9 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .header__area .mega__menu{background:#fff;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:16px;border:0;width:900px;padding:40px 20px 20px;-webkit-transform:translate(-25%,13px);transform:translate(-29.5%,13px)}
 .header__area .mega__menu::before{content:"";width:13px;height:9px;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:13px solid #fff;position:absolute;top:-12px;left:50%;margin-left:-110px}
 .header__area .mega__menu__item{height:100%}
-.header__area .mega__menu__item h2{background:linear-gradient(278.49deg,#1956a8 0,#171c60 88.22%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:1rem;line-height:1.5;font-weight:700;text-transform:uppercase;margin:0 0 10px}
+.header__area .mega__menu__item h2{background:linear-gradient(278.49deg,#1956a8 0,#171c60 88.22%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:.85rem;text-transform:uppercase;margin:0 0 10px}
 .header__area .mega__menu__item ul{margin:0;padding:0;list-style:none}
-.header__area .mega__menu__item ul li a{color:var(--blue);letter-spacing:.5px;text-transform:uppercase;font-size:.8125rem;line-height:1.2307692308;font-weight:700;font-family:"Raleway";text-decoration:none;display:inline-block;margin:12px 0;-webkit-transition:.2s;transition:.2s}
+.header__area .mega__menu__item ul li a{color:var(--blue);letter-spacing:.5px;text-transform:uppercase;font-size:.85rem;font-family:"Raleway";text-decoration:none;display:inline-block;margin:12px 0;-webkit-transition:.2s;transition:.2s}
 .header__area .mega__menu__item ul li a:hover{color:var(--orange)}
 .header__area .mega__menu [class*=col-] .mega__menu__item{border-right:1px solid #d3d6da}
 .header__area .mega__menu [class*=col-]:last-child .mega__menu__item{border-right:0}
@@ -210,11 +211,10 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .price__table.premium{background:#e8effb}
 .price__table.premium .price__body{background:#e8effb}
 .price__head{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:36px 40px 0}
-.price__head h4{text-transform:uppercase;font-size:1.125rem;line-height:1.5555555556;font-weight:800;margin:0 0 20px}
-.price__head h2{font-size:3.75rem;line-height:1.2;font-weight:800;margin:0}
+.price__head__offer{text-transform:uppercase;font-weight:800;font-size:20px;margin:0;font-family:'Rubik'}
+.price__head__price{font-weight:700;font-size:24px;line-height:30px;text-transform:uppercase;font-family:'Rubik'}
 .price__body{padding:15px 40px 36px 40px;border-radius:0 0 16px 16px;position:relative;z-index:2;background:#fff}
-.price__body h2{font-size:1rem;line-height:1.5;font-weight:700;color:#152235;text-transform:uppercase;max-width:346px;margin:0 0 20px}
-.price__body p{font-size:1rem;line-height:1.625;font-weight:500;font-family:"Raleway";color:#000}
+.price__body__title{color:#152235;text-transform:uppercase;max-width:346px;margin:0 0 20px;font-size:.95rem}
 .price__body ul{margin:30px 0 0;padding:0;list-style:none;font-size:1rem;line-height:1.625;font-weight:500;font-family:"Raleway";color:#152235}
 .price__body ul li{display:block;margin:0 0 15px;position:relative;padding-left:45px}
 .price__body ul li::before{content:"";background:url(../images/check-blue.svg) no-repeat scroll 0 0;width:31px;height:31px;position:absolute;top:-3px;left:0}
@@ -240,13 +240,10 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .blog__box h2{font-size:1.5625rem;line-height:1.4;font-weight:600;margin:0 0 10px}
 .blog__box p{font-size:1rem;line-height:1.75}
 .blog__item__image{height:205px}
-.price__head h2{font-size:3.125rem;line-height:1.24}
 }@media only screen and (max-width:1200px) and (max-width:768px){.blog__box h2{font-size:1.3671875rem;line-height:1.68}
 .blog__box p{font-size:.875rem;line-height:2.1}
-.price__head h2{font-size:2.734375rem;line-height:1.488}
 }@media only screen and (max-width:1200px) and (max-width:480px){.blog__box h2{max-width:100%;font-size:1.015625rem;line-height:1.96}
 .blog__box p{max-width:100%;font-size:.65rem;line-height:2.45}
-.price__head h2{max-width:100%;font-size:2.03125rem;line-height:1.736}
 }@media only screen and (max-width:991px){.mb-100{margin-bottom:50px !important}
 .mt-100{margin-top:50px !important}
 .header__area .mega__menu{min-width:auto;position:relative;margin:0;-webkit-transform:none;transform:none;background:transparent;padding:10px 26px;-webkit-box-shadow:0 0;box-shadow:0 0}
@@ -269,11 +266,6 @@ h3,.h3{font-size:1.3125rem;line-height:1.8}
 h4,.h4{font-size:1.09375rem;line-height:1.8}
 h5,.h5{font-size:.984375rem;line-height:1.6}
 h6,.h6{font-size:.875rem;line-height:1.8}
-body{font-size:.875rem;line-height:1.8}
-.header__area .nav-link{font-size:.7109375rem;line-height:1.4769230769}
-.header__area .dropdown-item{font-size:.7109375rem;line-height:1.4769230769}
-.header__area .mega__menu__item h2{font-size:.875rem;line-height:1.8}
-.header__area .mega__menu__item ul li a{font-size:.7109375rem;line-height:1.4769230769}
 .header__link{font-size:.7109375rem;line-height:1.4769230769}
 .footer__area__rs .fab{font-size:1.640625rem}
 .footer__area .copyright{font-size:.7109375rem;line-height:1.4769230769}
@@ -309,10 +301,6 @@ body{font-size:.875rem;line-height:1.8}
 .step__list ul.nav-tabs li a{font-size:1.3125rem;line-height:1.5}
 .step__list ul.nav-tabs li a .text{font-size:1.3125rem;line-height:1.5}
 .step__list ul.nav-tabs li a .text__body{font-size:1.3125rem;line-height:1.75}
-.price__head h4{font-size:.984375rem;line-height:1.8666666667}
-.price__head h2{font-size:3.28125rem;line-height:1.44}
-.price__body h2{font-size:.875rem;line-height:1.8}
-.price__body p{font-size:.875rem;line-height:1.95}
 .price__body ul{font-size:.875rem;line-height:1.95}
 .price__footer a{font-size:1.1484375rem;line-height:.9142857143}
 }@media only screen and (max-width:767px){.header__link{width:46px}
@@ -339,7 +327,6 @@ body{font-size:.875rem;line-height:1.8}
 .step__list ul.nav-tabs li a .text{width:40px;height:40px;font-size:1rem;line-height:1.875}
 .step__list.service ul.nav-tabs li a{display:block}
 .step__list.service ul.nav-tabs li a .text{width:60px;height:60px;font-size:1.5625rem;line-height:1.2;margin-bottom:20px}
-.price__head h2{font-size:2.5rem;line-height:1.125}
 }@media only screen and (max-width:767px) and (max-width:768px){.promotion__area.service .promotion__head h2{font-size:1.3671875rem;line-height:1.44}
 .community__info h2{font-size:1.640625rem;line-height:1.6}
 .community__form h2{font-size:1.09375rem}
@@ -350,7 +337,6 @@ body{font-size:.875rem;line-height:1.8}
 .step__list ul.nav-tabs li a{font-size:.875rem;line-height:1.8}
 .step__list ul.nav-tabs li a .text{font-size:.875rem;line-height:2.25}
 .step__list.service ul.nav-tabs li a .text{font-size:1.3671875rem;line-height:1.44}
-.price__head h2{font-size:2.1875rem;line-height:1.35}
 }@media only screen and (max-width:767px) and (max-width:480px){.promotion__area.service .promotion__head h2{max-width:100%;font-size:1.015625rem;line-height:1.68}
 .community__info h2{max-width:100%;font-size:1.21875rem;line-height:1.8666666667}
 .community__form h2{max-width:100%;font-size:.8125rem}
@@ -361,18 +347,12 @@ body{font-size:.875rem;line-height:1.8}
 .step__list ul.nav-tabs li a{max-width:100%;font-size:.65rem;line-height:2.1}
 .step__list ul.nav-tabs li a .text{max-width:100%;font-size:.65rem;line-height:2.625}
 .step__list.service ul.nav-tabs li a .text{max-width:100%;font-size:1.015625rem;line-height:1.68}
-.price__head h2{max-width:100%;font-size:1.625rem;line-height:1.575}
 }@media(max-width:480px){h1,.h1{max-width:100%;font-size:1.95rem;line-height:1.75}
 h2,.h2{max-width:100%;font-size:1.4625rem;line-height:1.8666666667}
 h3,.h3{max-width:100%;font-size:.975rem;line-height:2.1}
 h4,.h4{max-width:100%;font-size:.8125rem;line-height:2.1}
 h5,.h5{max-width:100%;font-size:.73125rem;line-height:1.8666666667}
 h6,.h6{max-width:100%;font-size:.65rem;line-height:2.1}
-body{max-width:100%;font-size:.65rem;line-height:2.1}
-.header__area .nav-link{max-width:100%;font-size:.528125rem;line-height:1.7230769231}
-.header__area .dropdown-item{max-width:100%;font-size:.528125rem;line-height:1.7230769231}
-.header__area .mega__menu__item h2{max-width:100%;font-size:.65rem;line-height:2.1}
-.header__area .mega__menu__item ul li a{max-width:100%;font-size:.528125rem;line-height:1.7230769231}
 .header__link{max-width:100%;font-size:.528125rem;line-height:1.7230769231}
 .footer__area__rs .fab{max-width:100%;font-size:1.21875rem}
 .footer__area .copyright{max-width:100%;font-size:.528125rem;line-height:1.7230769231}
@@ -408,11 +388,9 @@ body{max-width:100%;font-size:.65rem;line-height:2.1}
 .step__list ul.nav-tabs li a{max-width:100%;font-size:.975rem;line-height:1.75}
 .step__list ul.nav-tabs li a .text{max-width:100%;font-size:.975rem;line-height:1.75}
 .step__list ul.nav-tabs li a .text__body{max-width:100%;font-size:.975rem;line-height:2.0416666667}
-.price__head h4{max-width:100%;font-size:.73125rem;line-height:2.1777777778}
-.price__head h2{max-width:100%;font-size:2.4375rem;line-height:1.68}
-.price__body h2{max-width:100%;font-size:.65rem;line-height:2.1}
-.price__body p{max-width:100%;font-size:.65rem;line-height:2.275}
 .price__body ul{max-width:100%;font-size:.65rem;line-height:2.275}
 .price__footer a{max-width:100%;font-size:.853125rem;line-height:1.0666666667}
-}@media screen and (max-width:450px){.page__hero__text__subtitle{text-align:center}
+}@media screen and (max-width:450px){.page__hero .title{font-size:1.3rem;text-align:center}
+.page__hero__text__subtitle{text-align:center}
+.price__head__offer{font-size:18px}
 }

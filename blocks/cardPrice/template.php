@@ -22,14 +22,14 @@ $class_name = $args['class_name'];
 						<div class="price__table">
 							<div class="price__head">
 								<div class="price__head__left">
-									<h4 class="m-0"><?php echo get_sub_field('offer'); ?></h4>
+									<h4 class="price__head__offer"><?php echo get_sub_field('offer'); ?></h4>
 								</div>
 								<div>
-									<h3 class="m-0"><span class="g-text"><?php echo get_sub_field('price'); ?>€</span></h3>
+									<span class="price__head__price g-text"><?php echo get_sub_field('price'); ?>€</span>
 								</div>
 							</div>
-							<div class="price__body">
-								<h2><?php echo get_sub_field('title'); ?></h2>
+							<section class="price__body">
+								<h2 class="price__body__title"><?php echo get_sub_field('title'); ?></h2>
 								<p><?php echo get_sub_field('text'); ?></p>
 								<?php $link = get_sub_field('link'); ?>
 								<?php if ($link) : ?>
@@ -37,7 +37,7 @@ $class_name = $args['class_name'];
 										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
 									</a>
 								<?php endif; ?>
-							</div>
+							</section>
 						</div>
 					</div>
 				<?php $i++;

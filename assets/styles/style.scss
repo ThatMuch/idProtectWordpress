@@ -71,12 +71,15 @@
     --orange: #FF8833;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: "Raleway", sans-serif;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.99%, #E8EFFB), color-stop(49.58%, #FFFFFF));
     background: linear-gradient(180deg, #E8EFFB -2.99%, #FFFFFF 49.58%);
-
-    @include responsive-font-size(16, 24);
+    font-size: 1rem;
 }
 
 img {
@@ -164,7 +167,6 @@ hr.custom {
     }
 }
 
-
 .text__orange {
     color: var(--orange) !important;
 }
@@ -197,13 +199,11 @@ hr.custom {
 .header__area .nav-link {
     letter-spacing: 0.5px;
     text-transform: uppercase;
-
-    @include responsive-font-size(13, 16, 700);
-
     font-family: "Raleway", sans-serif;
     color: var(--blue);
     margin: 0 30px;
     isolation: isolate;
+    font-size: .85rem;
 }
 
 .header__area .nav-link:hover {
@@ -217,9 +217,6 @@ hr.custom {
 .header__area .dropdown-item {
     letter-spacing: 0.5px;
     text-transform: uppercase;
-
-    @include responsive-font-size(13, 16, 700);
-
     font-family: "Raleway", sans-serif;
     color: var(--blue);
 }
@@ -307,9 +304,7 @@ hr.custom {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
-    @include responsive-font-size(16, 24, 700);
-
+    font-size: .85rem;
     text-transform: uppercase;
     margin: 0 0 10px;
 }
@@ -324,9 +319,7 @@ hr.custom {
     color: var(--blue);
     letter-spacing: 0.5px;
     text-transform: uppercase;
-
-    @include responsive-font-size(13, 16, 700);
-
+    font-size: .85rem;
     font-family: "Raleway";
     text-decoration: none;
     display: inline-block;
@@ -1029,6 +1022,14 @@ hr.custom {
     }
 
 
+    @include breakpoint(mobile) {
+        .title {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+    }
+
+
     &__area {
         margin-bottom: 50px;
     }
@@ -1682,31 +1683,25 @@ hr.custom {
     -ms-flex-align: center;
     align-items: center;
     padding: 36px 40px 0;
-}
 
-.price__head h4 {
-    text-transform: uppercase;
+    &__offer {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 20px;
+        margin: 0;
+        font-family: 'Rubik';
 
-    @include responsive-font-size(18, 28, 800);
-
-    margin: 0 0 20px;
-}
-
-.price__head h2 {
-    @include responsive-font-size(60, 72, 800);
-
-    margin: 0;
-}
-
-@media only screen and (max-width: 1200px) {
-    .price__head h2 {
-        @include responsive-font-size(50, 62);
+        @include breakpoint(mobile) {
+            font-size: 18px;
+        }
     }
-}
 
-@media only screen and (max-width: 767px) {
-    .price__head h2 {
-        @include responsive-font-size(40, 45);
+    &__price {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-family: 'Rubik';
     }
 }
 
@@ -1716,22 +1711,14 @@ hr.custom {
     position: relative;
     z-index: 2;
     background: #fff;
-}
 
-.price__body h2 {
-    @include responsive-font-size(16, 24, 700);
-
-    color: #152235;
-    text-transform: uppercase;
-    max-width: 346px;
-    margin: 0 0 20px;
-}
-
-.price__body p {
-    @include responsive-font-size(16, 26, 500);
-
-    font-family: "Raleway";
-    color: #000000;
+    &__title {
+        color: #152235;
+        text-transform: uppercase;
+        max-width: 346px;
+        margin: 0 0 20px;
+        font-size: .95rem;
+    }
 }
 
 .price__body ul {
