@@ -1078,9 +1078,10 @@ hr.custom {
 }
 
 .page__hero__text__subtitle {
-    @include responsive-font-size(24, 30);
+    font-size: 1.3rem;
 
     @include breakpoint(mobile) {
+        font-size: 1.1rem;
         text-align: center;
     }
 

@@ -134,7 +134,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .page__hero__image{margin:0 auto 30px;width:150px}
 .page__hero__text{text-transform:uppercase;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;align-items:start}
 .page__hero__text__title{font-size:3.75rem;line-height:1.2;font-weight:800;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:100px 16px 16px 100px;background:#fff;padding:10px 40px;margin-bottom:20px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}
-.page__hero__text__subtitle{font-size:1.5rem;line-height:1.25}
+.page__hero__text__subtitle{font-size:1.3rem}
 .page__hero__text__subtitle .small{font-size:1.5rem;color:#1956a8}
 .page__hero__text h6{color:#1956a8;font-size:1.5rem;line-height:1.25;font-weight:700}
 .block__service.right{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
@@ -281,7 +281,6 @@ h6,.h6{font-size:.875rem;line-height:1.8}
 .page__header h3,.page__header__title{font-size:2.1875rem;line-height:1.44}
 .page__header h2{font-size:3.28125rem;line-height:1.44}
 .page__hero__text__title{font-size:3.28125rem;line-height:1.44}
-.page__hero__text__subtitle{font-size:1.3125rem;line-height:1.5}
 .page__hero__text__subtitle .small{font-size:1.3125rem}
 .page__hero__text h6{font-size:1.3125rem;line-height:1.5}
 .blog__featured__text h4{font-size:.875rem;line-height:1.95}
@@ -368,7 +367,6 @@ h6,.h6{max-width:100%;font-size:.65rem;line-height:2.1}
 .page__header h3,.page__header__title{max-width:100%;font-size:1.625rem;line-height:1.68}
 .page__header h2{max-width:100%;font-size:2.4375rem;line-height:1.68}
 .page__hero__text__title{max-width:100%;font-size:2.4375rem;line-height:1.68}
-.page__hero__text__subtitle{max-width:100%;font-size:.975rem;line-height:1.75}
 .page__hero__text__subtitle .small{max-width:100%;font-size:.975rem}
 .page__hero__text h6{max-width:100%;font-size:.975rem;line-height:1.75}
 .blog__featured__text h4{max-width:100%;font-size:.65rem;line-height:2.275}
@@ -391,6 +389,6 @@ h6,.h6{max-width:100%;font-size:.65rem;line-height:2.1}
 .price__body ul{max-width:100%;font-size:.65rem;line-height:2.275}
 .price__footer a{max-width:100%;font-size:.853125rem;line-height:1.0666666667}
 }@media screen and (max-width:450px){.page__hero .title{font-size:1.3rem;text-align:center}
-.page__hero__text__subtitle{text-align:center}
+.page__hero__text__subtitle{font-size:1.1rem;text-align:center}
 .price__head__offer{font-size:18px}
 }
