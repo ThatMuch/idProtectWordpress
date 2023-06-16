@@ -162,8 +162,8 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .blog__item__image .blog__link{width:32px;height:32px;top:10px;right:11px}
 .blog__item__image .blog__link img{width:15px;-o-object-fit:contain;object-fit:contain}
 .blog__item__text{margin-top:15px}
-.blog__item__text h5{font-size:.875rem;line-height:1.8571428571;font-weight:700;margin:0 0 5px}
-.blog__item__text h2{text-transform:uppercase;color:#152235;font-style:normal;font-size:1rem;line-height:1.5;font-weight:700}
+.blog__item__text h5{font-size:.875rem;margin:0 0 5px}
+.blog__item__text h2{text-transform:uppercase;color:#152235;font-style:normal;font-size:.875rem}
 .blog__item__text h2 a{color:#152235}
 .blog__list .owl-stage{padding-left:0 !important}
 .article__text{color:#152235;font-size:1rem;line-height:1.625;font-weight:500;font-family:"Raleway"}
@@ -240,8 +240,8 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .blog__box h2{font-size:1.5625rem;line-height:1.4;font-weight:600;margin:0 0 10px}
 .blog__box p{font-size:1rem;line-height:1.75}
 .blog__item__image{height:205px}
-}@media only screen and (max-width:1200px) and (max-width:768px){.blog__box h2{font-size:1.3671875rem;line-height:1.68}
-.blog__box p{font-size:.875rem;line-height:2.1}
+}@media only screen and (max-width:1200px) and (max-width:768px){.blog__box h2{font-size:1.484375rem;line-height:1.68}
+.blog__box p{font-size:.95rem;line-height:2.1}
 }@media only screen and (max-width:1200px) and (max-width:480px){.blog__box h2{max-width:100%;font-size:1.015625rem;line-height:1.96}
 .blog__box p{max-width:100%;font-size:.65rem;line-height:2.45}
 }@media only screen and (max-width:991px){.mb-100{margin-bottom:50px !important}
@@ -258,50 +258,48 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .community__info{max-width:100%}
 .page__hero__text__title{font-size:1.875rem;line-height:1.3333333333}
 .blog__box{padding:15px 25px}
-}@media only screen and (max-width:991px) and (max-width:768px){.page__hero__text__title{font-size:1.640625rem;line-height:1.6}
+}@media only screen and (max-width:991px) and (max-width:768px){.page__hero__text__title{font-size:1.78125rem;line-height:1.6}
 }@media only screen and (max-width:991px) and (max-width:480px){.page__hero__text__title{max-width:100%;font-size:1.21875rem;line-height:1.8666666667}
-}@media(max-width:768px){h1,.h1{font-size:2.625rem;line-height:1.5}
-h2,.h2{font-size:1.96875rem;line-height:1.6}
-h3,.h3{font-size:1.3125rem;line-height:1.8}
-h4,.h4{font-size:1.09375rem;line-height:1.8}
-h5,.h5{font-size:.984375rem;line-height:1.6}
-h6,.h6{font-size:.875rem;line-height:1.8}
-.header__link{font-size:.7109375rem;line-height:1.4769230769}
-.footer__area__rs .fab{font-size:1.640625rem}
-.footer__area .copyright{font-size:.7109375rem;line-height:1.4769230769}
-.footer__menu ul li a{font-size:.765625rem;line-height:2.2285714286}
-.community__info a i{font-size:1.3125rem}
-.community__info h2{font-size:2.1875rem;line-height:1.44}
-.community__info p{font-size:.984375rem;line-height:1.8666666667}
-.community__form h2{font-size:1.3125rem;line-height:1.5}
-.community__form input:not([type="submit"]),.community__form textarea{font-size:.875rem;line-height:1.425}
-.community__form p.note{font-size:.65625rem;line-height:1.4}
-.page__text h2{font-size:2.1875rem;line-height:1.44}
-.page__text p{font-size:.875rem;line-height:1.95}
-.page__header h3,.page__header__title{font-size:2.1875rem;line-height:1.44}
-.page__header h2{font-size:3.28125rem;line-height:1.44}
-.page__hero__text__title{font-size:3.28125rem;line-height:1.44}
-.page__hero__text__subtitle .small{font-size:1.3125rem}
-.page__hero__text h6{font-size:1.3125rem;line-height:1.5}
-.blog__featured__text h4{font-size:.875rem;line-height:1.95}
-.blog__featured__text h2,.blog__featured__text h1{font-size:2.1875rem;line-height:1.44}
-.blog__featured__text p{font-size:.875rem;line-height:1.95}
-.blog__box h2{font-size:2.078125rem;line-height:1.5157894737}
-.blog__box p{font-size:1.203125rem;line-height:1.9636363636}
-.blog__item__text h5{font-size:.765625rem;line-height:2.2285714286}
-.blog__item__text h2{font-size:.875rem;line-height:1.8}
-.article__text{font-size:.875rem;line-height:1.95}
-.article__text h3{font-size:1.3125rem;line-height:1.5}
-.article__text h4{font-size:.875rem;line-height:1.8}
-.article__body h6{font-size:.765625rem;line-height:2.2285714286}
-.article__body h2{font-size:.875rem;line-height:1.8}
-.article__box h2{font-size:1.3125rem;line-height:1.5}
-.article__box p{font-size:.875rem;line-height:3}
-.step__list ul.nav-tabs li a{font-size:1.3125rem;line-height:1.5}
-.step__list ul.nav-tabs li a .text{font-size:1.3125rem;line-height:1.5}
-.step__list ul.nav-tabs li a .text__body{font-size:1.3125rem;line-height:1.75}
-.price__body ul{font-size:.875rem;line-height:1.95}
-.price__footer a{font-size:1.1484375rem;line-height:.9142857143}
+}@media(max-width:768px){h1,.h1{font-size:2.85rem;line-height:1.5}
+h2,.h2{font-size:2.1375rem;line-height:1.6}
+h3,.h3{font-size:1.425rem;line-height:1.8}
+h4,.h4{font-size:1.1875rem;line-height:1.8}
+h5,.h5{font-size:1.06875rem;line-height:1.6}
+h6,.h6{font-size:.95rem;line-height:1.8}
+.header__link{font-size:.771875rem;line-height:1.4769230769}
+.footer__area__rs .fab{font-size:1.78125rem}
+.footer__area .copyright{font-size:.771875rem;line-height:1.4769230769}
+.footer__menu ul li a{font-size:.83125rem;line-height:2.2285714286}
+.community__info a i{font-size:1.425rem}
+.community__info h2{font-size:2.375rem;line-height:1.44}
+.community__info p{font-size:1.06875rem;line-height:1.8666666667}
+.community__form h2{font-size:1.425rem;line-height:1.5}
+.community__form input:not([type="submit"]),.community__form textarea{font-size:.95rem;line-height:1.425}
+.community__form p.note{font-size:.7125rem;line-height:1.4}
+.page__text h2{font-size:2.375rem;line-height:1.44}
+.page__text p{font-size:.95rem;line-height:1.95}
+.page__header h3,.page__header__title{font-size:2.375rem;line-height:1.44}
+.page__header h2{font-size:3.5625rem;line-height:1.44}
+.page__hero__text__title{font-size:3.5625rem;line-height:1.44}
+.page__hero__text__subtitle .small{font-size:1.425rem}
+.page__hero__text h6{font-size:1.425rem;line-height:1.5}
+.blog__featured__text h4{font-size:.95rem;line-height:1.95}
+.blog__featured__text h2,.blog__featured__text h1{font-size:2.375rem;line-height:1.44}
+.blog__featured__text p{font-size:.95rem;line-height:1.95}
+.blog__box h2{font-size:2.25625rem;line-height:1.5157894737}
+.blog__box p{font-size:1.30625rem;line-height:1.9636363636}
+.article__text{font-size:.95rem;line-height:1.95}
+.article__text h3{font-size:1.425rem;line-height:1.5}
+.article__text h4{font-size:.95rem;line-height:1.8}
+.article__body h6{font-size:.83125rem;line-height:2.2285714286}
+.article__body h2{font-size:.95rem;line-height:1.8}
+.article__box h2{font-size:1.425rem;line-height:1.5}
+.article__box p{font-size:.95rem;line-height:3}
+.step__list ul.nav-tabs li a{font-size:1.425rem;line-height:1.5}
+.step__list ul.nav-tabs li a .text{font-size:1.425rem;line-height:1.5}
+.step__list ul.nav-tabs li a .text__body{font-size:1.425rem;line-height:1.75}
+.price__body ul{font-size:.95rem;line-height:1.95}
+.price__footer a{font-size:1.246875rem;line-height:.9142857143}
 }@media only screen and (max-width:767px){.header__link{width:46px}
 .header__link span{display:none}
 .footer__menu ul{margin-bottom:10px}
@@ -326,16 +324,16 @@ h6,.h6{font-size:.875rem;line-height:1.8}
 .step__list ul.nav-tabs li a .text{width:40px;height:40px;font-size:1rem;line-height:1.875}
 .step__list.service ul.nav-tabs li a{display:block}
 .step__list.service ul.nav-tabs li a .text{width:60px;height:60px;font-size:1.5625rem;line-height:1.2;margin-bottom:20px}
-}@media only screen and (max-width:767px) and (max-width:768px){.promotion__area.service .promotion__head h2{font-size:1.3671875rem;line-height:1.44}
-.community__info h2{font-size:1.640625rem;line-height:1.6}
-.community__form h2{font-size:1.09375rem}
-.page__text h2{font-size:1.421875rem;line-height:1.3846153846}
-.page__header h3{font-size:.984375rem;line-height:1.8666666667}
-.page__header h2{font-size:1.640625rem;line-height:1.6}
-.blog__featured__text h2,.blog__featured__text h1{font-size:1.3671875rem;line-height:1.44}
-.step__list ul.nav-tabs li a{font-size:.875rem;line-height:1.8}
-.step__list ul.nav-tabs li a .text{font-size:.875rem;line-height:2.25}
-.step__list.service ul.nav-tabs li a .text{font-size:1.3671875rem;line-height:1.44}
+}@media only screen and (max-width:767px) and (max-width:768px){.promotion__area.service .promotion__head h2{font-size:1.484375rem;line-height:1.44}
+.community__info h2{font-size:1.78125rem;line-height:1.6}
+.community__form h2{font-size:1.1875rem}
+.page__text h2{font-size:1.54375rem;line-height:1.3846153846}
+.page__header h3{font-size:1.06875rem;line-height:1.8666666667}
+.page__header h2{font-size:1.78125rem;line-height:1.6}
+.blog__featured__text h2,.blog__featured__text h1{font-size:1.484375rem;line-height:1.44}
+.step__list ul.nav-tabs li a{font-size:.95rem;line-height:1.8}
+.step__list ul.nav-tabs li a .text{font-size:.95rem;line-height:2.25}
+.step__list.service ul.nav-tabs li a .text{font-size:1.484375rem;line-height:1.44}
 }@media only screen and (max-width:767px) and (max-width:480px){.promotion__area.service .promotion__head h2{max-width:100%;font-size:1.015625rem;line-height:1.68}
 .community__info h2{max-width:100%;font-size:1.21875rem;line-height:1.8666666667}
 .community__form h2{max-width:100%;font-size:.8125rem}
@@ -374,8 +372,6 @@ h6,.h6{max-width:100%;font-size:.65rem;line-height:2.1}
 .blog__featured__text p{max-width:100%;font-size:.65rem;line-height:2.275}
 .blog__box h2{max-width:100%;font-size:1.54375rem;line-height:1.7684210526}
 .blog__box p{max-width:100%;font-size:.89375rem;line-height:2.2909090909}
-.blog__item__text h5{max-width:100%;font-size:.56875rem;line-height:2.6}
-.blog__item__text h2{max-width:100%;font-size:.65rem;line-height:2.1}
 .article__text{max-width:100%;font-size:.65rem;line-height:2.275}
 .article__text h3{max-width:100%;font-size:.975rem;line-height:1.75}
 .article__text h4{max-width:100%;font-size:.65rem;line-height:2.1}

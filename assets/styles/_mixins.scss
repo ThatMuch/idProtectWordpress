@@ -51,7 +51,7 @@
 
     // Media Queries pour les écrans plus petits
     @media (max-width: 768px) {
-        font-size: $size / 16 * 0.875 * 1rem; // Réduit la taille de police pour les écrans plus petits
+        font-size: $size / 16 * 0.95 * 1rem; // Réduit la taille de police pour les écrans plus petits
         @if $line-height != null {
             line-height: $line-height / $size * 1.2; // Ajuste la hauteur de ligne pour les écrans plus petits
         }

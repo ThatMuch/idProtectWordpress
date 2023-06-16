@@ -1327,8 +1327,7 @@ hr.custom {
 }
 
 .blog__item__text h5 {
-    @include responsive-font-size(14, 26, 700);
-
+    font-size: 0.875rem;
     margin: 0 0 5px;
 }
 
@@ -1336,8 +1335,7 @@ hr.custom {
     text-transform: uppercase;
     color: #152235;
     font-style: normal;
-
-    @include responsive-font-size(16, 24, 700);
+    font-size: .875rem;
 }
 
 .blog__item__text h2 a {
