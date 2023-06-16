@@ -12,7 +12,9 @@ $block_id = $args['block_id'];
 $class_name = $args['class_name'];
 
 ?>
-<div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>" style="background-image: url(<?php echo esc_url($data['image']['url']); ?>)">
+<div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
+	<div class="promotion__bg" style="background-image: url(<?php echo esc_url($data['image']['url']); ?>)">
+	</div>
 
 	<div class="container">
 		<div class="row">
