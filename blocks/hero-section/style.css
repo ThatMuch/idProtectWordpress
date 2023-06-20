@@ -73,12 +73,6 @@
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	.hero__text h1 {
-		line-height: 1.65rem;
-	}
-}
-
 @media only screen and (max-width: 450px) {
 	.hero__text h1 {
 		font-size: 1.3rem;
@@ -153,4 +147,12 @@
 	display: -ms-flexbox;
 	display: flex;
 	gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+	.hero__box__button {
+		justify-content: center;
+	}
+
+
 }

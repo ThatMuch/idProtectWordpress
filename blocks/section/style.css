@@ -1,6 +1,11 @@
 .promotion__area {
-
+	margin-top: 150px;
 	position: relative;
+}
+
+.promotion {
+	display: flex;
+	flex-direction: column;
 }
 
 .promotion__bg {
@@ -34,6 +39,7 @@
 @media only screen and (max-width: 767px) {
 	.promotion {
 		min-height: 300px;
+		align-items: center;
 	}
 }
 
@@ -50,7 +56,8 @@
 .promotion__head {
 	text-align: right;
 	display: inline-block;
-	transform: translate(150%, -50px);
+	align-self: flex-end;
+	transform: translateY(-50px);
 }
 
 @media only screen and (max-width: 767px) {

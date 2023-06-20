@@ -20,7 +20,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 
 <div class="footer__area">
 	<div class="row">
-		<div class="col-sm-3">
+		<div class="col-md-3">
 			<img src="<?php if ($image[0]) : echo $image[0];
 						else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect" class="footer__area__logo mb-4">
 
@@ -78,17 +78,17 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 
 		</div>
 		<?php if (is_active_sidebar('footer-par')) : ?>
-			<div class="col-sm-3 ps-5 pe-5">
+			<div class="col-md-3 ps-5 pe-5">
 				<?php dynamic_sidebar('footer-par'); ?>
 			</div>
 		<?php endif; ?>
 		<?php if (is_active_sidebar('footer-pro')) : ?>
-			<div class="col-sm-3 ps-5 pe-5">
+			<div class="col-md-3 ps-5 pe-5">
 				<?php dynamic_sidebar('footer-pro'); ?>
 			</div>
 		<?php endif; ?>
 		<?php if (is_active_sidebar('footer-about')) : ?>
-			<div class="col-sm-3 ps-5 pe-5">
+			<div class="col-md-3 ps-5 pe-5">
 				<?php dynamic_sidebar('footer-about'); ?>
 			</div>
 		<?php endif; ?>
