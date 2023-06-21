@@ -126,6 +126,113 @@
                     },
                     "return_format": "array",
                     "parent_repeater": "field_64674b6ae4236"
+                },
+                {
+                    "key": "field_6492d4677e4db",
+                    "label": "",
+                    "name": "promotion",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "promotion": "Promotion"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "allow_custom": 0,
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Ajouter un nouveau choix",
+                    "parent_repeater": "field_64674b6ae4236"
+                },
+                {
+                    "key": "field_6492d4eb7e4dd",
+                    "label": "Prix de la promotion",
+                    "name": "promotion_price",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6492d4677e4db",
+                                "operator": "==",
+                                "value": "promotion"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64674b6ae4236"
+                },
+                {
+                    "key": "field_6492d4cf7e4dc",
+                    "label": "Nom de la promotion",
+                    "name": "promotion_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6492d4677e4db",
+                                "operator": "==",
+                                "value": "promotion"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64674b6ae4236"
+                },
+                {
+                    "key": "field_6492fa4bac07f",
+                    "label": "Texte supplémentaire",
+                    "name": "text_add",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64674b6ae4236"
                 }
             ]
         }
@@ -148,5 +255,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684491442
+    "modified": 1687354031
 }

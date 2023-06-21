@@ -1660,6 +1660,63 @@ hr.custom {
     border-radius: 16px;
     background: #FFFFFF;
     margin-bottom: 15px;
+    position: relative;
+
+    &__promotion {
+        position: absolute;
+        top: -20px;
+        right: -15px;
+        padding: 8px;
+        background: linear-gradient(90deg, #FF5326 0%, #FF8833 100%);
+        border-radius: 5px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Rubik';
+
+        p {
+            margin-bottom: 0;
+        }
+
+        &__price {
+            font-family: 'Rubik';
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 30px;
+            background: linear-gradient(90deg, #FF5326 0%, #FF8833 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            @include breakpoint(mobile) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .isPromotion {
+        font-family: 'Rubik';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        text-transform: uppercase;
+        background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: '';
+            background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+            top: calc(50% - 2px);
+            left: 0;
+            height: 2px;
+            width: 100%;
+        }
+    }
 }
 
 .price__table:nth-child(2) {

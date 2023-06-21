@@ -205,7 +205,12 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .step__list ul.nav-tabs li:last-child a{margin-bottom:0}
 .step__list.service ul.nav-tabs li a{color:#152235}
 .step__list.service ul.nav-tabs li a:hover,.step__list.service ul.nav-tabs li a.active{color:#fff}
-.price__table{-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:16px;background:#fff;margin-bottom:15px}
+.price__table{-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:16px;background:#fff;margin-bottom:15px;position:relative}
+.price__table__promotion{position:absolute;top:-20px;right:-15px;padding:8px;background:-webkit-gradient(linear,left top,right top,from(#ff5326),to(#f83));background:linear-gradient(90deg,#ff5326 0,#f83 100%);border-radius:5px;color:#fff;text-transform:uppercase;font-weight:bold;font-family:'Rubik'}
+.price__table__promotion p{margin-bottom:0}
+.price__table__promotion__price{font-family:'Rubik';font-weight:700;font-size:32px;line-height:30px;background:-webkit-gradient(linear,left top,right top,from(#ff5326),to(#f83));background:linear-gradient(90deg,#ff5326 0,#f83 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-fill-color:transparent}
+.price__table .isPromotion{font-family:'Rubik';font-weight:400;font-size:14px;line-height:30px;text-transform:uppercase;background:linear-gradient(278.49deg,#1956a8 0,#171c60 88.22%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative}
+.price__table .isPromotion:after{position:absolute;content:'';background:linear-gradient(278.49deg,#1956a8 0,#171c60 88.22%);top:calc(50% - 2px);left:0;height:2px;width:100%}
 .price__table:nth-child(2){background:#e8effb}
 .price__table:nth-child(2) .price__body{background:#e8effb}
 .price__table.premium{background:#e8effb}
@@ -387,5 +392,6 @@ h6,.h6{max-width:100%;font-size:.65rem;line-height:2.1}
 .price__footer a{max-width:100%;font-size:.853125rem;line-height:1.0666666667}
 }@media screen and (max-width:450px){.page__hero .title{font-size:1.3rem;text-align:center}
 .page__hero__text__subtitle{font-size:1.1rem;text-align:center}
+.price__table__promotion__price{font-size:24px}
 .price__head__offer{font-size:18px}
 }

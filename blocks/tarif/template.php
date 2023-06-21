@@ -26,11 +26,26 @@ $class_name = $args['class_name'];
 				<?php $i = 0; ?>
 				<?php while (have_rows('tarif_card')) : the_row(); ?>
 					<div class="col-lg-<?php echo $i <= 2 ? '5' : '4'; ?>">
+						<?php $isPromotion = count(get_sub_field('promotion')) > 0;
+						?>
 						<div class="price__table <?php echo get_sub_field('offer'); ?>">
+							<?php if ($isPromotion) : ?>
+								<div class="price__table__promotion">
+									<p><?php echo get_sub_field('promotion_label'); ?></p>
+								</div>
+							<?php endif; ?>
 							<div class="price__head">
 								<div class="price__head__left">
 									<h4><?php echo get_sub_field('offer'); ?></h4>
-									<h2><span class="g-text"><?php echo get_sub_field('price'); ?>€</span></h2>
+									<h2>
+										<?php if ($isPromotion) : ?>
+											<span class="price__table__promotion__price">
+												<?php echo get_sub_field('promotion_price'); ?>€
+											</span>
+										<?php endif; ?>
+										<span class="g-text <?php echo $isPromotion ? 'isPromotion' : ''; ?>">
+											<?php echo get_sub_field('price'); ?>€</span>
+									</h2>
 									<?php if (get_sub_field('text_add')) : ?>
 										<span class="section-price__column__text-add"><?php echo get_sub_field('text_add'); ?></span>
 									<?php endif; ?>
