@@ -5,7 +5,8 @@
  */
 // $data is what we're going to expose to our render template
 $data = array(
-	'card' => get_field('tarif_card')
+	'card' => get_field('tarif_card'),
+	'title' => get_field('section_title'),
 );
 
 // Dynamic block ID
@@ -34,7 +35,6 @@ get_template_part(
 		'block'      => $block,
 		'is_preview' => $is_preview,
 		'post_id'    => $post_id,
-
 		'data'       => $data,
 		'class_name' => $class_name,
 		'block_id'   => $block_id,

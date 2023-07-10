@@ -3,6 +3,26 @@
     "title": "Block - Tarifs",
     "fields": [
         {
+            "key": "field_64ac2b25751f7",
+            "label": "Titre de la section",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_641c92a30fe7c",
             "label": "Card",
             "name": "tarif_card",
@@ -353,5 +373,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687354051
+    "modified": 1689005263
 }

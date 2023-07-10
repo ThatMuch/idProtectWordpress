@@ -36,10 +36,14 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="page__hero">
-					<div class="page__hero__image">
-						<?php the_post_thumbnail('large', array()); ?>
-					</div>
+				<div class="page__hero <?php echo has_post_thumbnail() ? "justify-content-center" : "" ?> ">
+					<?php
+					if (has_post_thumbnail()) :
+					?>
+						<div class="page__hero__image">
+							<?php the_post_thumbnail('large', array()); ?>
+						</div>
+					<?php endif; ?>
 					<div class="page__hero__text">
 						<h1 class="title mt-0"><span class="g-text"><?php the_title(); ?></span></h1>
 						<?php the_field('headline'); ?>

@@ -1017,7 +1017,8 @@ hr.custom {
 
 .page__hero {
     display: block;
-    justify-content: center;
+
+    //justify-content: center;
     gap: 24px;
 
     @include breakpoint(tablet) {
@@ -1037,8 +1038,12 @@ hr.custom {
     }
 
 
+    .title {
+        margin-bottom: 0;
+    }
+
     &__area {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     &__image {
@@ -1086,6 +1091,7 @@ hr.custom {
 
 .page__hero__text__subtitle {
     font-size: 1.3rem;
+    margin-top: 1rem;
 
     @include breakpoint(mobile) {
         font-size: 1.1rem;

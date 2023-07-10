@@ -129,12 +129,13 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .page__header__area{min-height:312px;background-position:center;background-repeat:no-repeat;background-size:cover}
 .page__header__area.contact{background:-webkit-gradient(linear,left bottom,left top,from(rgba(255,136,51,0.5)),to(rgba(255,136,51,0.5))),url(../images/contact.jpg) no-repeat scroll center center/cover;background:linear-gradient(0,rgba(255,136,51,0.5),rgba(255,136,51,0.5)),url(../images/contact.jpg) no-repeat scroll center center/cover;margin-top:90px}
 .page__header__area .container{position:relative}
-.page__hero{display:block;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;gap:24px}
-.page__hero__area{margin-bottom:50px}
+.page__hero{display:block;gap:24px}
+.page__hero .title{margin-bottom:0}
+.page__hero__area{margin-bottom:30px}
 .page__hero__image{margin:0 auto 30px;width:150px}
 .page__hero__text{text-transform:uppercase;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;align-items:start}
 .page__hero__text__title{font-size:3.75rem;line-height:1.2;font-weight:800;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:100px 16px 16px 100px;background:#fff;padding:10px 40px;margin-bottom:20px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}
-.page__hero__text__subtitle{font-size:1.3rem}
+.page__hero__text__subtitle{font-size:1.3rem;margin-top:1rem}
 .page__hero__text__subtitle .small{font-size:1.5rem;color:#1956a8}
 .page__hero__text h6{color:#1956a8;font-size:1.5rem;line-height:1.25;font-weight:700}
 .block__service.right{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}

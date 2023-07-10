@@ -16,16 +16,19 @@ $class_name = $args['class_name'];
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card__title">
-					<h2 class="title"><span class="g-text">tarif</span></h2>
+					<h2 class="title">
+						<span class="g-text">
+							<?php echo get_field('section_title') ? get_field('section_title') : 'Tarifs'; ?>
+						</span>
+					</h2>
 				</div>
 			</div>
 		</div>
 		<div class="row justify-content-center">
-			<!-- Display the group field tarif_card1 -->
 			<?php if (have_rows('tarif_card')) : ?>
 				<?php $i = 0; ?>
 				<?php while (have_rows('tarif_card')) : the_row(); ?>
-					<div class="col-lg-<?php echo $i <= 2 ? '5' : '4'; ?>">
+					<div class="col-lg-<?php echo $i <= 2 ? '4' : '5'; ?>">
 						<?php $isPromotion = count(get_sub_field('promotion')) > 0;
 						?>
 						<div class="price__table <?php echo get_sub_field('offer'); ?>">
