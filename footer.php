@@ -151,7 +151,7 @@ if ($block) :
 		setTimeout(function() {
 			var myModal = new bootstrap.Modal(document.getElementById('hubspotModal'), {});
 			myModal.show();
-		}, 1); // 10000 milliseconds = 10 seconds
+		}, 10000); // 10000 milliseconds = 10 seconds
 	});
 </script>
 </body>
