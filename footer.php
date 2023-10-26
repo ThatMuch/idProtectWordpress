@@ -105,6 +105,28 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 		</a>
 	</div>
 </div>
+
+<?php if (is_front_page()) : ?>
+	<div class="modal fade" id="hubspotModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title">Vous souhaitez vous protéger contre l’usurpation d’identité ?
+					</h2>
+					<button type="button" class="close btn btn-primary" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">X</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Inscrivez vous à notre newsletter</p>
+					<div class="hubspot">
+						<?php echo do_shortcode('[hubspot type="form" portal="25430769" id="79af16ac-3a9f-47bc-9f71-c8b7050ceac4"]'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php endif ?>
 <?php
 $block = find_block_by_name('acf/temoignage', $post->ID);
 if ($block) :
@@ -123,6 +145,15 @@ if ($block) :
 	</div>
 <?php endif; ?>
 <?php wp_footer() ?>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		setTimeout(function() {
+			var myModal = new bootstrap.Modal(document.getElementById('hubspotModal'), {});
+			myModal.show();
+		}, 1); // 10000 milliseconds = 10 seconds
+	});
+</script>
 </body>
 
 </html>
