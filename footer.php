@@ -148,10 +148,15 @@ if ($block) :
 
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
-		setTimeout(function() {
-			var myModal = new bootstrap.Modal(document.getElementById('hubspotModal'), {});
-			myModal.show();
-		}, 10000); // 10000 milliseconds = 10 seconds
+		// Check if modal has already been shown in this session
+		if (!sessionStorage.getItem('modalShown')) {
+			setTimeout(function() {
+				var myModal = new bootstrap.Modal(document.getElementById('hubspotModal'), {});
+				myModal.show();
+				// Mark modal as shown in this session
+				sessionStorage.setItem('modalShown', 'true');
+			}, 10000); // 10000 milliseconds = 10 seconds
+		}
 	});
 </script>
 </body>
