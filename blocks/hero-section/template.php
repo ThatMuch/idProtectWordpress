@@ -12,11 +12,7 @@ $description = get_field('description');
 					<?php echo $title; ?>
 					<div class="hero__box">
 						<h2><?php echo $subtitle; ?></h2>
-						<p>ID Protect prévient l’usurpation d’identité grâce à des outils innovants. </p>
-						<ul>
-							<li>Particuliers, protégez vos documents et facilitez vos démarches en ligne . </li>
-							<li>Professionnels, prévenez facilement les cas d’usurpation.</li>
-						</ul>
+						<?php echo $description; ?>
 						<?php if (have_rows('cta_group')) : ?>
 							<div class="hero__box__button">
 								<?php while (have_rows('cta_group')) : the_row();
