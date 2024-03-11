@@ -35,7 +35,11 @@ do_action('woocommerce_before_main_content');
 		<div class="row">
 			<div class="col-md-12">
 				<div class="blog__featured">
-					<?php the_post_thumbnail('large', array('class' => 'blog__image')); ?>
+					<?php if (get_field('featured_image')) : $image = get_field('featured_image'); ?>
+						<!-- Full size image -->
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<?php endif; ?>
+
 					<div class="blog__featured__text">
 						<h1><?php the_title(); ?></h1>
 					</div>
