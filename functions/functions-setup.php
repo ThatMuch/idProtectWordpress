@@ -196,3 +196,10 @@ function display_pages_in_category_archives($query)
 	}
 }
 add_action('pre_get_posts', 'display_pages_in_category_archives');
+
+
+function mytheme_add_woocommerce_support()
+{
+	add_theme_support('woocommerce');
+}
+add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
