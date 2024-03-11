@@ -6,7 +6,7 @@
  *
  */
 
-.btn {
+.btn, .single_add_to_cart_button {
     -ms-flex-align: center;
     -webkit-box-align: center;
     align-items: center;
@@ -38,6 +38,22 @@
             color: #fff;
             background-color: $color-primary-darker;
         }
+    }
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
+    background-color: var(--blue);
+    color: #fff;
+
+    img {
+        -webkit-filter: brightness(100);
+        filter: brightness(100);
+        margin-left: 8px;
+    }
+
+    &:hover, &:active, &:focus {
+        color: #fff;
+        background-color: $color-primary-darker;
     }
 }
 

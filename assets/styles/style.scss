@@ -91,6 +91,10 @@ a {
     color: var(--blue);
 }
 
+*:focus-visible {
+    outline: none;
+}
+
 input:focus,
 button:focus,
 a:focus,
