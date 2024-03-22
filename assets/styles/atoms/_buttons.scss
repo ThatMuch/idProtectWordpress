@@ -6,7 +6,7 @@
  *
  */
 
-.btn, .single_add_to_cart_button {
+.btn, .single_add_to_cart_button, .wc-block-cart__submit-button, .wc-block-components-totals-coupon__button {
     -ms-flex-align: center;
     -webkit-box-align: center;
     align-items: center;
@@ -41,7 +41,8 @@
     }
 }
 
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
+body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
     background-color: var(--blue);
     color: #fff;
 
