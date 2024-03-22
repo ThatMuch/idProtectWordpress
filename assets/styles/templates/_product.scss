@@ -35,8 +35,12 @@
     }
 
     .wc-block-grid__product-link {
-        display: flex;
+        display: flex !important;
         gap: 1rem;
+
+        .wc-block-grid__product-title {
+            text-align: left;
+        }
 
         .wc-block-grid__product-image {
             display: block;
