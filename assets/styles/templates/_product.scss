@@ -33,4 +33,14 @@
     .wc-block-grid__products {
         flex-direction: column;
     }
+
+    .wc-block-grid__product-link {
+        display: flex;
+        gap: 1rem;
+
+        .wc-block-grid__product-image {
+            display: block;
+            width: 100px;
+        }
+    }
 }
