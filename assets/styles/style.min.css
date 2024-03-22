@@ -140,7 +140,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .page__header h3,.page__header__title{-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:100px 16px 16px 100px;background:#fff;color:#152235;text-transform:uppercase;font-size:2.5rem;line-height:1.2;font-weight:800;padding:10px 30px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;margin-left:auto}
 .page__header h2{font-size:3.75rem;line-height:1.2;font-weight:800;-webkit-box-shadow:0 16px 32px rgba(25,86,168,0.1);box-shadow:0 16px 32px rgba(25,86,168,0.1);border-radius:100px 16px 16px 100px;text-transform:uppercase;background:#fff;padding:10px 40px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;margin-left:auto}
 .page__header__area{min-height:312px;background-position:center;background-repeat:no-repeat;background-size:cover}
-.page__header__area--noBg .page__header__title{text-align:center;width:initial;border-radius:100px}
+.page__header__area--noBg .page__header__title{text-align:center;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;border-radius:100px;margin:auto}
 .page__header__area.contact{background:-webkit-gradient(linear,left bottom,left top,from(rgba(255,136,51,0.5)),to(rgba(255,136,51,0.5))),url(../images/contact.jpg) no-repeat scroll center center/cover;background:linear-gradient(0,rgba(255,136,51,0.5),rgba(255,136,51,0.5)),url(../images/contact.jpg) no-repeat scroll center center/cover;margin-top:90px}
 .page__header__area .container{position:relative}
 .page__hero{display:block;gap:24px}

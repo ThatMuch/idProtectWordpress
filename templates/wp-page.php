@@ -27,9 +27,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="page__header">
-						<h1 class="page__header__title"><?php the_title(); ?></h1>
-					</div>
+					<h1 class="page__header__title"><?php the_title(); ?></h1>
 				</div>
 			</div>
 		</div>

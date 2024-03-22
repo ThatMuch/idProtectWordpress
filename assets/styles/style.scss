@@ -1005,8 +1005,9 @@ hr.custom {
     &--noBg {
         .page__header__title {
             text-align: center;
-            width: initial;
+            width: fit-content;
             border-radius: 100px;
+            margin: auto;
         }
     }
 }
