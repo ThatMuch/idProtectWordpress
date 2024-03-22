@@ -11,6 +11,8 @@
 // Get the post's categories
 $categories = get_the_category();
 $category_name = '';
+// Get if the post is a product
+$is_product = false;
 
 // Check if the post has any categories
 if (!empty($categories)) {

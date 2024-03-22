@@ -15,41 +15,33 @@
  * @package     WooCommerce\Templates
  * @version     1.6.4
  */
+// Get the post's categories
+$categories = get_the_category();
+$category_name = '';
 
+// Check if the post has any categories
+if (!empty($categories)) {
+	// Get the first category's name (you can change this to adapt to your needs)
+	$category_name = strtolower($categories[0]->name);
+}
 if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly
 }
 
 get_header(); ?>
 
-<div class="page__area">
+<div class="page__area <?php echo $category_name ?>">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="blog__featured">
-					<?php if (get_field('featured_image')) : $image = get_field('featured_image'); ?>
-						<!-- Full size image -->
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					<?php endif; ?>
 
-					<div class="blog__featured__text">
-						<h1><?php the_title(); ?></h1>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="row g-3">
-			<div class="col-lg-8">
+			<div class="col-lg-9">
 				<?php while (have_posts()) : ?>
 					<?php the_post(); ?>
-
 					<?php wc_get_template_part('content', 'single-product'); ?>
-
-				<?php endwhile; // end of the loop.
-				?>
+				<?php endwhile; ?>
 			</div>
-			<div class="col-lg-4">
-				<?php get_sidebar(); ?>
+			<div class="col-lg-3">
+				<?php dynamic_sidebar('sidebar-products'); ?>
 			</div>
 		</div>
 	</div>

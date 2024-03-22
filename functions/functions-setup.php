@@ -128,6 +128,15 @@ function stanlee_widgets_init()
 		'after_title'   => '</h2>',
 	));
 	register_sidebar(array(
+		'name'          => esc_html__('Sidebar products', 'IdProtect'),
+		'id'            => 'sidebar-products',
+		'description'   => esc_html__('Add widgets here.', 'IdProtect'),
+		'before_widget' => '<aside id="%1$s" class="%2$s article__sidebar sidebar-products">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	));
+	register_sidebar(array(
 		'name'          => esc_html__('Footer Logos', 'IdProtect'),
 		'id'            => 'footer-1',
 		'description'   => esc_html__('Add widgets here.', 'IdProtect'),

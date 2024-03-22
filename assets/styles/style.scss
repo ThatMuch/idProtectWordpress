@@ -65,6 +65,7 @@
 // @import "./templates/_page";
 // @import "./templates/_post";
 // @import "./templates/_subsite";
+@import "./templates/_product";
 
 :root {
     --blue: #1956A8;
@@ -1906,4 +1907,8 @@ hr.custom {
 
 .sidebar-pro .article__box {
     background-color: #171C60;
+}
+
+.product_meta {
+    display: none;
 }
