@@ -28,3 +28,9 @@
         }
     }
 }
+
+.sidebar-products {
+    .wc-block-grid__products {
+        flex-direction: column;
+    }
+}
