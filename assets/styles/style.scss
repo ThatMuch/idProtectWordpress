@@ -67,11 +67,6 @@
 // @import "./templates/_subsite";
 @import "./templates/_product";
 
-// :root {
-//     --blue: $color-primary;
-//     --orange: #FF8833;
-// }
-
 html {
     font-size: 16px;
 }
@@ -823,7 +818,7 @@ hr.custom {
 }
 
 .community__form h2 {
-    color: #FF8833;
+    color: $color-secondary;
     text-transform: uppercase;
 
     @include responsive-font-size(24, 30, 700);
@@ -1267,7 +1262,7 @@ hr.custom {
 }
 
 .blog__box.orange {
-    background: #FF8833;
+    background: $color-secondary;
 }
 
 .blog__box h2 {
@@ -1687,7 +1682,7 @@ hr.custom {
         top: -20px;
         right: -15px;
         padding: 8px;
-        background: linear-gradient(90deg, #FF5326 0%, #FF8833 100%);
+        background: linear-gradient(90deg, #FF5326 0%, $color-secondary 100%);
         border-radius: 5px;
         color: #fff;
         text-transform: uppercase;
@@ -1703,7 +1698,7 @@ hr.custom {
             font-weight: 700;
             font-size: 32px;
             line-height: 30px;
-            background: linear-gradient(90deg, #FF5326 0%, #FF8833 100%);
+            background: linear-gradient(90deg, #FF5326 0%, $color-secondary 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
