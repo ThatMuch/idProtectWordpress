@@ -11,57 +11,57 @@
 			"palette": [
 				{
 					"slug": "primary_40",
-					"color": "#1956A8",
+					"color": "#171C60FF",
 					"name": "primary_40"
 				},
 				{
 					"slug": "primary_50",
-					"color": "#5E89C2",
+					"color": "#454980FF",
 					"name": "primary_50"
 				},
 				{
 					"slug": "primary_60",
-					"color": "#A3BBDC",
+					"color": "#8B8EB0FF",
 					"name": "primary_60"
 				},
 				{
 					"slug": "primary_30",
-					"color": "#144586",
+					"color": "#12164DFF",
 					"name": "primary_30"
 				},
 				{
 					"slug": "primary_20",
-					"color": "#0F3465",
+					"color": "#0C0E30FF",
 					"name": "primary_20"
 				},
 				{
 					"slug": "secondary_20",
-					"color": "#0C0E30",
+					"color": "#802A13FF",
 					"name": "secondary_20"
 				},
 				{
 					"slug": "secondary_30",
-					"color": "#12164D",
+					"color": "#CC421EFF",
 					"name": "secondary_30"
 				},
 				{
 					"slug": "secondary_40",
-					"color": "#171C60",
+					"color": "#FF5326FF",
 					"name": "secondary_40"
 				},
 				{
 					"slug": "secondary_50",
-					"color": "#454980",
+					"color": "#FF7551FF",
 					"name": "secondary_50"
 				},
 				{
 					"slug": "secondary_60",
-					"color": "#8B8EB0",
+					"color": "#FFA993FF",
 					"name": "secondary_60"
 				},
 				{
 					"slug": "secondary_70",
-					"color": "#E8E8EF",
+					"color": "#FFEEE9FF",
 					"name": "secondary_70"
 				},
 				{
@@ -76,7 +76,7 @@
 				},
 				{
 					"slug": "ACCENT_40",
-					"color": "#FF8833",
+					"color": "#FF7551FF",
 					"name": "ACCENT_40"
 				},
 				{

@@ -67,11 +67,6 @@
 // @import "./templates/_subsite";
 @import "./templates/_product";
 
-:root {
-    --blue: #1956A8;
-    --orange: #FF8833;
-}
-
 html {
     font-size: 16px;
 }
@@ -89,7 +84,7 @@ img {
 
 a {
     text-decoration: none;
-    color: var(--blue);
+    color: $color-primary;
 }
 
 *:focus-visible {
@@ -104,7 +99,7 @@ textarea:focus {
 }
 
 hr.custom {
-    border-color: #1956A8;
+    border-color: $color-primary;
     opacity: 1;
     margin: 50px auto;
     max-width: 85%;
@@ -147,7 +142,7 @@ hr.custom {
 }
 
 .g-text {
-    background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+    background: linear-gradient(278.49deg, $color-primary 0%, #171C60 88.22%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -180,11 +175,11 @@ hr.custom {
 }
 
 .text__orange {
-    color: var(--orange) !important;
+    color: $color-secondary !important;
 }
 
 .text__blue {
-    color: #1956A8;
+    color: $color-primary;
 }
 
 .text__dark {
@@ -212,14 +207,14 @@ hr.custom {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-family: "Raleway", sans-serif;
-    color: var(--blue);
+    color: $color-primary;
     margin: 0 30px;
     isolation: isolate;
     font-size: .85rem;
 }
 
 .header__area .nav-link:hover {
-    color: var(--orange);
+    color: $color-secondary;
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 7px;
@@ -230,7 +225,7 @@ hr.custom {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-family: "Raleway", sans-serif;
-    color: var(--blue);
+    color: $color-primary;
 }
 
 .header__area .dropdown-toggle::after {
@@ -249,7 +244,7 @@ hr.custom {
 }
 
 .header__area .dropdown-toggle.show {
-    color: var(--orange);
+    color: $color-secondary;
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 7px;
@@ -312,7 +307,7 @@ hr.custom {
 }
 
 .header__area .mega__menu__item h2 {
-    background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+    background: linear-gradient(278.49deg, $color-primary 0%, #171C60 88.22%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -328,7 +323,7 @@ hr.custom {
 }
 
 .header__area .mega__menu__item ul li a {
-    color: var(--blue);
+    color: $color-primary;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-size: .85rem;
@@ -341,7 +336,7 @@ hr.custom {
 }
 
 .header__area .mega__menu__item ul li a:hover {
-    color: var(--orange);
+    color: $color-secondary;
 }
 
 .header__area .mega__menu [class*=col-] .mega__menu__item {
@@ -361,7 +356,7 @@ hr.custom {
 }
 
 .header__area .navbar-toggler {
-    border-color: var(--orange);
+    border-color: $color-secondary;
 }
 
 .header__area .navbar-toggler-icon {
@@ -381,7 +376,7 @@ hr.custom {
 }
 
 .header__link {
-    color: var(--orange);
+    color: $color-secondary;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 
@@ -440,7 +435,7 @@ hr.custom {
 }
 
 .header__link:hover {
-    color: var(--orange);
+    color: $color-secondary;
 }
 
 .header__link:hover span {
@@ -459,7 +454,7 @@ hr.custom {
 }
 
 .footer__area {
-    background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+    background: linear-gradient(278.49deg, $color-primary 0%, #171C60 88.22%);
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px 16px 0px 0px;
@@ -730,7 +725,7 @@ hr.custom {
 }
 
 .community__info {
-    background: #1956A8;
+    background: $color-primary;
     border-radius: 16px;
     padding: 36px 40px;
     color: #fff;
@@ -823,7 +818,7 @@ hr.custom {
 }
 
 .community__form h2 {
-    color: #FF8833;
+    color: $color-secondary;
     text-transform: uppercase;
 
     @include responsive-font-size(24, 30, 700);
@@ -1116,12 +1111,12 @@ hr.custom {
     .small {
         @include responsive-font-size(24);
 
-        color: #1956A8;
+        color: $color-primary;
     }
 }
 
 .page__hero__text h6 {
-    color: #1956A8;
+    color: $color-primary;
 
     @include responsive-font-size(24, 30, 700);
 }
@@ -1245,7 +1240,7 @@ hr.custom {
 }
 
 .blog__box {
-    background: #1956A8;
+    background: $color-primary;
     border-radius: 16px;
     padding: 36px 40px;
     color: #F6F7F9;
@@ -1267,7 +1262,7 @@ hr.custom {
 }
 
 .blog__box.orange {
-    background: #FF8833;
+    background: $color-secondary;
 }
 
 .blog__box h2 {
@@ -1459,7 +1454,7 @@ hr.custom {
 }
 
 .article__box {
-    background: #1956A8;
+    background: $color-primary;
     border-radius: 16px;
     padding: 36px 40px;
     color: #F6F7F9;
@@ -1592,7 +1587,7 @@ hr.custom {
 
 .step__list ul.nav-tabs li a .text::after {
     content: "";
-    background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+    background: linear-gradient(278.49deg, $color-primary 0%, #171C60 88.22%);
     width: 100%;
     height: 100%;
     left: 0;
@@ -1624,7 +1619,7 @@ hr.custom {
 
 .step__list ul.nav-tabs li a:hover, .step__list ul.nav-tabs li a.active {
     color: #fff;
-    background: #1956A8;
+    background: $color-primary;
 }
 
 .professionnel .step__list ul.nav-tabs li a:hover, .professionnel .step__list ul.nav-tabs li a.active {
@@ -1687,7 +1682,7 @@ hr.custom {
         top: -20px;
         right: -15px;
         padding: 8px;
-        background: linear-gradient(90deg, #FF5326 0%, #FF8833 100%);
+        background: linear-gradient(90deg, #FF5326 0%, $color-secondary 100%);
         border-radius: 5px;
         color: #fff;
         text-transform: uppercase;
@@ -1703,7 +1698,7 @@ hr.custom {
             font-weight: 700;
             font-size: 32px;
             line-height: 30px;
-            background: linear-gradient(90deg, #FF5326 0%, #FF8833 100%);
+            background: linear-gradient(90deg, #FF5326 0%, $color-secondary 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -1721,7 +1716,7 @@ hr.custom {
         font-size: 14px;
         line-height: 30px;
         text-transform: uppercase;
-        background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+        background: linear-gradient(278.49deg, $color-primary 0%, #171C60 88.22%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -1730,7 +1725,7 @@ hr.custom {
         &:after {
             position: absolute;
             content: '';
-            background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+            background: linear-gradient(278.49deg, $color-primary 0%, #171C60 88.22%);
             top: calc(50% - 2px);
             left: 0;
             height: 2px;
@@ -1841,7 +1836,7 @@ hr.custom {
 }
 
 .price__footer {
-    background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%);
+    background: linear-gradient(278.49deg, $color-primary 0%, #171C60 88.22%);
     text-align: center;
     border-radius: 16px;
     margin-top: -25px;
@@ -1879,7 +1874,7 @@ hr.custom {
 }
 
 .price__footer a:hover {
-    background: var(--orange);
+    background: $color-secondary;
     color: #fff;
 }
 
@@ -1889,7 +1884,7 @@ hr.custom {
 }
 
 .bg_PRIMARY_40 {
-    background-color: var(--blue) !important;
+    background-color: $color-primary !important;
 }
 
 .bg_secondary_40 {

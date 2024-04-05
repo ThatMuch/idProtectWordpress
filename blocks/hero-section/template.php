@@ -4,7 +4,7 @@ $subtitle = get_field('subtitle') ?: 'Default subtitle';
 $image = get_field('image');
 $description = get_field('description');
 ?>
-<div class="hero__area">
+<div class="hero__area toto ooo">
 	<div class="container">
 		<div class="row hero__area__row">
 			<div class="col-lg-7 h-100">

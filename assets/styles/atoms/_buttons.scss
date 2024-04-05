@@ -12,7 +12,7 @@
     align-items: center;
     background: #FFFFFF;
     border-radius: 7px;
-    color: var(--blue);
+    color: $color-primary;
     display: -ms-inline-flexbox;
     display: -webkit-inline-box;
     display: inline-flex;
@@ -25,7 +25,7 @@
     text-transform: uppercase;
 
     &.btn__primary {
-        background: var(--blue);
+        background: $color-primary;
         color: #fff;
 
         img {
@@ -43,7 +43,7 @@
 
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
 body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
-    background-color: var(--blue);
+    background-color: $color-primary;
     color: #fff;
 
     img {
@@ -66,7 +66,7 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     text-align: center;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
-    color: var(--blue);
+    color: $color-primary;
     padding: 10px 15px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -77,7 +77,7 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 }
 
 .btn__white:hover {
-    background: var(--blue);
+    background: $color-primary;
 }
 
 .btn__white:hover img {
@@ -91,10 +91,10 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 }
 
 .btn__orange {
-    border: 2px solid #FF8833;
+    border: 2px solid $color-secondary;
     border-radius: 7px;
     padding: 13px 12px;
-    color: #FF8833;
+    color: $color-secondary;
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -103,25 +103,25 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 
 .btn__orange:hover {
     color: #fff;
-    background: #FF8833;
+    background: $color-secondary;
 }
 
 .btn__orange.solid {
-    background: #FF8833;
+    background: $color-secondary;
     color: #fff;
 }
 
 .btn__orange.solid:hover {
-    background: var(--blue);
+    background: $color-primary;
 }
 
 .btn__orange.blue {
-    border-color: #1956A8;
-    color: #1956A8;
+    border-color: $color-primary;
+    color: $color-primary;
 }
 
 .btn__orange.blue:hover {
-    background: #1956A8;
+    background: $color-primary;
     color: #fff;
 }
 

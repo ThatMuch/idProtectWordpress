@@ -10,7 +10,7 @@
 }
 
 .community__head {
-	background: #FF8833;
+	background: #FF7551FF;
 	-webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
 	box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
 	border-radius: 16px;
@@ -88,7 +88,7 @@
 }
 
 .community__body h2 {
-	color: #FF8833;
+	color: #FF7551FF;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 1.5;
@@ -110,7 +110,7 @@
 }
 
 .community__title {
-	color: #FF8833;
+	color: #FF7551FF;
 	font-family: "Rubik", sans-serif;
 	font-weight: 800;
 	font-size: 3.75;
