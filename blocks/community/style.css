@@ -106,7 +106,7 @@
 
 .community__body .btn__white:hover {
 	color: #fff !important;
-	background: var(--orange);
+	background: $color-secondary;
 }
 
 .community__title {

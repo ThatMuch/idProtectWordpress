@@ -28,17 +28,57 @@ $element_width_mobile: 95vw; // default width of the .element content-div
 
 /* Presets
 /––––––––––––––––––––––––*/
-$color-primary: #1956A8;
-$color-primary-darker: #0F3465;
-$color-secondary: #FF8833;
-$color-secondary-darker: #3790a9;
-$color-black: #212529;
-$color-dark: #343a40;
+
+$blue-80: #F5F9FF;
+$blue-70: #E8EFFB;
+$blue-60: #9FC1EF;
+$blue-50: #5E89C2;
+$blue-40: #1956A8;
+$blue-30: #144586;
+$blue-20: #0F3465;
+
+$navy-80: #FAFAFE;
+$navy-70: #E8E8EF;
+$navy-60: #8B8EB0;
+$navy-50: #454980;
+$navy-40: #171C60;
+$navy-30: #12164D;
+$navy-20: #0C0E30;
+
+$orange-20: #80441AFF;
+$orange-30: #CC6D29FF;
+$orange-40: #FF8833FF;
+$orange-50: #FFA05CFF;
+$orange-60: #FFC499FF;
+$orange-70: #FFF3EBFF;
+
+$red-20: #802A13FF;
+$red-30: #CC421EFF;
+$red-40: #FF5326FF;
+$red-50: #FF7551FF;
+$red-60: #FFA993FF;
+$red-70: #FFEEE9FF;
+
+$green-20: #0C763DFF;
+$green-30: #12BC61FF;
+$green-40: #17EB79FF;
+$green-50: #45EF94FF;
+$green-60: #8BF5BCFF;
+$green-70: #E8FDF2FF;
+
+// ........................
+$color-primary: $navy-40;
+$color-primary-darker: $navy-20;
+$color-secondary: $red-50;
+$color-secondary-darker: $red-40;
+$color-black: $navy-40;
+$color-dark: $navy-40;
 $color-grey2: #495057;
 $color-grey1: #868e96;
 $color-grey: #F2F2F2;
 $color-light: #F7F7F7;
 
+//ddd
 /*=============================================
   FONTS
 =============================================*/

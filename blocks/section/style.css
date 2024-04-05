@@ -140,7 +140,7 @@
 }
 
 .promotion__bottom .btn__white {
-	color: var(--blue);
+	color: $color-primary;
 }
 
 .promotion__bottom .btn__white:hover {
