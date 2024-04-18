@@ -12,9 +12,11 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?>
 
 <!-- If the page is not the home page display the widget from the sidebar footer-1 -->
-<?php if (is_active_sidebar('footer-1')) : ?>
-	<?php dynamic_sidebar('footer-1'); ?>
-<?php endif; ?>
+<div class="logos__list">
+	<?php if (is_active_sidebar('footer-1')) : ?>
+		<?php dynamic_sidebar('footer-1'); ?>
+	<?php endif; ?>
+</div>
 
 </div><!-- #content -->
 
@@ -58,7 +60,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 			<button type="button" class="close btn btn-close " data-bs-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">Fermer x</span>
 			</button>
-			<div class="modal-body">
+			<div class="modal-body tally">
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="form">

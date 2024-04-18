@@ -30,6 +30,7 @@ h5.card__content__title {
 
 .card__content img {
 	margin-bottom: .5rem;
+	width: 25px;
 }
 
 @media screen and (max-width: 768px) {
