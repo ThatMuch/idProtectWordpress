@@ -904,6 +904,10 @@ hr.custom {
 
     margin-bottom: 40px;
     font-family: "Rubik", sans-serif;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -913,8 +917,6 @@ hr.custom {
 }
 
 .page__text p {
-    @include responsive-font-size(16, 26, 500);
-
     margin-bottom: 25px;
 }
 
