@@ -78,10 +78,8 @@
 				));
 				?>
 			</div>
-			<a class="header__link" href="https://app.idprotect.fr/">
-				<span>se connecter</span>
-				<img class="eye" src="<?php echo get_template_directory_uri() ?>/assets/images/icon-1-orange.svg" alt="Oeil">
-				<img class="eye-hover" src="<?php echo get_template_directory_uri() ?>/assets/images/icon-1-orange.svg" alt="User">
+			<a class="btn btn__primary" href="https://app.idprotect.fr/">
+				Monter un dossier
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>

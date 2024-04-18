@@ -67,6 +67,7 @@ const imgDST = './assets/images/';
 // >>>>> Watch files paths.
 // Path to all *.scss files inside css folder and inside them.
 const watchStyles = './assets/styles/**/*.scss';
+const watchCss = './blocks/**/*.css';
 
 // Path to all vendor JS files.
 const watchJsVendor = './assets/scripts/vendor/*.js';
@@ -160,6 +161,7 @@ module.exports = {
 	watchJsVendor,
 	watchJsCustom,
 	watchPhp,
+	watchCss,
 	zipName,
 	zipDestination,
 	zipIncludeGlob,

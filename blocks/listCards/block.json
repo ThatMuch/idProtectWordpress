@@ -1,0 +1,29 @@
+{
+	"name": "listCards",
+	"title": "Liste de cartes",
+	"description": "Une section pour une liste de cartes",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"keywords": [
+		"Id Protect",
+		"liste",
+		"cartes"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"name": "listIcon",
+	"title": "Section de liste d'éléments avec une icône",
+	"description": "Section de liste d'éléments avec une icône",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"Liste"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full"
+}

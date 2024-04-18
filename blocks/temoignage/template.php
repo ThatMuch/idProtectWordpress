@@ -11,47 +11,40 @@ $block_id = $args['block_id'];
 // The block class names
 $class_name = $args['class_name'];
 
+// get 3 last wordpress posts  of type testimonial
+$args = array(
+	'post_type' => 'testimonials',
+	'posts_per_page' => 3,
+	'orderby' => 'date',
+	'order' => 'DESC',
+);
+$the_query = new WP_Query($args);
+
+
 ?>
 <div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-7">
-				<div class="testimonial mb-0">
-					<div class="testimonial__right order-md-1">
-						<h4 class="title text__orange"><?php echo $data['title']; ?></h4>
-						<?php if (have_rows('video_preview')) : ?>
-							<?php while (have_rows('video_preview')) : the_row(); ?>
-								<?php $image_1 = get_sub_field('image_2'); ?>
-								<?php if ($image_1) : ?>
-									<img src="<?php echo esc_url($image_1['url']); ?>" alt="<?php echo esc_attr($image_1['alt']); ?>" />
-								<?php endif; ?>
-							<?php endwhile; ?>
-						<?php endif; ?>
+		<div class="testimonial__title"><?php echo $data['title']; ?></div>
+		<div class="testimonial__list">
+			<?php if ($the_query->have_posts()) : ?>
+				<?php while ($the_query->have_posts()) : $the_query->the_post();
+					$consequence = get_field('consequence', $post->ID);
+					$fraude = get_field('fraude', $post->ID);
+				?>
+					<div class="testimonial__post">
+						<h4 class="testimonial__post__title"><?php the_title(); ?></h4>
+						<?php the_post_thumbnail('large', array('class' => 'temoignage__image')); ?>
+						<div class="temoignage__text">
+							<?php if ($consequence) : ?>
+								<h3 class="title"><?php echo $consequence ?></h3>
+							<?php endif; ?>
+							<?php if ($fraude) : ?>
+								<p><?php echo $fraude; ?></p>
+							<?php endif; ?>
+						</div>
 					</div>
-					<div class="testimonial__left order-md-0">
-						<?php if (have_rows('video_preview')) : ?>
-							<?php while (have_rows('video_preview')) : the_row(); ?>
-								<?php $image_2 = get_sub_field('image_1'); ?>
-								<?php if ($image_2) : ?>
-									<img src="<?php echo esc_url($image_2['url']); ?>" alt="<?php echo esc_attr($image_2['alt']); ?>" />
-
-								<?php endif; ?>
-							<?php endwhile; ?>
-						<?php endif; ?>
-						<button id="temoignageYoutube" type="button" data-bs-toggle="modal" data-bs-target="#videoModal"><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right-white.svg" alt="Flèche vers la droite"></button>
-
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-5">
-				<div class="testimonial__details">
-					<?php echo $data['subtitle']; ?>
-					<p><?php echo $data['description']; ?></p>
-					<?php if ($data['link']) : ?>
-						<a href="<?php echo esc_url($data['link']['url']); ?>" class="btn btn__orange">voir l'article</a>
-					<?php endif; ?>
-				</div>
-			</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>

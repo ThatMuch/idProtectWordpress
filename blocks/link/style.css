@@ -17,7 +17,7 @@
 	position: absolute;
 	height: 100%;
 	top: 0;
-	left: 0;
+	left: -50px;
 	width: 30%;
 	background-size: cover;
 }
@@ -34,7 +34,7 @@
 	position: absolute;
 	height: 100%;
 	top: 0;
-	right: 0;
+	right: -50px;
 	width: 30%;
 	background-size: cover;
 }
@@ -79,23 +79,17 @@
 }
 
 .promo.professionnels::before {
-	background-image: url(img/bg-line-2.svg);
-	left: 25px;
-}
-
-@media only screen and (max-width: 1200px) {
-	.promo.professionnels::before {
-		left: -70px;
-	}
+	background-position: center;
+	background-image: url(img/left.png);
+	background-size: cover;
+	left: 0px;
+	width: 20%;
 }
 
 .promo.professionnels::after {
-	background-image: url(img/bg-line-3.svg);
-	right: 25px;
-}
-
-@media only screen and (max-width: 1200px) {
-	.promo.professionnels::after {
-		right: -70px;
-	}
+	background-position: center;
+	background-image: url(img/right.png);
+	background-size: cover;
+	width: 20%;
+	right: 0;
 }

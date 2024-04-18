@@ -76,6 +76,7 @@ body {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.99%, #E8EFFB), color-stop(49.58%, #FFFFFF));
     background: linear-gradient(180deg, #E8EFFB -2.99%, #FFFFFF 49.58%);
     font-size: 1rem;
+    color: $text-c;
 }
 
 img {
@@ -183,7 +184,7 @@ hr.custom {
 }
 
 .text__dark {
-    color: #171C60;
+    color: $color-dark;
 }
 
 .header__area {
@@ -461,6 +462,12 @@ hr.custom {
     padding: 30px 30px 15px 30px;
     color: #A3BBDC;
 
+    &__menu {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
     &__sponso {
         display: flex;
         flex-direction: row;
@@ -522,14 +529,13 @@ hr.custom {
     &__logo {
         margin: 0 auto;
         display: block;
-        width: 160px;
+        width: 50px;
 
         // Transform the image to white
         filter: invert(1) brightness(100);
     }
 
     &__bottom {
-        margin-top: 15px;
         border-top: 1px solid #5E89C2;
         color: #5E89C2;
         padding-top: 15px;
@@ -891,7 +897,7 @@ hr.custom {
 }
 
 .page__text h2 {
-    color: #152235;
+    color: $text-c;
     text-transform: uppercase;
 
     @include responsive-font-size(40, 48, 800);
@@ -907,8 +913,6 @@ hr.custom {
 }
 
 .page__text p {
-    color: #152235;
-
     @include responsive-font-size(16, 26, 500);
 
     margin-bottom: 25px;
@@ -948,7 +952,7 @@ hr.custom {
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 100px 16px 16px 100px;
     background: #FFFFFF;
-    color: #152235;
+    color: $color-black;
     text-transform: uppercase;
 
     @include responsive-font-size(40, 48, 800);
@@ -1136,8 +1140,8 @@ hr.custom {
 
 .blog__featured::after {
     content: "";
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 34, 53, 0)), to(#152235));
-    background: linear-gradient(180deg, rgba(21, 34, 53, 0) 0%, #152235 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 34, 53, 0)), to($text-c));
+    background: linear-gradient(180deg, rgba(21, 34, 53, 0) 0%, $text-c 100%);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -1355,13 +1359,13 @@ hr.custom {
 
 .blog__item__text h2 {
     text-transform: uppercase;
-    color: #152235;
+    color: $text-c;
     font-style: normal;
     font-size: .875rem;
 }
 
 .blog__item__text h2 a {
-    color: #152235;
+    color: $text-c;
 }
 
 .blog__list .owl-stage {
@@ -1369,7 +1373,7 @@ hr.custom {
 }
 
 .article__text {
-    color: #152235;
+    color: $text-c;
 
     @include responsive-font-size(16, 26, 500);
 
@@ -1440,7 +1444,7 @@ hr.custom {
 .article__body h2 {
     @include responsive-font-size(16, 24, 700);
 
-    color: #152235;
+    color: $text-c;
     text-transform: uppercase;
 
     a {
@@ -1449,7 +1453,7 @@ hr.custom {
 }
 
 .article__body a {
-    color: #152235;
+    color: $text-c;
     padding: 0;
 }
 
@@ -1500,173 +1504,6 @@ hr.custom {
 
 .step__image img {
     width: 100%;
-}
-
-.step__list ul {
-    border: 0;
-}
-
-.step__list ul.nav-tabs {
-    display: block;
-}
-
-.professionnel .step__list ul.nav-tabs li a {
-    color: #171C60;
-}
-
-.step__list ul.nav-tabs li a {
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 16px;
-    background: #FFFFFF;
-    padding: 36px 40px;
-    margin-bottom: 15px;
-    display: block;
-
-    @include responsive-font-size(24, 30, 700);
-
-    text-transform: uppercase;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-@media only screen and (max-width: 767px) {
-    .step__list ul.nav-tabs li a {
-        @include responsive-font-size(16, 24);
-
-        padding: 20px;
-    }
-}
-
-.step__list ul.nav-tabs li a .text {
-    @include responsive-font-size(24, 30, 700);
-
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-right: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-@media only screen and (max-width: 767px) {
-    .step__list ul.nav-tabs li a .text {
-        width: 40px;
-        height: 40px;
-
-        @include responsive-font-size(16, 30);
-    }
-}
-
-.step__list ul.nav-tabs li a .text::before {
-    content: "";
-    background: #fff;
-    top: 5px;
-    bottom: 5px;
-    left: 5px;
-    right: 5px;
-    position: absolute;
-    z-index: 1;
-    border-radius: 100%;
-}
-
-.step__list ul.nav-tabs li a .text::after {
-    content: "";
-    background: linear-gradient(278.49deg, $color-primary 0%, #171C60 88.22%);
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-}
-
-.step__list ul.nav-tabs li a .text span {
-    position: relative;
-    z-index: 2;
-}
-
-.step__list ul.nav-tabs li a .text__body {
-    @include responsive-font-size(24, 35, 500);
-
-    font-family: "Raleway";
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    text-transform: none;
-}
-
-.step__list ul.nav-tabs li a .text__body .head {
-    display: block;
-    font-weight: 700;
-    font-family: "Rubik";
-    text-transform: uppercase;
-}
-
-.step__list ul.nav-tabs li a:hover, .step__list ul.nav-tabs li a.active {
-    color: #fff;
-    background: $color-primary;
-}
-
-.professionnel .step__list ul.nav-tabs li a:hover, .professionnel .step__list ul.nav-tabs li a.active {
-    background: #171C60;
-}
-
-.step__list ul.nav-tabs li a:hover .text::before, .step__list ul.nav-tabs li a.active .text::before {
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: transparent;
-    border: 5px solid #fff;
-}
-
-.step__list ul.nav-tabs li a:hover .text span, .step__list ul.nav-tabs li a.active .text span {
-    color: #fff;
-    background: transparent;
-    -webkit-text-fill-color: #fff;
-}
-
-.step__list ul.nav-tabs li:last-child a {
-    margin-bottom: 0;
-}
-
-.step__list.service ul.nav-tabs li a {
-    color: #152235;
-}
-
-@media only screen and (max-width: 767px) {
-    .step__list.service ul.nav-tabs li a {
-        display: block;
-    }
-
-    .step__list.service ul.nav-tabs li a .text {
-        width: 60px;
-        height: 60px;
-
-        @include responsive-font-size(25, 30);
-
-        margin-bottom: 20px;
-    }
-}
-
-.step__list.service ul.nav-tabs li a:hover, .step__list.service ul.nav-tabs li a.active {
-    color: #fff;
 }
 
 .price__table {
@@ -1791,7 +1628,7 @@ hr.custom {
     background: #fff;
 
     &__title {
-        color: #152235;
+        color: $text-c;
         text-transform: uppercase;
         max-width: 346px;
         margin: 0 0 20px;
@@ -1807,7 +1644,7 @@ hr.custom {
     @include responsive-font-size(16, 26, 500);
 
     font-family: "Raleway";
-    color: #152235;
+    color: $text-c;
 }
 
 .price__body ul li {

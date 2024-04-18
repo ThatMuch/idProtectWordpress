@@ -52,45 +52,46 @@
 	 * Post Type: Témoignages.
 	 */
 
-	// $labels = array(
-	//     "name" => __( "Témoignages", "" ),
-	//     "singular_name" => __( "Témoignage", "" ),
-	//     "menu_name" => __( "Témoignages", "" ),
-	//     "all_items" => __( "Tous les témoignages", "" ),
-	//     "add_new" => __( "Ajouter un témoignage", "" ),
-	//     "add_new_item" => __( "Ajouter un nouveau témoignage", "" ),
-	//     "edit_item" => __( "Modifier le témoignage", "" ),
-	//     "new_item" => __( "Nouveau témoignage", "" ),
-	//     "view_item" => __( "Voir le témoignage", "" ),
-	//     "view_items" => __( "Voir les témoignages", "" ),
-	//     "search_items" => __( "Chercher un témoignage", "" ),
-	//     "not_found" => __( "Rien trouvé", "" ),
-	//     "not_found_in_trash" => __( "Rien n'a été trouvé dans la corbeille", "" ),
-	// );
+	$labels = array(
+		"name" => __("Témoignages", ""),
+		"singular_name" => __("Témoignage", ""),
+		"menu_name" => __("Témoignages", ""),
+		"all_items" => __("Tous les témoignages", ""),
+		"add_new" => __("Ajouter un témoignage", ""),
+		"add_new_item" => __("Ajouter un nouveau témoignage", ""),
+		"edit_item" => __("Modifier le témoignage", ""),
+		"new_item" => __("Nouveau témoignage", ""),
+		"view_item" => __("Voir le témoignage", ""),
+		"view_items" => __("Voir les témoignages", ""),
+		"search_items" => __("Chercher un témoignage", ""),
+		"not_found" => __("Rien trouvé", ""),
+		"not_found_in_trash" => __("Rien n'a été trouvé dans la corbeille", ""),
+	);
 
-	// $args = array(
-	//     "label" => __( "Témoignages", "" ),
-	//     "labels" => $labels,
-	//     "description" => "",
-	//     "public" => true,
-	//     "publicly_queryable" => true,
-	//     "show_ui" => true,
-	//     "show_in_rest" => false,
-	//     "rest_base" => "",
-	//     "has_archive" => false,
-	//     "show_in_menu" => true,
-	//     "show_in_nav_menus" => true,
-	//     "exclude_from_search" => false,
-	//     "capability_type" => "post",
-	//     "map_meta_cap" => true,
-	//     "hierarchical" => false,
-	//     "rewrite" => array( "slug" => "testimonials", "with_front" => true ),
-	//     "query_var" => true,
-	//     "menu_icon" => "dashicons-format-quote",
-	//     "supports" => array( "title", "thumbnail" ),
-	// );
+	$args = array(
+		"label" => __("Témoignages", ""),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array("slug" => "testimonials", "with_front" => true),
+		"query_var" => true,
+		"menu_icon" => "dashicons-format-quote",
+		'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'custom-fields',),
 
-	// register_post_type( "testimonials", $args );
+	);
+
+	register_post_type("testimonials", $args);
 
 	/**
 	 * Post Type: services.

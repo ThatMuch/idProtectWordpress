@@ -1,0 +1,45 @@
+.block-datas {
+	margin-bottom: 7.5rem;
+}
+
+.block-datas .card {
+	display: flex;
+	padding: 3.125rem;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.5rem;
+	border-radius: 1rem;
+	background: var(--Gradient-Light, linear-gradient(180deg, #E8EFFB -2.99%, #FFF 49.58%));
+	border: none;
+	/* Shadow/2 */
+	box-shadow: 0px 16px 32px 0px rgba(25, 86, 168, 0.10);
+}
+
+.block-datas .card__title {
+	font-family: Rubik;
+	font-size: 4rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 3.625rem;
+	/* 90.625% */
+	letter-spacing: -0.1125rem;
+}
+
+@media screen and (max-width: 768px) {
+	.block-datas .card {
+		margin-bottom: 1.5rem;
+		padding: 1.5rem;
+		align-items: center;
+
+	}
+
+	.block-datas .card p {
+		text-align: center;
+
+	}
+
+	.block-datas {
+		margin-bottom: 3.75rem;
+	}
+
+}

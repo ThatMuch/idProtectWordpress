@@ -1,0 +1,20 @@
+{
+	"name": "datasSection",
+	"title": "Section datas",
+	"description": "A custom datas block.",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"Datas",
+		"Numbers"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full"
+}

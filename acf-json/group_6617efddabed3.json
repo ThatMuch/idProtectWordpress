@@ -1,9 +1,9 @@
 {
-    "key": "group_641c72454d89a",
-    "title": "Block - Steps",
+    "key": "group_6617efddabed3",
+    "title": "Block - List + Icons",
     "fields": [
         {
-            "key": "field_641c74610f879",
+            "key": "field_6617efddfdc49",
             "label": "Titre",
             "name": "title",
             "aria-label": "",
@@ -23,11 +23,11 @@
             "delay": 0
         },
         {
-            "key": "field_641c7246002ea",
-            "label": "Image",
-            "name": "image",
+            "key": "field_6617f00bfdc4a",
+            "label": "Description",
+            "name": "description",
             "aria-label": "",
-            "type": "image",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,21 +36,16 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_641c734d002eb",
-            "label": "Steps",
-            "name": "steps",
+            "key": "field_6617f01bfdc4b",
+            "label": "Éléments",
+            "name": "items",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -61,16 +56,42 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Ajouter un élément",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_641c735e002ec",
+                    "key": "field_6617f036fdc4c",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6617f01bfdc4b"
+                },
+                {
+                    "key": "field_6617f049fdc4d",
                     "label": "Titre",
                     "name": "title",
                     "aria-label": "",
@@ -88,14 +109,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_641c734d002eb"
+                    "parent_repeater": "field_6617f01bfdc4b"
                 },
                 {
-                    "key": "field_641c7369002ed",
-                    "label": "Description",
-                    "name": "description",
+                    "key": "field_6617f050fdc4e",
+                    "label": "Texte",
+                    "name": "text",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -105,32 +126,16 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_641c734d002eb"
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_6617f01bfdc4b"
                 }
             ]
         },
         {
-            "key": "field_6617f6916be95",
-            "label": "CTA",
-            "name": "cta",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_661909a5a7d86",
+            "key": "field_661907ba54cd8",
             "label": "Orientation",
             "name": "orientation",
             "aria-label": "",
@@ -144,10 +149,10 @@
                 "id": ""
             },
             "choices": {
-                "gauche": "Gauche",
-                "droite": "Droite"
+                "vertical": "Vertical",
+                "horizontal": "Horizontal"
             },
-            "default_value": "gauche",
+            "default_value": "vertical",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -160,7 +165,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/steps"
+                "value": "acf\/listicon"
             }
         ]
     ],
@@ -173,5 +178,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712920166
+    "modified": 1712933514
 }

@@ -144,3 +144,27 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     background: #fff;
     color: #171C60;
 }
+
+.btn-link {
+    background-color: transparent;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    border-radius: 0;
+    position: relative;
+    padding: 0 1.5rem 10px 0;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background: url(../images/arrow-right.svg) no-repeat;
+        background-size: contain;
+        right: 0;
+        top: 0.3rem;
+    }
+
+    &:hover:after {
+        display: none;
+    }
+}

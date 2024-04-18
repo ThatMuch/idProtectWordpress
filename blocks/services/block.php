@@ -5,15 +5,13 @@
  */
 // $data is what we're going to expose to our render template
 $data = array(
-	'image' => get_field('image'),
-	'steps' => get_field('steps'),
 	'title' => get_field('title'),
-	'cta' => get_field('cta'),
-	'orientation' => get_field('orientation'),
+	'image' => get_field('image'),
+	'services' => get_field('services'),
 );
 
 // Dynamic block ID
-$block_id = 'steps' . $block['id'];
+$block_id = 'block-services' . $block['id'];
 
 
 
@@ -23,7 +21,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Block classes
-$class_name = 'block__steps';
+$class_name = 'block__services';
 if (!empty($block['class_name'])) {
 	$class_name .= ' ' . $block['class_name'];
 }
@@ -32,7 +30,7 @@ if (!empty($block['class_name'])) {
  * Pass the block data into the template part
  */
 get_template_part(
-	'blocks/steps/template',
+	'blocks/services/template',
 	null,
 	array(
 		'block'      => $block,
