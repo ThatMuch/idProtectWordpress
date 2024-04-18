@@ -37,7 +37,6 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 		));
 		?>
 	</div>
-
 	<div class="footer__area__bottom d-flex justify-content-between">
 		<div></div>
 		<div>
@@ -50,20 +49,36 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 	</div>
 </div>
 
+
 <?php wp_footer() ?>
 
+<div class="modal fade" id="tallyModal" tabindex="-1" role="dialog" aria-labelledby="tallyModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content">
+			<button type="button" class="close btn btn-close " data-bs-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">Fermer x</span>
+			</button>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form">
+							<iframe data-tally-src="https://tally.so/embed/wLdZKz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" frameborder="0" marginheight="0" marginwidth="0" title="Quel type de préjudice avez-vous subi ?"></iframe>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="illu">
+							<img src="<?php echo get_template_directory_uri() ?>/assets/images/modal_illustration.png" class="img" alt="SOS Usurpation logo">
+							<img src="<?php echo get_template_directory_uri() ?>/assets/images/logo_sos.png" class="logo" alt="SOS Usurpation logo">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
 <script>
-	document.addEventListener("DOMContentLoaded", function() {
-		// Check if modal has already been shown in this session
-		if (!sessionStorage.getItem('modalShown')) {
-			setTimeout(function() {
-				var myModal = new bootstrap.Modal(document.getElementById('hubspotModal'), {});
-				myModal.show();
-				// Mark modal as shown in this session
-				sessionStorage.setItem('modalShown', 'true');
-			}, 10000); // 10000 milliseconds = 10 seconds
-		}
-	});
+	Tally.loadEmbeds();
 </script>
 </body>
 

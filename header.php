@@ -24,8 +24,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inc/assets/css/normalize.css">
-
-	<!-- Google Tag Manager -->
+	<script async src="https://tally.so/widgets/embed.js"></script> <!-- Google Tag Manager -->
 	<script>
 		(function(w, d, s, l, i) {
 			w[l] = w[l] || [];
@@ -78,9 +77,9 @@
 				));
 				?>
 			</div>
-			<a class="btn btn__primary" href="https://app.idprotect.fr/">
+			<button type="button" class="btn btn__primary" data-bs-toggle="modal" data-bs-target="#tallyModal">
 				Monter un dossier
-			</a>
+			</button>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
