@@ -20,7 +20,7 @@
 
 .testimonial__list {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	gap: 1rem;
 	flex-wrap: wrap;
 }
