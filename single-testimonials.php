@@ -21,7 +21,7 @@ if (!empty($categories)) {
 
 <?php get_header(); ?>
 
-<div class="page__area">
+<div class="page__area pt-0">
 	<div class="container">
 		<h1><?php the_title(); ?></h1>
 		<div class="row g-3">

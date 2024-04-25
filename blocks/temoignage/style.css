@@ -30,6 +30,9 @@
 	padding-left: 0;
 	padding-right: 0;
 	position: relative;
+	&:hover {
+		color: #0C0E30;
+	}
 }
 
 .testimonial__post p {
