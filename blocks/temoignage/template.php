@@ -31,7 +31,7 @@ $the_query = new WP_Query($args);
 					$consequence = get_field('consequence', $post->ID);
 					$fraude = get_field('fraude', $post->ID);
 				?>
-					<div class="testimonial__post">
+					<a href="<?php the_permalink() ?>" class="testimonial__post">
 						<h4 class="testimonial__post__title"><?php the_title(); ?></h4>
 						<?php the_post_thumbnail('large', array('class' => 'temoignage__image')); ?>
 						<div class="temoignage__text">
@@ -42,7 +42,7 @@ $the_query = new WP_Query($args);
 								<p><?php echo $fraude; ?></p>
 							<?php endif; ?>
 						</div>
-					</div>
+					</a>
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
