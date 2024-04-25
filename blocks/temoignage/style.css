@@ -35,29 +35,6 @@
 			place-items: center;
 }
 
-.testimonial__post:before {
-	content: "";
-	position: absolute;
-	width: 5.6rem;
-	height: 5.6rem;
-	background-image: url(./img/Card.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	left: 14rem;
-	top: calc(30% - 5.6rem);
-}
-
-.testimonial__post:first-child:before {
-
-	left: -25px;
-	top: calc(50% - 5.6rem);
-}
-
-.testimonial__post:last-child:before {
-	left: 14rem;
-	top: calc(70% - 5.6rem);
-}
-
 .testimonial__post p {
 	font-family: Rubik;
 	font-size: 1.4rem;
