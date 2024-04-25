@@ -121,6 +121,7 @@ hr.custom{border-color:#171c60;opacity:1;margin:50px auto;max-width:85%}
 .footer__menu ul li a{color:#e8effb;text-transform:uppercase;font-size:.875rem;line-height:1.8571428571;font-weight:500;text-decoration:none;margin:0 10px}
 .footer__menu ul li a:hover{text-decoration:underline}
 .section__area{padding:50px 0;position:relative;z-index:2;overflow:hidden}
+.single-testimonials .section__area{padding-top:0 !important}
 .home .section__area::after{content:"";background:url(../images/line.svg) no-repeat scroll 0 0/100% 100%;position:absolute;top:10%;height:100%;left:0;width:100%;z-index:-1}
 .section__area .container{position:relative;z-index:3}
 .promotion__area.service{background:-webkit-gradient(linear,left bottom,left top,from(rgba(23,28,96,0.5)),to(rgba(23,28,96,0.5))),url(../images/bg-4.jpg) no-repeat scroll center center/cover;background:linear-gradient(0,rgba(23,28,96,0.5),rgba(23,28,96,0.5)),url(../images/bg-4.jpg) no-repeat scroll center center/cover}

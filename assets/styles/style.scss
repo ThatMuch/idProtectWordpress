@@ -643,6 +643,10 @@ hr.custom {
     overflow: hidden;
 }
 
+.single-testimonials .section__area {
+    padding-top: 0 !important;
+}
+
 @media only screen and (max-width: 768px) {
     .section__area {
         padding: 20px 0;
