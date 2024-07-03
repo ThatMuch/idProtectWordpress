@@ -1,0 +1,19 @@
+{
+	"name": "avantages",
+	"title": "avantages",
+	"description": "A custom testimonial block.",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"avantages"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./template.php"
+	},
+	"align": "full"
+}

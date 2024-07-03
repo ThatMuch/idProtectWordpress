@@ -1,0 +1,33 @@
+.avantages{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 10px;
+}
+
+
+.avantage_title{
+	margin-bottom: 24px;
+}
+
+.avantage_card{
+	width: 352px;
+	background: rgb(232,239,251);
+	background: linear-gradient(180deg, rgba(232,239,251,1) 0%, rgba(255,255,255,1) 51%);
+	border-radius: 10px;
+	box-shadow: 1px 0px 18px -1px rgba(0,0,0,0.33);
+	-webkit-box-shadow: 1px 0px 18px -1px rgba(0,0,0,0.33);
+	-moz-box-shadow: 1px 0px 18px -1px rgba(0,0,0,0.33);
+}
+
+.avantage_content{
+	margin: 0 35px;
+	padding: 50px 0 20px;
+}
+
+.avantage_subtitle{
+	margin-bottom: 10px;
+}
+
+.shield{
+	margin-top: 30px;
+}

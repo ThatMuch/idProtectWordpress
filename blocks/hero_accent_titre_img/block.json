@@ -1,0 +1,19 @@
+{
+	"name": "hero_accent_titre_img",
+	"title": "Hero Accent Titre Img",
+	"description": "A custom testimonial block.",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"Hero"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./template.php"
+	},
+	"align": "full"
+}

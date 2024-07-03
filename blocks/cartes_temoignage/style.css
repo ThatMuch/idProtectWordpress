@@ -1,0 +1,114 @@
+.container{
+	max-width: 1400px;
+	margin: auto;
+}
+
+.d-flex{
+	display: flex;
+}
+
+.h1-45{
+	font-family: Rubik;
+	font-weight: 800;
+	font-size: 45px;
+	text-transform: uppercase;
+	color: #171C60;
+	line-height: 56px;
+}
+
+.margin-h1{
+	margin: 0 0 25px 0;
+}
+
+.unselectable {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.grab{
+	cursor: grab;
+}
+
+.grabbing{
+    cursor: grabbing;
+}
+
+
+.digit-14{
+	font-family: Rubik;
+	font-size: 14px;
+}
+
+.b3-14_negative{
+	font-family: Raleway;
+	font-size: 14px;
+	font-weight: 500;
+	color: white;
+	line-height: 24px;
+}
+
+.guillemets{
+	margin-bottom: 20px;
+}
+
+.testimony_box{
+	overflow-x:scroll;
+	scrollbar-width: none;
+}
+
+.testimony_title{
+	color: #171C60;
+	font-family: Rubik;
+	font-size: 48px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.orange_title{
+	color: #FF8833;
+	background-color: #FFFFFF;
+	padding: 5px 30px 5px 15px;
+	border-radius: 5px 50px 50px 5px;
+	font-family: Rubik;
+	font-weight:800;
+	box-shadow: 1px 0px 18px -1px rgba(0,0,0,0.33);
+	-webkit-box-shadow: 1px 0px 18px -1px rgba(0,0,0,0.33);
+	-moz-box-shadow: 1px 0px 18px -1px rgba(0,0,0,0.33);
+    margin-left: 15px;
+}
+
+.card{
+	font-family: Raleway;
+	min-width: 250px;
+	padding: 25px 30px;
+	background-color: #1956A8;
+	color: #FFFFFF;
+	border-radius: 10px;
+	margin: 0 5px;
+}
+
+.notation{
+	color: #FF8833;
+	margin-bottom: 20px;
+	display:flex;
+	justify-content: space-between;
+}
+
+.card_text{
+	max-width: 250px;
+	max-height: 160px;
+	overflow: hidden;
+}
+
+.person{
+	margin-top: 30px
+}
+
+.username p{
+	font-size: 16px;
+	font-weight:600;
+	font-family:Rubik;
+}
