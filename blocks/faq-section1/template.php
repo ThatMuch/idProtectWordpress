@@ -1,6 +1,6 @@
 <?php
-$title = get_field( 'question' )?: 'Default question';
-$subtitle = get_field( 'answer' )?: 'Default answer' ;
+$question = get_field( 'question' )?: 'Default question';
+$answer = get_field( 'answer' )?: 'Default answer' ;
 ?>
 <div class="faq-section">
   <h2 class="title-faq h1-45-faq text-primary">Nos réponses fréquentes</h2>
@@ -22,10 +22,10 @@ $subtitle = get_field( 'answer' )?: 'Default answer' ;
         while ($faq_query->have_posts()) : $faq_query->the_post(); ?>
             <div class="faq-item">
               <button class="accordion-faq">
-                  <div class="faq-question b2-medium-faq text-primary"><?php the_title(); ?></>
+                  <div class="faq-question b2-medium-faq text-primary"><?php echo $question; ?></>
               </button>
               <div class="panel-faq">
-                <div class="faq-answer b2-medium-faq text-primary"><?php the_content(); ?></div>
+                <div class="faq-answer b2-medium-faq text-primary"><?php echo $answer; ?></div>
               </div>
             </div>
             <?php $count++; ?>

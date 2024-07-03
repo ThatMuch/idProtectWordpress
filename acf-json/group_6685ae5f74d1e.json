@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_6685ae6099e98",
-            "label": "The question",
+            "label": "Question",
             "name": "question",
             "aria-label": "",
             "type": "text",
@@ -24,7 +24,7 @@
         },
         {
             "key": "field_6685aed499e99",
-            "label": "The answer",
+            "label": "Answer",
             "name": "answer",
             "aria-label": "",
             "type": "text",
@@ -61,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720037100
+    "modified": 1720037395
 }
