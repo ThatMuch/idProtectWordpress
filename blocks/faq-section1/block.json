@@ -1,7 +1,7 @@
 {
-	"name": "heroSection",
-	"title": "Hero Section Accueil",
-	"description": "A custom testimonial block.",
+	"name": "faqSection",
+	"title": "Section FAQ",
+	"description": "A custom FAQ block.",
 	"style": [
 		"file:./style.css"
 	],
@@ -9,7 +9,7 @@
 	"icon": "admin-comments",
 	"keywords": [
 		"Id Protect",
-		"Hero"
+		"FAQ"
 	],
 	"acf": {
 		"mode": "preview",

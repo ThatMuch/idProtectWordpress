@@ -4,28 +4,8 @@
     "fields": [
         {
             "key": "field_6685ae6099e98",
-            "label": "Question",
-            "name": "question",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6685aed499e99",
-            "label": "Answer",
-            "name": "answer",
+            "label": "FAQ",
+            "name": "title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -46,9 +26,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/faqsection"
             }
         ]
     ],
@@ -61,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720037395
+    "modified": 1720100065
 }

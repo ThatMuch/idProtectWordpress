@@ -1,7 +1,4 @@
-<?php
-$question = get_field( 'question' )?: 'Default question';
-$answer = get_field( 'answer' )?: 'Default answer' ;
-?>
+<?php $title  = get_field("title") ?>
 <div class="faq-section">
   <h2 class="title-faq h1-45-faq text-primary">Nos réponses fréquentes</h2>
   <div class="container-faq">
@@ -9,23 +6,25 @@ $answer = get_field( 'answer' )?: 'Default answer' ;
       <span class="card__title-faq-orange title-faq h1-45-faq mb-5">questions</span>
     
   </div>
-
+<h1><?= $title ?></h1>
   <p class="b2-medium-faq text-primary">Questions fréquentes : Tout ce que vous devez savoir sur la protection de votre identité avec ID Protect!</p>
     <?php
     $args = array(
         'post_type' => 'faq',
-        'posts_per_page' => -1
+        'posts_per_page' => 4,
+       
     );
     $faq_query = new WP_Query($args);
     if ($faq_query->have_posts()) :
         $count = 1; // Counter for iteration number
         while ($faq_query->have_posts()) : $faq_query->the_post(); ?>
+        <?= get_the_ID() ?>
             <div class="faq-item">
               <button class="accordion-faq">
-                  <div class="faq-question b2-medium-faq text-primary"><?php echo $question; ?></>
+                  <div class="faq-question b2-medium-faq text-primary"><?php the_title() ?></>
               </button>
               <div class="panel-faq">
-                <div class="faq-answer b2-medium-faq text-primary"><?php echo $answer; ?></div>
+                <div class="faq-answer b2-medium-faq text-primary"><?php the_content() ?></div>
               </div>
             </div>
             <?php $count++; ?>

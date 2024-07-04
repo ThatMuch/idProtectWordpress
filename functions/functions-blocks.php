@@ -27,10 +27,6 @@ register_block_type( get_template_directory() . '/blocks/temoignage/block.json' 
 array(
 	    'icon'  => $icon,
 	),);
-register_block_type( get_template_directory() . '/blocks/faq-section1/block.json' ,
-array(
-		'icon'  => $icon,
-	),);
 register_block_type( get_template_directory() . '/blocks/service/block.json' ,
 array(
 	    'icon'  => $icon,
@@ -67,5 +63,8 @@ register_block_type( get_template_directory() . '/blocks/tarif/block.json' ,
 array(
 	    'icon'  => $icon,
 	),);
-
-?>
+// Ajout Philippe
+register_block_type( get_template_directory() . '/blocks/faq-section1/block.json' ,
+array(
+		'icon'  => $icon,
+	),);
