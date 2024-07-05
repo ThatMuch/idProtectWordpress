@@ -5,6 +5,9 @@
 	"style": [
 		"file:./style.css"
 	],
+	"script": [
+		"file:./script.js"
+	],
 	"category": "theme",
 	"icon": "admin-comments",
 	"keywords": [
