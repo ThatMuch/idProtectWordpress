@@ -1,0 +1,19 @@
+{
+	"name": "operationsSection",
+	"title": "Section Intervention",
+	"description": "A custom Operation block.",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"Usurpation identité"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./template.php"
+	},
+	"align": "full"
+}

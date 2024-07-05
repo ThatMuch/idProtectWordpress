@@ -68,3 +68,7 @@ register_block_type( get_template_directory() . '/blocks/faq-section1/block.json
 array(
 		'icon'  => $icon,
 	),);
+register_block_type( get_template_directory() . '/blocks/operations-section/block.json' ,
+array(
+		'icon'  => $icon,
+	),);
