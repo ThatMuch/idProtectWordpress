@@ -15,8 +15,10 @@ $image = get_field( 'image' )?: 'Default image';
         while ($operation_query->have_posts()) : $operation_query->the_post(); ?>
         <div><?= $author ?></div>
             <?php if ($image != 'Default image') : ?>
-                <div class="card" style="width:200px;">
-                    <img class="img-card" src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>">
+                <div class="card-group operations-testimony">
+                    <div class="card" style="width:200px;">
+                        <img class="img-card" src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>">
+                    </div>
                 </div>
             <?php else : ?>
                     <p><?= $image ?></p>
