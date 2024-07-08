@@ -1,1 +1,15 @@
-/* A remplir */
+.card {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.img-card {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
