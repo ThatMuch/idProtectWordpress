@@ -1,3 +1,30 @@
+.text-primary {
+    color: var(--primary-color);
+}
+
+.h1-45{
+    font-family: Rubik;
+    font-weight: 800;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #171C60;
+    line-height: 56px;
+    background-color: white;
+}
+
+.container-faq {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur une nouvelle ligne si nécessaire */
+  }
+  
+.h1-45-faq{
+    font-family: Rubik;
+    font-size: 45px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 56px;
+}
+
 .operations-testimony {
     display: flex;
     justify-content: space-between;
