@@ -1,11 +1,11 @@
 {
-    "key": "group_641c92a27133a",
-    "title": "Block - Tarifs",
+    "key": "group_668d05afeda92",
+    "title": "Block - Operation1 Section",
     "fields": [
         {
-            "key": "field_641c92a30fe7c",
+            "key": "field_668d05b048001",
             "label": "Card",
-            "name": "tarif_card",
+            "name": "operation_card",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -21,11 +21,11 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Ajouter un élément",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_641c93540fe7d",
+                    "key": "field_668d06c748002",
                     "label": "Offre",
                     "name": "offer",
                     "aria-label": "",
@@ -43,10 +43,10 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_641c92a30fe7c"
+                    "parent_repeater": "field_668d05b048001"
                 },
                 {
-                    "key": "field_641c93600fe7e",
+                    "key": "field_668d072348004",
                     "label": "Price",
                     "name": "price",
                     "aria-label": "",
@@ -66,10 +66,10 @@
                     "step": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_641c92a30fe7c"
+                    "parent_repeater": "field_668d05b048001"
                 },
                 {
-                    "key": "field_641c93760fe7f",
+                    "key": "field_668d074348005",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
@@ -92,10 +92,10 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
-                    "parent_repeater": "field_641c92a30fe7c"
+                    "parent_repeater": "field_668d05b048001"
                 },
                 {
-                    "key": "field_641c93810fe80",
+                    "key": "field_668d077448006",
                     "label": "Titre",
                     "name": "title",
                     "aria-label": "",
@@ -113,10 +113,10 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_641c92a30fe7c"
+                    "parent_repeater": "field_668d05b048001"
                 },
                 {
-                    "key": "field_641c93900fe81",
+                    "key": "field_668d07a848007",
                     "label": "Texte",
                     "name": "text",
                     "aria-label": "",
@@ -134,11 +134,11 @@
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 0,
-                    "parent_repeater": "field_641c92a30fe7c"
+                    "parent_repeater": "field_668d05b048001"
                 },
                 {
-                    "key": "field_641c93a40fe82",
-                    "label": "List",
+                    "key": "field_668d07c848008",
+                    "label": "Liste",
                     "name": "list",
                     "aria-label": "",
                     "type": "repeater",
@@ -155,12 +155,11 @@
                     "min": 0,
                     "max": 0,
                     "collapsed": "",
-                    "button_label": "Add Row",
+                    "button_label": "Ajouter un élément",
                     "rows_per_page": 20,
-                    "parent_repeater": "field_641c92a30fe7c",
                     "sub_fields": [
                         {
-                            "key": "field_641c93b50fe83",
+                            "key": "field_668d080448009",
                             "label": "Texte",
                             "name": "text",
                             "aria-label": "",
@@ -178,10 +177,10 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "parent_repeater": "field_641c93a40fe82"
+                            "parent_repeater": "field_668d07c848008"
                         },
                         {
-                            "key": "field_641c93c20fe84",
+                            "key": "field_668d081b4800a",
                             "label": "Desactivé",
                             "name": "desactive",
                             "aria-label": "",
@@ -203,13 +202,14 @@
                             "layout": "vertical",
                             "toggle": 0,
                             "save_custom": 0,
-                            "parent_repeater": "field_641c93a40fe82",
-                            "custom_choice_button_text": "Ajouter un nouveau choix"
+                            "custom_choice_button_text": "Ajouter un nouveau choix",
+                            "parent_repeater": "field_668d07c848008"
                         }
-                    ]
+                    ],
+                    "parent_repeater": "field_668d05b048001"
                 },
                 {
-                    "key": "field_641c94210fe85",
+                    "key": "field_668d08a24800b",
                     "label": "Lien",
                     "name": "link",
                     "aria-label": "",
@@ -223,10 +223,10 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "parent_repeater": "field_641c92a30fe7c"
+                    "parent_repeater": "field_668d05b048001"
                 },
                 {
-                    "key": "field_64441f751f972",
+                    "key": "field_668d08d54800c",
                     "label": "Texte supplémentaire",
                     "name": "text_add",
                     "aria-label": "",
@@ -244,19 +244,12 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_641c92a30fe7c"
+                    "parent_repeater": "field_668d05b048001"
                 }
             ]
         }
     ],
     "location": [
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/tarif"
-            }
-        ],
         [
             {
                 "param": "block",
@@ -274,5 +267,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720517341
+    "modified": 1720519330
 }

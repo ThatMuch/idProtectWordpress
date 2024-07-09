@@ -14,19 +14,19 @@ $class_name = $args['class_name'];
 <div class="row">
 	<div class="col-md-12">
 		<div class="card__title">
-			<h2 class="title"><span class="g-text">tarif</span></h2>
+			<h2 class="title"><span class="g-text">Intervention</span></h2>
 		</div>
 	</div>
 </div>
 <div class="row justify-content-center">
-	<!-- Display the group field tarif_card1 -->
-	<?php if ( have_rows( 'tarif_card' ) ) : ?>
+	<!-- Display the group field operation_card -->
+	<?php if ( have_rows( 'operation_card' ) ) : ?>
 		<?php 
-        // Get the total number of rows in the 'tarif_card' repeater field
-        $total_rows = count(get_field('tarif_card'));
+        // Get the total number of rows in the 'operation_card' repeater field
+        $total_rows = count(get_field('operation_card'));
         var_dump($total_rows); // Output the number of rows
         ?>
-		<?php while ( have_rows( 'tarif_card' ) ) : the_row(); ?>
+		<?php while ( have_rows( 'operation_card' ) ) : the_row(); ?>
 			<div class="col-lg-5">
 				    <div class="price__table">
                         <div class="price__head">
@@ -62,16 +62,6 @@ $class_name = $args['class_name'];
 									<?php endwhile; ?>
 								</ul>
 								<?php endif; ?>
-                        </div>
-                        <div class="price__footer">
-							<?php $link = get_sub_field('link'); ?>
-				<?php if ( $link ) : ?>
-					<a
-					class="btn btn__white"
-					href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?>
-				<img src="<?php echo get_template_directory_uri()?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
-				</a>
-				<?php endif; ?>
                         </div>
                     </div>
 			</div>

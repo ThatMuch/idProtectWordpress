@@ -4,7 +4,7 @@
  */
 // $data is what we're going to expose to our render template
 $data = array(
-	'card' => get_field( 'tarif_card' )
+	'card' => get_field( 'operation_card' )
 );
 
 // Dynamic block ID
