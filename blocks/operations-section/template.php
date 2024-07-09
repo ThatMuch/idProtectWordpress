@@ -1,35 +1,80 @@
-
 <?php
-$author = get_field( 'author' )?: 'Default author';
-$image = get_field( 'image' )?: 'Default image';
-?>
+// The block attributes
+$block = $args['block'];
 
-    <?php
-    $args = array(
-        'post_type' => 'operation',
-        'posts_per_page' => 1,
-       
-    );
-    $operation_query = new WP_Query($args);
-    if ($operation_query->have_posts()) :
-        $count = 1; // Counter for iteration numbers
-        
-        while ($operation_query->have_posts()) : $operation_query->the_post(); ?>
-        <div><?= $author ?></div>
-            <?php if ($image != 'Default image') : ?>
-                    <div class="container-testimony">
-                        <div class="card-group operations-testimony">
-                            <div class="card" style="width:200px;">
-                                <img class="img-card" src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>">
+// The block data
+$data = $args['data'];
+
+// The block ID
+$block_id = $args['block_id'];
+
+// The block class names
+$class_name = $args['class_name'];
+?>
+<div class="row">
+	<div class="col-md-12">
+		<div class="card__title">
+			<h2 class="title"><span class="g-text">tarif</span></h2>
+		</div>
+	</div>
+</div>
+<div class="row justify-content-center">
+	<!-- Display the group field tarif_card1 -->
+	<?php if ( have_rows( 'tarif_card' ) ) : ?>
+		<?php 
+        // Get the total number of rows in the 'tarif_card' repeater field
+        $total_rows = count(get_field('tarif_card'));
+        var_dump($total_rows); // Output the number of rows
+        ?>
+		<?php while ( have_rows( 'tarif_card' ) ) : the_row(); ?>
+			<div class="col-lg-5">
+				    <div class="price__table">
+                        <div class="price__head">
+                            <div class="price__head__left">
+                                <h4><?php echo get_sub_field('offer'); ?></h4>
+                                <h2><span class="g-text"><?php echo get_sub_field('price'); ?>€</span></h2>
+                            </div>
+                            <div class="price__head__right">
+                                <?php $image = get_sub_field('image');  ?>
+								<?php if ( !empty( $image ) ) : ?>
+									<img
+									src="<?php echo esc_url($image['url']); ?>"
+									alt="<?php echo esc_attr($image['alt']); ?>" />
+								<?php endif; ?>
                             </div>
                         </div>
+                        <div class="price__body">
+                            <h2><?php echo get_sub_field('title') ;?></h2>
+                            <p><?php echo get_sub_field('text'); ?></p>
+
+							<?php if (have_rows('list')): ?>
+								<ul>
+									<?php while (have_rows('list')) : the_row() ;?>
+									<?php
+									// Get the 'disabled' field value
+									$disabled = get_sub_field( 'desactive' );
+
+									// Check if the 'disabled' checkbox is checked
+									$disabled_class = $disabled ? 'disable' : '';
+
+									?>
+                                		<li class="<?php echo esc_attr( $disabled_class ); ?>"><?php echo get_sub_field('text') ?></li>
+									<?php endwhile; ?>
+								</ul>
+								<?php endif; ?>
+                        </div>
+                        <div class="price__footer">
+							<?php $link = get_sub_field('link'); ?>
+				<?php if ( $link ) : ?>
+					<a
+					class="btn btn__white"
+					href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo esc_html( $link['title'] ); ?>
+				<img src="<?php echo get_template_directory_uri()?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
+				</a>
+				<?php endif; ?>
+                        </div>
                     </div>
-            <?php else : ?>
-                    <p><?= $image ?></p>
-            <?php endif; ?>
-            <?php $count++; ?>
-        <?php endwhile;
-        wp_reset_postdata();
-    else : ?>
-        <p><?php _e('Sorry, no operations found.'); ?></p>
-    <?php endif; ?>
+			</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
+</div>

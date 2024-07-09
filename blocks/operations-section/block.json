@@ -1,7 +1,7 @@
 {
 	"name": "operationsSection",
 	"title": "Section Intervention",
-	"description": "A custom Operation block.",
+	"description": "une section pour afficher les interventions",
 	"style": [
 		"file:./style.css"
 	],
@@ -13,7 +13,17 @@
 	],
 	"acf": {
 		"mode": "preview",
-		"renderTemplate": "./template.php"
+		"renderTemplate": "./block.php"
 	},
-	"align": "full"
+	"align": "full",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		}
+	}
 }

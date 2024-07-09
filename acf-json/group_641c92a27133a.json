@@ -157,6 +157,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_641c92a30fe7c",
                     "sub_fields": [
                         {
                             "key": "field_641c93b50fe83",
@@ -202,10 +203,10 @@
                             "layout": "vertical",
                             "toggle": 0,
                             "save_custom": 0,
-                            "parent_repeater": "field_641c93a40fe82"
+                            "parent_repeater": "field_641c93a40fe82",
+                            "custom_choice_button_text": "Ajouter un nouveau choix"
                         }
-                    ],
-                    "parent_repeater": "field_641c92a30fe7c"
+                    ]
                 },
                 {
                     "key": "field_641c94210fe85",
@@ -223,6 +224,27 @@
                     },
                     "return_format": "array",
                     "parent_repeater": "field_641c92a30fe7c"
+                },
+                {
+                    "key": "field_64441f751f972",
+                    "label": "Texte supplémentaire",
+                    "name": "text_add",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "\/mois",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_641c92a30fe7c"
                 }
             ]
         }
@@ -233,6 +255,13 @@
                 "param": "block",
                 "operator": "==",
                 "value": "acf\/tarif"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "6845"
             }
         ]
     ],
@@ -245,5 +274,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679594570
+    "modified": 1720453669
 }
