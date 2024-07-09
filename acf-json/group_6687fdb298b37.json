@@ -70,6 +70,27 @@
                     "mime_types": "",
                     "preview_size": "medium",
                     "parent_repeater": "field_668d30f76a78b"
+                },
+                {
+                    "key": "field_668d59ca38351",
+                    "label": "Cas d'intervention",
+                    "name": "case",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "citer le cas d'intervention",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_668d30f76a78b"
                 }
             ]
         }
@@ -92,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720533146
+    "modified": 1720539921
 }

@@ -10,6 +10,7 @@ $block_id = $args['block_id'];
 
 // The block class names
 $class_name = $args['class_name'];
+
 ?>
 <div class="row">
 	<div class="col-md-12">
@@ -32,6 +33,7 @@ $class_name = $args['class_name'];
 									alt="<?php echo esc_attr($image['alt']); ?>" />
 								<?php endif; ?>
 								<p><?php echo get_sub_field('author'); ?><p>
+								<p><?php echo get_sub_field('case'); ?><p>
 						</div>
 					</div>
 				</div>
