@@ -7,9 +7,6 @@ $data = array(
 	'card' => get_field( 'operation_card' )
 );
 
-$data = array(
-	'intervention' => get_field( 'intervention_card' )
-);
 // Dynamic block ID
 $block_id = 'tarif' . $block['id'];
 
