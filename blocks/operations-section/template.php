@@ -26,15 +26,21 @@ $class_name = $args['class_name'];
         var_dump($total_rows); // Output the number of rows
         ?>
 		<?php while ( have_rows( 'intervention_card' ) ) : the_row(); ?>
-			<div>
-				<h2><span class="g-text"><?php echo get_sub_field('author'); ?></span></h2>
-				<div class="price__head__right">
-					<?php $image = get_sub_field('image');  ?>
-					<?php if ( !empty( $image ) ) : ?>
-						<img
-						src="<?php echo esc_url($image['url']); ?>"
-						alt="<?php echo esc_attr($image['alt']); ?>" />
-					<?php endif; ?>
+			<div class="col-auto">
+				<div class="container-intervention">
+					<div class="card-group">
+						<div class="card custom-card">
+							<h2><span class="g-text"><?php echo get_sub_field('author'); ?></span></h2>
+							<div class="price__head__right">
+								<?php $image = get_sub_field('image');  ?>
+								<?php if ( !empty( $image ) ) : ?>
+									<img
+									src="<?php echo esc_url($image['url']); ?>"
+									alt="<?php echo esc_attr($image['alt']); ?>" />
+								<?php endif; ?>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		<?php endwhile; ?>
