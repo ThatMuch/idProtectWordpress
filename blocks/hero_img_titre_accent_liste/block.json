@@ -1,6 +1,6 @@
 {
-	"name": "carte_temoignage",
-	"title": "carte_temoignage",
+	"name": "hero_img_titre_accent liste",
+	"title": "Hero Img Titre Accent Liste",
 	"description": "A custom testimonial block.",
 	"style": [
 		"file:./style.css"
@@ -9,7 +9,8 @@
 	"icon": "admin-comments",
 	"keywords": [
 		"Id Protect",
-		"carte"
+		"Hero",
+		"Liste"
 	],
 	"acf": {
 		"mode": "preview",

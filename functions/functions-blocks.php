@@ -110,7 +110,7 @@ register_block_type(
 );
 
 register_block_type(
-	get_template_directory() . '/blocks/cartes_temoignage/block.json',
+	get_template_directory() . '/blocks/cartes_avis/block.json',
 	array(
 		'icon'  => $icon,
 	),
@@ -139,6 +139,13 @@ register_block_type(
 
 register_block_type(
 	get_template_directory() . '/blocks/hero_img_titre_accent/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+
+register_block_type(
+	get_template_directory() . '/blocks/hero_img_titre_accent_liste/block.json',
 	array(
 		'icon'  => $icon,
 	),

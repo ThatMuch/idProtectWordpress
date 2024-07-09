@@ -16,10 +16,10 @@ $cta = get_field('cta');
                         <div class="bloc_title margin-h1">
                             <h1 class="h1-45"><?= $title?><span class="orange_title"><?= $accent?></span></h1>
                         </div>
-                        <div class="bloc_text_btn">
-                            <p class="b2-medium bloc_text">
+                        <div class="bloc_text_btn b2-medium bloc_text">
+                            
                             <?= $description?>
-                            </p>
+                            
                             <div>
                                 <button class="btn-primary"><?= $cta ?></button>
                             </div>

@@ -47,7 +47,7 @@
             "label": "Description",
             "name": "description",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -56,11 +56,11 @@
                 "class": "",
                 "id": ""
             },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
             "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "delay": 0
         },
         {
             "key": "field_668520f0bf5fc",
@@ -113,7 +113,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "acf\/herosectionv2"
             }
         ]
     ],
@@ -126,5 +126,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720003654
+    "modified": 1720176143
 }

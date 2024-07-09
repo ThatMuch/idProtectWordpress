@@ -257,7 +257,7 @@ hr.custom { border-color: #1956A8; opacity: 1; margin: 50px auto; max-width: 85%
 
 .header__link:hover .eye { opacity: 0; }
 
-.footer__area { background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%); -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 16px 16px 0px 0px; padding: 30px 30px 15px 30px; color: #A3BBDC; }
+.footer__area { background: linear-gradient(278.49deg, #1956A8 0%, #171C60 88.22%); -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 16px 16px 0px 0px; padding: 30px 30px 0 30px; color: #A3BBDC; }
 
 .footer__area__sponso { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 0px; gap: 10px; }
 
@@ -287,7 +287,7 @@ hr.custom { border-color: #1956A8; opacity: 1; margin: 50px auto; max-width: 85%
 
 .footer__area__logo { margin: 0 auto; display: block; width: 160px; -webkit-filter: invert(1) brightness(100); filter: invert(1) brightness(100); }
 
-.footer__area__bottom { margin-top: 15px; border-top: 1px solid #5E89C2; color: #5E89C2; padding-top: 15px; }
+.footer__area__bottom { margin-top: 15px; color: #5E89C2; padding-top: 15px; }
 
 .footer__area__bottom p { margin-bottom: 0; }
 

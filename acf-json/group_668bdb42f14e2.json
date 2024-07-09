@@ -1,53 +1,11 @@
 {
-    "key": "group_66852d439bbbb",
-    "title": "carte_avis",
+    "key": "group_668bdb42f14e2",
+    "title": "Block - Hero_img_titre_accent_liste",
     "fields": [
         {
-            "key": "field_66852d44e08c7",
-            "label": "Note",
-            "name": "note",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_66852d57e08c8",
-            "label": "Commentaire",
-            "name": "commentaire",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_66852d6fe08c9",
-            "label": "Username",
-            "name": "username",
+            "key": "field_668bdb43088cd",
+            "label": "Titre",
+            "name": "titre",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -65,9 +23,9 @@
             "append": ""
         },
         {
-            "key": "field_66852d7ae08ca",
-            "label": "Subtitle",
-            "name": "subtitle",
+            "key": "field_668bdb430c627",
+            "label": "Titre_accent",
+            "name": "titre_accent",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -83,6 +41,71 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_668bdb430fe35",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_668bdb431383d",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_668bdb4317343",
+            "label": "Image",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -90,7 +113,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/carte-avis"
+                "value": "acf\/hero-img-titre-accent-liste"
             }
         ]
     ],
@@ -103,5 +126,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720521873
+    "modified": 1720441686
 }
