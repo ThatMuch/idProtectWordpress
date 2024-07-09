@@ -4,11 +4,14 @@
  */
 // $data is what we're going to expose to our render template
 $data = array(
-	'card' => get_field( 'intervention_card' )
+	'card' => get_field( 'operation_card' )
 );
 
+$data = array(
+	'intervention' => get_field( 'intervention_card' )
+);
 // Dynamic block ID
-$block_id = 'Section Intervention' . $block['id'];
+$block_id = 'tarif' . $block['id'];
 
 
 

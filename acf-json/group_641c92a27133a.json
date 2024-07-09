@@ -256,13 +256,6 @@
                 "operator": "==",
                 "value": "acf\/tarif"
             }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/operationssection"
-            }
         ]
     ],
     "menu_order": 0,
@@ -274,5 +267,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720517341
+    "modified": 1720528958
 }

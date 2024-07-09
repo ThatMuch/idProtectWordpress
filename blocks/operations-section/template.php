@@ -19,6 +19,26 @@ $class_name = $args['class_name'];
 	</div>
 </div>
 <div class="row justify-content-center">
+	<?php if ( have_rows( 'intervention_card' ) ) : ?>
+		<?php 
+        // Get the total number of rows in the 'intervention_card' repeater field
+        $total_rows = count(get_field('intervention_card'));
+        var_dump($total_rows); // Output the number of rows
+        ?>
+		<?php while ( have_rows( 'intervention_card' ) ) : the_row(); ?>
+			<div>
+				<h2><span class="g-text"><?php echo get_sub_field('author'); ?></span></h2>
+				<div class="price__head__right">
+					<?php $image = get_sub_field('image');  ?>
+					<?php if ( !empty( $image ) ) : ?>
+						<img
+						src="<?php echo esc_url($image['url']); ?>"
+						alt="<?php echo esc_attr($image['alt']); ?>" />
+					<?php endif; ?>
+				</div>
+			</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
 	<!-- Display the group field operation_card -->
 	<?php if ( have_rows( 'operation_card' ) ) : ?>
 		<?php 
