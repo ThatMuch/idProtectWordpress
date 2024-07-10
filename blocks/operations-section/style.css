@@ -1,3 +1,8 @@
+.operations-testimony {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .custom-card {
     width: 150px; /* Define a fixed width for the cards */
     margin: 10px; /* Add some margin to separate the cards slightly */
@@ -10,15 +15,15 @@
     height: auto; /* Keep the aspect ratio of the image */
 }
 
-.container-intervention {
+/* .container-intervention {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-}
+} */
 
 /* Début section carré avec coins colorés */
-.container {
+.container-intervention {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,10 +43,6 @@
     text-align: center;
 }
 
-.img-container {
-    position: relative;
-}
-
 .img-card {
     display: block;
     margin: 0 auto;
@@ -50,8 +51,8 @@
 
 .square {
     display: flex;
-    width: 93px;
-    height: 93px;
+    width: 40px;
+    height: 40px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -61,7 +62,7 @@
     box-shadow: 0px 1.329px 13.286px 0px rgba(25, 86, 168, 0.25);
     backdrop-filter: blur(4.151785373687744px);
     position: absolute;
-    z-index: 1; /* z-index inférieur */
+    /* z-index: 1; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -69,10 +70,22 @@
     /* height: auto; */
 }
 
-.triangle, .square {
+.card:hover .square {
+    transform-origin: center; /* Centrer le point de transformation */
+    transform: translate(-50%, -50%) scale(0.5); /* Réduire la taille du carré au survol */
+    transition: transform 0.3s ease 0.08s; /* Transition pour le carré */
+}
+
+.card:hover .triangle { 
+    transform: translate(-50%, -50%) scale(0.5); /* Réduire la taille du carré au survol */
+    transition: transform 0.3s ease; /* Transition pour le triangle */
+}
+
+
+/* .triangle, .square {
     position: absolute;
     transform-origin: center; /* Centrer le point de transformation */
-}
+} */
 
 .triangle {
     top: 50%;
@@ -80,7 +93,18 @@
     transform: translate(-50%, -50%);
     width: 40px; /* Taille initiale du triangle */
     height: auto; /* Maintenir les proportions */
-    z-index: 2; /* z-index supérieur */
+    z-index: 3; /* z-index supérieur */
+}
+
+.autour-image {
+    position: relative;
+}
+
+.square, .triangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
