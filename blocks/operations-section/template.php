@@ -32,7 +32,7 @@ $class_name = $args['class_name'];
 									src="<?php echo esc_url($image['url']); ?>"
 									alt="<?php echo esc_attr($image['alt']); ?>" />
 								<?php endif; ?>
-								<p><?php echo get_sub_field('author'); ?><p>
+								<p style="color: red;"><?php echo get_sub_field('author'); ?><p>
 								<p><?php echo get_sub_field('case'); ?><p>
 						</div>
 					</div>
