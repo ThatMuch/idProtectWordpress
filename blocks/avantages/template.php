@@ -121,6 +121,9 @@
                     </div>
                 </div>            
             </div>
+            <div class="d-flex justify-center btn_margin">
+                <button class="btn-primary"><?= $cta?></button>
+            </div>
         </div>
     </div>
 
