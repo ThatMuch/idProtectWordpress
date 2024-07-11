@@ -10,7 +10,7 @@ $pro = get_field('pro');
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<div class="block__link promo <?php echo $pro ? 'professionnels' : ''; ?>" style="background-image: linear-gradient(0deg, rgba(15, 71, 143, 0.45), rgba(15, 71, 143, 0.45)), url(<?php echo esc_url($background['url']); ?>) ">
+			<div class="block__link promo <?php echo $pro ? 'professionnels' : ''; ?>" style="background-image: linear-gradient(0deg, rgba(1, 5, 52, 0.70) 0%, rgba(1, 5, 52, 0.70) 100%), url(<?php echo esc_url($background['url']); ?>) ">
 				<div class="promo__text">
 					<h3><?php echo $title; ?></h3>
 					<p><?php echo $text; ?> </p>

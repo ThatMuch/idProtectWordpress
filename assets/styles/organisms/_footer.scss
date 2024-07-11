@@ -12,6 +12,10 @@
     color: $color-grey;
     background: $color-dark;
 
+    &__logo {
+        width: 150px;
+    }
+
     ul, li {
         list-style: none;
         padding: 0;

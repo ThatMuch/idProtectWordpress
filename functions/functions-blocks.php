@@ -97,4 +97,27 @@ register_block_type(
 		'icon'  => $icon,
 	),
 );
-//toto
+register_block_type(
+	get_template_directory() . '/blocks/datas/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/listIcon/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/services/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/listCards/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);

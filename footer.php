@@ -12,87 +12,32 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?>
 
 <!-- If the page is not the home page display the widget from the sidebar footer-1 -->
-<?php if (is_active_sidebar('footer-1')) : ?>
-	<?php dynamic_sidebar('footer-1'); ?>
-<?php endif; ?>
+<div class="logos__list">
+	<?php if (is_active_sidebar('footer-1')) : ?>
+		<?php dynamic_sidebar('footer-1'); ?>
+	<?php endif; ?>
+</div>
 
 </div><!-- #content -->
 
 <div class="footer__area">
-	<div class="row">
-		<div class="col-md-3">
+	<div class="d-flex justify-content-center flex-wrap">
+		<a href="<?php echo site_url(); ?>">
 			<img src="<?php if ($image[0]) : echo $image[0];
-						else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect" class="footer__area__logo mb-4">
-
-			<p class="footer__area__text"><?php echo get_bloginfo('description'); ?></p>
-			<?php if (have_rows('rs', 'options')) : ?>
-
-				<ul class="footer__area__rs">
-					<?php while (have_rows('rs', 'options')) : the_row(); ?>
-						<?php if (get_sub_field('facebook')) : ?>
-							<li class="footer__rs__item">
-								<a href="<?php the_sub_field('facebook'); ?>">
-									<i class="fab fa-facebook" aria-hidden="true"></i>
-								</a>
-							</li>
-						<?php endif; ?>
-						<?php if (get_sub_field('twitter')) : ?>
-							<li class="footer__rs__item">
-								<a href="<?php the_sub_field('twitter'); ?>">
-									<i class="fab fa-twitter" aria-hidden="true"></i>
-								</a>
-							</li>
-						<?php endif; ?>
-						<?php if (get_sub_field('instagram')) : ?>
-							<li class="footer__rs__item">
-								<a href="<?php the_sub_field('instagram'); ?>">
-									<i class="fab fa-instagram" aria-hidden="true"></i>
-								</a>
-							</li>
-						<?php endif; ?>
-						<?php if (get_sub_field('google')) : ?>
-							<li class="footer__rs__item">
-								<a href="<?php the_sub_field('google'); ?>">
-									<i class="fab fa-google" aria-hidden="true"></i>
-								</a>
-							</li>
-						<?php endif; ?>
-						<?php if (get_sub_field('linkedin')) : ?>
-							<li class="footer__rs__item">
-								<a href="<?php the_sub_field('linkedin'); ?>">
-									<i class="fab fa-linkedin" aria-hidden="true"></i>
-								</a>
-							</li>
-						<?php endif; ?>
-						<?php if (get_sub_field('youtube')) : ?>
-							<li class="footer__rs__item">
-								<a href="<?php the_sub_field('youtube'); ?>">
-									<i class="fab fa-youtube" aria-hidden="true"></i>
-								</a>
-							</li>
-						<?php endif; ?>
-					<?php endwhile; ?>
-				</ul>
-				<?php dynamic_sidebar('footer-partenaires'); ?>
-			<?php endif; ?>
-
-		</div>
-		<?php if (is_active_sidebar('footer-par')) : ?>
-			<div class="col-md-3 ps-5 pe-5">
-				<?php dynamic_sidebar('footer-par'); ?>
-			</div>
-		<?php endif; ?>
-		<?php if (is_active_sidebar('footer-pro')) : ?>
-			<div class="col-md-3 ps-5 pe-5">
-				<?php dynamic_sidebar('footer-pro'); ?>
-			</div>
-		<?php endif; ?>
-		<?php if (is_active_sidebar('footer-about')) : ?>
-			<div class="col-md-3 ps-5 pe-5">
-				<?php dynamic_sidebar('footer-about'); ?>
-			</div>
-		<?php endif; ?>
-
+						else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect" class="footer__area__logo mb-4" />
+		</a>
+		<!-- afficher le submenu -->
+		<?php
+		wp_nav_menu(array(
+			'theme_location' => 'submenu',
+			'menu_id'        => 'menu-submenu',
+			'container'      => false,
+			'depth'          => 1,
+			'menu_class'     => 'footer__area__menu m-auto',
+			'walker'         => new Bootstrap_NavWalker(),
+			'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
+		));
+		?>
 	</div>
 	<div class="footer__area__bottom d-flex justify-content-between">
 		<div></div>
@@ -106,58 +51,36 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 	</div>
 </div>
 
-<?php if (is_front_page()) : ?>
-	<div class="modal fade" id="hubspotModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h2 class="modal-title">Vous souhaitez vous protéger contre l’usurpation d’identité ?
-					</h2>
-					<button type="button" class="close btn btn-primary" data-bs-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">X</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<p>Inscrivez vous à notre newsletter</p>
-					<div class="hubspot">
-						<?php echo do_shortcode('[hubspot type="form" portal="25430769" id="79af16ac-3a9f-47bc-9f71-c8b7050ceac4"]'); ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php endif ?>
-<?php
-$block = find_block_by_name('acf/temoignage', $post->ID);
-if ($block) :
-	$field_value = $block['attrs']['data']["video_preview_video"]; ?>
-	<!-- Modal bootstrap -->
-	<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-			<div class="modal-content">
-				<div class="modal-body">
-					<div class="oembed-container">
-						<?php echo wp_oembed_get($field_value); ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php endif; ?>
+
 <?php wp_footer() ?>
 
+<div class="modal fade" id="tallyModal" tabindex="-1" role="dialog" aria-labelledby="tallyModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content">
+			<button type="button" class="close btn btn-close " data-bs-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">Fermer x</span>
+			</button>
+			<div class="modal-body tally">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form">
+							<iframe data-tally-src="https://tally.so/embed/wLdZKz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" frameborder="0" marginheight="0" marginwidth="0" title="Quel type de préjudice avez-vous subi ?"></iframe>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="illu">
+							<img src="<?php echo get_template_directory_uri() ?>/assets/images/modal_illustration.png" class="img" alt="SOS Usurpation logo">
+							<img src="<?php echo get_template_directory_uri() ?>/assets/images/logo_sos.png" class="logo" alt="SOS Usurpation logo">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
 <script>
-	document.addEventListener("DOMContentLoaded", function() {
-		// Check if modal has already been shown in this session
-		if (!sessionStorage.getItem('modalShown')) {
-			setTimeout(function() {
-				var myModal = new bootstrap.Modal(document.getElementById('hubspotModal'), {});
-				myModal.show();
-				// Mark modal as shown in this session
-				sessionStorage.setItem('modalShown', 'true');
-			}, 10000); // 10000 milliseconds = 10 seconds
-		}
-	});
+	Tally.loadEmbeds();
 </script>
 </body>
 

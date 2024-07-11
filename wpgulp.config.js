@@ -22,6 +22,8 @@ const injectChanges = true;
 // >>>>> Style options.
 // Path to main .scss file.
 const styleSRC = './assets/styles/style.scss';
+
+// Path to place the compiled CSS file. Default set to root folder.
 const styleDestination = './assets/styles/';
 
 // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
@@ -65,6 +67,7 @@ const imgDST = './assets/images/';
 // >>>>> Watch files paths.
 // Path to all *.scss files inside css folder and inside them.
 const watchStyles = './assets/styles/**/*.scss';
+const watchCss = './blocks/**/*.css';
 
 // Path to all vendor JS files.
 const watchJsVendor = './assets/scripts/vendor/*.js';
@@ -83,7 +86,7 @@ const zipName = 'IDProtect.zip';
 
 // Must be a folder outside of the zip folder.
 const zipDestination = './dist'; // Default: Parent folder.
-const zipIncludeGlob = ['./**/*']; // Default: Include all files/folders in current directory.
+const zipIncludeGlob = [ './**/*' ]; // Default: Include all files/folders in current directory.
 
 // Default ignored files and folders for the zip file.
 const zipIgnoreGlob = [
@@ -133,7 +136,7 @@ const team = 'ThatMuch <social@thatmuch.fr>';
 
 // Browsers you care about for auto-prefixing. Browserlist https://github.com/ai/browserslist
 // The following list is set as per WordPress requirements. Though; Feel free to change.
-const BROWSERS_LIST = ['last 2 version','> 1%'];
+const BROWSERS_LIST = [ 'last 2 version', '> 1%' ];
 
 // Export.
 module.exports = {
@@ -158,6 +161,7 @@ module.exports = {
 	watchJsVendor,
 	watchJsCustom,
 	watchPhp,
+	watchCss,
 	zipName,
 	zipDestination,
 	zipIncludeGlob,

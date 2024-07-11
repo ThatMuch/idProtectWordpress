@@ -5,3 +5,110 @@
  * @since       idProtect_1.0.0.0
  *
  */
+.modal-dialog {
+    width: 90vw;
+    max-width: inherit;
+    height: 90vh;
+}
+
+#tallyModal {
+    .modal-content {
+        overflow: hidden;
+        background-color: $blue-80;
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            z-index: 9999;
+            height: inherit;
+            width: initial;
+        }
+    }
+
+    .modal-body {
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+.tally {
+    .form {
+        padding: 1rem;
+        background-color: $blue-70;
+        max-height: 90vh;
+        min-height: 578px;
+        overflow-y: scroll;
+    }
+
+    .illu {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        .img {
+            max-width: 50%;
+        }
+
+        .logo {
+            position: absolute;
+            right: 2rem;
+            bottom: 2rem;
+        }
+    }
+
+    &--page {
+        @include breakpoint(tablet) {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+
+        .form {
+            padding: 2rem;
+
+            @include breakpoint(mobile) {
+                max-height: initial;
+                padding: 1rem;
+            }
+        }
+
+        .container {
+            padding: 0;
+            background-color: $blue-80;
+
+            @include breakpoint(mobile) {
+                min-height: 100vh;
+                background-color: $blue-70;
+            }
+        }
+
+        .row {
+            @include breakpoint(mobile) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .illu {
+            @include breakpoint(mobile) {
+                padding: 2rem;
+                background-color: $blue-80;
+            }
+        }
+    }
+}
+
+.page-template-formulaire {
+    background: $navy-40;
+
+    .footer__area, .logos__list, .header__area {
+        display: none;
+    }
+
+    .section__area {
+        padding: 0;
+    }
+}
