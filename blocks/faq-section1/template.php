@@ -18,7 +18,6 @@
     if ($faq_query->have_posts()) :
         $count = 1; // Counter for iteration number
         while ($faq_query->have_posts()) : $faq_query->the_post(); ?>
-        <?= get_the_ID() ?>
             <div class="faq-item">
               <button class="accordion-faq">
                   <div class="faq-question b2-medium-faq text-primary"><?php the_title() ?></>
