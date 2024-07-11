@@ -1,11 +1,25 @@
 <?php
-$titre = get_field('titre') ?: 'Default title';
-$accent = get_field('titre_accent') ?: 'Default accent';
-$image = get_field('image');
-$description = get_field('description');
+$titre = get_field('titre');
+$accent = get_field('titre_accent');
 $cta = get_field('cta');
-?>
+$image = get_field('image');
+// The block attributes
+$block = $args['block'];
 
+// The block data
+$data = $args['data'];
+
+// The block ID
+$block_id = $args['block_id'];
+
+// The block class names
+$class_name = $args['class_name'];
+// Arguments pour la requête des témoignages
+$args = array(
+    'post_type' => 'liste'
+);
+$hero_list_query = new WP_Query($args);
+?>
 
 <section name="bloc">
     <div class="container">
@@ -21,30 +35,18 @@ $cta = get_field('cta');
                         </div>
                         <div class="bloc_text_btn b2-medium bloc_text">
                             <ul class="unstyled">
-                                <div>
-                                    <li class="list_item">
-                                        <img src="<?= esc_url(get_template_directory_uri() .'/blocks/hero_img_titre_accent_liste/shield.png'); ?>" alt="shield">
-                                        coucoucou
-                                    </li>
-                                </div>
-                                <div>
-                                    <li class="list_item">
-                                        <img src="<?= esc_url(get_template_directory_uri() .'/blocks/hero_img_titre_accent_liste/shield.png'); ?>" alt="shield">
-                                        coucoucou
-                                    </li>
-                                </div>
-                                <div>
-                                    <li class="list_item">
-                                        <img src="<?= esc_url(get_template_directory_uri() .'/blocks/hero_img_titre_accent_liste/shield.png'); ?>" alt="shield">
-                                        coucoucou
-                                    </li>
-                                </div>
-                                <div>
-                                    <li class="list_item">
-                                        <img src="<?= esc_url(get_template_directory_uri() .'/blocks/hero_img_titre_accent_liste/shield.png'); ?>" alt="shield">
-                                        coucoucou
-                                    </li>
-                                </div>
+                            <?php if ($hero_list_query->have_posts()) : ?>
+                                <?php while ($hero_list_query->have_posts()) : $hero_list_query->the_post(); 
+                                    $liste = get_field('item', $post->ID);
+                                ?>
+                                    <div>
+                                        <li class="list_item d-flex">
+                                            <img height="25px" src="<?= esc_url(get_template_directory_uri() .'/blocks/hero_img_titre_accent_liste/shield.png'); ?>" alt="shield">
+                                            <?= $liste ?>
+                                        </li>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                             </ul>
                             
                             <div>

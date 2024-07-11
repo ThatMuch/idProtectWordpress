@@ -187,6 +187,10 @@ body{
 	text-align: right;
 }
 
+.list_item img{
+	margin-right: 5px;
+}
+
 .orange_title{
 	color: #FF8833;
 	background-color: #FFFFFF;

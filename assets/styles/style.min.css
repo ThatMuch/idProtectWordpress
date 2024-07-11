@@ -134,7 +134,7 @@ hr.custom{border-color:#1956a8;opacity:1;margin:50px auto;max-width:85%}
 .page__area{padding:30px 0}
 .page__text{font-family:"Raleway",sans-serif}
 .page__text h1,.page__text h2,.page__text h3,.page__text h4,.page__text h5,.page__text h6{font-family:"Rubik",sans-serif;text-transform:uppercase;font-weight:800;margin-bottom:30px}
-.page__text h2{color:#152235;text-transform:uppercase;font-size:2.5rem;line-height:1.2;font-weight:800;margin-bottom:40px;font-family:"Rubik",sans-serif}
+/* .page__text h2{color:#152235;text-transform:uppercase;font-size:2.5rem;line-height:1.2;font-weight:800;margin-bottom:40px;font-family:"Rubik",sans-serif} */
 /* .page__text p{color:#152235;font-size:1rem;line-height:1.625;font-weight:500;margin-bottom:25px} */
 .page__text p strong{font-weight:700}
 .page__header{position:absolute;top:-120px;right:0;text-align:right;min-height:175px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
@@ -299,7 +299,7 @@ h6,.h6{font-size:.95rem;line-height:1.8}
 .community__form h2{font-size:1.425rem;line-height:1.5}
 .community__form input:not([type="submit"]),.community__form textarea{font-size:.95rem;line-height:1.425}
 .community__form p.note{font-size:.7125rem;line-height:1.4}
-.page__text h2{font-size:2.375rem;line-height:1.44}
+/* .page__text h2{font-size:2.375rem;line-height:1.44} */
 .page__text p{font-size:.95rem;line-height:1.95}
 .page__header h3,.page__header__title{font-size:2.375rem;line-height:1.44}
 .page__header h2{font-size:3.5625rem;line-height:1.44}
@@ -335,7 +335,7 @@ h6,.h6{font-size:.95rem;line-height:1.8}
 .community__info h2{font-size:1.875rem;line-height:1.3333333333}
 .community__form{padding:20px}
 .community__form h2{font-size:1.25rem}
-.page__text h2{font-size:1.625rem;line-height:1.1538461538}
+/* .page__text h2{font-size:1.625rem;line-height:1.1538461538} */
 .page__header{top:-75px;min-height:110px}
 .page__header h3{font-size:1.125rem;line-height:1.5555555556;padding:10px 15px}
 .page__header h2{font-size:1.875rem;line-height:1.3333333333;font-weight:800;padding:10px 15px}

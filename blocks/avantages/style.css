@@ -9,8 +9,19 @@
 	margin-bottom: 24px;
 }
 
+.item{
+	height: 130px;
+}
+
+.titre_avantages{
+	width:650px;
+	position: relative;
+	left: 510px;
+}
+
 .avantage_card{
 	width: 352px;
+	height: 350px;
 	background: rgb(232,239,251);
 	background: linear-gradient(180deg, rgba(232,239,251,1) 0%, rgba(255,255,255,1) 51%);
 	border-radius: 10px;
@@ -21,7 +32,7 @@
 
 .avantage_content{
 	margin: 0 35px;
-	padding: 50px 0 20px;
+	padding: 25px 0 20px;
 }
 
 .avantage_subtitle{

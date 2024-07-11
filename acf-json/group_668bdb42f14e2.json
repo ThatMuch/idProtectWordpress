@@ -43,26 +43,6 @@
             "append": ""
         },
         {
-            "key": "field_668bdb430fe35",
-            "label": "Description",
-            "name": "description",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "default_value": "",
-            "delay": 0
-        },
-        {
             "key": "field_668bdb431383d",
             "label": "CTA",
             "name": "cta",
@@ -126,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720441686
+    "modified": 1720701580
 }

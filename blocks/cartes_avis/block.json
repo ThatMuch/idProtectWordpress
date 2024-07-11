@@ -1,20 +1,19 @@
 {
 	"name": "carte_avis",
 	"title": "carte_avis",
-	"description": "A custom testimonial block.",
+	"description": "une section de cartes d'avis",
 	"style": [
 		"file:./style.css"
 	],
 	"category": "theme",
-	"icon": "admin-comments",
 	"keywords": [
 		"Id Protect",
-		"carte",
-		"avis"
+		"avis",
+		"carte"
 	],
 	"acf": {
 		"mode": "preview",
-		"renderTemplate": "./template.php"
+		"renderTemplate": "./block.php"
 	},
 	"align": "full"
 }
