@@ -25,11 +25,10 @@ $class_name = $args['class_name'];
 			<div class="col-auto">
 				<div class="container-intervention">
 					<div class="card-group operations-testimony">
-						<!-- <div class="card custom-card"> -->
 						<div class="card" style="width:200px;">
 								<?php $image = get_sub_field('image');  ?>
 								<?php if ( !empty( $image ) ) : ?>
-									<div class="autour-image">
+									<div class="zoom-centered-image">
 										<img class="img-card"
 										src="<?php echo esc_url($image['url']); ?>"
 										alt="<?php echo esc_attr($image['alt']); ?>" />
@@ -47,7 +46,7 @@ $class_name = $args['class_name'];
 												</svg>
 											</div>
 											<div class="corner bottom-left">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M23.0312 20.0564C23.0312 21.5972 21.7821 22.8464 20.2412 22.8464L9.08125 22.8464C4.45862 22.8464 0.711249 19.099 0.71125 14.4764L0.71125 3.31637C0.71125 1.77549 1.96037 0.526366 3.50125 0.526366C5.04212 0.526366 6.29125 1.77549 6.29125 3.31637L6.29125 14.4764C6.29125 16.0172 7.54037 17.2664 9.08125 17.2664L20.2412 17.2664C21.7821 17.2664 23.0312 18.5155 23.0312 20.0564Z" fill="#17EB79"/>
 												</svg>
 											</div>
@@ -59,7 +58,7 @@ $class_name = $args['class_name'];
 										</div>
 
 										<div class="triangle">
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 24 27" fill="none">
+											<svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 24 27" fill="none">
 												<path d="M22.2118 11.1858L4.1519 0.367709C3.76564 0.144665 3.32771 0.0266486 2.88168 0.0253997C2.43565 0.0241508 1.99706 0.139713 1.60956 0.36059C1.22206 0.581467 0.899141 0.899958 0.672941 1.28438C0.446742 1.6688 0.325139 2.10575 0.320237 2.55175L0.320236 24.1878C0.325138 24.6338 0.446741 25.0708 0.67294 25.4552C0.89914 25.8396 1.22205 26.1581 1.60956 26.379C1.99706 26.5999 2.43564 26.7154 2.88168 26.7142C3.32771 26.7129 3.76563 26.5949 4.15189 26.3719L22.2118 15.5538C22.5871 15.3262 22.8975 15.0056 23.1129 14.623C23.3283 14.2404 23.4414 13.8088 23.4414 13.3698C23.4414 12.9308 23.3283 12.4992 23.1129 12.1166C22.8975 11.734 22.5871 11.4134 22.2118 11.1858V11.1858Z" fill="white"/>
 											</svg>
 										</div>
@@ -67,7 +66,6 @@ $class_name = $args['class_name'];
 								<?php endif; ?>
 								<p style="color: red;"><?php echo get_sub_field('author'); ?><p>
 								<p><?php echo get_sub_field('case'); ?><p>
-								<p><?php echo get_sub_field('case'); ?><p></p>
 						</div>
 					</div>
 				</div>
