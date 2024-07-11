@@ -16,7 +16,7 @@
 	],
 	"acf": {
 		"mode": "preview",
-		"renderTemplate": "./template.php"
+		"renderTemplate": "./block.php"
 	},
 	"align": "full"
 }
