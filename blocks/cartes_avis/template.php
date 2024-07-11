@@ -2,7 +2,6 @@
 // Arguments pour la requête des témoignages
 $args = array(
     'post_type' => 'avis',
-    'posts_per_page' => -1
 );
 $testimony_query = new WP_Query($args);
 ?>

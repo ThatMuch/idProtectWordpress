@@ -1,9 +1,9 @@
 {
-    "key": "group_66852d439bbbb",
-    "title": "carte_avis",
+    "key": "group_6686930765d4e",
+    "title": "type_avis",
     "fields": [
         {
-            "key": "field_66852d44e08c7",
+            "key": "field_6686930794fa7",
             "label": "Note",
             "name": "note",
             "aria-label": "",
@@ -25,7 +25,7 @@
             "append": ""
         },
         {
-            "key": "field_66852d57e08c8",
+            "key": "field_6686930798a8b",
             "label": "Commentaire",
             "name": "commentaire",
             "aria-label": "",
@@ -45,7 +45,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_66852d6fe08c9",
+            "key": "field_668693079c4f4",
             "label": "Username",
             "name": "username",
             "aria-label": "",
@@ -65,7 +65,7 @@
             "append": ""
         },
         {
-            "key": "field_66852d7ae08ca",
+            "key": "field_668693079ff6a",
             "label": "Subtitle",
             "name": "subtitle",
             "aria-label": "",
@@ -88,9 +88,9 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/carte-avis"
+                "value": "avis"
             }
         ]
     ],
@@ -103,5 +103,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720521873
+    "modified": 1720691443
 }
