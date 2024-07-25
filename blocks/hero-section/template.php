@@ -1,15 +1,17 @@
 <?php
 $title = get_field('title');
+$accent = get_field('title_accent');
 $subtitle = get_field('subtitle');
 $image = get_field('image');
 $description = get_field('description');
+$isReverse = get_field('reverse');
 ?>
-<div class="hero__area">
+<section class="hero__area">
 	<div class="container">
-		<div class="row hero__area__row">
+		<div class="row align-items-center <?php echo $isReverse ? "flex-row-reverse" : "" ?>">
 			<div class="col-lg-7 h-100">
 				<div class="hero__text">
-					<?php echo $title; ?>
+					<h1><?= $title; ?> <span class="title text-orange"><?= $accent ?></span></h1>
 					<div class="hero__box">
 						<?php if ($subtitle) : ?><h2><?php echo $subtitle; ?></h2><?php endif; ?>
 						<?php if ($description) : ?><p><?php echo $description; ?></p><?php endif; ?>
@@ -40,4 +42,4 @@ $description = get_field('description');
 			</div>
 		</div>
 	</div>
-</div>
+</section>

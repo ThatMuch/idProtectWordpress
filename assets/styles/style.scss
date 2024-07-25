@@ -648,7 +648,8 @@ hr.custom {
 
 .home .section__area::after {
     content: "";
-    background: url(../images/line.svg) no-repeat scroll 0 0 / 100% 100%;
+
+    // background: url(../images/line.svg) no-repeat scroll 0 0 / 100% 100%;
     position: absolute;
     top: 10%;
     height: 100%;

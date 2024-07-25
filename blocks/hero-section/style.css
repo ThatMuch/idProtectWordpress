@@ -12,8 +12,8 @@
         left: 50%;
         top: -50px;
         opacity: 0.65;
-        background-image: url(./backgroundHero.png);
-        background-repeat: no-repeat;
+        /* background-image: url(./backgroundHero.png);
+        background-repeat: no-repeat; */
         z-index: -1;
     }
 
@@ -37,9 +37,10 @@
         text-align: center;
         padding: 0;
     }
-    h1 {
+    h1,
+    h2 {
         font-weight: 800;
-        font-size: 2.5rem;
+        /* font-size: 2.5rem; */
         line-height: 1.375;
         text-transform: uppercase;
         @media only screen and (max-width: 1199px) {
@@ -73,7 +74,7 @@
     @media only screen and (max-width: 450px) {
         margin: 0;
     }
-    h2 {
+    /* h2 {
         color: var(--blue);
         font-weight: 700;
         font-size: 1.5rem;
@@ -83,19 +84,19 @@
         @media screen and (max-width: 450px) {
             font-size: 1.25rem;
         }
-        p {
-            margin-bottom: 0;
-        }
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            li::before {
-                content: "\f061";
-                font-family: "Font Awesome 6 Free";
-                font-weight: 900;
-                margin-right: 8px;
-            }
+    } */
+    p {
+        margin-bottom: 0;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li::before {
+            content: "\f061";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 8px;
         }
     }
 }
