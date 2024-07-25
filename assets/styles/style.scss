@@ -384,9 +384,6 @@ hr.custom {
     color: var(--orange);
     letter-spacing: 0.5px;
     text-transform: uppercase;
-
-    @include responsive-font-size(13, 16, 700);
-
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     display: -webkit-box;
@@ -399,6 +396,8 @@ hr.custom {
     transition: 0.2s;
     width: 181px;
     position: relative;
+
+    @include responsive-font-size(13, 16, 700);
 }
 
 @media only screen and (max-width: 991px) {
@@ -564,11 +563,10 @@ hr.custom {
 .footer__area .copyright {
     color: #E8EFFB;
     letter-spacing: 0.5px;
-
-    @include responsive-font-size(13, 16, 500);
-
     font-family: "Raleway", sans-serif;
     text-align: right;
+
+    @include responsive-font-size(13, 16, 500);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -609,11 +607,10 @@ hr.custom {
 .footer__menu ul li a {
     color: #E8EFFB;
     text-transform: uppercase;
-
-    @include responsive-font-size(14, 26, 500);
-
     text-decoration: none;
     margin: 0 10px;
+
+    @include responsive-font-size(14, 26, 500);
 }
 
 .footer__menu ul li a:hover {
@@ -708,9 +705,9 @@ hr.custom {
 
 @media only screen and (max-width: 767px) {
     .promotion__area.service .promotion__head h2 {
-        @include responsive-font-size(25, 30);
-
         letter-spacing: 0;
+
+        @include responsive-font-size(25, 30);
     }
 }
 
@@ -765,11 +762,11 @@ hr.custom {
 }
 
 .community__info h2 {
-    @include responsive-font-size(40, 48, 800);
-
     text-transform: uppercase;
     color: #F6F7F9;
     margin: 0 0 20px;
+
+    @include responsive-font-size(40, 48, 800);
 }
 
 @media only screen and (max-width: 767px) {
@@ -779,9 +776,9 @@ hr.custom {
 }
 
 .community__info p {
-    @include responsive-font-size(18, 28, 700);
-
     text-transform: uppercase;
+
+    @include responsive-font-size(18, 28, 700);
 }
 
 .community__info ul {
@@ -825,10 +822,9 @@ hr.custom {
 .community__form h2 {
     color: #FF8833;
     text-transform: uppercase;
+    margin: 0 0 10px;
 
     @include responsive-font-size(24, 30, 700);
-
-    margin: 0 0 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -852,13 +848,12 @@ hr.custom {
     border-color: #384050;
     background: transparent;
     color: #384050;
-
-    @include responsive-font-size(16, 19, 500);
-
     font-family: "Raleway", sans-serif;
     width: 100%;
     padding: 3px 0;
     margin: 10px 0 0;
+
+    @include responsive-font-size(16, 19, 500);
 }
 
 .community__form textarea {
@@ -868,11 +863,10 @@ hr.custom {
 
 .community__form p.note {
     color: #384050;
-
-    @include responsive-font-size(12, 14, 400);
-
     font-family: "Raleway", sans-serif;
     margin: 10px 0 0;
+
+    @include responsive-font-size(12, 14, 400);
 }
 
 .page__area {
@@ -898,11 +892,10 @@ hr.custom {
 .page__text h2 {
     color: #152235;
     text-transform: uppercase;
-
-    @include responsive-font-size(40, 48, 800);
-
     margin-bottom: 40px;
     font-family: "Rubik", sans-serif;
+
+    @include responsive-font-size(40, 48, 800);
 }
 
 @media only screen and (max-width: 767px) {
@@ -913,10 +906,9 @@ hr.custom {
 
 .page__text p {
     color: #152235;
+    margin-bottom: 25px;
 
     @include responsive-font-size(16, 26, 500);
-
-    margin-bottom: 25px;
 }
 
 .page__text p strong {
@@ -955,14 +947,13 @@ hr.custom {
     background: #FFFFFF;
     color: #152235;
     text-transform: uppercase;
-
-    @include responsive-font-size(40, 48, 800);
-
     padding: 10px 30px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
+
+    @include responsive-font-size(40, 48, 800);
 }
 
 @media only screen and (max-width: 767px) {
@@ -974,8 +965,6 @@ hr.custom {
 }
 
 .page__header h2 {
-    @include responsive-font-size(60, 72, 800);
-
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 100px 16px 16px 100px;
@@ -986,13 +975,15 @@ hr.custom {
     width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
+
+    @include responsive-font-size(60, 72, 800);
 }
 
 @media only screen and (max-width: 767px) {
     .page__header h2 {
-        @include responsive-font-size(30, 40, 800);
-
         padding: 10px 15px;
+
+        @include responsive-font-size(30, 40, 800);
     }
 }
 
@@ -1086,15 +1077,15 @@ hr.custom {
 }
 
 .page__hero__text__title {
-    @include responsive-font-size(60, 72, 800);
-
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 100px 16px 16px 100px;
     background: #FFFFFF;
     padding: 10px 40px;
     margin-bottom: 20px;
     width: fit-content;
+
+    @include responsive-font-size(60, 72, 800);
 }
 
 @media only screen and (max-width: 991px) {
@@ -1114,9 +1105,9 @@ hr.custom {
 
 
     .small {
-        @include responsive-font-size(24);
-
         color: #1956A8;
+
+        @include responsive-font-size(24);
     }
 }
 
@@ -1180,16 +1171,16 @@ hr.custom {
 }
 
 .blog__featured__text h4 {
-    @include responsive-font-size(16, 26, 600);
-
     font-family: "Raleway", sans-serif;
+
+    @include responsive-font-size(16, 26, 600);
 }
 
 .blog__featured__text h2, .blog__featured__text h1 {
-    @include responsive-font-size(40, 48, 800);
-
     text-transform: uppercase;
     margin-bottom: 25px;
+
+    @include responsive-font-size(40, 48, 800);
 }
 
 @media only screen and (max-width: 767px) {
@@ -1199,10 +1190,10 @@ hr.custom {
 }
 
 .blog__featured__text p {
-    @include responsive-font-size(16, 26, 500);
-
     font-family: "Raleway", sans-serif;
     max-width: 500px;
+
+    @include responsive-font-size(16, 26, 500);
 }
 
 .blog__featured__text a {
@@ -1271,27 +1262,27 @@ hr.custom {
 }
 
 .blog__box h2 {
-    @include responsive-font-size(38, 48, 600);
-
     color: #F6F7F9;
     text-transform: uppercase;
     margin: 0 0 25px;
+
+    @include responsive-font-size(38, 48, 600);
 }
 
 @media only screen and (max-width: 1200px) {
     .blog__box h2 {
-        @include responsive-font-size(25, 35, 600);
-
         margin: 0 0 10px;
+
+        @include responsive-font-size(25, 35, 600);
     }
 }
 
 .blog__box p {
-    @include responsive-font-size(22, 36, 700);
-
     text-transform: uppercase;
     color: #F6F7F9;
     margin: 0;
+
+    @include responsive-font-size(22, 36, 700);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1375,10 +1366,9 @@ hr.custom {
 
 .article__text {
     color: #152235;
+    font-family: "Raleway";
 
     @include responsive-font-size(16, 26, 500);
-
-    font-family: "Raleway";
 }
 
 .article__text iframe {
@@ -1387,11 +1377,11 @@ hr.custom {
 }
 
 .article__text h3 {
-    @include responsive-font-size(24, 30, 700);
-
     text-transform: uppercase;
     margin: 0 0 20px;
     font-family: "Rubik";
+
+    @include responsive-font-size(24, 30, 700);
 }
 
 .article__text h4 {
@@ -1436,17 +1426,17 @@ hr.custom {
 }
 
 .article__body h6 {
-    @include responsive-font-size(14, 26, 700);
-
     font-family: "Raleway";
     margin: 0;
+
+    @include responsive-font-size(14, 26, 700);
 }
 
 .article__body h2 {
-    @include responsive-font-size(16, 24, 700);
-
     color: #152235;
     text-transform: uppercase;
+
+    @include responsive-font-size(16, 24, 700);
 
     a {
         padding: 0;
@@ -1489,10 +1479,10 @@ hr.custom {
 }
 
 .article__box h2 {
-    @include responsive-font-size(24, 30, 700);
-
     text-transform: uppercase;
     margin: 30px 0;
+
+    @include responsive-font-size(24, 30, 700);
 }
 
 .article__box p {
@@ -1527,9 +1517,6 @@ hr.custom {
     padding: 36px 40px;
     margin-bottom: 15px;
     display: block;
-
-    @include responsive-font-size(24, 30, 700);
-
     text-transform: uppercase;
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -1539,19 +1526,19 @@ hr.custom {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+
+    @include responsive-font-size(24, 30, 700);
 }
 
 @media only screen and (max-width: 767px) {
     .step__list ul.nav-tabs li a {
-        @include responsive-font-size(16, 24);
-
         padding: 20px;
+
+        @include responsive-font-size(16, 24);
     }
 }
 
 .step__list ul.nav-tabs li a .text {
-    @include responsive-font-size(24, 30, 700);
-
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -1567,6 +1554,8 @@ hr.custom {
     margin-right: 20px;
     position: relative;
     overflow: hidden;
+
+    @include responsive-font-size(24, 30, 700);
 }
 
 @media only screen and (max-width: 767px) {
@@ -1606,13 +1595,13 @@ hr.custom {
 }
 
 .step__list ul.nav-tabs li a .text__body {
-    @include responsive-font-size(24, 35, 500);
-
     font-family: "Raleway";
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
     text-transform: none;
+
+    @include responsive-font-size(24, 35, 500);
 }
 
 .step__list ul.nav-tabs li a .text__body .head {
@@ -1663,10 +1652,9 @@ hr.custom {
     .step__list.service ul.nav-tabs li a .text {
         width: 60px;
         height: 60px;
+        margin-bottom: 20px;
 
         @include responsive-font-size(25, 30);
-
-        margin-bottom: 20px;
     }
 }
 
@@ -1808,11 +1796,10 @@ hr.custom {
     margin: 30px 0 0;
     padding: 0;
     list-style: none;
-
-    @include responsive-font-size(16, 26, 500);
-
     font-family: "Raleway";
     color: #152235;
+
+    @include responsive-font-size(16, 26, 500);
 }
 
 .price__body ul li {
@@ -1852,9 +1839,6 @@ hr.custom {
     background: #FFFFFF;
     border-radius: 7px;
     font-family: "Raleway";
-
-    @include responsive-font-size(21, 16, 700);
-
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -1871,6 +1855,8 @@ hr.custom {
     align-items: center;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
+
+    @include responsive-font-size(21, 16, 700);
 }
 
 .price__footer a img {
