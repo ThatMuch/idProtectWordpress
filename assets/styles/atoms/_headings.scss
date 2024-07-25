@@ -16,7 +16,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    @include responsive-font-size(36, 48, bold);
+    @include responsive-font-size(30, 48, bold);
 }
 
 h3, .h3 {

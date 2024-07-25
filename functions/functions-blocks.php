@@ -86,12 +86,6 @@ register_block_type(
 	),
 );
 register_block_type(
-	get_template_directory() . '/blocks/communityTechFraud/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-register_block_type(
 	get_template_directory() . '/blocks/cardPrice/block.json',
 	array(
 		'icon'  => $icon,

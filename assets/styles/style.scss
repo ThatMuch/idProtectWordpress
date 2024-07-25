@@ -170,12 +170,13 @@ hr.custom {
         padding: 10px 30px;
         border-radius: 16px 100px 100px 16px;
         justify-content: center;
-        font-size: 2.85rem;
+
+        //font-size: 2.85rem;
     }
 
 
     @include breakpoint(tablet) {
-        font-size: 2.5rem;
+        //font-size: 2.5rem;
         padding: 10px 40px 10px 25px;
     }
 }
