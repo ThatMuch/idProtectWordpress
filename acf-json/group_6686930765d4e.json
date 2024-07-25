@@ -1,6 +1,6 @@
 {
     "key": "group_6686930765d4e",
-    "title": "type_avis",
+    "title": "Avis",
     "fields": [
         {
             "key": "field_6686930794fa7",
@@ -39,14 +39,14 @@
                 "id": ""
             },
             "default_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "maxlength": "",
+            "maxlength": 300,
             "rows": "",
             "placeholder": "",
             "new_lines": ""
         },
         {
             "key": "field_668693079c4f4",
-            "label": "Username",
+            "label": "Nom",
             "name": "username",
             "aria-label": "",
             "type": "text",
@@ -66,7 +66,7 @@
         },
         {
             "key": "field_668693079ff6a",
-            "label": "Subtitle",
+            "label": "Situation",
             "name": "subtitle",
             "aria-label": "",
             "type": "text",
@@ -103,5 +103,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720691443
+    "modified": 1721932788
 }
