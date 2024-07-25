@@ -11,7 +11,7 @@ $block_id = $args['block_id'];
 // The block class names
 $class_name = $args['class_name'];
 ?>
-<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> mb-5">
 	<div class="container">
 		<div class="<?php echo $class_name; ?>__title">
 			<h2><span class="text__orange title"><?= $data["accent"] ?></span> <br> <?= $data['title'] ?></h2>

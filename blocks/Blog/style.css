@@ -1,0 +1,14 @@
+.block__blog {
+	h1 {
+		text-align: right;
+		text-transform: uppercase;
+	}
+	.title {
+		border-radius: 100px 16px 16px 100px;
+	}
+
+	.btn {
+		margin-left: auto;
+		 display: table;
+	}
+}

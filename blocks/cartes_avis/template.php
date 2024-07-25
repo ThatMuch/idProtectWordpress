@@ -18,7 +18,7 @@ $testimony_query = new WP_Query($args);
 ?>
 
 
-<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> mb-5">
     <div class="container">
         <h1 class="testimony_title mb-4">
             <?php the_field('titre'); ?>

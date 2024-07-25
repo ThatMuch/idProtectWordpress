@@ -92,16 +92,6 @@ register_block_type(
 	),
 );
 
-/********************
- **** AJOUT KEVIN****
- ********************/
-
-register_block_type(
-	get_template_directory() . '/blocks/hero_sectionV2/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
 
 register_block_type(
 	get_template_directory() . '/blocks/cartes_avis/block.json',
@@ -118,34 +108,6 @@ register_block_type(
 );
 
 register_block_type(
-	get_template_directory() . '/blocks/hero_accent_titre_img/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
-	get_template_directory() . '/blocks/hero_img_accent_titre/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
-	get_template_directory() . '/blocks/hero_img_titre_accent/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
-	get_template_directory() . '/blocks/hero_img_titre_accent_liste/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
-
-register_block_type(
 	get_template_directory() . '/blocks/datas/block.json',
 	array(
 		'icon'  => $icon,
@@ -154,6 +116,12 @@ register_block_type(
 
 register_block_type(
 	get_template_directory() . '/blocks/ListCards/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/Blog/block.json',
 	array(
 		'icon'  => $icon,
 	),
