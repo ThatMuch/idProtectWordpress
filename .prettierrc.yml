@@ -1,0 +1,11 @@
+semi: true
+tabWidth: 4
+useTabs: false
+printWidth: 140
+singleQuote: false
+trailingComma: all
+arrowParens: always
+bracketSpacing: true
+bracketSameLine: true
+singleAttributePerLine: true
+preserveCase: true
