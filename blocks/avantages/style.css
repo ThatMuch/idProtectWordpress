@@ -13,6 +13,10 @@
 	height: 130px;
 }
 
+.btn_margin{
+	margin-top: 15px;
+}
+
 .titre_avantages{
 	width:650px;
 	position: relative;
