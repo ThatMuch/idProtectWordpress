@@ -69,7 +69,7 @@
 
 :root {
     --blue: #1956A8;
-    --orange: #FF8833;
+    --orange: $color-secondary;
 }
 
 html {
@@ -81,6 +81,7 @@ body {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.99%, #E8EFFB), color-stop(49.58%, #FFFFFF));
     background: linear-gradient(180deg, #E8EFFB -2.99%, #FFFFFF 49.58%);
     font-size: 1rem;
+    color: $color-primary;
 }
 
 img {
@@ -175,7 +176,7 @@ hr.custom {
 
     @include breakpoint(tablet) {
         font-size: 2.5rem;
-        padding: 10px 40px;
+        padding: 10px 40px 10px 25px;
     }
 }
 
@@ -820,7 +821,7 @@ hr.custom {
 }
 
 .community__form h2 {
-    color: #FF8833;
+    color: $color-secondary;
     text-transform: uppercase;
     margin: 0 0 10px;
 
@@ -1258,7 +1259,7 @@ hr.custom {
 }
 
 .blog__box.orange {
-    background: #FF8833;
+    background: $color-secondary;
 }
 
 .blog__box h2 {
@@ -1675,7 +1676,7 @@ hr.custom {
         top: -20px;
         right: -15px;
         padding: 8px;
-        background: linear-gradient(90deg, #FF5326 0%, #FF8833 100%);
+        background: linear-gradient(90deg, #FF5326 0%, $color-secondary 100%);
         border-radius: 5px;
         color: #fff;
         text-transform: uppercase;
@@ -1691,7 +1692,7 @@ hr.custom {
             font-weight: 700;
             font-size: 32px;
             line-height: 30px;
-            background: linear-gradient(90deg, #FF5326 0%, #FF8833 100%);
+            background: linear-gradient(90deg, #FF5326 0%, $color-secondary 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;

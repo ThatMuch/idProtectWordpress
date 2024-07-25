@@ -1,6 +1,6 @@
 <?php
-$title = get_field('title') ?: 'Default title';
-$subtitle = get_field('subtitle') ?: 'Default subtitle';
+$title = get_field('title');
+$subtitle = get_field('subtitle');
 $image = get_field('image');
 $description = get_field('description');
 ?>
@@ -11,16 +11,20 @@ $description = get_field('description');
 				<div class="hero__text">
 					<?php echo $title; ?>
 					<div class="hero__box">
-						<h2><?php echo $subtitle; ?></h2>
-						<?php echo $description; ?>
+						<?php if ($subtitle) : ?><h2><?php echo $subtitle; ?></h2><?php endif; ?>
+						<?php if ($description) : ?><p><?php echo $description; ?></p><?php endif; ?>
 						<?php if (have_rows('cta_group')) : ?>
 							<div class="hero__box__button">
 								<?php while (have_rows('cta_group')) : the_row();
 									$cta_primary = get_sub_field('primary_cta');
 									$cta_secondary = get_sub_field('secondary_cta');
 								?>
-									<a class="btn btn__primary" href="<?php echo esc_url($cta_primary['url']); ?>"><span><?php echo esc_html($cta_primary['title']); ?></span></a>
-									<a class="btn btn__orange blue text-uppercase" href="<?php echo esc_url($cta_secondary['url']); ?>"><span><?php echo esc_html($cta_secondary['title']); ?></span></a>
+									<?php if ($cta_primary) : ?>
+										<a class="btn btn__primary" href="<?php echo esc_url($cta_primary['url']); ?>"><span><?php echo esc_html($cta_primary['title']); ?></span></a>
+									<?php endif; ?>
+									<?php if ($cta_secondary) : ?>
+										<a class="btn btn__secondary" href="<?php echo esc_url($cta_secondary['url']); ?>"><span><?php echo esc_html($cta_secondary['title']); ?></span></a>
+									<?php endif; ?>
 								<?php endwhile; ?>
 							</div>
 						<?php endif; ?>

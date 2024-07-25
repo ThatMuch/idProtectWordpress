@@ -9,19 +9,19 @@ var browserSync = require("browser-sync").create();
 
 gulp.task("styles", function () {
 	return (
-		gulp
-			.src("assets/styles/**/*.scss")
-			.pipe(sass().on("error", sass.logError))
-			//.pipe(autoprefixer("last 2 versions"))
-			.pipe(cleanCSS())
-			.pipe(rename({ suffix: ".min" }))
-			.pipe(gulp.dest("dist/css"))
-			.pipe(
-				browserSync.reload({
-					stream: true,
-				})
-			)
-	);
+        gulp
+            .src("assets/styles/**/*.scss")
+            .pipe(sass().on("error", sass.logError))
+            //.pipe(autoprefixer("last 2 versions"))
+            .pipe(cleanCSS())
+            .pipe(rename({ suffix: ".min" }))
+            .pipe(gulp.dest("assets/styles/"))
+            .pipe(
+                browserSync.reload({
+                    stream: true,
+                }),
+            )
+    );
 });
 gulp.task("scripts", function () {
 	return gulp
