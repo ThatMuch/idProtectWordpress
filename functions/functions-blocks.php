@@ -126,3 +126,82 @@ register_block_type(
 		'icon'  => $icon,
 	),
 );
+register_block_type(
+	get_template_directory() . '/blocks/section/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/temoignage/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/service/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/logos/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/link/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/community/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/widgetSidebar/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/serviceSection1/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/serviceSection2/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/steps/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/tarif/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+// Ajout Philippe
+register_block_type(
+	get_template_directory() . '/blocks/faq-section1/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/operations-section/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
