@@ -20,11 +20,11 @@ $testimony_query = new WP_Query($args);
 
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> mb-5">
     <div class="container">
-        <h1 class="testimony_title mb-4">
+        <h1 class="mb-4">
             <?php the_field('titre'); ?>
             <span class="title text__orange"><?php the_field('titre_accent'); ?></span>
         </h1>
-        <div id="testimony_box" class="d-flex testimony_box grab">
+        <div id="testimony_box" class="d-flex box grab">
             <?php if ($testimony_query->have_posts()) : ?>
                 <?php while ($testimony_query->have_posts()) : $testimony_query->the_post();
                     $note = get_field('note', $post->ID);
@@ -32,25 +32,18 @@ $testimony_query = new WP_Query($args);
                     $username = get_field('username', $post->ID);
                     $sub = get_field('subtitle', $post->ID)
                 ?>
-                    <div class="card unselectable">
-                        <div class="guillemets">
-                            <img src="<?= esc_url(get_template_directory_uri() . '/blocks/cartes_avis/assets/guillemets.svg') ?>" alt="guillemets">
-                        </div>
+                    <div class="reviews__card">
+                        <img class="mb-4" src="<?= esc_url(get_template_directory_uri() . '/blocks/Reviews/assets/guillemets.svg') ?>" alt="guillemets">
                         <div class="d-flex justify-content-between mb-2 text__orange">
                             <div class="stars">
                                 <?php
                                 for ($i = 0; $i < $note; $i++) { ?>
-                                    <img src="<?= esc_url(get_template_directory_uri() . '/blocks/cartes_avis/assets/star.svg') ?>" alt="star">
+                                    <img src="<?= esc_url(get_template_directory_uri() . '/blocks/Reviews/assets/star.svg') ?>" alt="star">
                                 <?php } ?>
                             </div>
-                            <div class="digit-14">
-                                <span><?= esc_html($note); ?>/5</span>
-                            </div>
+                            <span class="digit-14"><?= esc_html($note); ?>/5</span>
                         </div>
-                        <div class="card_text b3-14_negative mb-4">
-                            <p><?= $content ?></p>
-                        </div>
-
+                        <p class="mb-4"><?= $content ?></p>
                         <p class="mb-2"><?= $username ?></p>
                         <small class="subtitle"><?= $sub ?></small>
                     </div>

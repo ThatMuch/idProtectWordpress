@@ -1,0 +1,39 @@
+.reviews {
+	box {
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+}
+
+    .reviews__card {
+        font-family: Raleway;
+        width: 300px;
+        padding: 25px 30px;
+        background-color: #1956a8;
+        color: #ffffff;
+        border-radius: 10px;
+        margin: 0 5px;
+		    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+
+.grab {
+    cursor: grab;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+.digit-14 {
+    font-family: Rubik;
+    font-size: 14px;
+}
+
+.username {
+    font-weight: 600;
+    font-family: Rubik;
+}

@@ -1,6 +1,6 @@
 {
     "key": "group_6685ae5f74d1e",
-    "title": "Block - FAQ Section",
+    "title": "Block - FAQ",
     "fields": [
         {
             "key": "field_6685ae6099e98",
@@ -21,6 +21,53 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_66a370ca43e24",
+            "label": "Mot accentué",
+            "name": "accent",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66a370d843e25",
+            "label": "Catégorie",
+            "name": "category",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "protection": "Protection",
+                "usurpation": "Usurpation",
+                "offres": "Offres"
+            },
+            "default_value": "protection",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -41,5 +88,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720100065
+    "modified": 1721987410
 }

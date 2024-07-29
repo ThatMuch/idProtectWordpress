@@ -9,3 +9,6 @@ bracketSpacing: true
 bracketSameLine: true
 singleAttributePerLine: true
 preserveCase: true
+
+parser: php
+plugins: ["@prettier/plugin-php"]

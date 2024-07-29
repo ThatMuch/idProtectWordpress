@@ -1,6 +1,6 @@
 {
     "key": "group_668fab2d5bae1",
-    "title": "bloc-avis",
+    "title": "Block - Avis client",
     "fields": [
         {
             "key": "field_668fab2eb16ed",
@@ -61,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720691594
+    "modified": 1721984516
 }

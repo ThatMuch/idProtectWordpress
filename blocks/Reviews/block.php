@@ -19,7 +19,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Block classes
-$class_name = 'carte_avis';
+$class_name = 'reviews';
 if (!empty($block['class_name'])) {
 	$class_name .= ' ' . $block['class_name'];
 }
@@ -28,7 +28,7 @@ if (!empty($block['class_name'])) {
  * Pass the block data into the template part
  */
 get_template_part(
-	'blocks/cartes_avis/template',
+	'blocks/Reviews/template',
 	null,
 	array(
 		'block'      => $block,

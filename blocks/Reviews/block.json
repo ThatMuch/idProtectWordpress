@@ -1,18 +1,15 @@
 {
-	"name": "faqSection",
-	"title": "Section FAQ",
-	"description": "A custom FAQ block.",
+	"name": "carte_avis",
+	"title": "Avis client",
+	"description": "Une section d'avis client",
 	"style": [
 		"file:./style.css"
 	],
-	"script": [
-		"file:./script.js"
-	],
 	"category": "theme",
-	"icon": "admin-comments",
 	"keywords": [
 		"Id Protect",
-		"FAQ"
+		"avis",
+		"carte"
 	],
 	"acf": {
 		"mode": "preview",

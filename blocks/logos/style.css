@@ -57,6 +57,7 @@
 	max-width: 200px;
 	height: 45px;
 	object-fit: contain;
+	    mix-blend-mode: multiply;
 }
 
 @media only screen and (max-width: 767px) {
