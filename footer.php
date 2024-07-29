@@ -69,23 +69,48 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 </div>
 <div class="footer__area">
 	<div class="row d-flex justify-content-between">
-		<div class="footer__credits__thatmuch d-flex justify-content-between">
-			<img src="<?= esc_url(get_template_directory_uri() . '/logo-IDPROTECT_footer.png'); ?>" alt="">
+		<div class="footer__area__menu d-flex justify-content-between align-items-center">
+			<img class="footer__area__logo" src="<?= esc_url(get_template_directory_uri() . '/logo-IDPROTECT_footer.png'); ?>" alt="">
 			<div class="d-flex align-center">
-				<a style="color:white" class="footer_items" href="">FAQ</a>
-				<a style="color:white" class="footer_items" href="">CGU</a>
-				<a style="color:white" class="footer_items" href="">MENTIONS LéGALES</a>
-				<a style="color:white" class="footer_items" href="">POLITIQUE DE CONFIDENTIALITé</a>
-				<a style="color:white" class="footer_items" href="">CONTACT</a>
-
+				<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
 			</div>
+			<div></div>
+		</div>
+	</div>
+	<div class="footer__area__bottom d-flex justify-content-between">
+		<div></div>
+		<div>
 			<?php $year = date('Y'); ?>
-			<div class="d-flex align-items-end">
-				<p> © <?php echo $year ?> ID PROTECT tout droits réservés</p>
+			<p class="text-center"> © <?php echo $year ?> ID PROTECT tout droits réservés</p>
+		</div>
+		<a class="footer__area__credits" href="https://thatmuch.fr" target="_blank" rel="noopener noreferrer">
+			<img src="<?php echo get_template_directory_uri() ?>/assets/images/THATMUCH_Logo_White.png" alt="logo that much">
+		</a>
+	</div>
+</div>
+
+
+<?php if (is_front_page()) : ?>
+	<div class="modal fade" id="hubspotModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title">Vous souhaitez vous protéger contre l’usurpation d’identité ?
+					</h2>
+					<button type="button" class="close btn btn-primary" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">X</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Inscrivez vous à notre newsletter</p>
+					<div class="hubspot">
+						<?php echo do_shortcode('[hubspot type="form" portal="25430769" id="79af16ac-3a9f-47bc-9f71-c8b7050ceac4"]'); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+<?php endif ?>
 
 <?php wp_footer() ?>
 
