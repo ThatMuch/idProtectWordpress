@@ -10,48 +10,40 @@ $block_id = $args['block_id'];
 
 // The block class names
 $class_name = $args['class_name'];
+$args = array(
+	"post_type" => "testimony",
+	"posts_per_page" => 3,
+	'orderby' => 'date',
+	'order' => 'ASC',
+);
 
+$the_query = new WP_Query($args);
 ?>
-<div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-7">
-				<div class="testimonial mb-0">
-					<div class="testimonial__right order-md-1">
-						<h4 class="title text__orange"><?php echo $data['title']; ?></h4>
-						<?php if (have_rows('video_preview')) : ?>
-							<?php while (have_rows('video_preview')) : the_row(); ?>
-								<?php $image_1 = get_sub_field('image_2'); ?>
-								<?php if ($image_1) : ?>
-									<img src="<?php echo esc_url($image_1['url']); ?>" alt="<?php echo esc_attr($image_1['alt']); ?>" />
-								<?php endif; ?>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</div>
-					<div class="testimonial__left order-md-0">
-						<?php if (have_rows('video_preview')) : ?>
-							<?php while (have_rows('video_preview')) : the_row(); ?>
-								<?php $image_2 = get_sub_field('image_1'); ?>
-								<?php if ($image_2) : ?>
-									<img src="<?php echo esc_url($image_2['url']); ?>" alt="<?php echo esc_attr($image_2['alt']); ?>" />
 
-								<?php endif; ?>
-							<?php endwhile; ?>
-						<?php endif; ?>
-						<button id="temoignageYoutube" type="button" data-bs-toggle="modal" data-bs-target="#videoModal"><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right-white.svg" alt="Flèche vers la droite"></button>
-
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-5">
-				<div class="testimonial__details">
-					<?php echo $data['subtitle']; ?>
-					<p><?php echo $data['description']; ?></p>
-					<?php if ($data['link']) : ?>
-						<a href="<?php echo esc_url($data['link']['url']); ?>" class="btn btn__orange">voir l'article</a>
-					<?php endif; ?>
-				</div>
-			</div>
+		<div class="list">
+			<?php if ($the_query->have_posts()) : ?>
+				<?php while ($the_query->have_posts()) : $the_query->the_post();
+					$consequence = get_field('consequence', $post->ID);
+					$fraude = get_field('fraude', $post->ID);
+				?>
+					<a href="<?php the_permalink() ?>" class="testimonial__item">
+						<div class="testimonial__img">
+							<?php the_post_thumbnail('large', array('class' => 'testimonial__image')); ?>
+						</div>
+						<div class="content">
+							<?php
+							$title = explode(' ', get_the_title());
+							unset($title[0]);
+							$desc = implode(' ', $title);
+							?>
+							<h4 class="content__title mb-0"><?php echo explode(' ', get_the_title())[0]; ?></h4>
+							<p class="content__desc"><?= $desc ?></p>
+						</div>
+					</a>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</div>
-</div>
+</section>

@@ -41,7 +41,8 @@ gulp.task("watch", function () {
 		proxy: "http://localhost:10074",
 	});
 	gulp.watch("assets/styles/**/*.scss", gulp.series("styles"));
-	gulp.watch("assets/script/*.js", gulp.series("scripts"));
+	gulp.watch("assets/script/*.js",gulp.series("scripts"));
+	gulp.watch("**/*.css").on("change", browserSync.reload);
 	gulp.watch("**/*.php").on("change", browserSync.reload);
 });
 gulp.task("default", gulp.parallel("styles", "scripts", "watch"));
