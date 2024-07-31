@@ -9,6 +9,11 @@ bracketSpacing: true
 bracketSameLine: true
 singleAttributePerLine: true
 preserveCase: true
+jsxBracketSameLine: false
+requirePragma: false
+proseWrap: preserve
+htmlWhitespaceSensitivity: 'css'
+endOfLine: 'lf'
 
-parser: php
-plugins: ["@prettier/plugin-php"]
+
+plugins: ["@prettier/plugin-php","prettier-plugin-css-order"]
