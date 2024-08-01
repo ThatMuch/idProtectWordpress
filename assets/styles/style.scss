@@ -199,6 +199,10 @@ hr.custom {
     padding: 0;
 }
 
+.menu-item {
+    cursor: pointer;
+}
+
 .header__area .navbar-brand {
     height: 4rem;
 
@@ -220,6 +224,7 @@ hr.custom {
 }
 
 .header__area .nav-link:hover {
+    cursor: pointer;
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 7px;
@@ -230,8 +235,12 @@ hr.custom {
 .header__area .dropdown-item {
     color: var(--blue);
     font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    &:hover,
+    &.active {
+        cursor: pointer;
+        background-color: #fff;
+        color: $color-secondary;
+    }
 }
 
 .header__area .dropdown-toggle::after {
@@ -263,7 +272,8 @@ hr.custom {
     background-image: url(../images/arrow-down-orange.svg);
 }
 
-.header__area .mega__menu {
+.header__area .dropdown-menu {
+    top: 54px;
     -webkit-transform: translate(-25%, 13px);
     transform: translate(-29.5%, 13px);
     -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
@@ -271,12 +281,11 @@ hr.custom {
     border: 0;
     border-radius: 16px;
     background: #ffffff;
-    padding: 40px 20px 20px;
-    width: 900px;
+    padding: 1.25rem;
 }
 
 @media only screen and (max-width: 991px) {
-    .header__area .mega__menu {
+    .header__area .dropdown-menu {
         position: relative;
         -webkit-transform: none;
         transform: none;
@@ -289,11 +298,12 @@ hr.custom {
     }
 }
 
-.header__area .mega__menu::before {
+.header__area .dropdown-menu::before {
     position: absolute;
     top: -12px;
+    // center
     left: 50%;
-    margin-left: -110px;
+    transform: translate(-50%, 0);
     border-right: 9px solid transparent;
     border-bottom: 13px solid #fff;
     border-left: 9px solid transparent;
@@ -303,16 +313,16 @@ hr.custom {
 }
 
 @media only screen and (max-width: 991px) {
-    .header__area .mega__menu::before {
+    .header__area .dropdown-menu::before {
         display: none;
     }
 }
 
-.header__area .mega__menu__item {
+.header__area .dropdown-menu__item {
     height: 100%;
 }
 
-.header__area .mega__menu__item h2 {
+.header__area .dropdown-menu__item h2 {
     background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -322,13 +332,13 @@ hr.custom {
     text-transform: uppercase;
 }
 
-.header__area .mega__menu__item ul {
+.header__area .dropdown-menu__item ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.header__area .mega__menu__item ul li a {
+.header__area .dropdown-menu__item ul li a {
     display: inline-block;
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -338,26 +348,25 @@ hr.custom {
     font-family: "Raleway";
     letter-spacing: 0.5px;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
-.header__area .mega__menu__item ul li a:hover {
+.header__area .dropdown-menu__item ul li a:hover {
     color: var(--orange);
 }
 
-.header__area .mega__menu [class*="col-"] .mega__menu__item {
+.header__area .dropdown-menu [class*="col-"] .dropdown-menu__item {
     border-right: 1px solid #d3d6da;
 }
 
 @media only screen and (max-width: 991px) {
-    .header__area .mega__menu [class*="col-"] .mega__menu__item {
+    .header__area .dropdown-menu [class*="col-"] .dropdown-menu__item {
         border-right: 0;
         border-bottom: 1px solid #d3d6da;
         padding: 10px 0;
     }
 }
 
-.header__area .mega__menu [class*="col-"]:last-child .mega__menu__item {
+.header__area .dropdown-menu [class*="col-"]:last-child .dropdown-menu__item {
     border-right: 0;
 }
 

@@ -71,8 +71,8 @@
 					'theme_location' => 'mainmenu', // Defined when registering the menu
 					'menu_id'        => 'menu-main',
 					'container'      => false,
-					'depth'          => 2,
-					'menu_class'     => 'navbar-nav mx-auto',
+					'depth'          => 3,
+					'menu_class'     => 'nav navbar-nav mx-auto',
 					'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
 					'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
 				));
@@ -84,6 +84,7 @@
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+
 		</div>
 	</nav>
 
