@@ -52,7 +52,7 @@ function idProtect_enqueue()
   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.6.0');
   wp_enqueue_script('jquery');
   // scripts
-  wp_register_script('ID_Protect_/scripts', get_template_directory_uri() . '/assets/scripts/custom.min.js', false, array('jquery'), true);
+  wp_register_script('ID_Protect_/scripts', get_template_directory_uri() . '/assets/scripts/all.min.js', false, array('jquery'), true);
   wp_enqueue_script('ID_Protect_/scripts');
   // styles
   wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/inc/assets/css/owl.carousel.min.css', false, null);

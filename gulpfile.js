@@ -25,11 +25,11 @@ gulp.task("styles", function () {
 });
 gulp.task("scripts", function () {
 	return gulp
-		.src("assets/scripts/*.js")
+		.src("assets/scripts/**/*.js")
 		.pipe(concat("all.js"))
 		.pipe(uglify())
 		.pipe(rename({ suffix: ".min" }))
-		.pipe(gulp.dest("dist/js"))
+		.pipe(gulp.dest("assets/scripts/"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -41,7 +41,7 @@ gulp.task("watch", function () {
 		proxy: "http://localhost:10074",
 	});
 	gulp.watch("assets/styles/**/*.scss", gulp.series("styles"));
-	gulp.watch("assets/script/*.js",gulp.series("scripts"));
+	gulp.watch("assets/scripts/**/*.js",gulp.series("scripts"));
 	gulp.watch("**/*.css").on("change", browserSync.reload);
 	gulp.watch("**/*.php").on("change", browserSync.reload);
 });
