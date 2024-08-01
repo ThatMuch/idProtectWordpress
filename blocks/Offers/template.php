@@ -52,18 +52,18 @@ $the_query = new WP_Query($argsQuery);
 								<?php if ($popular) : ?>
 									<div class="popular"><span>Le plus populaire</span> </div>
 								<?php endif; ?>
-								<?php if ($price) : ?>
-									<div class="d-flex gap-2 align-items-center justify-content-center">
-										<?php if (the_post_thumbnail()) : ?>
-											<div class="price__image">
-												<?php the_post_thumbnail('medium'); ?>
-											</div>
-										<?php endif; ?>
-										<span class="price">
-											<?php echo $price; ?> €
-										</span>
-									</div>
-								<?php endif; ?>
+
+								<div class="d-flex gap-2 align-items-center justify-content-center">
+									<?php if (the_post_thumbnail()) : ?>
+										<div class="price__image">
+											<?php the_post_thumbnail('medium'); ?>
+										</div>
+									<?php endif; ?>
+									<span class="price">
+										<?php echo $price ? $price : "0"; ?> €
+									</span>
+								</div>
+
 								<?php if ($infos) : ?>
 									<div class="infos"><?php echo $infos; ?></div>
 								<?php endif; ?>
