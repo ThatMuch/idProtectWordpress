@@ -17,6 +17,7 @@
                 "id": ""
             },
             "choices": {
+                "free": "Gratuit",
                 "basic": "Basic",
                 "standard": "Standard",
                 "premium": "Premium"

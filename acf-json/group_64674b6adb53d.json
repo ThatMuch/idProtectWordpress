@@ -58,7 +58,7 @@
             },
             "choices": {
                 "usurpation": "Usurpation",
-                "prevention": "Prévention"
+                "protection": "Prévention"
             },
             "default_value": false,
             "return_format": "value",
