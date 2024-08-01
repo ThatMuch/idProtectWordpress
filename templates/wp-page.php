@@ -5,6 +5,7 @@
  * @version     0.1.0
  * @since       idProtect_1.0.0
  */
+$titleIsHidden = get_field('hide_title');
 ?>
 
 <?php get_header(); ?>
@@ -23,7 +24,7 @@
 		</div>
 	</div>
 <?php else : ?>
-	<div class="page__header__area--noBg">
+	<div class="page__header__area--noBg <?php echo  $titleIsHidden ? "d-none" : "" ?>">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -38,11 +39,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="page__text">
-					<?php while (have_posts()) : the_post(); ?>
-						<?php the_content(); ?>
-					<?php endwhile; ?>
-				</div>
+				<?php while (have_posts()) : the_post(); ?>
+					<?php the_content(); ?>
+				<?php endwhile; ?>
+
 			</div>
 		</div>
 	</div>
