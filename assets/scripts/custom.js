@@ -94,10 +94,10 @@
 
   // Find every link with the class "wp-block-button__link wp-element-button" and replace it by a link with the class "btn btn__outlined"
   $('.wp-block-button__link.wp-element-button').each(function () {
-    $(this).removeClass('wp-block-button__link wp-element-button').addClass('btn btn__orange blue');
+    $(this).removeClass('wp-block-button__link wp-element-button').addClass('btn btn__primary');
   });
   $('.wp-block-file__button').each(function () {
-    $(this).removeClass('wp-block-file__button wp-element-button').addClass('btn btn__orange blue');
+    $(this).removeClass("wp-block-file__button wp-element-button").addClass("btn btn__primary");
     console.log("first");
   });
 
