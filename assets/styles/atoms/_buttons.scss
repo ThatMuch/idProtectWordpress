@@ -6,21 +6,25 @@
  *
  */
 
-.btn, .single_add_to_cart_button, .wc-block-cart__submit-button, .wc-block-components-totals-coupon__button {
+.btn,
+.single_add_to_cart_button,
+.wc-block-cart__submit-button,
+.wc-block-components-totals-coupon__button {
     -ms-flex-align: center;
     -webkit-box-align: center;
-    align-items: center;
-    background: #FFFFFF;
-    border-radius: 7px;
-    color: $color-primary;
     display: -ms-inline-flexbox;
     display: -webkit-inline-box;
     display: inline-flex;
-    font-family: "Raleway", sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 7px;
+    background: #ffffff;
     padding: 10px 15px;
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
 
@@ -34,9 +38,11 @@
             margin-left: 8px;
         }
 
-        &:hover, &:active, &:focus {
-            color: #fff;
+        &:hover,
+        &:active,
+        &:focus {
             background-color: $color-primary-darker;
+            color: #fff;
         }
     }
 }
@@ -52,25 +58,27 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
         margin-left: 8px;
     }
 
-    &:hover, &:active, &:focus {
-        color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
         background-color: $color-primary-darker;
+        color: #fff;
     }
 }
 
 .btn__white {
-    background: #FFFFFF;
-    border-radius: 7px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
-    color: $color-primary;
-    padding: 10px 15px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    border-radius: 7px;
+    background: #ffffff;
+    padding: 10px 15px;
+    color: $color-primary;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -95,15 +103,15 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     border-radius: 7px;
     padding: 13px 12px;
     color: $color-secondary;
-    text-align: center;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
     font-family: "Raleway", sans-serif;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .btn__orange:hover {
-    color: #fff;
     background: $color-secondary;
+    color: #fff;
 }
 
 .btn__orange.solid {
