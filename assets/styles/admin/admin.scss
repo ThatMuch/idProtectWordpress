@@ -23,6 +23,12 @@
         color: $color-primary;
     }
 
+    .alternate,
+    .striped > tbody > :nth-child(odd),
+    ul.striped > :nth-child(odd) {
+        background-color: #e8effb;
+    }
+
     #adminmenu,
     #adminmenu .wp-submenu,
     #adminmenuback,
