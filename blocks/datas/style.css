@@ -52,7 +52,7 @@
     padding-bottom: 50px;
     width: 25%;
     overflow-wrap: break-word; /* Add this */
-    word-break: break-word; 
+    word-break: break-word;
 }
 
 .statistiques{
@@ -64,12 +64,12 @@
     margin-top: 20px;
 }
 
-.first-percent, .second-percent, .third-percent{
+.percent, .unit{
     font-size: 60px;
     font-weight: 800;
     font-family: Rubik;
 	color: #171C60;
-    
+
 }
 
 .stat_detail{

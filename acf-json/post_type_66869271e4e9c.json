@@ -4,7 +4,7 @@
     "menu_order": 0,
     "active": true,
     "post_type": "faq",
-    "advanced_configuration": false,
+    "advanced_configuration": true,
     "import_source": "",
     "import_date": "",
     "labels": {
@@ -57,7 +57,7 @@
     "rest_namespace": "wp\/v2",
     "rest_controller_class": "WP_REST_Posts_Controller",
     "menu_position": "",
-    "menu_icon": "",
+    "menu_icon": "dashicons-info",
     "rename_capabilities": false,
     "singular_capability_name": "post",
     "plural_capability_name": "posts",
@@ -82,5 +82,5 @@
     "can_export": true,
     "delete_with_user": false,
     "register_meta_box_cb": "",
-    "modified": 1721986513
+    "modified": 1722852208
 }

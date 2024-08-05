@@ -12,11 +12,11 @@ $titleIsHidden = get_field('hide_title');
 
 <!-- Page Header Start -->
 <?php if (has_post_thumbnail($post->ID)) : ?>
-	<div class="page__header__area" style="background-image: linear-gradient(0deg, rgba(23, 28, 96, 0.5), rgba(23, 28, 96, 0.5)), url('<?php the_post_thumbnail_url(); ?>')">
+	<div class="page__header__area">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="page__header">
+					<div class="page__header" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
 						<h1 class="page__header__title"><?php the_title(); ?></h1>
 					</div>
 				</div>

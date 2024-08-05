@@ -15,7 +15,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="page__header">
-					<h2><span class="g-text"><?php the_title(); ?></span></h2>
+					<h1 class="page__header__title"><?php the_title(); ?></h1>
 				</div>
 			</div>
 		</div>
