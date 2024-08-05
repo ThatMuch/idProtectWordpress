@@ -79,7 +79,7 @@ add_action('wp_enqueue_scripts', 'idProtect_enqueue');
 // Admin Style
 function my_custom_admin_stylesheet()
 {
-  wp_enqueue_style('custom-admin', get_stylesheet_directory_uri() . '/admin_style.min.css');
+  wp_enqueue_style('custom-admin', get_stylesheet_directory_uri() . '/assets/styles/admin/admin.min.css');
 }
 
 //This loads the function above on the login page
@@ -88,7 +88,7 @@ add_action('admin_enqueue_scripts', 'my_custom_admin_stylesheet');
 // Login Style
 function my_custom_login_stylesheet()
 {
-  wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/login_style.min.css');
+  wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/assets/styles/admin/login.min.css');
 }
 
 //This loads the function above on the login page
