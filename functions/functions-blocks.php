@@ -102,7 +102,7 @@ register_block_type(
 );
 
 register_block_type(
-	get_template_directory() . '/blocks/Datas/block.json',
+	get_template_directory() . '/blocks/DatasList/block.json',
 	array(
 		'icon'  => $icon,
 	),
