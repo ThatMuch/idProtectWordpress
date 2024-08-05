@@ -30,7 +30,7 @@ $the_query = new WP_Query($argsQuery);
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
 		<?php if ($data["title"]) : ?>
-			<h1 class="mb-4"><?php echo $data["title"]; ?> <span class="title text__orange"><?php echo $data["accent"] ?></span></h1>
+			<h1 class="section__title"><?php echo $data["title"]; ?> <span class="title text__orange"><?php echo $data["accent"] ?></span></h1>
 		<?php endif; ?>
 		<div class="price__list">
 			<?php if ($the_query->have_posts()) : ?>

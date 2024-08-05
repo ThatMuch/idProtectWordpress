@@ -115,6 +115,10 @@ hr.custom {
     margin-bottom: 20px !important;
 }
 
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
 .mb-100 {
     margin-bottom: 100px !important;
 }
@@ -501,6 +505,9 @@ hr.custom {
     ul {
         display: flex;
         gap: 0.625rem;
+        @include breakpoint(mobile) {
+            flex-direction: column;
+        }
     }
 
     ul,
@@ -556,7 +563,7 @@ hr.custom {
 .section__area {
     position: relative;
     z-index: 2;
-    padding: 50px 0;
+    padding: 50px 0 0;
     overflow: hidden;
 }
 
@@ -865,8 +872,10 @@ hr.custom {
     text-transform: uppercase;
     @include responsive-font-size(40, 48, 800);
     @media only screen and (max-width: 767px) {
-        @include responsive-font-size(18, 28);
-        padding: 10px 15px;
+        @include responsive-font-size(30, 40);
+        margin: 0 auto;
+        border-radius: 100px;
+        text-align: center;
     }
 }
 
@@ -929,6 +938,19 @@ hr.custom {
             margin: 0;
             width: 170px;
         }
+    }
+}
+
+.section__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+
+    @include responsive-font-size(40, 48, 800);
+    @include breakpoint(mobile) {
+        text-align: center;
+        @include responsive-font-size(30, 40);
     }
 }
 

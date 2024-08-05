@@ -24,7 +24,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Block classes
-$class_name = 'block__steps';
+$class_name = 'block__steps mb-100';
 if (!empty($block['class_name'])) {
 	$class_name .= ' ' . $block['class_name'];
 }

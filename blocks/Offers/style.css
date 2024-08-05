@@ -1,12 +1,13 @@
-.block__price {
-    margin-bottom: 8rem;
-}
+
 .price__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     align-items: end;
     gap: 1rem;
-    margin: 0 auto;
+    @media screen and (max-width: 768px) {
+
+        margin-bottom: 7rem;
+    }
 }
 
 .price__table {
@@ -16,6 +17,9 @@
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 16px;
     background: #ffffff;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 6rem;
+    }
 }
 
 .price__head {

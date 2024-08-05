@@ -21,7 +21,7 @@ $the_query = new WP_Query($args);
 ?>
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<h1 class="title mb-4"><?= $data['title'] ?></h1>
+		<h1 class="title section__title"><?= $data['title'] ?></h1>
 		<div class="list">
 			<?php if ($the_query->have_posts()) : ?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post();

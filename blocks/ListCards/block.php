@@ -23,7 +23,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Block classes
-$class_name = 'block__listCards';
+$class_name = 'block__listCards mb-100';
 if (!empty($block['class_name'])) {
 	$class_name .= ' ' . $block['class_name'];
 }

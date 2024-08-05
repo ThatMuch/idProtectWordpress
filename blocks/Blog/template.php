@@ -11,7 +11,7 @@ $the_query = new WP_Query($args);
 	<div class="container">
 		<div class="row g-3">
 			<div class="col-lg-4">
-				<h1 class="text-right"><span class="text__orange title">Suivez</span> nos dernières actualités</h1>
+				<h1 class="section__title"><span class="text__orange title">Suivez</span> nos dernières actualités</h1>
 				<a href="<?php echo site_url();  ?>/community-blog" class="btn btn__primary">Voir tous les articles</a>
 			</div>
 			<div class="col-lg-8">

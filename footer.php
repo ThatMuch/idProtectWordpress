@@ -69,15 +69,15 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 </div>
 <div class="footer__area">
 	<div class="row d-flex justify-content-between">
-		<div class="footer__area__menu d-flex justify-content-between align-items-center">
+		<div class="footer__area__menu d-md-flex justify-content-between align-items-center">
 			<img class="footer__area__logo" src="<?= esc_url(get_template_directory_uri() . '/logo-IDPROTECT_footer.png'); ?>" alt="">
-			<div class="d-flex align-center">
+			<div class="d-md-flex align-center">
 				<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
 			</div>
 			<div></div>
 		</div>
 	</div>
-	<div class="footer__area__bottom d-flex justify-content-between">
+	<div class="footer__area__bottom d-md-flex justify-content-between">
 		<div></div>
 		<div>
 			<?php $year = date('Y'); ?>

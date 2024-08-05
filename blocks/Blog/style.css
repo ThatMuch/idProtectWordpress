@@ -1,14 +1,24 @@
 .block__blog {
-	h1 {
+	.section__title {
 		text-align: right;
 		text-transform: uppercase;
+		@media screen and (max-width: 768px) {
+			text-align: center;
+		}
 	}
 	.title {
 		border-radius: 100px 16px 16px 100px;
+		@media screen and (max-width: 768px) {
+			border-radius: 100px;
+			padding: 10px 20px;
+		}
 	}
 
 	.btn {
 		margin-left: auto;
 		 display: table;
+		@media screen and (max-width: 768px) {
+			margin: 0 auto;
+		}
 	}
 }

@@ -1,13 +1,4 @@
-.community {
-	padding-left: 10px;
-	margin-bottom: 80px;
-}
 
-@media only screen and (max-width: 991px) {
-	.community {
-		padding: 0;
-	}
-}
 
 .community__head {
 	background: #FF8833;

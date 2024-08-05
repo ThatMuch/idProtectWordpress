@@ -20,11 +20,11 @@ $testimony_query = new WP_Query($args);
 
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> mb-5">
     <div class="container">
-        <h1 class="mb-4">
+        <h1 class="section__title">
             <?php the_field('titre'); ?>
             <span class="title text__orange"><?php the_field('titre_accent'); ?></span>
         </h1>
-        <div id="testimony_box" class="d-flex box grab">
+        <div id="testimony_box" class="reviews__list">
             <?php if ($testimony_query->have_posts()) : ?>
                 <?php while ($testimony_query->have_posts()) : $testimony_query->the_post();
                     $note = get_field('note', $post->ID);

@@ -1,27 +1,30 @@
-.reviews {
-	box {
+.reviews__list {
+    display: flex;
+    cursor: grab;
     overflow-x: scroll;
     scrollbar-width: none;
-}
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
 }
 
-    .reviews__card {
-        font-family: Raleway;
-        width: 300px;
-        padding: 25px 30px;
-        background-color: #1956a8;
-        color: #ffffff;
-        border-radius: 10px;
-        margin: 0 5px;
-		    -webkit-user-select: none;
+.reviews__card {
+    margin: 0 5px;
+    border-radius: 10px;
+    background-color: #1956a8;
+    padding: 25px 30px;
+    width: 300px;
+    color: #ffffff;
+    font-family: Raleway;
+    -webkit-user-select: none;
     -webkit-touch-callout: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0 0 20px 0;
     }
-
-.grab {
-    cursor: grab;
 }
 
 .grabbing {
@@ -29,8 +32,8 @@
 }
 
 .digit-14 {
-    font-family: Rubik;
     font-size: 14px;
+    font-family: Rubik;
 }
 
 .username {

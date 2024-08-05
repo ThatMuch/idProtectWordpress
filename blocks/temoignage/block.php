@@ -18,7 +18,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Block classes
-$class_name = 'testimonial';
+$class_name = 'testimonial mb-100';
 if (!empty($block['class_name'])) {
 	$class_name .= ' ' . $block['class_name'];
 }

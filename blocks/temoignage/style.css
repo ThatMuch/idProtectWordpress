@@ -6,6 +6,10 @@
         justify-content: center;
         gap: 1.5rem;
         margin-bottom: 50px;
+        @media screen and (max-width: 768px) {
+            display: block;
+
+        }
     }
 }
 

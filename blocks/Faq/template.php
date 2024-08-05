@@ -4,9 +4,9 @@ $accent = get_field("accent");
 $category = get_field("category");
 ?>
 
-<section class="faq-section mb-5">
+<section class="faq-section mb-100">
     <div class="container">
-        <h1><?= $title ?> <span class="title text__orange"><?= $accent ?></span></h1>
+        <h1 class="section__title"><?= $title ?> <span class="title text__orange"><?= $accent ?></span></h1>
         <?php
         $args = array(
             'post_type' => 'faq',

@@ -16,7 +16,6 @@ $class_name = $args['class_name'];
 		<div class="col-lg-8 mx-auto">
 			<div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 				<div class="card__header">
-
 					<?php if ($data['image']) : ?>
 						<div class="card__icon">
 							<img src="<?php echo esc_url($data['image']['url']); ?>" alt="<?php echo esc_attr($data['image']['alt']); ?>" />
@@ -24,7 +23,6 @@ $class_name = $args['class_name'];
 					<?php endif; ?>
 					<h3 class="title d-sm-none"><span class="g-text"><?php echo $data['title']; ?></span></h3>
 				</div>
-
 				<div class="card__text">
 					<h3 class="title d-none d-sm-flex"><span class="g-text"><?php echo $data['title']; ?></span></h3>
 					<div class="card__text__box mh-auto bg_<?php echo $args['bg_color']; ?>">
