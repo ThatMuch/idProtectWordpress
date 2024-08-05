@@ -78,7 +78,7 @@
 				));
 				?>
 			</div>
-			<a class="btn btn__primary" href="https://app.idprotect.fr/">
+			<a class="btn btn__primary" href="<?php echo site_url(); ?>/usurpation">
 				Découvrez nos offres
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
