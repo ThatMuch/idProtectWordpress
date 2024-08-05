@@ -78,13 +78,14 @@
 				));
 				?>
 			</div>
-			<a class="btn btn__primary" href="<?php echo site_url(); ?>/usurpation">
-				Découvrez nos offres
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
+			<div>
+				<a class="btn btn__primary" href="<?php echo site_url(); ?>/offre-usurpation/">
+					Découvrez nos offres
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
 		</div>
 	</nav>
 

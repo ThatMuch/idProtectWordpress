@@ -201,6 +201,11 @@ hr.custom {
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     background: #fff;
     padding: 0;
+    .container {
+        @include breakpoint(mobile) {
+            //justify-content: center;
+        }
+    }
 }
 
 .menu-item {
@@ -214,6 +219,9 @@ hr.custom {
         width: 100%;
         height: 100%;
         object-fit: contain;
+        @include breakpoint(mobile) {
+            width: 121px;
+        }
     }
 }
 
