@@ -1,6 +1,6 @@
 {
-	"name": "data",
-	"title": "data",
+	"name": "datas",
+	"title": "Données",
 	"description": "A custom data block.",
 	"style": [
 		"file:./style.css"
