@@ -861,8 +861,8 @@ hr.custom {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    color: $color-secondary;
     text-transform: uppercase;
-
     @include responsive-font-size(40, 48, 800);
     @media only screen and (max-width: 767px) {
         @include responsive-font-size(18, 28);
@@ -889,10 +889,6 @@ hr.custom {
         background:
             linear-gradient(0deg, rgba(255, 136, 51, 0.5), rgba(255, 136, 51, 0.5)),
             url(../images/contact.jpg) no-repeat scroll center (center / cover);
-    }
-
-    .page__header__title {
-        color: $color-secondary;
     }
 }
 
