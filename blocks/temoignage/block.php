@@ -7,7 +7,6 @@
 // $data is what we're going to expose to our render template
 $data = array(
 	'title' => get_field('title'),
-	'accent' => get_field('accent'),
 );
 
 // Dynamic block ID
