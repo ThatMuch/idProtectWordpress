@@ -890,6 +890,10 @@ hr.custom {
             linear-gradient(0deg, rgba(255, 136, 51, 0.5), rgba(255, 136, 51, 0.5)),
             url(../images/contact.jpg) no-repeat scroll center (center / cover);
     }
+
+    .page__header__title {
+        color: $color-secondary;
+    }
 }
 
 .page__hero {

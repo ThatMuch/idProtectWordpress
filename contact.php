@@ -24,7 +24,7 @@ get_header(); ?>
 <!-- Page Header End -->
 <div class="page__area">
 	<div class="container">
-		<div class="col-xl-11 mx-auto">
+		<div class="col-xl-12">
 			<div class="row g-2">
 				<?php if (have_rows('card_contact')) : ?>
 					<?php while (have_rows('card_contact')) : the_row(); ?>
