@@ -162,18 +162,7 @@ register_block_type(
 		'icon'  => $icon,
 	),
 );
-// register_block_type(
-// 	get_template_directory() . '/blocks/serviceSection1/block.json',
-// 	array(
-// 		'icon'  => $icon,
-// 	),
-// );
-// register_block_type(
-// 	get_template_directory() . '/blocks/serviceSection2/block.json',
-// 	array(
-// 		'icon'  => $icon,
-// 	),
-// );
+
 register_block_type(
 	get_template_directory() . '/blocks/steps/block.json',
 	array(
@@ -186,7 +175,7 @@ register_block_type(
 		'icon'  => $icon,
 	),
 );
-// Ajout Philippe
+
 register_block_type(
 	get_template_directory() . '/blocks/Faq/block.json',
 	array(
