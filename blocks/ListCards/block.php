@@ -32,7 +32,7 @@ if (!empty($block['class_name'])) {
  * Pass the block data into the template part
  */
 get_template_part(
-	'blocks/listCards/template',
+	'blocks/ListCards/template',
 	null,
 	array(
 		'block'      => $block,
