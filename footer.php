@@ -9,6 +9,10 @@
 <?php
 $custom_logo_id = get_theme_mod('custom_logo');
 $image = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+// get the template type of the page
+$template = get_page_template_slug();
+$template = str_replace(array('page-', '.php'), '', $template);
 ?>
 
 <!-- If the page is not the home page display the widget from the sidebar footer-1 -->
@@ -17,7 +21,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 <?php endif; ?>
 
 </div><!-- #content -->
-<?php if (have_rows('rs', 'options')) : ?>
+<?php if (have_rows('rs', 'options') && $template !== "landing") : ?>
 	<ul class="footer__rs">
 		<?php while (have_rows('rs', 'options')) : the_row(); ?>
 			<?php if (get_sub_field('facebook')) : ?>
@@ -69,12 +73,14 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 </div>
 <div class="footer__area">
 	<div class="row d-flex justify-content-between">
-		<div class="footer__area__menu d-md-flex justify-content-between align-items-center">
-			<img class="footer__area__logo" src="<?= esc_url(get_template_directory_uri() . '/logo-IDPROTECT_footer.png'); ?>" alt="">
-			<div class="d-md-flex align-center">
-				<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
-			</div>
-			<div></div>
+		<div class="footer__area__menu d-md-flex  justify-content-<?php echo $template !== "landing" ? "between" : "center" ?> align-items-center">
+			<img class="footer__area__logo" src="<?= esc_url(get_template_directory_uri() . '/logo-IDPROTECT_footer.png'); ?>" alt="ID Protect logo">
+			<?php if ($template !== "landing") : ?>
+				<div class="d-md-flex align-center">
+					<?php wp_nav_menu(array('theme_location' => 'submenu')); ?>
+				</div>
+				<div></div>
+			<?php endif; ?>
 		</div>
 	</div>
 	<div class="footer__area__bottom d-md-flex justify-content-between">

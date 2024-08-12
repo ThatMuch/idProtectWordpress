@@ -6,7 +6,7 @@ $items = get_field('items');
 $speed = get_field('vitesse') ?: 8;
 ?>
 
-<section class="mb-100">
+<section class="mb-50">
     <div class="container-stats container">
         <h1 class="text-white section__title"><?= $title ?> <span class="text__orange title"><?= $accent ?></span></h1>
         <div class="statistiques">

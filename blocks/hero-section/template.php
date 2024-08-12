@@ -6,7 +6,7 @@ $image = get_field('image');
 $description = get_field('description');
 $isReverse = get_field('reverse');
 ?>
-<section class="hero__area mb-100">
+<section class="hero__area mb-50">
 	<div class="container">
 		<div class="row align-items-center <?php echo $isReverse ? "flex-row-reverse" : "" ?>">
 			<div class="col-lg-7 h-100">

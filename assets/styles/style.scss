@@ -1021,6 +1021,10 @@ hr.custom {
     flex-direction: row-reverse;
 }
 
+.block__blog {
+    margin-bottom: 50px;
+}
+
 .blog__featured {
     position: relative;
     margin-bottom: 50px;
@@ -1201,10 +1205,6 @@ hr.custom {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-}
-
-.blog__item {
-    margin-bottom: 50px;
 }
 
 .blog__item__image {

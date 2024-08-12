@@ -19,7 +19,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Block classes
-$class_name = 'block__faq card__box mb-100';
+$class_name = 'block__faq card__box mb-50';
 if (!empty($block['class_name'])) {
 	$class_name .= ' ' . $block['class_name'];
 }

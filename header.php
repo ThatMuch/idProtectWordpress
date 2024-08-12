@@ -5,6 +5,10 @@
  * @version     0.1.0
  * @since       idProtect_1.0.0
  */
+
+// get the template type of the page
+$template = get_page_template_slug();
+$template = str_replace(array('page-', '.php'), '', $template);
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -59,33 +63,34 @@
 	?>
 
 	<nav class="header__area navbar sticky-top navbar-expand-lg">
-		<div class="container align-items-center">
+		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
 							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect">
 			</a>
-
-			<div class="collapse navbar-collapse" id="navbar">
-				<?php
-				wp_nav_menu(array(
-					'theme_location' => 'mainmenu', // Defined when registering the menu
-					'menu_id'        => 'menu-main',
-					'container'      => false,
-					'depth'          => 3,
-					'menu_class'     => 'nav navbar-nav mx-auto',
-					'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
-					'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
-				));
-				?>
-			</div>
-			<div>
-				<a class="btn btn__primary" href="<?php echo site_url(); ?>/offre-usurpation/">
-					Découvrez nos offres
-				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-			</div>
+			<?php if ($template !== "landing") : ?>
+				<div class="collapse navbar-collapse" id="navbar">
+					<?php
+					wp_nav_menu(array(
+						'theme_location' => 'mainmenu', // Defined when registering the menu
+						'menu_id'        => 'menu-main',
+						'container'      => false,
+						'depth'          => 3,
+						'menu_class'     => 'nav navbar-nav mx-auto',
+						'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
+						'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
+					));
+					?>
+				</div>
+				<div>
+					<a class="btn btn__primary" href="<?php echo site_url(); ?>/offre-usurpation/">
+						Découvrez nos offres
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			<?php endif; ?>
 		</div>
 	</nav>
 

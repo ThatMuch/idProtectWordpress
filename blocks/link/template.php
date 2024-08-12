@@ -7,7 +7,7 @@ $pro = get_field('pro');
 // check if the field pro is checked
 
 ?>
-<section class="mb-100">
+<section class="mb-50">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
