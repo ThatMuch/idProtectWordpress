@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Main Functions File - used for:
  * • including other function-files
@@ -30,7 +31,6 @@ require('functions/functions-settings.php');
 ==================================================================================*/
 // Sections using the ACF Flexible Content
 // » https://www.advancedcustomfields.com/resources/flexible-content/
-require('functions/functions-sections.php');
 require('functions/functions-blocks.php');
 //require('acf.php');
 
