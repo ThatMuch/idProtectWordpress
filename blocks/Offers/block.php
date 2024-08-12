@@ -21,7 +21,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Block classes
-$class_name = 'block__price mb-50';
+$class_name = 'block__price';
 if (!empty($block['class_name'])) {
 	$class_name .= ' ' . $block['class_name'];
 }
