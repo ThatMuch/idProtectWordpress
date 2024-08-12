@@ -32,7 +32,7 @@
 // @import "./atoms/_dividers";
 @import "./atoms/_headings";
 
-// @import "./atoms/_images";
+@import "./atoms/_images";
 // @import "./atoms/_inputs";
 // @import "./atoms/_labels";
 // @import "./atoms/_links";
@@ -55,8 +55,8 @@
 
 /*=====  Organisms  ======*/
 
-// @import "./organisms/_footer";
-// @import "./organisms/_header";
+@import "./organisms/_footer";
+@import "./organisms/_header";
 // @import "./organisms/_hero";
 // @import "./organisms/sections";
 
@@ -84,13 +84,8 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 a {
-    color: var(--blue);
+    color: $color-tertiary;
     text-decoration: none;
 }
 
@@ -195,379 +190,6 @@ hr.custom {
 
 .text__dark {
     color: #171c60;
-}
-
-.header__area {
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    background: #fff;
-    padding: 0;
-    .container {
-        @include breakpoint(mobile) {
-            //justify-content: center;
-        }
-    }
-}
-
-.menu-item {
-    cursor: pointer;
-}
-
-.header__area .navbar-brand {
-    height: 4rem;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        @include breakpoint(mobile) {
-            width: 121px;
-        }
-    }
-}
-
-.header__area .nav-link {
-    margin: 0 30px;
-    isolation: isolate;
-    color: var(--blue);
-    font-size: 0.85rem;
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.header__area .nav-link:hover {
-    cursor: pointer;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 7px;
-    background: #ffffff;
-    color: var(--orange);
-}
-
-.header__area .dropdown-item {
-    color: var(--blue);
-    font-family: "Raleway", sans-serif;
-    &:hover,
-    &.active {
-        cursor: pointer;
-        background-color: #fff;
-        color: $color-secondary;
-    }
-}
-
-.header__area .dropdown-toggle::after {
-    vertical-align: 2px;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-    margin-left: 10px;
-    border: 0;
-    background: url(../images/arrow-down.svg) no-repeat scroll 0 0 / 100%;
-    width: 10px;
-    height: 6px;
-}
-
-.header__area .dropdown-toggle:hover::after {
-    background-image: url(../images/arrow-down-orange.svg);
-}
-.header__area .dropdown-toggle.show {
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 7px;
-    background: #ffffff;
-    color: var(--orange);
-}
-
-.header__area .dropdown-toggle.show::after {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-    background-image: url(../images/arrow-down-orange.svg);
-}
-
-.header__area .dropdown-menu {
-    top: 54px;
-    -webkit-transform: translate(-25%, 13px);
-    transform: translate(-29.5%, 13px);
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border: 0;
-    border-radius: 16px;
-    background: #ffffff;
-    padding: 1.25rem;
-}
-
-@media only screen and (max-width: 991px) {
-    .header__area .dropdown-menu {
-        position: relative;
-        top: inherit;
-        -webkit-transform: none;
-        transform: none;
-        margin: 0;
-        -webkit-box-shadow: 0 0 0;
-        box-shadow: 0 0 0;
-        background: transparent;
-        padding: 10px 26px;
-        min-width: auto;
-    }
-}
-
-.header__area .dropdown-menu::before {
-    position: absolute;
-    top: -12px;
-    // center
-    left: 50%;
-    transform: translate(-50%, 0);
-    border-right: 9px solid transparent;
-    border-bottom: 13px solid #fff;
-    border-left: 9px solid transparent;
-    width: 13px;
-    height: 9px;
-    content: "";
-}
-
-@media only screen and (max-width: 991px) {
-    .header__area .dropdown-menu::before {
-        display: none;
-    }
-}
-
-.header__area .dropdown-menu__item {
-    height: 100%;
-}
-
-.header__area .dropdown-menu__item h2 {
-    background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0 0 10px;
-    background-clip: text;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-}
-
-.header__area .dropdown-menu__item ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.header__area .dropdown-menu__item ul li a {
-    display: inline-block;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-    margin: 12px 0;
-    color: var(--blue);
-    font-size: 0.85rem;
-    font-family: "Raleway";
-    letter-spacing: 0.5px;
-    text-decoration: none;
-}
-
-.header__area .dropdown-menu__item ul li a:hover {
-    color: var(--orange);
-}
-
-.header__area .dropdown-menu [class*="col-"] .dropdown-menu__item {
-    border-right: 1px solid #d3d6da;
-}
-
-@media only screen and (max-width: 991px) {
-    .header__area .dropdown-menu [class*="col-"] .dropdown-menu__item {
-        border-right: 0;
-        border-bottom: 1px solid #d3d6da;
-        padding: 10px 0;
-    }
-}
-
-.header__area .dropdown-menu [class*="col-"]:last-child .dropdown-menu__item {
-    border-right: 0;
-}
-
-.header__area .navbar-toggler {
-    border-color: var(--orange);
-}
-
-.header__area .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 136, 51, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-@media only screen and (max-width: 991px) {
-    .header__area .navbar-collapse {
-        position: absolute;
-        top: 64px;
-        right: 0;
-        left: 0;
-        -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-        box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-        background: #fff;
-    }
-}
-
-.header__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    color: var(--orange);
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    position: relative;
-    align-items: center;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-    width: 181px;
-
-    @include responsive-font-size(13, 16, 700);
-}
-
-@media only screen and (max-width: 991px) {
-    .header__link {
-        margin-right: 15px;
-        margin-left: auto;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .header__link {
-        width: 46px;
-    }
-}
-
-.header__link img {
-    position: absolute;
-    right: 0;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-    -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    width: 46px;
-}
-
-.header__link span {
-    padding: 10px 15px;
-}
-
-@media only screen and (max-width: 767px) {
-    .header__link span {
-        display: none;
-    }
-}
-
-.header__link .eye-hover {
-    opacity: 0;
-}
-
-.header__link:hover {
-    color: var(--orange);
-}
-
-.header__link:hover span {
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 100px 0px 0px 100px;
-    background: #ffffff;
-}
-
-.header__link:hover .eye-hover {
-    opacity: 1;
-}
-
-.header__link:hover .eye {
-    opacity: 0;
-}
-
-.footer__rs {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: var(--Spacing-32, 2rem);
-    margin: 0 auto;
-    padding: 0.625rem;
-    list-style: none;
-
-    .footer__rs__item {
-        margin: 0;
-        padding: 0;
-        font-size: 2rem;
-
-        a {
-            color: $color-primary;
-
-            &:hover {
-                color: $color-primary-darker;
-            }
-        }
-    }
-}
-
-.footer__area {
-    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 16px 16px 0px 0px;
-    background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
-    padding: 0.625rem 1.875rem var(--Spacing-0, 0rem) 1.875rem;
-    color: #a3bbdc;
-
-    ul {
-        display: flex;
-        gap: 0.625rem;
-        @include breakpoint(mobile) {
-            flex-direction: column;
-        }
-    }
-
-    ul,
-    li {
-        margin-bottom: 0;
-        padding: 0;
-        list-style: none;
-
-        a {
-            color: #fff;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 0.875rem;
-            line-height: 1.625rem; /* 185.714% */
-            font-family: Raleway;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-    }
-
-    &__logo {
-        width: 3rem;
-    }
-
-    &__bottom {
-        margin-top: 15px;
-        border-top: 1px solid #5e89c2;
-        padding: 15px 0;
-        color: #5e89c2;
-
-        p {
-            margin-bottom: 0;
-        }
-
-        img {
-            opacity: 0.3;
-            transition-duration: 0.5s;
-            width: 100px;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .footer__area {
-        text-align: center;
-    }
 }
 
 .section__area {
@@ -811,48 +433,6 @@ hr.custom {
 
     @include responsive-font-size(12, 14, 400);
 }
-
-// .page__text {
-//     font-family: "Raleway", sans-serif;
-// }
-
-// .page__text h1,
-// .page__text h2,
-// .page__text h3,
-// .page__text h4,
-// .page__text h5,
-// .page__text h6 {
-//     margin-bottom: 30px;
-//     font-weight: 700;
-//     font-family: "Rubik", sans-serif;
-//     text-transform: uppercase;
-// }
-
-// .page__text h2 {
-//     margin-bottom: 40px;
-//     color: #152235;
-//     font-family: "Rubik", sans-serif;
-//     text-transform: uppercase;
-
-//     @include responsive-font-size(40, 48, 800);
-// }
-
-// @media only screen and (max-width: 767px) {
-//     .page__text h2 {
-//         @include responsive-font-size(26, 30);
-//     }
-// }
-
-// .page__text p {
-//     color: #152235;
-//     //margin-bottom: 25px;
-
-//     //@include responsive-font-size(16, 26, 500);
-// }
-
-// .page__text p strong {
-//     font-weight: 700;
-// }
 
 .page__header {
     border-radius: var(--Radius-20, 1.25rem);
@@ -1571,7 +1151,7 @@ hr.custom {
 }
 
 .bg_PRIMARY_40 {
-    background-color: var(--blue) !important;
+    background-color: $color-tertiary !important;
 }
 
 .bg_secondary_40 {
