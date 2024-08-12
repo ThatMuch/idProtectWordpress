@@ -811,10 +811,6 @@ hr.custom {
     @include responsive-font-size(12, 14, 400);
 }
 
-.page__area {
-    padding: 30px 0;
-}
-
 // .page__text {
 //     font-family: "Raleway", sans-serif;
 // }
@@ -1075,6 +1071,7 @@ hr.custom {
 }
 
 .blog__featured__text h4 {
+    color: #fff;
     font-family: "Raleway", sans-serif;
 
     @include responsive-font-size(16, 26, 600);
@@ -1083,6 +1080,7 @@ hr.custom {
 .blog__featured__text h2,
 .blog__featured__text h1 {
     margin-bottom: 25px;
+    color: #fff;
     text-transform: uppercase;
 
     @include responsive-font-size(40, 48, 800);
@@ -1355,6 +1353,9 @@ hr.custom {
     background: #1956a8;
     padding: 36px 40px;
     color: #f6f7f9;
+    h2 {
+        color: #f6f7f9;
+    }
 }
 
 .wp-block-latest-posts__post-category {
