@@ -35,6 +35,9 @@
     position: relative;
     width: 338px;
     overflow: hidden;
+    &.disabled{
+            opacity: .2;
+    }
 }
 
 .content {

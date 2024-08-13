@@ -18,6 +18,11 @@ $args = array(
 );
 
 $the_query = new WP_Query($args);
+// get post type
+$post_type = get_post_type();
+$isTestimony = $post_type === 'testimony';
+// the post id
+$post_id = get_the_ID();
 ?>
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
@@ -28,7 +33,9 @@ $the_query = new WP_Query($args);
 					$consequence = get_field('consequence', $post->ID);
 					$fraude = get_field('fraude', $post->ID);
 				?>
-					<a href="<?php the_permalink() ?>" class="testimonial__item">
+					<a
+						href="<?php the_permalink() ?>"
+						class="testimonial__item <?php echo $isTestimony && $post_id === $post->ID ? "disabled" : "" ?>">
 						<div class="testimonial__img">
 							<?php the_post_thumbnail('large', array('class' => 'testimonial__image')); ?>
 						</div>
