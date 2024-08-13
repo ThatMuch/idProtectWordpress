@@ -1,0 +1,19 @@
+{
+	"name": "video",
+	"title": "Hero Section for a video",
+	"description": "A hero section for a video",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"Hero"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./template.php"
+	},
+	"align": "full"
+}
