@@ -37,7 +37,9 @@ $class_name = $args['class_name'];
 								$step_description = get_sub_field('description');
 							?>
 								<div class="item">
-									<div class="item__number"></div>
+									<span class="item__number">
+										<?php echo $i; ?>
+									</span>
 									<div>
 										<h4 class="text-uppercase"> <?php echo $step_title; ?></h4>
 										<?php if ($step_description) {
