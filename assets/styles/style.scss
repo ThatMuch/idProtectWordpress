@@ -435,6 +435,7 @@ hr.custom {
 }
 
 .page__header {
+    margin-bottom: 50px;
     border-radius: var(--Radius-20, 1.25rem);
     padding: 2.5rem;
     height: 19.5rem;
@@ -750,15 +751,11 @@ hr.custom {
     margin: 0 0 25px;
     color: #f6f7f9;
     text-transform: uppercase;
-
-    @include responsive-font-size(38, 48, 600);
 }
 
 @media only screen and (max-width: 1200px) {
     .blog__box h2 {
         margin: 0 0 10px;
-
-        @include responsive-font-size(25, 35, 600);
     }
 }
 

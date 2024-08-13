@@ -82,20 +82,19 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-}
 
-.btn__white:hover {
-    background: $color-primary;
-}
-
-.btn__white:hover img {
-    -webkit-filter: brightness(10);
-    filter: brightness(10);
-}
-
-.btn__white img {
-    margin-left: 6px;
-    width: 16px;
+    img {
+        margin-left: 6px;
+        width: 16px;
+    }
+    &:hover {
+        background: $color-primary;
+        color: #fff;
+        img {
+            -webkit-filter: brightness(10);
+            filter: brightness(10);
+        }
+    }
 }
 
 .btn__orange {
@@ -107,48 +106,39 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
-}
-
-.btn__orange:hover {
-    background: $color-secondary;
-    color: #fff;
-}
-
-.btn__orange.solid {
-    background: $color-secondary;
-    color: #fff;
-}
-
-.btn__orange.solid:hover {
-    background: $color-primary;
-}
-
-.btn__orange.blue {
-    border-color: $color-primary;
-    color: $color-primary;
-}
-
-.btn__orange.blue:hover {
-    background: $color-primary;
-    color: #fff;
-}
-
-.btn__orange.dark {
-    border-color: $color-primary;
-    color: $color-primary;
-}
-
-.btn__orange.dark:hover {
-    background: $color-primary;
-    color: #fff;
-}
-
-.btn__orange.white {
-    border-color: #fff;
-    color: #fff;
-}
-
-.btn__orange.white:hover {
-    background: #fff;
-    color: $color-primary;
+    &.solid {
+        background: $color-secondary;
+        color: #fff;
+        &:hover {
+            background: $color-primary;
+        }
+    }
+    &.blue {
+        border-color: $color-primary;
+        color: $color-primary;
+        &:hover {
+            background: $color-primary;
+            color: #fff;
+        }
+    }
+    &.dark {
+        border-color: $color-primary;
+        color: $color-primary;
+        &:hover {
+            background: $color-primary;
+            color: #fff;
+        }
+    }
+    &.white {
+        border-color: #fff;
+        color: #fff;
+        &:hover {
+            background: #fff;
+            color: $color-primary;
+        }
+    }
+    :hover {
+        background: $color-secondary;
+        color: #fff;
+    }
 }
