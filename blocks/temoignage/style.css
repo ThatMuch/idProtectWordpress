@@ -8,16 +8,25 @@
         margin-bottom: 50px;
         @media screen and (max-width: 768px) {
             display: block;
-
         }
     }
 }
 
 .testimonial__img {
     position: relative;
-    margin-bottom: 0.5rem;
 
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &:hover {
+
+        img {
+            transform: scale(1.1);
+        }
+    }
     img {
+        transition: transform .8s;
         width: 100%;
     }
 }
@@ -25,6 +34,7 @@
 .testimonial__item {
     position: relative;
     width: 338px;
+    overflow: hidden;
 }
 
 .content {
