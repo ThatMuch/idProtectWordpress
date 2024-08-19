@@ -60,6 +60,7 @@ gulp.task("watch", function () {
 	gulp.watch("assets/styles/admin/*.scss", gulp.series("styles_admin"));
 	gulp.watch("assets/scripts/custom/*.js",gulp.series("scripts"));
 	gulp.watch("**/*.css").on("change", browserSync.reload);
-	gulp.watch("**/*.php").on("change", browserSync.reload);
+	gulp.watch("**/*.php").on("change",browserSync.reload);
+	gulp.watch("**/*.js").on("change",browserSync.reload);
 });
 gulp.task("default", gulp.parallel("styles", "scripts", "watch"));

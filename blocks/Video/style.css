@@ -4,7 +4,7 @@
     height: auto;
     overflow: hidden;
     border-radius: 12px;
-    .video__wrapper{
+    &.responsive{
 padding-bottom: 56.25%;
     }
     iframe,

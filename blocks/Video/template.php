@@ -37,12 +37,20 @@ $isReverse = get_field('reverse');
 			<div class="col-lg-7 d-flex h-100">
 				<?php if ($video) : ?>
 					<div class="hero__video mt-auto mb-auto w-100">
-						<div class="video__wrapper">
-							<?= $video; ?>
-						</div>
+
+						<?= $video; ?>
+
 					</div>
 				<?php endif; ?>
 			</div>
 		</div>
 	</div>
 </section>
+
+<script>
+	if (!document.querySelector(".rll-youtube-player")) {
+		// add the class "responsive" to the hero__video element
+		document.querySelector(".hero__video").classList.add("responsive");
+	}
+	console.log("video")
+</script>
