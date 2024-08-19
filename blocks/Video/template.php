@@ -10,10 +10,10 @@ $isReverse = get_field('reverse');
 <section class="hero__area mb-50">
 	<div class="container">
 		<h1 class="section__title"><?= $title; ?> <span class="title text-orange"><?= $accent ?></span></h1>
-		<div class="row align-items-center <?php echo $isReverse ? "flex-row-reverse" : "" ?>">
+		<div class="row <?php echo $isReverse ? "flex-row-reverse" : "" ?>">
 			<div class="col-lg-5 h-100">
 				<div class="hero__text">
-					<div class="hero__box">
+					<div>
 						<?php if ($subtitle) : ?><h2><?php echo $subtitle; ?></h2><?php endif; ?>
 						<?php if ($description) : ?><p><?php echo $description; ?></p><?php endif; ?>
 						<?php if (have_rows('cta_group')) : ?>
