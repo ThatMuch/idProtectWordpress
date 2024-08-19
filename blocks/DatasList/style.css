@@ -56,12 +56,16 @@
 }
 
 .statistiques{
-    display: flex;
+    display: block;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     padding: 0 0 10px 0;
     margin-top: 20px;
+    @media screen and (min-width: 992px) {
+    display: flex;
+
+    }
 }
 
 .percent, .unit{
