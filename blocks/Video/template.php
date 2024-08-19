@@ -37,7 +37,9 @@ $isReverse = get_field('reverse');
 			<div class="col-lg-7 d-flex h-100">
 				<?php if ($video) : ?>
 					<div class="hero__video mt-auto mb-auto w-100">
-						<?= $video; ?>
+						<div class="video__wrapper">
+							<?= $video; ?>
+						</div>
 					</div>
 				<?php endif; ?>
 			</div>
