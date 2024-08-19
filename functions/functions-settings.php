@@ -64,8 +64,12 @@ function idProtect_enqueue()
   wp_enqueue_script('html5hiv', get_template_directory_uri() . '/inc/assets/js/html5.js', array(), '3.7.0', false);
   wp_script_add_data('html5hiv', 'conditional', 'lt IE 9');
   // scripts
-  wp_register_script('ID_Protect_/scripts', get_template_directory_uri() . '/assets/scripts/all.min.js', false, array('jquery'), true);
+  wp_register_script('ID_Protect_/scripts', get_template_directory_uri() . '/dist/js/all.min.js', false, array('jquery'), true);
   wp_enqueue_script('ID_Protect_/scripts');
+
+  // blocks script
+  wp_register_script('ID_Protect_/blocks', get_template_directory_uri() . '/dist/js/blocks.js', false, array('jquery'), true);
+  wp_enqueue_script('ID_Protect_/blocks');
   // load bootstrap js
   wp_enqueue_script('wp-bootstrap-starter-popper', get_template_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true);
   wp_enqueue_script('wp-bootstrap-starter-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.min.js', array(), '', true);
@@ -79,7 +83,7 @@ add_action('wp_enqueue_scripts', 'idProtect_enqueue');
 // Admin Style
 function my_custom_admin_stylesheet()
 {
-  wp_enqueue_style('custom-admin', get_stylesheet_directory_uri() . '/assets/styles/admin/admin.min.css');
+  wp_enqueue_style('custom-admin', get_stylesheet_directory_uri() . '/dist/css/admin/admin.min.css');
 }
 
 //This loads the function above on the login page
@@ -88,7 +92,7 @@ add_action('admin_enqueue_scripts', 'my_custom_admin_stylesheet');
 // Login Style
 function my_custom_login_stylesheet()
 {
-  wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/assets/styles/admin/login.min.css');
+  wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/dist/css/admin/login.min.css');
 }
 
 //This loads the function above on the login page

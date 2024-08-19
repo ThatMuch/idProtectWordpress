@@ -1,0 +1,21 @@
+{
+	"apiVersion": 3,
+	"name": "react-test",
+	"version": "0.1.0",
+	"title": "React test",
+	"category": "media",
+	"icon": "media",
+	"description": "Set media, words and buttons side-by-side for a richer layout.",
+	"example": {},
+	"keywords": [
+		"image",
+		"video"
+	],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "default",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

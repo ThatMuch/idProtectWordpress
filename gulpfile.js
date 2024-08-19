@@ -1,21 +1,29 @@
-var gulp = require("gulp");
+const { task, src, dest, watch, series, parallel } = require("gulp");
 var sass = require("gulp-sass")(require("sass"));
 //var autoprefixer = require("gulp-autoprefixer");
 var cleanCSS = require("gulp-clean-css");
-var concat = require("gulp-concat");
+const concat = require("gulp-concat-util");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var browserSync = require("browser-sync").create();
+const babel = require("gulp-babel");
+const block = {
+    header: `(function (wp) {
+    const { registerBlockType } = wp.blocks;
+    const {RichText} = wp.editor;
+    const {components, editor, blocks, element, i18n} = wp;
+  `,
+    footer: `})(window.wp);`,
+};
 
-gulp.task("styles", function () {
-	return (
-        gulp
-            .src("assets/styles/**/*.scss")
+task("styles", function () {
+    return (
+src("assets/styles/**/*.scss")
             .pipe(sass().on("error", sass.logError))
             //.pipe(autoprefixer("last 2 versions"))
             .pipe(cleanCSS())
             .pipe(rename({ suffix: ".min" }))
-            .pipe(gulp.dest("assets/styles/"))
+            .pipe(dest("dist/css/"))
             .pipe(
                 browserSync.reload({
                     stream: true,
@@ -23,15 +31,14 @@ gulp.task("styles", function () {
             )
     );
 });
-gulp.task("styles_admin", function () {
-	return (
-        gulp
-            .src("assets/styles/admin/*.scss")
+task("styles_admin", function () {
+    return (
+src("assets/styles/admin/*.scss")
             .pipe(sass().on("error", sass.logError))
             //.pipe(autoprefixer("last 2 versions"))
             .pipe(cleanCSS())
             .pipe(rename({ suffix: ".min" }))
-            .pipe(gulp.dest("assets/styles/"))
+            .pipe(dest("dist/css"))
             .pipe(
                 browserSync.reload({
                     stream: true,
@@ -39,27 +46,42 @@ gulp.task("styles_admin", function () {
             )
     );
 });
-gulp.task("scripts", function () {
-	return gulp
-		.src("assets/scripts/custom/*.js")
-		.pipe(concat("all.js"))
-		.pipe(uglify())
-		.pipe(rename({ suffix: ".min" }))
-		.pipe(gulp.dest("assets/scripts/"))
-		.pipe(
-			browserSync.reload({
-				stream: true,
-			})
-		);
+task("scripts", function () {
+    return src("assets/scripts/custom/*.js")
+        .pipe(concat("all.js"))
+        .pipe(uglify())
+        .pipe(rename({ suffix: ".min" }))
+        .pipe(dest("dist/js"))
+        .pipe(
+            browserSync.reload({
+                stream: true,
+            }),
+        );
 });
-gulp.task("watch", function () {
-	browserSync.init({
-		proxy: "http://localhost:10074",
-	});
-	gulp.watch("assets/styles/**/*.scss", gulp.series("styles"));
-	gulp.watch("assets/styles/admin/*.scss", gulp.series("styles_admin"));
-	gulp.watch("assets/scripts/custom/*.js",gulp.series("scripts"));
-	gulp.watch("**/*.css").on("change", browserSync.reload);
-	gulp.watch("**/*.php").on("change", browserSync.reload);
+
+task("blocks", function () {
+    return src("./blocks/**/*.js")
+	.pipe(
+		babel({
+			presets: ["@babel/preset-react"],
+		}),
+	)
+        .pipe(concat("blocks.js"))
+        .pipe(concat.header(block.header))
+        .pipe(concat.footer(block.footer))
+        .pipe(dest("dist/js"));
 });
-gulp.task("default", gulp.parallel("styles", "scripts", "watch"));
+
+task("watch", function () {
+    browserSync.init({
+        proxy: "http://localhost:10074",
+    });
+    watch("assets/styles/**/*.scss", series("styles"));
+    watch("assets/styles/admin/*.scss", series("styles_admin"));
+    watch("assets/scripts/custom/*.js", series("scripts"));
+	watch("./blocks/**/*.js", series("blocks"));
+    watch("**/*.css").on("change", browserSync.reload);
+	watch("**/*.php").on("change",browserSync.reload);
+});
+
+task("default", parallel("styles", "scripts", "watch"));

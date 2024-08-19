@@ -13,6 +13,22 @@ $icon = '<svg width="40" height="40" viewBox="0 0 40 40" fill="#152235" xmlns="h
 <path d="M20.0633 10.0333C15.5442 10.0333 11.6848 12.6052 10.1212 16.2357C11.6848 19.8662 15.5442 22.4381 20.0633 22.4381C24.5824 22.4381 28.4418 19.8662 30.0054 16.2357C28.4418 12.6052 24.5824 10.0333 20.0633 10.0333ZM20.0633 20.3707C17.5687 20.3707 15.5442 18.5182 15.5442 16.2357C15.5442 13.9532 17.5687 12.1008 20.0633 12.1008C22.5579 12.1008 24.5824 13.9532 24.5824 16.2357C24.5824 18.5182 22.5579 20.3707 20.0633 20.3707ZM20.0633 13.7548C18.5629 13.7548 17.3518 14.8629 17.3518 16.2357C17.3518 17.6085 18.5629 18.7167 20.0633 18.7167C21.5636 18.7167 22.7748 17.6085 22.7748 16.2357C22.7748 14.8629 21.5636 13.7548 20.0633 13.7548Z" fill="#152235"/>
 </svg>
 ';
+
+wp_enqueue_script(
+	'custom-block-scripts',
+	get_template_directory_uri() . '/dist/js/blocks.js',
+	array(
+		'wp-blocks',
+		'wp-components',
+		'wp-element',
+		'wp-i18n',
+		'wp-editor'
+	),
+	'1.0.0',
+	true
+);
+
+
 register_block_type(
 	get_template_directory() . '/blocks/hero-section/block.json',
 	array(
@@ -177,6 +193,12 @@ register_block_type(
 );
 register_block_type(
 	get_template_directory() . '/blocks/Video/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/ReactTest/block.json',
 	array(
 		'icon'  => $icon,
 	),
