@@ -3,7 +3,7 @@
 }
 .price__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    grid-template-columns: repeat(auto-fit, 290px);
     align-items: end;
     gap: 1rem;
     justify-content: center;
