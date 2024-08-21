@@ -6,26 +6,30 @@
  *
  */
 
-.btn, .single_add_to_cart_button, .wc-block-cart__submit-button, .wc-block-components-totals-coupon__button {
+.btn,
+.single_add_to_cart_button,
+.wc-block-cart__submit-button,
+.wc-block-components-totals-coupon__button {
     -ms-flex-align: center;
     -webkit-box-align: center;
-    align-items: center;
-    background: #FFFFFF;
-    border-radius: 7px;
-    color: var(--blue);
     display: -ms-inline-flexbox;
     display: -webkit-inline-box;
     display: inline-flex;
-    font-family: "Raleway", sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 7px;
+    background: #ffffff;
     padding: 10px 15px;
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
 
     &.btn__primary {
-        background: var(--blue);
+        background: $color-primary;
         color: #fff;
 
         img {
@@ -34,16 +38,18 @@
             margin-left: 8px;
         }
 
-        &:hover, &:active, &:focus {
-            color: #fff;
+        &:hover,
+        &:active,
+        &:focus {
             background-color: $color-primary-darker;
+            color: #fff;
         }
     }
 }
 
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
 body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
-    background-color: var(--blue);
+    background-color: $color-primary;
     color: #fff;
 
     img {
@@ -52,95 +58,87 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
         margin-left: 8px;
     }
 
-    &:hover, &:active, &:focus {
-        color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
         background-color: $color-primary-darker;
+        color: #fff;
     }
 }
 
 .btn__white {
-    background: #FFFFFF;
-    border-radius: 7px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
-    color: var(--blue);
-    padding: 10px 15px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    border-radius: 7px;
+    background: #ffffff;
+    padding: 10px 15px;
+    color: $color-primary;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-}
 
-.btn__white:hover {
-    background: var(--blue);
-}
-
-.btn__white:hover img {
-    -webkit-filter: brightness(10);
-    filter: brightness(10);
-}
-
-.btn__white img {
-    margin-left: 6px;
-    width: 16px;
+    img {
+        margin-left: 6px;
+        width: 16px;
+    }
+    &:hover {
+        background: $color-primary;
+        color: #fff;
+        img {
+            -webkit-filter: brightness(10);
+            filter: brightness(10);
+        }
+    }
 }
 
 .btn__orange {
-    border: 2px solid #FF8833;
+    border: 2px solid $color-secondary;
     border-radius: 7px;
     padding: 13px 12px;
-    color: #FF8833;
-    text-align: center;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    color: $color-secondary;
     font-family: "Raleway", sans-serif;
-}
-
-.btn__orange:hover {
-    color: #fff;
-    background: #FF8833;
-}
-
-.btn__orange.solid {
-    background: #FF8833;
-    color: #fff;
-}
-
-.btn__orange.solid:hover {
-    background: var(--blue);
-}
-
-.btn__orange.blue {
-    border-color: #1956A8;
-    color: #1956A8;
-}
-
-.btn__orange.blue:hover {
-    background: #1956A8;
-    color: #fff;
-}
-
-.btn__orange.dark {
-    border-color: #171C60;
-    color: #171C60;
-}
-
-.btn__orange.dark:hover {
-    background: #171C60;
-    color: #fff;
-}
-
-.btn__orange.white {
-    border-color: #fff;
-    color: #fff;
-}
-
-.btn__orange.white:hover {
-    background: #fff;
-    color: #171C60;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    &.solid {
+        background: $color-secondary;
+        color: #fff;
+        &:hover {
+            background: $color-primary;
+        }
+    }
+    &.blue {
+        border-color: $color-primary;
+        color: $color-primary;
+        &:hover {
+            background: $color-primary;
+            color: #fff;
+        }
+    }
+    &.dark {
+        border-color: $color-primary;
+        color: $color-primary;
+        &:hover {
+            background: $color-primary;
+            color: #fff;
+        }
+    }
+    &.white {
+        border-color: #fff;
+        color: #fff;
+        &:hover {
+            background: #fff;
+            color: $color-primary;
+        }
+    }
+    :hover {
+        background: $color-secondary;
+        color: #fff;
+    }
 }

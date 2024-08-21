@@ -1,0 +1,66 @@
+.faq-section {
+    .panel-faq {
+        padding: 0px;
+        display: none; /* Initially hide the panel */
+        background-color: white;
+        overflow: hidden;
+        width: 100%; /* Make the panel take up the full width */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    &.active .panel-faq {
+        display: block;
+    }
+
+    .faq-item {
+        border-bottom: 1px solid #ccc;
+    }
+    .faq-answer {
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.accordion-faq {
+    cursor: pointer;
+    padding-right: 100px;
+    width: 100%; /* Make the accordion buttons take up the full width */
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    display: block; /* Ensure each button is on a new line */
+    position: relative; /* Allow positioning of the "+" symbol */
+
+    &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-image: url("./img/Plus.svg");
+        background-size: contain;
+        height: 1rem;
+        width: 1rem;
+        position: absolute;
+        right: 0px; /* Adjust the position */
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg); /* Initial rotation */
+        transition: transform 0.5s; /* Smooth transition over 1 second */
+    }
+    &.active::after {
+        transform: translateY(-50%) rotate(45deg);
+        filter: invert(61%) sepia(10%) saturate(6849%) hue-rotate(326deg) brightness(101%) contrast(101%);
+    }
+
+    .faq-question {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: #171c60;
+
+        &:hover {
+            font-weight: 600;
+        }
+    }
+
+    &.active .faq-question {
+        font-weight: 600;
+    }
+}

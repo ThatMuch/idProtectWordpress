@@ -49,12 +49,12 @@ register_block_type(
 		'icon'  => $icon,
 	),
 );
-register_block_type(
-	get_template_directory() . '/blocks/community/block.json',
-	array(
-		'icon'  => $icon,
-	),
-);
+// register_block_type(
+// 	get_template_directory() . '/blocks/community/block.json',
+// 	array(
+// 		'icon'  => $icon,
+// 	),
+// );
 register_block_type(
 	get_template_directory() . '/blocks/widgetSidebar/block.json',
 	array(
@@ -79,20 +79,104 @@ register_block_type(
 		'icon'  => $icon,
 	),
 );
+
+register_block_type(
+	get_template_directory() . '/blocks/Offers/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+
+register_block_type(
+	get_template_directory() . '/blocks/Reviews/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+
+register_block_type(
+	get_template_directory() . '/blocks/DatasList/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+
+register_block_type(
+	get_template_directory() . '/blocks/ListCards/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/Blog/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/section/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/temoignage/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/service/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/logos/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/link/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/community/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+register_block_type(
+	get_template_directory() . '/blocks/widgetSidebar/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
+
+register_block_type(
+	get_template_directory() . '/blocks/steps/block.json',
+	array(
+		'icon'  => $icon,
+	),
+);
 register_block_type(
 	get_template_directory() . '/blocks/tarif/block.json',
 	array(
 		'icon'  => $icon,
 	),
 );
+
 register_block_type(
-	get_template_directory() . '/blocks/communityTechFraud/block.json',
+	get_template_directory() . '/blocks/Faq/block.json',
 	array(
 		'icon'  => $icon,
 	),
 );
 register_block_type(
-	get_template_directory() . '/blocks/cardPrice/block.json',
+	get_template_directory() . '/blocks/Video/block.json',
 	array(
 		'icon'  => $icon,
 	),

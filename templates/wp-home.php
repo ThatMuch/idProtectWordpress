@@ -133,32 +133,7 @@ $the_queryTem = new WP_Query($argsTem);
 				}
 			} ?>
 
-			<!-- Temoignages -->
-			<div class="row g-3 mt-4">
-				<div class="col-lg-4">
-					<div class="blog__left">
-						<div class="blog__box orange">
-							<h2>Temoignages</h2>
-							<?php
-							$category_description = category_description(get_category_by_slug('temoignage'));
-							?>
-							<p><?php echo $category_description; ?></p>
-						</div>
-						<a href="<?php echo site_url();  ?>/category/temoignage" class="btn btn__orange text-uppercase">Tous les articles</a>
-					</div> <!-- end blog left -->
-				</div>
-				<div class="col-lg-8">
-					<div class="blog__list owl-carousel">
-						<?php if ($the_queryTem->have_posts()) : ?>
-							<?php while ($the_queryTem->have_posts()) : $the_queryTem->the_post(); ?>
-								<?php get_template_part('templates/wp', 'post'); ?>
-							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-						<?php endif; ?>
-					</div> <!-- end blog list -->
-				</div> <!-- end col -->
-			</div> <!-- end row -->
-			<!-- End of Temoignages -->
+
 		</div> <!-- end container -->
 
 	</main>

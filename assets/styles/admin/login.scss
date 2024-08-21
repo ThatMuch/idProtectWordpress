@@ -1,0 +1,53 @@
+@import "../_mixins.scss";
+@import "../_vars.scss";
+
+body.login h1 a {
+    margin: 0 auto;
+    background-image: url("../../images/logo_idprotect.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+}
+
+body.login .button-primary {
+    border-color: $color-primary;
+    background: $color-primary;
+}
+
+body.login .button-primary:hover {
+    border-color: $color-primary-darker;
+    background: $color-primary-darker;
+}
+
+body.login form input.input,
+body.login form input[type="checkbox"],
+body.login input[type="text"],
+body.login form input.input:active,
+body.login form input[type="checkbox"],
+body.login input[type="text"]:active {
+    border-color: $color-primary;
+    background-color: rgba($color: $color-primary, $alpha: 0.3) !important;
+    background: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgba($color: $color-primary, $alpha: 0.3) inset !important;
+    box-shadow: 0 0 0 30px rgba($color: $color-primary, $alpha: 0.3) inset !important;
+}
+
+.wp-core-ui .button.wp-hide-pw {
+    vertical-align: top;
+    border-color: $color-primary;
+    background: inherit;
+    color: $color-primary;
+}
+
+body.login {
+    background: linear-gradient(180deg, #e8effb -2.99%, #fff 49.58%);
+    font-family: "Raleway", sans-serif;
+}

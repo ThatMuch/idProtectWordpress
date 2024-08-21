@@ -1,0 +1,22 @@
+{
+	"name": "faqSection",
+	"title": "Block FAQ",
+	"description": "A custom FAQ block.",
+	"style": [
+		"file:./style.css"
+	],
+	"script": [
+		"file:./script.js"
+	],
+	"category": "theme",
+	"icon": "admin-comments",
+	"keywords": [
+		"Id Protect",
+		"FAQ"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full"
+}

@@ -1,0 +1,85 @@
+@import "../_mixins.scss";
+@import "../_vars.scss";
+@import "./_acf.scss";
+
+.wp-admin {
+    background-repeat: no-repeat;
+    background-color: #f5f9ff;
+    font-weight: 500;
+    font-family: "Raleway", sans-serif;
+
+    .postbox,
+    .updated,
+    .notice {
+        border: none;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .notice {
+        background-color: #e8effb;
+    }
+    a {
+        color: $color-primary;
+    }
+
+    .alternate,
+    .striped > tbody > :nth-child(odd),
+    ul.striped > :nth-child(odd) {
+        background-color: #e8effb;
+    }
+
+    #adminmenu,
+    #adminmenu .wp-submenu,
+    #adminmenuback,
+    #adminmenuwrap {
+        background-color: $color-primary;
+    }
+    #wpadminbar {
+        background-color: $color-primary-darker;
+    }
+
+    #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+    #adminmenu .wp-menu-arrow,
+    #adminmenu .wp-menu-arrow div,
+    #adminmenu li.current a.menu-top,
+    #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+        background: $color-primary-lighter;
+        color: #fff;
+    }
+
+    #adminmenu li.menu-top:hover,
+    #adminmenu li.opensub > a.menu-top,
+    #adminmenu li > a.menu-top:focus {
+        background: $color-primary-lighter;
+        color: #fff;
+    }
+
+    #adminmenu .wp-submenu a:focus,
+    #adminmenu .wp-submenu a:hover,
+    #adminmenu a:hover,
+    #adminmenu li.menu-top > a:focus {
+        color: #fff;
+    }
+
+    #adminmenu li a:focus div.wp-menu-image:before,
+    #adminmenu li.opensub div.wp-menu-image:before,
+    #adminmenu li:hover div.wp-menu-image:before {
+        color: #fff;
+    }
+}
+
+.wp-core-ui .button-primary {
+    border-color: $color-primary;
+    background: $color-primary;
+    &:hover {
+        border-color: $color-primary-darker;
+        background: $color-primary-darker;
+    }
+}
+
+#adminmenu .awaiting-mod,
+#adminmenu .menu-counter,
+#adminmenu .update-plugins {
+    background-color: $color-secondary;
+}

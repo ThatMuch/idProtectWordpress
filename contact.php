@@ -15,7 +15,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="page__header">
-					<h2><span class="g-text"><?php the_title(); ?></span></h2>
+					<h1 class="page__header__title"><?php the_title(); ?></h1>
 				</div>
 			</div>
 		</div>
@@ -24,7 +24,7 @@ get_header(); ?>
 <!-- Page Header End -->
 <div class="page__area">
 	<div class="container">
-		<div class="col-xl-11 mx-auto">
+		<div class="col-xl-12">
 			<div class="row g-2">
 				<?php if (have_rows('card_contact')) : ?>
 					<?php while (have_rows('card_contact')) : the_row(); ?>

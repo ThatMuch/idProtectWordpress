@@ -1,0 +1,52 @@
+.container-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin: auto;
+    border-radius: 20px;
+    background-image: url("Data\ Container.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 100%;
+}
+
+.statistiques {
+    display: block;
+    justify-content: space-around;
+    gap: 1.5rem;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+        display: flex;
+    }
+
+    .stat {
+        flex: 1;
+        margin-bottom: 1rem;
+        border-radius: 15px;
+        background-color: #fff;
+        padding: 20px;
+        padding-bottom: 50px;
+        @media screen and (min-width: 992px) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.percent,
+.unit {
+    color: #171c60;
+    font-weight: 800;
+    font-size: 60px;
+    font-family: Rubik;
+}
+
+.stat_detail {
+    color: #171c60;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Raleway;
+}

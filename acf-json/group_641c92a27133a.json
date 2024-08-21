@@ -246,93 +246,7 @@
                     "parent_repeater": "field_641c92a30fe7c"
                 },
                 {
-                    "key": "field_6492cdb0c5294",
-                    "label": "",
-                    "name": "promotion",
-                    "aria-label": "",
-                    "type": "checkbox",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "promotion": "Promotion"
-                    },
-                    "default_value": [],
-                    "return_format": "value",
-                    "allow_custom": 0,
-                    "layout": "vertical",
-                    "toggle": 0,
-                    "save_custom": 0,
-                    "custom_choice_button_text": "Ajouter un nouveau choix",
-                    "parent_repeater": "field_641c92a30fe7c"
-                },
-                {
-                    "key": "field_6492ce1cc5295",
-                    "label": "Nom de la promotion",
-                    "name": "promotion_label",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_6492cdb0c5294",
-                                "operator": "==",
-                                "value": "promotion"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_641c92a30fe7c"
-                },
-                {
-                    "key": "field_6492ce4fc5296",
-                    "label": "Prix de la promotion",
-                    "name": "promotion_price",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_6492cdb0c5294",
-                                "operator": "==",
-                                "value": "promotion"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_641c92a30fe7c"
-                },
-                {
-                    "key": "field_6492fa0f9ddcf",
+                    "key": "field_64441f751f972",
                     "label": "Texte supplémentaire",
                     "name": "text_add",
                     "aria-label": "",
@@ -345,7 +259,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "\/mois",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
@@ -373,5 +287,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689005263
+    "modified": 1720528958
 }

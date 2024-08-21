@@ -40,9 +40,9 @@
 // Create a step size
 // Mixin pour gérer les tailles de texte responsives
 @mixin responsive-font-size($size, $line-height: null, $weight: null) {
-    font-size: $size / 16 * 1rem; // Convertit les pixels en rem
+    font-size: calc($size / 16 * 1rem); // Convertit les pixels en rem
     @if $line-height != null {
-        line-height: $line-height / $size;
+        line-height: calc($line-height / $size);
     }
 
     @if $weight != null {
@@ -51,18 +51,18 @@
 
     // Media Queries pour les écrans plus petits
     @media (max-width: 768px) {
-        font-size: $size / 16 * 0.95 * 1rem; // Réduit la taille de police pour les écrans plus petits
+        font-size: calc($size / 16 * 0.95 * 1rem); // Réduit la taille de police pour les écrans plus petits
         @if $line-height != null {
-            line-height: $line-height / $size * 1.2; // Ajuste la hauteur de ligne pour les écrans plus petits
+            line-height: calc($line-height / $size * 1.2); // Ajuste la hauteur de ligne pour les écrans plus petits
         }
     }
 
     // Media Queries pour les écrans encore plus petits
     @media (max-width: 480px) {
         max-width: 100%;
-        font-size: $size / 16 * 0.65 * 1rem; // Réduit la taille de police pour les écrans encore plus petits
+        font-size: calc($size / 16 * 0.65 * 1rem); // Réduit la taille de police pour les écrans encore plus petits
         @if $line-height != null {
-            line-height: $line-height / $size * 1.4; // Ajuste la hauteur de ligne pour les écrans encore plus petits
+            line-height: calc($line-height / $size * 1.4); // Ajuste la hauteur de ligne pour les écrans encore plus petits
         }
     }
 }

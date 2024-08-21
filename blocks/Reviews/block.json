@@ -1,0 +1,19 @@
+{
+	"name": "carte_avis",
+	"title": "Avis client",
+	"description": "Une section d'avis client",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"keywords": [
+		"Id Protect",
+		"avis",
+		"carte"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full"
+}

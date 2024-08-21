@@ -1,12 +1,13 @@
 <?php
+
 /**
  * My First Block
  */
 
 // $data is what we're going to expose to our render template
 $data = array(
-	'title' => get_field( 'title' ),
-    'gallery' => get_field( 'gallery' )
+	'title' => get_field('title'),
+	'gallery' => get_field('gallery')
 );
 
 
@@ -14,14 +15,14 @@ $data = array(
 $block_id = 'block-logos' . $block['id'];
 
 // Check if a custom ID is set in the block editor
-if( !empty($block['anchor']) ) {
-    $block_id = $block['anchor'];
+if (!empty($block['anchor'])) {
+	$block_id = $block['anchor'];
 }
 
 // Block classes
-$class_name = 'block-logos sponsor';
-if( !empty($block['class_name']) ) {
-    $class_name .= ' ' . $block['class_name'];
+$class_name = 'block-logos sponsor mb-50';
+if (!empty($block['class_name'])) {
+	$class_name .= ' ' . $block['class_name'];
 }
 
 /**
@@ -36,7 +37,7 @@ get_template_part(
 		'post_id'    => $post_id,
 
 		'data'       => $data,
-        'class_name' => $class_name,
-        'block_id'   => $block_id,
+		'class_name' => $class_name,
+		'block_id'   => $block_id,
 	)
 );
