@@ -42,6 +42,7 @@ $the_query = new WP_Query($argsQuery);
 					$block = get_field('block', $post->ID);
 					$link = get_field('link', $post->ID);
 					$popular = get_field('populaire', $post->ID);
+					$abonnement = get_field('abonnement', $post->ID);
 				?>
 					<div class="price__table">
 						<div class="price__body">
@@ -62,6 +63,9 @@ $the_query = new WP_Query($argsQuery);
 									<span class="price">
 										<?php echo $price ? $price : "0"; ?> €
 									</span>
+									<?php if ($abonnement) : ?>
+										<div class="abonnement"><span>/mois</span> </div>
+									<?php endif; ?>
 								</div>
 
 								<?php if ($infos) : ?>
