@@ -19,7 +19,9 @@
             "choices": {
                 "basic": "Basic",
                 "standard": "Standard",
-                "premium": "Premium"
+                "premium": "Premium",
+                "sérénité": "Sérénité",
+                "famille": "Famille"
             },
             "default_value": false,
             "return_format": "array",
