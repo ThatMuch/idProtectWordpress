@@ -31,7 +31,7 @@
     margin-bottom: 1.5rem !important;
 }
 
-h5.card__content__title {
+.card__content__title {
     margin-bottom: 1rem !important;
     font-size: 1rem !important;
     line-height: 1.5rem;
