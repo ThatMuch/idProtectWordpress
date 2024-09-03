@@ -15,7 +15,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=5, initial-scale=1">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php idProtect_gtm('head') ?>
 	<!--=== OPEN-GRAPH TAGS ===-->

@@ -26,42 +26,42 @@ $template = str_replace(array('page-', '.php'), '', $template);
 		<?php while (have_rows('rs', 'options')) : the_row(); ?>
 			<?php if (get_sub_field('facebook')) : ?>
 				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('facebook'); ?>" target="_blank">
+					<a href="<?php the_sub_field('facebook'); ?>" target="_blank" aria-label="Facebook">
 						<i class="fab fa-facebook" aria-hidden="true"></i>
 					</a>
 				</li>
 			<?php endif; ?>
 			<?php if (get_sub_field('twitter')) : ?>
 				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('twitter'); ?>" target="_blank">
+					<a href="<?php the_sub_field('twitter'); ?>" target="_blank" aria-label="Twitter">
 						<i class="fab fa-twitter" aria-hidden="true"></i>
 					</a>
 				</li>
 			<?php endif; ?>
 			<?php if (get_sub_field('instagram')) : ?>
 				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('instagram'); ?>" target="_blank">
+					<a href="<?php the_sub_field('instagram'); ?>" target="_blank" aria-label="Instagram">
 						<i class="fab fa-instagram" aria-hidden="true"></i>
 					</a>
 				</li>
 			<?php endif; ?>
 			<?php if (get_sub_field('google')) : ?>
 				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('google'); ?>" target="_blank">
+					<a href="<?php the_sub_field('google'); ?>" target="_blank" aria-label="Google">
 						<i class="fab fa-google" aria-hidden="true"></i>
 					</a>
 				</li>
 			<?php endif; ?>
 			<?php if (get_sub_field('linkedin')) : ?>
 				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('linkedin'); ?>" target="_blank">
+					<a href="<?php the_sub_field('linkedin'); ?>" target="_blank" aria-label="Linkedin">
 						<i class="fab fa-linkedin" aria-hidden="true"></i>
 					</a>
 				</li>
 			<?php endif; ?>
 			<?php if (get_sub_field('youtube')) : ?>
 				<li class="footer__rs__item">
-					<a href="<?php the_sub_field('youtube'); ?>" target="_blank">
+					<a href="<?php the_sub_field('youtube'); ?>" target="_blank" aria-label="Youtube">
 						<i class="fab fa-youtube" aria-hidden="true"></i>
 					</a>
 				</li>
