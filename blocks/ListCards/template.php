@@ -19,12 +19,12 @@ $class_name = $args['class_name'];
 				<?php //var_dump($card)
 				?>
 				<div class="col-md-4">
-					<h4 class="card__item__title"><?php echo $card['title']; ?></h4>
+					<h2 class="card__item__title h4"><?php echo $card['title']; ?></h2>
 					<div class="card__item">
 						<?php foreach ($card['items'] as $item) :  ?>
 							<div class="card__content">
 								<img src="<?php echo $item['icon']['url']; ?>" class="card__content__icon" alt="<?php echo $item['icon']['alt']; ?>">
-								<h5 class="card__content__title"><?php echo $item['title']; ?></h5>
+								<h3 class="card__content__title h5"><?php echo $item['title']; ?></h3>
 								<p class="card__content__text"><?php echo $item['text']; ?></p>
 							</div>
 						<?php endforeach; ?>
