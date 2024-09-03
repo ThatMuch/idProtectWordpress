@@ -77,8 +77,10 @@ html {
 }
 
 body {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.99%, #e8effb), color-stop(49.58%, #ffffff));
-    background: linear-gradient(180deg, #e8effb -2.99%, #ffffff 49.58%);
+    background:
+        url(../images/bg_default.svg) no-repeat,
+        linear-gradient(180deg, #e8effb -2.99%, #ffffff 49.58%);
+    background-size: cover;
     color: $color-primary;
     font-size: 1rem;
     font-family: "Raleway", sans-serif;
@@ -225,15 +227,6 @@ hr.custom {
 .section__area .container {
     position: relative;
     z-index: 3;
-}
-
-.promotion__area.service {
-    background:
-        -webkit-gradient(linear, left bottom, left top, from(rgba(23, 28, 96, 0.5)), to(rgba(23, 28, 96, 0.5))),
-        url(../images/bg-4.jpg) no-repeat scroll center (center / cover);
-    background:
-        linear-gradient(0deg, rgba(23, 28, 96, 0.5), rgba(23, 28, 96, 0.5)),
-        url(../images/bg-4.jpg) no-repeat scroll center (center / cover);
 }
 
 @media only screen and (max-width: 1200px) {
