@@ -44,7 +44,7 @@ $testimony_query = new WP_Query($args);
                             <span class="digit-14"><?= esc_html($note); ?>/5</span>
                         </div>
                         <p class="mb-4"><?= $content ?></p>
-                        <p class="mb-2"><?= $username ?></p>
+                        <p class="mb-2 text-uppercase fw-bold"><?= $username ?></p>
                         <small class="subtitle"><?= $sub ?></small>
                     </div>
                 <?php endwhile; ?>
