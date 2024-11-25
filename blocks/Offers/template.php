@@ -30,7 +30,7 @@ $the_query = new WP_Query($argsQuery);
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
 		<?php if ($data["title"]) : ?>
-			<h1 class="section__title"><?php echo $data["title"]; ?> <span class="title text__orange"><?php echo $data["accent"] ?></span></h1>
+			<h2 class="section__title h1"><?php echo $data["title"]; ?> <span class="title text__orange"><?php echo $data["accent"] ?></span></h2>
 		<?php endif; ?>
 		<div class="price__list">
 			<?php if ($the_query->have_posts()) : ?>
@@ -48,7 +48,7 @@ $the_query = new WP_Query($argsQuery);
 						<div class="price__body">
 							<div class="price__head">
 								<?php if ($type) : ?>
-									<h4 class="type"><?php echo $type["label"]; ?></h4>
+									<h3 class="type h4"><?php echo $type["label"]; ?></h3>
 								<?php endif; ?>
 								<?php if ($popular) : ?>
 									<div class="popular"><span>Le plus populaire</span> </div>
@@ -74,12 +74,11 @@ $the_query = new WP_Query($argsQuery);
 							</div>
 							<div class="price__content">
 								<?php if ($block) : ?>
-
 									<!-- loop through block -->
 									<?php foreach ($block as $item) : ?>
 										<div class="mb-4">
 											<?php if ($item['title']) : ?>
-												<h5 class="mb-3"><?php echo $item['title']; ?></h5>
+												<h4 class="mb-3 h5"><?php echo $item['title']; ?></h4>
 											<?php endif; ?>
 											<?php if ($item['option']) : ?>
 												<?php foreach ($item['option'] as $option) : ?>

@@ -6,7 +6,7 @@ $category = get_field("category");
 
 <section class="faq-section mb-50">
     <div class="container">
-        <h1 class="section__title"><?= $title ?> <span class="title text__orange"><?= $accent ?></span></h1>
+        <h2 class="section__title h1"><?= $title ?> <span class="title text__orange"><?= $accent ?></span></h2>
         <?php
         $args = array(
             'post_type' => 'faq',

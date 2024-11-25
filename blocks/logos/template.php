@@ -15,7 +15,7 @@ $size = 'medium'; // (thumbnail, medium, large, full or custom size)
 ?>
 <section class="section__logos">
 	<div class="container">
-		<h2 class="title mb-5"><span> <?php echo $data['title']; ?></span></h2>
+		<h3 class="title mb-5 h2"><span> <?php echo $data['title']; ?></span></h3>
 		<div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> slider">
 			<?php if ($data['gallery']) : ?>
 				<ul class="slide-track">
