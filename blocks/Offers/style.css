@@ -22,10 +22,6 @@
     box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
     border-radius: 16px;
     background: #ffffff;
-
-    @media screen and (max-width: 992px) {
-        margin-bottom: 6rem;
-    }
 }
 
 .price__head {
