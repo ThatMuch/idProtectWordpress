@@ -11,7 +11,7 @@ $titleIsHidden = get_field('hide_title');
 <?php get_header(); ?>
 
 <!-- Page Header Start -->
-<?php if (has_post_thumbnail($post->ID)) : ?>
+<?php if (has_post_thumbnail($post->ID) && !$titleIsHidden) : ?>
 	<div class="page__header__area">
 		<div class="container">
 			<div class="row">
@@ -23,7 +23,7 @@ $titleIsHidden = get_field('hide_title');
 			</div>
 		</div>
 	</div>
-<?php else : ?>
+<?php elseif (!$titleIsHidden) : ?>
 	<div class="page__header__area--noBg <?php echo  $titleIsHidden ? "d-none" : "" ?>">
 		<div class="container">
 			<div class="row">
@@ -34,6 +34,7 @@ $titleIsHidden = get_field('hide_title');
 		</div>
 	</div>
 <?php endif; ?>
+
 <!-- Page Header End -->
 <div class="page__area">
 	<div class="container">
