@@ -81,7 +81,7 @@ $the_queryTem = new WP_Query($argsTem);
 							<?php
 							$category_description = category_description(get_category_by_slug('particulier'));
 							?>
-							<p><?php echo $category_description; ?></p>
+							<h1 class="blog__box__title"><?php echo $category_description; ?></h1>
 						</div>
 
 						<a href="<?php echo site_url();  ?>/category/particulier" class="btn btn__orange blue text-uppercase">Tous les articles</a>
