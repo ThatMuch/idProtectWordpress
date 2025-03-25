@@ -15,7 +15,7 @@ Ce document fournit une vue d'ensemble et un guide pour le thème `idProtectWord
 
 ## Présentation du projet
 
-Le thème `idProtectWordpress` est un thème WordPress personnalisé conçu pour le projet idProtect. Il utilise SCSS pour une mise en forme efficace et maintenable. Le thème suit une approche modulaire, tirant parti des principes du design atomique pour organiser ses composants CSS.
+Le thème `idProtectWordpress` est un thème WordPress personnalisé conçu pour le projet idProtect. Il utilise SCSS pour une mise en forme efficace et maintenable. Le thème suit une approche modulaire, tirant parti des principes du design atomique pour organiser ses composants CSS.Comment
 
 ## Installation
 
