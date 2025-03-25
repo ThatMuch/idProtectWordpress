@@ -37,10 +37,6 @@ Voici les instructions pour installer et compiler le thème `idProtectWordpress`
         ```bash
         npm install -g gulp-cli
         ```
-    -   **Installation de Gulp (localement) :** Naviguez jusqu'à la racine de votre projet de thème (`/app/public/wp-content/themes/idProtectWordpress/`) dans votre terminal. Exécutez la commande suivante pour installer Gulp localement en tant que dépendance de développement :
-        ```bash
-        npm install gulp --save-dev
-        ```
     -   **Exécution de Gulp :** Exécutez la commande `gulp` dans votre terminal (toujours dans le répertoire racine du thème) pour compiler vos fichiers SCSS en CSS et lancer la surveillance des fichiers.
         ```bash
         gulp
