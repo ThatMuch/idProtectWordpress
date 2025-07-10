@@ -14,7 +14,7 @@ $icon = '<svg width="40" height="40" viewBox="0 0 40 40" fill="#152235" xmlns="h
 </svg>
 ';
 register_block_type(
-	get_template_directory() . '/blocks/hero-section/block.json',
+	get_template_directory() . '/blocks/HeroSection/block.json',
 	array(
 		'icon'  => $icon,
 	),

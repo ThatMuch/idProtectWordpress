@@ -29,7 +29,7 @@ $queryAll = new WP_Query($argsAll);
 						<?php echo
 						$term->slug === "professionnel" ?
 							'dark' : ($term->slug === "temoignage" ? 'orange' : ''); ?>">
-							<h2><?php single_cat_title(); ?></h2>
+							<h1 class="h2"><?php single_cat_title(); ?></h1>
 							<?php
 
 							echo $category_description;
