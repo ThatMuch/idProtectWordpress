@@ -244,20 +244,16 @@ if (false && !is_user_logged_in() && is_main_query() && !is_admin() && !is_login
   die();
 }
 
-/**
- * Get ID of the first ACF block on the page
- */
-function sg_get_first_block_id()
+function remplacer_premier_h2_par_h1_si_aucun_h1($content)
 {
-  $post = get_post();
-
-  if (has_blocks($post->post_content)) {
-    $blocks = parse_blocks($post->post_content);
-    $first_block_attrs = $blocks[0]['attrs'];
-
-    if (array_key_exists('id', $first_block_attrs)) {
-      return $first_block_attrs['id'];
-    }
+  // Vérifie si un <h1> existe déjà
+  if (strpos($content, '<h1') === false) {
+    // Remplace seulement le premier <h2> par un <h1>
+    $content = preg_replace('/<h2([^>]*)>(.*?)<\/h2>/i', '<h1$1>$2</h1>', $content, 1);
   }
+
+  return $content;
 }
+add_filter('the_content', 'remplacer_premier_h2_par_h1_si_aucun_h1');
+
 ?>

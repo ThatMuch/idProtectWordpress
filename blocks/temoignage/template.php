@@ -26,7 +26,7 @@ $post_id = get_the_ID();
 ?>
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<h1 class="title section__title"><?= $data['title'] ?></h1>
+		<h2 class="title section__title h1"><?= $data['title'] ?></h2>
 		<div class="list">
 			<?php if ($the_query->have_posts()) : ?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post();

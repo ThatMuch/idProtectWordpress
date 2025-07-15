@@ -16,8 +16,7 @@ $data = array(
 );
 
 // Dynamic block ID
-$block_id = 'heroSection-' . $block['id'];
-
+$block_id = acf_get_block_id($block); // For debugging purposes, remove in production
 // Check if a custom ID is set in the block editor
 if (!empty($block['anchor'])) {
 	$block_id = $block['anchor'];

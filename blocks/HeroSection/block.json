@@ -15,5 +15,8 @@
 		"mode": "preview",
 		"renderTemplate": "./block.php"
 	},
-	"align": "full"
+	"align": "full",
+	"supports": {
+		"anchor": true
+	}
 }
