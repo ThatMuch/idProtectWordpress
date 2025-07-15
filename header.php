@@ -63,7 +63,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	?>
 
 	<nav class="header__area navbar sticky-top navbar-expand-lg">
-		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
+		<div class="container align-items-center <?= $template === "landing" && "justify-content-center" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
 							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect">

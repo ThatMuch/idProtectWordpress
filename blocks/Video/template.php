@@ -9,7 +9,7 @@ $isReverse = get_field('reverse');
 ?>
 <section class="hero__area mb-50">
 	<div class="container">
-		<h1 class="section__title"><?= $title; ?> <span class="title text-orange"><?= $accent ?></span></h1>
+		<h2 class="section__title h1"><?= $title; ?> <span class="title text-orange"><?= $accent ?></span></h2>
 		<div class="row <?php echo $isReverse ? "flex-row-reverse" : "" ?>">
 			<div class="col-lg-5 h-100">
 				<div class="hero__text">

@@ -1,23 +1,36 @@
 <?php
+// The block attributes
+$block = $args['block'];
+
+// The block data
+$data = $args['data'];
+
+// The block ID
+$block_id = $block['id'] ?? uniqid();
+$block_name = $block['name'] ?? '';
+// The block class names
+$class_name = $args['class_name'];
 $title = get_field('title');
 $accent = get_field('title_accent');
 $subtitle = get_field('subtitle');
 $image = get_field('image');
 $description = get_field('description');
 $isReverse = get_field('reverse');
-$isFirst = get_field('is_first');
+
+// For debugging purposes, remove in production
 ?>
 
-<section class="hero__area mb-50">
+<section class="hero__area mb-50" id="<?php echo esc_attr($block_id); ?>" data-block-id="<?php echo esc_attr($block['id']); ?>" data-block-name="<?php echo esc_attr($block['name']); ?>">
 	<div class="container">
 		<div class="row align-items-center <?php echo $isReverse ? "flex-row-reverse" : "" ?>">
 			<div class="col-lg-7 h-100">
 				<div class="hero__text">
-					<?php if ($isFirst) : ?>
-						<h1 class="section__title h1"><?= $title; ?> <span class="title text-orange"><?= $accent ?></span></h1>
-					<?php else : ?>
-						<h2 class="section__title h1"><?= $title; ?> <span class="title text-orange"><?= $accent ?></span></h2>
+					<?php if ($title) : ?>
+						<h2 class="hero-block__title">
+							<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
+						</h2>
 					<?php endif; ?>
+
 				</div>
 				<div class="hero__box">
 					<?php if ($subtitle) : ?>
