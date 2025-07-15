@@ -23,7 +23,7 @@ $titleIsHidden = get_field('hide_title');
 			</div>
 		</div>
 	</div>
-<?php else : ?>
+<?php elseif (!$titleIsHidden) : ?>
 	<div class="page__header__area--noBg <?php echo  $titleIsHidden ? "d-none" : "" ?>">
 		<div class="container">
 			<div class="row">
