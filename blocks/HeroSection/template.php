@@ -16,8 +16,7 @@ $subtitle = get_field('subtitle');
 $image = get_field('image');
 $description = get_field('description');
 $isReverse = get_field('reverse');
-
-// For debugging purposes, remove in production
+$isFirst = get_field('is_first');
 ?>
 
 <section class="hero__area mb-50" id="<?php echo esc_attr($block_id); ?>" data-block-id="<?php echo esc_attr($block['id']); ?>" data-block-name="<?php echo esc_attr($block['name']); ?>">
@@ -26,9 +25,16 @@ $isReverse = get_field('reverse');
 			<div class="col-lg-7 h-100">
 				<div class="hero__text">
 					<?php if ($title) : ?>
-						<h2 class="hero-block__title">
-							<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
-						</h2>
+						<?php if ($isFirst) : ?>
+							<h1 class="hero-block__title h1">
+								<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
+							</h1>
+						<?php else : ?>
+							<h2 class="hero-block__title h1">
+								<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
+							</h2>
+
+						<?php endif; ?>
 					<?php endif; ?>
 
 				</div>
