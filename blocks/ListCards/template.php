@@ -13,7 +13,7 @@ $class_name = $args['class_name'];
 ?>
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<h2 class="section__title h1"><span class="text__orange title"><?= $data["accent"] ?></span> <br> <?= $data['title'] ?></h2>
+		<h2 class="section__title"><span class="text__orange title"><?= $data["accent"] ?></span> <br> <?= $data['title'] ?></h2>
 		<div class="row mb-4">
 			<?php foreach ($data['cards'] as $card) : ?>
 				<div class="col-md-4">
