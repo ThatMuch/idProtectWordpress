@@ -244,16 +244,4 @@ if (false && !is_user_logged_in() && is_main_query() && !is_admin() && !is_login
   die();
 }
 
-function remplacer_premier_h2_par_h1_si_aucun_h1($content)
-{
-  // Vérifie si un <h1> existe déjà
-  if (strpos($content, '<h1') === false) {
-    // Remplace seulement le premier <h2> par un <h1>
-    $content = preg_replace('/<h2([^>]*)>(.*?)<\/h2>/i', '<h1$1>$2</h1>', $content, 1);
-  }
-
-  return $content;
-}
-add_filter('the_content', 'remplacer_premier_h2_par_h1_si_aucun_h1');
-
 ?>

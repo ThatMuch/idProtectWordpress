@@ -48,3 +48,15 @@ function find_block_by_name($block_name, $post_id)
 
 	return null;
 }
+
+function remplacer_premier_h2_par_h1_si_aucun_h1($content)
+{
+	// Vérifie si un <h1> existe déjà
+	if (strpos($content, '<h1') === false) {
+		// Remplace seulement le premier <h2> par un <h1>
+		$content = preg_replace('/<h2([^>]*)>(.*?)<\/h2>/i', '<h1$1>$2</h1>', $content, 1);
+	}
+
+	return $content;
+}
+add_filter('the_content', 'remplacer_premier_h2_par_h1_si_aucun_h1');
