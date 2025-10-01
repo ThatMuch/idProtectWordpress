@@ -67,6 +67,28 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_66aa3bfccea23",
+            "label": "Pourcentage d'économie (annuel)",
+            "name": "savings_percentage",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Pourcentage d'économie à afficher sur l'onglet annuel (sans le symbole %). Laissez vide pour masquer le badge.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 20,
+            "min": 0,
+            "max": 100,
+            "placeholder": "20",
+            "step": 1,
+            "prepend": "",
+            "append": "%"
         }
     ],
     "location": [

@@ -26,18 +26,54 @@ $argsQuery = array(
 );
 
 $the_query = new WP_Query($argsQuery);
+
+// Vérifier s'il y a des offres avec abonnement
+$has_subscription_offers = false;
+if ($the_query->have_posts()) {
+	// Sauvegarder les posts pour éviter de refaire la requête
+	$posts_array = $the_query->posts;
+
+	foreach ($posts_array as $post_item) {
+		$abonnement_check = get_field('abonnement', $post_item->ID);
+		if ($abonnement_check) {
+			$has_subscription_offers = true;
+			break;
+		}
+	}
+
+	// Remettre à zéro les compteurs pour la boucle d'affichage
+	$the_query->rewind_posts();
+}
 ?>
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
 		<?php if ($data["title"]) : ?>
 			<h2 class="section__title h1"><?php echo $data["title"]; ?> <span class="title text__orange"><?php echo $data["accent"] ?></span></h2>
 		<?php endif; ?>
+
+		<?php if ($has_subscription_offers) : ?>
+			<!-- Onglets de prix -->
+			<div class="pricing-tabs">
+				<div class="tabs-navigation">
+					<button class="tab-btn active" data-tab="monthly">Mensuel</button>
+					<button class="tab-btn" data-tab="yearly">
+						Annuel
+						<?php if ($data["savings_percentage"]) : ?>
+							<span class="savings-badge">-<?php echo $data["savings_percentage"]; ?>%</span>
+						<?php endif; ?>
+					</button>
+				</div>
+			</div>
+		<?php endif; ?>
+
 		<div class="price__list">
 			<?php if ($the_query->have_posts()) : ?>
 				<?php $i = 0; ?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post();
 					$type = get_field('type', $post->ID);
-					$price = get_field('price', $post->ID);
+					$price_monthly = get_field('price_monthly', $post->ID);
+					$price_yearly = get_field('price_yearly', $post->ID);
+					$price_fixed = get_field('price_fixed', $post->ID);
 					$infos = get_field('infos', $post->ID);
 					$block = get_field('block', $post->ID);
 					$link = get_field('link', $post->ID);
@@ -60,11 +96,26 @@ $the_query = new WP_Query($argsQuery);
 											<?php the_post_thumbnail('medium'); ?>
 										</div>
 									<?php endif; ?>
-									<span class="price">
-										<?php echo $price ? $price : "0"; ?> €
-									</span>
+
 									<?php if ($abonnement) : ?>
-										<div class="abonnement"><span>/mois</span> </div>
+										<!-- Offre avec abonnement - affichage mensuel/annuel -->
+										<div class="pricing-container">
+											<span class="price price-monthly" style="display: block;">
+												<?php echo $price_monthly ? $price_monthly : "0"; ?> €
+											</span>
+											<span class="price price-yearly" style="display: none;">
+												<?php echo $price_yearly ? $price_yearly : "0"; ?> €
+											</span>
+										</div>
+										<div class="abonnement">
+											<span class="period-monthly">/mois</span>
+											<span class="period-yearly" style="display: none;">/an</span>
+										</div>
+									<?php else : ?>
+										<!-- Offre sans abonnement - prix unique -->
+										<span class="price">
+											<?php echo $price_fixed ? $price_fixed : "0"; ?> €
+										</span>
 									<?php endif; ?>
 								</div>
 

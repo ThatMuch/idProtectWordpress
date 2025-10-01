@@ -1,6 +1,98 @@
 .block__price {
     margin-bottom: 150px;
 }
+
+/* Onglets de tarification */
+.pricing-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.tabs-navigation {
+    display: flex;
+    background: #f8f9fa;
+    border-radius: 50px;
+    padding: 4px;
+    gap: 4px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-family: var(--Font-Family-Headline, Rubik);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--Text-Text-primary, #171c60);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn.active {
+    background: var(--Text-Text-primary, #171c60);
+    color: white;
+    box-shadow: 0px 4px 12px rgba(23, 28, 96, 0.2);
+}
+
+.tab-btn:hover:not(.active) {
+    background: rgba(23, 28, 96, 0.1);
+}
+
+.savings-badge {
+    background: var(--Text-Text-accent, #ff7551);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    margin-left: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Animation des prix */
+.pricing-container {
+    position: relative;
+}
+
+.price {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.price.hide {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.abonnement span {
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .pricing-tabs {
+        margin-bottom: 2rem;
+    }
+
+    .tabs-navigation {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .tab-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        flex: 1;
+    }
+}
 .price__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 350px));

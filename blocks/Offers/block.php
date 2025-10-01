@@ -8,6 +8,7 @@ $data = array(
 	'title' => get_field('title'),
 	'accent' => get_field('accent'),
 	'category' => get_field('category'),
+	'savings_percentage' => get_field('savings_percentage'),
 );
 
 // Dynamic block ID
