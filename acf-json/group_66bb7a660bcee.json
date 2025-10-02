@@ -3,6 +3,26 @@
     "title": "Block - Video",
     "fields": [
         {
+            "key": "field_674454e64bb80",
+            "label": "Première section de la page",
+            "name": "is_first",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "A préciser si la section est la première de la page pour afficher un H1 au lieu d'un H2",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_66bb7a6655ed9",
             "label": "Titre",
             "name": "title",

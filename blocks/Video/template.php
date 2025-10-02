@@ -6,10 +6,21 @@ $video = get_field('video');
 $description = get_field('description');
 $buttons = get_field('cta_group');
 $isReverse = get_field('reverse');
+$isFirst = get_field('is_first');
 ?>
 <section class="hero__area mb-50">
 	<div class="container">
-		<h2 class="section__title h1"><?= $title; ?> <span class="title text-orange"><?= $accent ?></span></h2>
+		<?php if ($title) : ?>
+			<?php if ($isFirst) : ?>
+				<h1 class="hero-block__title h1">
+					<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
+				</h1>
+			<?php else : ?>
+				<h2 class="section__title h1">
+					<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
+				</h2>
+			<?php endif; ?>
+		<?php endif; ?>
 		<div class="row <?php echo $isReverse ? "flex-row-reverse" : "" ?>">
 			<div class="col-lg-5 h-100">
 				<div class="hero__text">
