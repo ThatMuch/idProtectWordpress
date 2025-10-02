@@ -76,6 +76,16 @@
     transition: opacity 0.3s ease;
 }
 
+/* Liens de paiement */
+.payment-link {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.payment-link.hide {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
 /* Responsive design */
 @media screen and (max-width: 768px) {
     .pricing-tabs {

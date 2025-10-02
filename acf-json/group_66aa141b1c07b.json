@@ -143,21 +143,78 @@
         },
         {
             "key": "field_66aa1700792ba",
-            "label": "Lien",
-            "name": "link",
+            "label": "Lien de paiement (prix fixe)",
+            "name": "link_fixed",
             "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66c70ba4104f4",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_66aa1700792bb",
+            "label": "Lien de paiement mensuel",
+            "name": "link_monthly",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66c70ba4104f4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
                 "id": ""
-            }
+            },
+            "return_format": "array"
         },
         {
-            "key": "field_66aa176c792bb",
+            "key": "field_66aa1700792bc",
+            "label": "Lien de paiement annuel",
+            "name": "link_yearly",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66c70ba4104f4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_66aa176c792bd",
             "label": "Populaire",
             "name": "populaire",
             "aria-label": "",

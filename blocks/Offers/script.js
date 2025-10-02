@@ -18,14 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Ajouter la classe active au bouton cliqué
                 this.classList.add('active');
 
-                // Gérer l'affichage des prix avec animation
+                // Gérer l'affichage des prix et liens avec animation
                 const monthlyPrices = document.querySelectorAll('.price-monthly');
                 const yearlyPrices = document.querySelectorAll('.price-yearly');
                 const monthlyPeriods = document.querySelectorAll('.period-monthly');
                 const yearlyPeriods = document.querySelectorAll('.period-yearly');
+                const monthlyLinks = document.querySelectorAll('.payment-link-monthly');
+                const yearlyLinks = document.querySelectorAll('.payment-link-yearly');
 
                 if (targetTab === 'monthly') {
-                    // Masquer les prix annuels
+                    // Masquer les éléments annuels
                     yearlyPrices.forEach(price => {
                         price.style.opacity = '0';
                         setTimeout(() => {
@@ -38,8 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             period.style.display = 'none';
                         }, 300);
                     });
+                    yearlyLinks.forEach(link => {
+                        link.style.opacity = '0';
+                        setTimeout(() => {
+                            link.style.display = 'none';
+                        }, 300);
+                    });
 
-                    // Afficher les prix mensuels
+                    // Afficher les éléments mensuels
                     setTimeout(() => {
                         monthlyPrices.forEach(price => {
                             price.style.display = 'block';
@@ -53,10 +61,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                 period.style.opacity = '1';
                             }, 50);
                         });
+                        monthlyLinks.forEach(link => {
+                            link.style.display = 'flex';
+                            setTimeout(() => {
+                                link.style.opacity = '1';
+                            }, 50);
+                        });
                     }, 300);
 
                 } else if (targetTab === 'yearly') {
-                    // Masquer les prix mensuels
+                    // Masquer les éléments mensuels
                     monthlyPrices.forEach(price => {
                         price.style.opacity = '0';
                         setTimeout(() => {
@@ -69,8 +83,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             period.style.display = 'none';
                         }, 300);
                     });
+                    monthlyLinks.forEach(link => {
+                        link.style.opacity = '0';
+                        setTimeout(() => {
+                            link.style.display = 'none';
+                        }, 300);
+                    });
 
-                    // Afficher les prix annuels
+                    // Afficher les éléments annuels
                     setTimeout(() => {
                         yearlyPrices.forEach(price => {
                             price.style.display = 'block';
@@ -82,6 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             period.style.display = 'inline';
                             setTimeout(() => {
                                 period.style.opacity = '1';
+                            }, 50);
+                        });
+                        yearlyLinks.forEach(link => {
+                            link.style.display = 'flex';
+                            setTimeout(() => {
+                                link.style.opacity = '1';
                             }, 50);
                         });
                     }, 300);

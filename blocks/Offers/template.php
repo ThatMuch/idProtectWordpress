@@ -55,13 +55,13 @@ if ($the_query->have_posts()) {
 			<!-- Onglets de prix -->
 			<div class="pricing-tabs">
 				<div class="tabs-navigation">
-					<button class="tab-btn active" data-tab="monthly">Mensuel</button>
-					<button class="tab-btn" data-tab="yearly">
+					<button class="tab-btn active" data-tab="yearly">
 						Annuel
 						<?php if ($data["savings_percentage"]) : ?>
 							<span class="savings-badge">-<?php echo $data["savings_percentage"]; ?>%</span>
 						<?php endif; ?>
 					</button>
+					<button class="tab-btn " data-tab="monthly">Mensuel</button>
 				</div>
 			</div>
 		<?php endif; ?>
@@ -76,7 +76,9 @@ if ($the_query->have_posts()) {
 					$price_fixed = get_field('price_fixed', $post->ID);
 					$infos = get_field('infos', $post->ID);
 					$block = get_field('block', $post->ID);
-					$link = get_field('link', $post->ID);
+					$link_fixed = get_field('link_fixed', $post->ID);
+					$link_monthly = get_field('link_monthly', $post->ID);
+					$link_yearly = get_field('link_yearly', $post->ID);
 					$popular = get_field('populaire', $post->ID);
 					$abonnement = get_field('abonnement', $post->ID);
 				?>
@@ -147,10 +149,25 @@ if ($the_query->have_posts()) {
 							</div>
 						</div>
 						<div class="price__footer">
-							<?php if ($link) : ?>
-								<a class="btn btn__white" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?>
-									<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
-								</a>
+							<?php if ($abonnement) : ?>
+								<!-- Offre avec abonnement - liens conditionnels -->
+								<?php if ($link_monthly) : ?>
+									<a class="btn btn__white payment-link payment-link-monthly" href="<?php echo esc_url($link_monthly['url']); ?>" target="<?php echo esc_attr($link_monthly['target']); ?>"><?php echo esc_html($link_monthly['title']); ?>
+										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
+									</a>
+								<?php endif; ?>
+								<?php if ($link_yearly) : ?>
+									<a class="btn btn__white payment-link payment-link-yearly" style="display: none;" href="<?php echo esc_url($link_yearly['url']); ?>" target="<?php echo esc_attr($link_yearly['target']); ?>"><?php echo esc_html($link_yearly['title']); ?>
+										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
+									</a>
+								<?php endif; ?>
+							<?php else : ?>
+								<!-- Offre sans abonnement - lien fixe -->
+								<?php if ($link_fixed) : ?>
+									<a class="btn btn__white" href="<?php echo esc_url($link_fixed['url']); ?>" target="<?php echo esc_attr($link_fixed['target']); ?>"><?php echo esc_html($link_fixed['title']); ?>
+										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
+									</a>
+								<?php endif; ?>
 							<?php endif; ?>
 						</div>
 					</div>
