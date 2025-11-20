@@ -65,7 +65,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	$custom_menu_id = get_field('page_custom_menu');
 	$nav_class = '';
 	$current_menu_id = null;
-	
+
 	if ($custom_menu_id) {
 		$menu_object = wp_get_nav_menu_object($custom_menu_id);
 	} else {
@@ -80,7 +80,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 		$nav_class = 'menu-' . $menu_object->slug;
 		$current_menu_id = $menu_object->term_id;
 	}
-	?>	<nav class="header__area navbar sticky-top navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
+	?> <nav class="header__area navbar sticky-top navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
 		<div class="container align-items-center <?= $template === "landing" && "justify-content-center" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
