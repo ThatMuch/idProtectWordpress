@@ -1,0 +1,47 @@
+{
+	"key": "group_page_menu_settings",
+	"title": "Paramètres du menu",
+	"fields": [
+		{
+			"key": "field_page_custom_menu",
+			"label": "Menu personnalisé",
+			"name": "page_custom_menu",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "Sélectionnez un menu spécifique pour cette page. Si aucun menu n'est sélectionné, le menu principal sera utilisé.",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": [],
+			"default_value": false,
+			"return_format": "id",
+			"multiple": 0,
+			"allow_null": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": ""
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "page"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "side",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0
+}

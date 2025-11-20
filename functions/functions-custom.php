@@ -60,3 +60,27 @@ function remplacer_premier_h2_par_h1_si_aucun_h1($content)
 	return $content;
 }
 add_filter('the_content', 'remplacer_premier_h2_par_h1_si_aucun_h1');
+
+/* Populate Menu Select Field
+/––––––––––––––––––––––––*/
+function acf_load_menu_field_choices($field)
+{
+
+	// Reset choices
+	$field['choices'] = array();
+
+	// Get all nav menus
+	$menus = wp_get_nav_menus();
+
+	// Add default option
+	$field['choices'][''] = 'Menu par défaut';
+
+	if (! empty($menus)) {
+		foreach ($menus as $menu) {
+			$field['choices'][$menu->term_id] = $menu->name;
+		}
+	}
+
+	return $field;
+}
+add_filter('acf/load_field/name=page_custom_menu', 'acf_load_menu_field_choices');

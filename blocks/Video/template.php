@@ -12,7 +12,7 @@ $isFirst = get_field('is_first');
 	<div class="container">
 		<?php if ($title) : ?>
 			<?php if ($isFirst) : ?>
-				<h1 class="hero-block__title h1">
+				<h1 class="section__title h1">
 					<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
 				</h1>
 			<?php else : ?>

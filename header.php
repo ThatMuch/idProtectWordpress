@@ -60,9 +60,27 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	<?php
 	$custom_logo_id = get_theme_mod('custom_logo');
 	$image = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+	// Check for custom menu
+	$custom_menu_id = get_field('page_custom_menu');
+	$nav_class = '';
+
+	if ($custom_menu_id) {
+		$menu_object = wp_get_nav_menu_object($custom_menu_id);
+	} else {
+		// Get the menu assigned to 'mainmenu' location
+		$locations = get_nav_menu_locations();
+		if (isset($locations['mainmenu'])) {
+			$menu_object = wp_get_nav_menu_object($locations['mainmenu']);
+		}
+	}
+
+	if (isset($menu_object) && $menu_object) {
+		$nav_class = 'menu-' . $menu_object->slug;
+	}
 	?>
 
-	<nav class="header__area navbar sticky-top navbar-expand-lg">
+	<nav class="header__area navbar sticky-top navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
 		<div class="container align-items-center <?= $template === "landing" && "justify-content-center" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
@@ -71,7 +89,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 			<?php if ($template !== "landing") : ?>
 				<div class="collapse navbar-collapse" id="navbar">
 					<?php
-					wp_nav_menu(array(
+					$menu_args = array(
 						'theme_location' => 'mainmenu', // Defined when registering the menu
 						'menu_id'        => 'menu-main',
 						'container'      => false,
@@ -79,7 +97,14 @@ $template = str_replace(array('page-', '.php'), '', $template);
 						'menu_class'     => 'nav navbar-nav mx-auto',
 						'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
 						'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
-					));
+					);
+
+					// Check for custom menu
+					if ($custom_menu_id) {
+						$menu_args['menu'] = $custom_menu_id;
+					}
+
+					wp_nav_menu($menu_args);
 					?>
 				</div>
 				<div>
