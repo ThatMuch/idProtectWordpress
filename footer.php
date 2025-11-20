@@ -120,7 +120,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 <?php wp_footer() ?>
 
-<script>
+<!-- <script>
 	document.addEventListener("DOMContentLoaded", function() {
 		// Check if modal has already been shown in this session
 		if (!sessionStorage.getItem('modalShown')) {
@@ -132,7 +132,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 			}, 10000); // 10000 milliseconds = 10 seconds
 		}
 	});
-</script>
+</script> -->
 </body>
 
 </html>
