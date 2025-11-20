@@ -64,7 +64,8 @@ $template = str_replace(array('page-', '.php'), '', $template);
 	// Check for custom menu
 	$custom_menu_id = get_field('page_custom_menu');
 	$nav_class = '';
-
+	$current_menu_id = null;
+	
 	if ($custom_menu_id) {
 		$menu_object = wp_get_nav_menu_object($custom_menu_id);
 	} else {
@@ -77,10 +78,9 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 	if (isset($menu_object) && $menu_object) {
 		$nav_class = 'menu-' . $menu_object->slug;
+		$current_menu_id = $menu_object->term_id;
 	}
-	?>
-
-	<nav class="header__area navbar sticky-top navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
+	?>	<nav class="header__area navbar sticky-top navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
 		<div class="container align-items-center <?= $template === "landing" && "justify-content-center" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
@@ -108,9 +108,23 @@ $template = str_replace(array('page-', '.php'), '', $template);
 					?>
 				</div>
 				<div>
-					<a class="btn btn__primary" href="<?php echo site_url(); ?>/offre-usurpation/">
-						Découvrez nos offres
-					</a>
+					<?php
+					$btn_text = '';
+					$btn_link = '';
+					$btn_style = 'btn__primary';
+
+					if ($current_menu_id) {
+						$btn_text = get_theme_mod('header_btn_text_' . $current_menu_id, '');
+						$btn_link = get_theme_mod('header_btn_link_' . $current_menu_id, '');
+						$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn__primary');
+					}
+
+					if ($btn_text && $btn_link) :
+					?>
+						<a class="btn <?php echo esc_attr($btn_style); ?> custom-btn-header" href="<?php echo esc_url($btn_link); ?>">
+							<?php echo esc_html($btn_text); ?>
+						</a>
+					<?php endif; ?>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>

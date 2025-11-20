@@ -84,3 +84,70 @@ function acf_load_menu_field_choices($field)
 	return $field;
 }
 add_filter('acf/load_field/name=page_custom_menu', 'acf_load_menu_field_choices');
+
+/*==================================================================================
+  CUSTOMIZER SETTINGS
+==================================================================================*/
+function idprotect_customize_register($wp_customize)
+{
+	// Panel Header Button
+	$wp_customize->add_panel('idprotect_header_panel', array(
+		'title'       => __('Bouton Header', 'idprotect'),
+		'priority'    => 30,
+		'description' => __('Sélectionnez un menu pour configurer son bouton.', 'idprotect'),
+	));
+
+	$menus = wp_get_nav_menus();
+
+	if (!empty($menus)) {
+		foreach ($menus as $menu) {
+			$menu_id = $menu->term_id;
+			$menu_name = $menu->name;
+
+			// Section per Menu
+			$wp_customize->add_section('idprotect_header_section_' . $menu_id, array(
+				'title'  => $menu_name,
+				'panel'  => 'idprotect_header_panel',
+			));
+
+			// Button Text
+			$wp_customize->add_setting('header_btn_text_' . $menu_id, array(
+				'default'   => '',
+				'transport' => 'refresh',
+			));
+			$wp_customize->add_control('header_btn_text_' . $menu_id, array(
+				'label'    => __('Texte du bouton', 'idprotect'),
+				'section'  => 'idprotect_header_section_' . $menu_id,
+				'type'     => 'text',
+			));
+
+			// Button Link
+			$wp_customize->add_setting('header_btn_link_' . $menu_id, array(
+				'default'   => '',
+				'transport' => 'refresh',
+			));
+			$wp_customize->add_control('header_btn_link_' . $menu_id, array(
+				'label'    => __('Lien du bouton', 'idprotect'),
+				'section'  => 'idprotect_header_section_' . $menu_id,
+				'type'     => 'url',
+			));
+
+			// Button Style
+			$wp_customize->add_setting('header_btn_style_' . $menu_id, array(
+				'default'   => 'btn__primary',
+				'transport' => 'refresh',
+			));
+			$wp_customize->add_control('header_btn_style_' . $menu_id, array(
+				'label'    => __('Style du bouton', 'idprotect'),
+				'section'  => 'idprotect_header_section_' . $menu_id,
+				'type'     => 'select',
+				'choices'  => array(
+					'btn__primary'   => 'Primaire (Orange)',
+					'btn__secondary' => 'Secondaire (Bleu)',
+					'btn__white'     => 'Blanc',
+				),
+			));
+		}
+	}
+}
+add_action('customize_register', 'idprotect_customize_register');
