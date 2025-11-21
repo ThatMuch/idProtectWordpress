@@ -47,7 +47,7 @@
             "label": "Catégorie",
             "name": "category",
             "aria-label": "",
-            "type": "select",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -56,18 +56,14 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "protection": "Protection",
-                "usurpation": "Usurpation",
-                "offres": "Offres"
-            },
-            "default_value": "protection",
-            "return_format": "value",
-            "multiple": 0,
+            "taxonomy": "faq_category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "field_type": "select",
             "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "multiple": 0
         }
     ],
     "location": [
@@ -88,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721987410
+    "modified": 1763721903
 }

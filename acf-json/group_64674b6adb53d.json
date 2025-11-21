@@ -1,6 +1,6 @@
 {
     "key": "group_64674b6adb53d",
-    "title": "Block - Offres",
+    "title": "Block - Card Tarifs",
     "fields": [
         {
             "key": "field_66aa3be0cea20",
@@ -47,7 +47,7 @@
             "label": "Catégorie",
             "name": "category",
             "aria-label": "",
-            "type": "select",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -56,39 +56,14 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "usurpation": "Usurpation",
-                "protection": "Prévention"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
+            "taxonomy": "offer_category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "field_type": "select",
             "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_66aa3bfccea23",
-            "label": "Pourcentage d'économie (annuel)",
-            "name": "savings_percentage",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "Pourcentage d'économie à afficher sur l'onglet annuel (sans le symbole %). Laissez vide pour masquer le badge.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 20,
-            "min": 0,
-            "max": 100,
-            "placeholder": "20",
-            "step": 1,
-            "prepend": "",
-            "append": "%"
+            "multiple": 0
         }
     ],
     "location": [
@@ -109,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1722440390
+    "modified": 1763720721
 }

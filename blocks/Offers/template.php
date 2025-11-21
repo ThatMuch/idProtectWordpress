@@ -18,7 +18,7 @@ $argsQuery = array(
 	'order' => 'ASC',
 	'tax_query' => array(
 		array(
-			'taxonomy' => 'category', // Taxonomy, in my case I need default post categories
+			'taxonomy' => 'offer_category', // Taxonomy, in my case I need default post categories
 			'field'    => 'slug',
 			'terms'    => $data["category"], // Your category slug (I have a category 'interior')
 		),

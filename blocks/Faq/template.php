@@ -13,7 +13,7 @@ $category = get_field("category");
             'posts_per_page' => 4,
             'tax_query' => array(
                 array(
-                    'taxonomy' => 'category', // Taxonomy, in my case I need default post categories
+                    'taxonomy' => 'faq_category', // Taxonomy, in my case I need default post categories
                     'field'    => 'slug',
                     'terms'    => $category, // Your category slug (I have a category 'interior')
                 ),
