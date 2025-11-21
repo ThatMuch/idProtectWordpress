@@ -102,16 +102,16 @@ if ($the_query->have_posts()) {
 									<?php if ($abonnement) : ?>
 										<!-- Offre avec abonnement - affichage mensuel/annuel -->
 										<div class="pricing-container">
-											<span class="price price-monthly" style="display: block;">
+											<span class="price price-monthly" style="display: none;">
 												<?php echo $price_monthly ? $price_monthly : "0"; ?> €
 											</span>
-											<span class="price price-yearly" style="display: none;">
+											<span class="price price-yearly" style="display: block;">
 												<?php echo $price_yearly ? $price_yearly : "0"; ?> €
 											</span>
 										</div>
 										<div class="abonnement">
-											<span class="period-monthly">/mois</span>
-											<span class="period-yearly" style="display: none;">/an</span>
+											<span class="period-monthly" style="display: none;">/mois</span>
+											<span class="period-yearly">/an</span>
 										</div>
 									<?php else : ?>
 										<!-- Offre sans abonnement - prix unique -->
@@ -152,12 +152,12 @@ if ($the_query->have_posts()) {
 							<?php if ($abonnement) : ?>
 								<!-- Offre avec abonnement - liens conditionnels -->
 								<?php if ($link_monthly) : ?>
-									<a class="btn btn__white payment-link payment-link-monthly" href="<?php echo esc_url($link_monthly['url']); ?>" target="<?php echo esc_attr($link_monthly['target']); ?>"><?php echo esc_html($link_monthly['title']); ?>
+									<a class="btn btn__white payment-link payment-link-monthly" style="display: none;" href="<?php echo esc_url($link_monthly['url']); ?>" target="<?php echo esc_attr($link_monthly['target']); ?>"><?php echo esc_html($link_monthly['title']); ?>
 										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
 									</a>
 								<?php endif; ?>
 								<?php if ($link_yearly) : ?>
-									<a class="btn btn__white payment-link payment-link-yearly" style="display: none;" href="<?php echo esc_url($link_yearly['url']); ?>" target="<?php echo esc_attr($link_yearly['target']); ?>"><?php echo esc_html($link_yearly['title']); ?>
+									<a class="btn btn__white payment-link payment-link-yearly" href="<?php echo esc_url($link_yearly['url']); ?>" target="<?php echo esc_attr($link_yearly['target']); ?>"><?php echo esc_html($link_yearly['title']); ?>
 										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
 									</a>
 								<?php endif; ?>
