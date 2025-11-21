@@ -66,9 +66,7 @@
         "editor",
         "thumbnail"
     ],
-    "taxonomies": [
-        "category"
-    ],
+    "taxonomies": [],
     "has_archive": false,
     "has_archive_slug": "",
     "rewrite": {
