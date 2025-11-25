@@ -118,4 +118,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialiser les onglets de tarification
     initPricingTabs();
+
+    // Fonction pour gérer l'affichage/masquage des détails
+    function initToggleDetails() {
+        const toggleButtons = document.querySelectorAll('.toggle-details-btn');
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('data-target');
+                const detailsElement = document.querySelector(`.offer-details[data-details-for="${targetId}"]`);
+                const buttonText = this.querySelector('.btn-text');
+
+                if (detailsElement) {
+                    // Basculer la classe pour afficher/masquer
+                    detailsElement.classList.toggle('details-hidden');
+                    this.classList.toggle('active');
+
+                    // Changer le texte du bouton
+                    if (detailsElement.classList.contains('details-hidden')) {
+                        buttonText.textContent = 'Voir le détail';
+                    } else {
+                        buttonText.textContent = 'Masquer le détail';
+                    }
+                }
+            });
+        });
+    }
+
+    // Initialiser le toggle des détails
+    initToggleDetails();
 });

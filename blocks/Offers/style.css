@@ -1,7 +1,15 @@
 .block__price {
     margin-bottom: 150px;
 }
-
+.price__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .btn {
+        width: fit-content;
+    margin: 0 auto;
+    }
+}
 /* Onglets de tarification */
 .pricing-tabs {
     display: flex;
@@ -235,4 +243,35 @@ bottom: -3.5rem;
         -webkit-transition: 0.2s ease;
         transition: 0.2s ease;
     }
+}
+
+/* Styles pour l'affichage/masquage des détails */
+.offer-details {
+    max-height: 1000px;
+    overflow: hidden;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.3s ease, margin 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.offer-details.details-hidden {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
+}
+
+.toggle-details-btn {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.toggle-details-btn .btn-text::after {
+    content: ' ▼';
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.toggle-details-btn.active .btn-text::after {
+    transform: rotate(180deg);
 }

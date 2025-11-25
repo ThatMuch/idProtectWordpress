@@ -82,7 +82,7 @@ if ($the_query->have_posts()) {
 					$popular = get_field('populaire', $post->ID);
 					$abonnement = get_field('abonnement', $post->ID);
 				?>
-					<div class="price__table">
+					<div class="price__table" data-offer-id="offer-<?php echo $post->ID; ?>">
 						<div class="price__body">
 							<div class="price__head">
 								<?php if ($type) : ?>
@@ -127,24 +127,31 @@ if ($the_query->have_posts()) {
 							</div>
 							<div class="price__content">
 								<?php if ($block) : ?>
-									<!-- loop through block -->
-									<?php foreach ($block as $item) : ?>
-										<div class="mb-4">
-											<?php if ($item['title']) : ?>
-												<h4 class="mb-3 h5"><?php echo $item['title']; ?></h4>
-											<?php endif; ?>
-											<?php if ($item['option']) : ?>
-												<?php foreach ($item['option'] as $option) : ?>
-													<div class="d-flex gap-1 align-items-center mb-2">
-														<?php if ($option['text']) : ?>
-															<img src="<?php echo get_template_directory_uri() ?>/assets/images/icon_<?php echo $option['active'] ? "check" : "cancel" ?>.svg" alt="Check">
-															<span class="text"><?php echo $option['text']; ?></span>
-														<?php endif; ?>
-													</div>
-												<?php endforeach; ?>
-											<?php endif; ?>
-										</div>
-									<?php endforeach; ?>
+									<div class="offer-details <?php echo $data["hide_details"] ? 'details-hidden' : ''; ?>" data-details-for="offer-<?php echo $post->ID; ?>">
+										<!-- loop through block -->
+										<?php foreach ($block as $item) : ?>
+											<div class="mb-4">
+												<?php if ($item['title']) : ?>
+													<h4 class="mb-3 h5"><?php echo $item['title']; ?></h4>
+												<?php endif; ?>
+												<?php if ($item['option']) : ?>
+													<?php foreach ($item['option'] as $option) : ?>
+														<div class="d-flex gap-1 align-items-center mb-2">
+															<?php if ($option['text']) : ?>
+																<img src="<?php echo get_template_directory_uri() ?>/assets/images/icon_<?php echo $option['active'] ? "check" : "cancel" ?>.svg" alt="Check">
+																<span class="text"><?php echo $option['text']; ?></span>
+															<?php endif; ?>
+														</div>
+													<?php endforeach; ?>
+												<?php endif; ?>
+											</div>
+										<?php endforeach; ?>
+									</div>
+								<?php endif; ?>
+								<?php if ($data["hide_details"]) : ?>
+									<button class="btn btn__white text-center toggle-details-btn" data-target="offer-<?php echo $post->ID; ?>">
+										<span class="btn-text">Voir le détail</span>
+									</button>
 								<?php endif; ?>
 							</div>
 						</div>
