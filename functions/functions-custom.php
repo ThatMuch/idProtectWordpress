@@ -51,6 +51,11 @@ function find_block_by_name($block_name, $post_id)
 
 function remplacer_premier_h2_par_h1_si_aucun_h1($content)
 {
+	// Ne s'applique que sur les pages, pas sur les articles
+	if (!is_page()) {
+		return $content;
+	}
+
 	// Vérifie si un <h1> existe déjà
 	if (strpos($content, '<h1') === false) {
 		// Remplace seulement le premier <h2> par un <h1>
