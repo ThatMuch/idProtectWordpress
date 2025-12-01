@@ -17,11 +17,12 @@
                 "id": ""
             },
             "choices": {
+                "free": "Gratuit",
                 "basic": "Basic",
                 "standard": "Standard",
                 "premium": "Premium",
-                "sérénité": "Sérénité",
-                "famille": "Famille"
+                "famille": "Famille",
+                "sérénité": "Sérénité"
             },
             "default_value": false,
             "return_format": "array",
@@ -32,214 +33,29 @@
             "placeholder": ""
         },
         {
-            "key": "field_66c70ba4104f4",
-            "label": "Abonnement",
-            "name": "abonnement",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "100",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_66aa163c792b2",
-            "label": "Prix fixe",
-            "name": "price_fixed",
+            "label": "Prix",
+            "name": "price",
             "aria-label": "",
             "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "100",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_66aa163c792b3",
-            "label": "Prix mensuel",
-            "name": "price_monthly",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_66aa163c792b4",
-            "label": "Prix annuel",
-            "name": "price_yearly",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_66aa1700792ba",
-            "label": "Lien de paiement (prix fixe)",
-            "name": "link_fixed",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "100",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_66aa1700792bb",
-            "label": "Lien de paiement mensuel",
-            "name": "link_monthly",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_66aa1700792bc",
-            "label": "Lien de paiement annuel",
-            "name": "link_yearly",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_66aa176c792bd",
-            "label": "Populaire",
-            "name": "populaire",
-            "aria-label": "",
-            "type": "checkbox",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "popular": "Populaire"
-            },
-            "default_value": [],
-            "return_format": "value",
-            "allow_custom": 0,
-            "layout": "vertical",
-            "toggle": 0,
-            "save_custom": 0,
-            "custom_choice_button_text": "Ajouter un nouveau choix"
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_66aa164c792b5",
+            "key": "field_66aa164c792b3",
             "label": "Infos",
             "name": "infos",
             "aria-label": "",
@@ -259,7 +75,27 @@
             "delay": 0
         },
         {
-            "key": "field_66aa1661792b6",
+            "key": "field_692d684d112a3",
+            "label": "Content",
+            "name": "content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_66aa1661792b4",
             "label": "Block",
             "name": "block",
             "aria-label": "",
@@ -299,7 +135,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_66aa1661792b6"
+                    "parent_repeater": "field_66aa1661792b4"
                 },
                 {
                     "key": "field_66aa167c792b6",
@@ -371,9 +207,70 @@
                             "parent_repeater": "field_66aa167c792b6"
                         }
                     ],
-                    "parent_repeater": "field_66aa1661792b6"
+                    "parent_repeater": "field_66aa1661792b4"
                 }
             ]
+        },
+        {
+            "key": "field_66aa1700792b9",
+            "label": "Lien",
+            "name": "link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_66aa176c792ba",
+            "label": "Populaire",
+            "name": "populaire",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "popular": "Populaire"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Ajouter un nouveau choix"
+        },
+        {
+            "key": "field_66c709b9327e9",
+            "label": "Abonnement",
+            "name": "abonnement",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -400,5 +297,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724320692
+    "modified": 1764583521
 }

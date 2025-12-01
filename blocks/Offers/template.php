@@ -75,12 +75,12 @@ if ($the_query->have_posts()) {
 					$price_yearly = get_field('price_yearly', $post->ID);
 					$price_fixed = get_field('price_fixed', $post->ID);
 					$infos = get_field('infos', $post->ID);
-					$block = get_field('block', $post->ID);
 					$link_fixed = get_field('link_fixed', $post->ID);
 					$link_monthly = get_field('link_monthly', $post->ID);
 					$link_yearly = get_field('link_yearly', $post->ID);
 					$popular = get_field('populaire', $post->ID);
 					$abonnement = get_field('abonnement', $post->ID);
+					$content = get_field('content', $post->ID);
 				?>
 					<div class="price__table" data-offer-id="offer-<?php echo $post->ID; ?>">
 						<div class="price__body">
@@ -128,24 +128,7 @@ if ($the_query->have_posts()) {
 							<div class="price__content">
 								<?php if ($block) : ?>
 									<div class="offer-details <?php echo $data["hide_details"] ? 'details-hidden' : ''; ?>" data-details-for="offer-<?php echo $post->ID; ?>">
-										<!-- loop through block -->
-										<?php foreach ($block as $item) : ?>
-											<div class="mb-4">
-												<?php if ($item['title']) : ?>
-													<h4 class="mb-3 h5"><?php echo $item['title']; ?></h4>
-												<?php endif; ?>
-												<?php if ($item['option']) : ?>
-													<?php foreach ($item['option'] as $option) : ?>
-														<div class="d-flex gap-1 align-items-center mb-2">
-															<?php if ($option['text']) : ?>
-																<img src="<?php echo get_template_directory_uri() ?>/assets/images/icon_<?php echo $option['active'] ? "check" : "cancel" ?>.svg" alt="Check">
-																<span class="text"><?php echo $option['text']; ?></span>
-															<?php endif; ?>
-														</div>
-													<?php endforeach; ?>
-												<?php endif; ?>
-											</div>
-										<?php endforeach; ?>
+										<?php echo $content; ?>
 									</div>
 								<?php endif; ?>
 								<?php if ($data["hide_details"]) : ?>
