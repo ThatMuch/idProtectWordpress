@@ -126,21 +126,33 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
+                e.stopPropagation();
 
-                const targetId = this.getAttribute('data-target');
+                // Utiliser closest pour s'assurer qu'on a le bon bouton même si on clique sur un enfant
+                const clickedButton = e.target.closest('.toggle-details-btn');
+                if (!clickedButton) return;
+
+                const targetId = clickedButton.getAttribute('data-target');
                 const detailsElement = document.querySelector(`.offer-details[data-details-for="${targetId}"]`);
-                const buttonText = this.querySelector('.btn-text');
+
+                // Chercher le texte du bouton - peut être directement dans .btn-text ou dans .btn__content .btn-text
+                let buttonText = clickedButton.querySelector('.btn-text');
+                if (!buttonText) {
+                    buttonText = clickedButton.querySelector('.btn__content .btn-text');
+                }
 
                 if (detailsElement) {
                     // Basculer la classe pour afficher/masquer
                     detailsElement.classList.toggle('details-hidden');
-                    this.classList.toggle('active');
+                    clickedButton.classList.toggle('active');
 
                     // Changer le texte du bouton
-                    if (detailsElement.classList.contains('details-hidden')) {
-                        buttonText.textContent = 'Voir le détail';
-                    } else {
-                        buttonText.textContent = 'Masquer le détail';
+                    if (buttonText) {
+                        if (detailsElement.classList.contains('details-hidden')) {
+                            buttonText.textContent = 'Voir le détail';
+                        } else {
+                            buttonText.textContent = 'Masquer le détail';
+                        }
                     }
                 }
             });
