@@ -71,27 +71,32 @@
     position: relative;
 }
 
-.price {
-    transition: opacity 0.3s ease, transform 0.3s ease;
+.price,
+.period-monthly,
+.period-yearly,
+.payment-link {
+    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    will-change: opacity;
 }
 
-.price.hide {
-    opacity: 0;
-    transform: translateY(10px);
+.price.fade-out,
+.period-monthly.fade-out,
+.period-yearly.fade-out,
+.payment-link.fade-out {
+    opacity: 0 !important;
+}
+
+.price.fade-in,
+.period-monthly.fade-in,
+.period-yearly.fade-in,
+.payment-link.fade-in {
+    opacity: 1 !important;
 }
 
 .abonnement span {
-    transition: opacity 0.3s ease;
-}
-
-/* Liens de paiement */
-.payment-link {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.payment-link.hide {
-    opacity: 0;
-    transform: translateY(10px);
+    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
 }
 
 /* Responsive design */

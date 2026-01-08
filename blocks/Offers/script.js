@@ -1,164 +1,151 @@
 /**
- * Script pour le bloc Offers - Gestion des onglets mensuel/annuel
+ * Offers Block - Pricing tabs and details toggle
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
+    'use strict';
 
-    // Fonction pour gérer le changement d'onglets
+    const ANIMATION_DURATION = 300;
+    const PRICING_TYPE_MONTHLY = 'monthly';
+    const PRICING_TYPE_YEARLY = 'yearly';
+
+    const SELECTORS = {
+        tabButton: '.tab-btn',
+        priceMonthly: '.price-monthly',
+        priceYearly: '.price-yearly',
+        periodMonthly: '.period-monthly',
+        periodYearly: '.period-yearly',
+        linkMonthly: '.payment-link-monthly',
+        linkYearly: '.payment-link-yearly',
+        toggleDetailsBtn: '.toggle-details-btn',
+        offerDetails: '.offer-details'
+    };
+
+    const CLASSES = {
+        active: 'active',
+        hidden: 'details-hidden',
+        fadeOut: 'fade-out',
+        fadeIn: 'fade-in'
+    };
+
+    function toggleElementsVisibility(hideElements, showElements) {
+        // Step 1: Ensure all elements are visible so transition can occur
+        hideElements.forEach(el => {
+            if (el.style.display === 'none') {
+                const displayType = el.classList.contains('payment-link') ? 'flex' :
+                                   el.classList.contains('period') ? 'inline' : 'block';
+                el.style.display = displayType;
+            }
+            // Ensure element starts with full opacity
+            el.classList.remove(CLASSES.fadeOut);
+        });
+
+        // Step 2: Force browser reflow to apply display change
+        if (hideElements.length > 0) {
+            hideElements[0].offsetHeight; // Force reflow
+        }
+
+        // Step 3: Trigger fade-out animation
+        requestAnimationFrame(() => {
+            hideElements.forEach(el => el.classList.add(CLASSES.fadeOut));
+        });
+
+        // Step 4: After animation completes, hide and show elements
+        setTimeout(() => {
+            // Hide the faded-out elements
+            hideElements.forEach(el => {
+                el.style.display = 'none';
+                el.classList.remove(CLASSES.fadeOut);
+            });
+
+            // Prepare elements to show
+            showElements.forEach(el => {
+                const displayType = el.classList.contains('payment-link') ? 'flex' :
+                                   el.classList.contains('period') ? 'inline' : 'block';
+                el.style.display = displayType;
+                el.classList.remove(CLASSES.fadeIn);
+            });
+
+            // Force reflow before fade-in
+            if (showElements.length > 0) {
+                showElements[0].offsetHeight;
+            }
+
+            // Trigger fade-in animation
+            requestAnimationFrame(() => {
+                showElements.forEach(el => el.classList.add(CLASSES.fadeIn));
+            });
+        }, ANIMATION_DURATION);
+    }
+
+    function switchPricingTab(tab) {
+        const isMonthly = tab === PRICING_TYPE_MONTHLY;
+
+        const elementsToHide = [
+            ...document.querySelectorAll(isMonthly ? SELECTORS.priceYearly : SELECTORS.priceMonthly),
+            ...document.querySelectorAll(isMonthly ? SELECTORS.periodYearly : SELECTORS.periodMonthly),
+            ...document.querySelectorAll(isMonthly ? SELECTORS.linkYearly : SELECTORS.linkMonthly)
+        ];
+
+        const elementsToShow = [
+            ...document.querySelectorAll(isMonthly ? SELECTORS.priceMonthly : SELECTORS.priceYearly),
+            ...document.querySelectorAll(isMonthly ? SELECTORS.periodMonthly : SELECTORS.periodYearly),
+            ...document.querySelectorAll(isMonthly ? SELECTORS.linkMonthly : SELECTORS.linkYearly)
+        ];
+
+        toggleElementsVisibility(elementsToHide, elementsToShow);
+    }
+
     function initPricingTabs() {
-        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabButtons = document.querySelectorAll(SELECTORS.tabButton);
+        if (!tabButtons.length) return;
 
         tabButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const targetTab = this.getAttribute('data-tab');
+                const targetTab = this.dataset.tab;
+                if (!targetTab) return;
 
-                // Retirer la classe active de tous les boutons
-                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabButtons.forEach(btn => btn.classList.remove(CLASSES.active));
+                this.classList.add(CLASSES.active);
 
-                // Ajouter la classe active au bouton cliqué
-                this.classList.add('active');
-
-                // Gérer l'affichage des prix et liens avec animation
-                const monthlyPrices = document.querySelectorAll('.price-monthly');
-                const yearlyPrices = document.querySelectorAll('.price-yearly');
-                const monthlyPeriods = document.querySelectorAll('.period-monthly');
-                const yearlyPeriods = document.querySelectorAll('.period-yearly');
-                const monthlyLinks = document.querySelectorAll('.payment-link-monthly');
-                const yearlyLinks = document.querySelectorAll('.payment-link-yearly');
-
-                if (targetTab === 'monthly') {
-                    // Masquer les éléments annuels
-                    yearlyPrices.forEach(price => {
-                        price.style.opacity = '0';
-                        setTimeout(() => {
-                            price.style.display = 'none';
-                        }, 300);
-                    });
-                    yearlyPeriods.forEach(period => {
-                        period.style.opacity = '0';
-                        setTimeout(() => {
-                            period.style.display = 'none';
-                        }, 300);
-                    });
-                    yearlyLinks.forEach(link => {
-                        link.style.opacity = '0';
-                        setTimeout(() => {
-                            link.style.display = 'none';
-                        }, 300);
-                    });
-
-                    // Afficher les éléments mensuels
-                    setTimeout(() => {
-                        monthlyPrices.forEach(price => {
-                            price.style.display = 'block';
-                            setTimeout(() => {
-                                price.style.opacity = '1';
-                            }, 50);
-                        });
-                        monthlyPeriods.forEach(period => {
-                            period.style.display = 'inline';
-                            setTimeout(() => {
-                                period.style.opacity = '1';
-                            }, 50);
-                        });
-                        monthlyLinks.forEach(link => {
-                            link.style.display = 'flex';
-                            setTimeout(() => {
-                                link.style.opacity = '1';
-                            }, 50);
-                        });
-                    }, 300);
-
-                } else if (targetTab === 'yearly') {
-                    // Masquer les éléments mensuels
-                    monthlyPrices.forEach(price => {
-                        price.style.opacity = '0';
-                        setTimeout(() => {
-                            price.style.display = 'none';
-                        }, 300);
-                    });
-                    monthlyPeriods.forEach(period => {
-                        period.style.opacity = '0';
-                        setTimeout(() => {
-                            period.style.display = 'none';
-                        }, 300);
-                    });
-                    monthlyLinks.forEach(link => {
-                        link.style.opacity = '0';
-                        setTimeout(() => {
-                            link.style.display = 'none';
-                        }, 300);
-                    });
-
-                    // Afficher les éléments annuels
-                    setTimeout(() => {
-                        yearlyPrices.forEach(price => {
-                            price.style.display = 'block';
-                            setTimeout(() => {
-                                price.style.opacity = '1';
-                            }, 50);
-                        });
-                        yearlyPeriods.forEach(period => {
-                            period.style.display = 'inline';
-                            setTimeout(() => {
-                                period.style.opacity = '1';
-                            }, 50);
-                        });
-                        yearlyLinks.forEach(link => {
-                            link.style.display = 'flex';
-                            setTimeout(() => {
-                                link.style.opacity = '1';
-                            }, 50);
-                        });
-                    }, 300);
-                }
+                switchPricingTab(targetTab);
             });
         });
     }
 
-    // Initialiser les onglets de tarification
-    initPricingTabs();
-
-    // Fonction pour gérer l'affichage/masquage des détails
     function initToggleDetails() {
-        const toggleButtons = document.querySelectorAll('.toggle-details-btn');
+        const toggleButtons = document.querySelectorAll(SELECTORS.toggleDetailsBtn);
+        if (!toggleButtons.length) return;
 
         toggleButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
 
-                // Utiliser closest pour s'assurer qu'on a le bon bouton même si on clique sur un enfant
-                const clickedButton = e.target.closest('.toggle-details-btn');
+                const clickedButton = e.target.closest(SELECTORS.toggleDetailsBtn);
                 if (!clickedButton) return;
 
-                const targetId = clickedButton.getAttribute('data-target');
-                const detailsElement = document.querySelector(`.offer-details[data-details-for="${targetId}"]`);
+                const targetId = clickedButton.dataset.target;
+                if (!targetId) return;
 
-                // Chercher le texte du bouton - peut être directement dans .btn-text ou dans .btn__content .btn-text
-                let buttonText = clickedButton.querySelector('.btn-text');
-                if (!buttonText) {
-                    buttonText = clickedButton.querySelector('.btn__content .btn-text');
-                }
+                const detailsElement = document.querySelector(
+                    `${SELECTORS.offerDetails}[data-details-for="${targetId}"]`
+                );
+                const buttonText = clickedButton.querySelector('.btn-text') ||
+                                  clickedButton.querySelector('.btn__content .btn-text');
 
-                if (detailsElement) {
-                    // Basculer la classe pour afficher/masquer
-                    detailsElement.classList.toggle('details-hidden');
-                    clickedButton.classList.toggle('active');
+                if (!detailsElement || !buttonText) return;
 
-                    // Changer le texte du bouton
-                    if (buttonText) {
-                        if (detailsElement.classList.contains('details-hidden')) {
-                            buttonText.textContent = 'Voir le détail';
-                        } else {
-                            buttonText.textContent = 'Masquer le détail';
-                        }
-                    }
-                }
+                const isHidden = detailsElement.classList.toggle(CLASSES.hidden);
+                clickedButton.classList.toggle(CLASSES.active);
+                buttonText.textContent = isHidden ? 'Voir le détail' : 'Masquer le détail';
             });
         });
+
     }
 
-    // Initialiser le toggle des détails
-    initToggleDetails();
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        initPricingTabs();
+        initToggleDetails();
+    });
+})();
