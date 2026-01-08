@@ -81,6 +81,9 @@ if ($the_query->have_posts()) {
 					$popular = get_field('populaire', $post->ID);
 					$abonnement = get_field('abonnement', $post->ID);
 					$content = get_field('content', $post->ID);
+					$indice_prix_fixed = get_field('indice_du_prix_fixe', $post->ID);
+					$indice_prix_monthly = get_field('indice_du_prix_mensuel', $post->ID);
+					$indice_prix_yearly = get_field('indice_du_prix_annuel', $post->ID);
 				?>
 					<div class="price__table" data-offer-id="offer-<?php echo $post->ID; ?>">
 						<div class="price__body">
@@ -110,8 +113,8 @@ if ($the_query->have_posts()) {
 											</span>
 										</div>
 										<div class="abonnement">
-											<span class="period-monthly" style="display: none;">/mois</span>
-											<span class="period-yearly">/an</span>
+											<span class="period-monthly" style="display: none;"><?php echo $indice_prix_monthly ? $indice_prix_monthly : "/mois"; ?></span>
+											<span class="period-yearly"><?php echo $indice_prix_yearly ? $indice_prix_yearly : "/an"; ?></span>
 										</div>
 									<?php else : ?>
 										<!-- Offre sans abonnement - prix unique -->

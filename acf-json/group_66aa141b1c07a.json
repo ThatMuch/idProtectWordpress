@@ -1,5 +1,5 @@
 {
-    "key": "group_66aa141b1c07b",
+    "key": "group_66aa141b1c07a",
     "title": "Offres",
     "fields": [
         {
@@ -30,7 +30,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_66c70ba4104f4",
@@ -83,6 +85,35 @@
             "append": ""
         },
         {
+            "key": "field_695fa1093f685",
+            "label": "Indice du prix fixe",
+            "name": "indice_du_prix_fixe",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66c70ba4104f4",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_66aa163c792b3",
             "label": "Prix mensuel",
             "name": "price_monthly",
@@ -113,6 +144,27 @@
             "append": ""
         },
         {
+            "key": "field_695fa12e3f686",
+            "label": "Indice du prix mensuel",
+            "name": "indice_du_prix_mensuel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_66aa163c792b4",
             "label": "Prix annuel",
             "name": "price_yearly",
@@ -139,6 +191,27 @@
             "max": "",
             "placeholder": "",
             "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_695fa13f3f687",
+            "label": "Indice du prix annuel",
+            "name": "indice_du_prix_annuel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
             "prepend": "",
             "append": ""
         },
@@ -318,6 +391,7 @@
                     "collapsed": "",
                     "button_label": "Ajouter un élément",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_66aa1661792b4",
                     "sub_fields": [
                         {
                             "key": "field_66aa1687792b7",
@@ -366,8 +440,7 @@
                             "custom_choice_button_text": "Ajouter un nouveau choix",
                             "parent_repeater": "field_66aa167c792b6"
                         }
-                    ],
-                    "parent_repeater": "field_66aa1661792b4"
+                    ]
                 }
             ]
         },
@@ -437,5 +510,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1764583521
+    "display_title": "",
+    "modified": 1767875034
 }
