@@ -106,8 +106,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 					wp_nav_menu($menu_args);
 					?>
-				</div>
-				<div>
 					<?php
 					$btn_text = '';
 					$btn_link = '';
@@ -121,10 +119,12 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 					if ($btn_text && $btn_link) :
 					?>
-						<a class="btn <?php echo esc_attr($btn_style); ?> custom-btn-header" href="<?php echo esc_url($btn_link); ?>">
+						<a class="btn <?php echo esc_attr($btn_style); ?> custom-btn-header ms-lg-3 my-3 my-lg-0" href="<?php echo esc_url($btn_link); ?>">
 							<?php echo esc_html($btn_text); ?>
 						</a>
 					<?php endif; ?>
+				</div>
+				<div>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
