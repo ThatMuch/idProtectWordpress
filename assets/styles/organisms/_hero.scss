@@ -8,7 +8,7 @@
 
 
 .heroSection {
-	height: 38.875rem;
+	min-height: 38.875rem;
 	align-self: stretch;
 	background-image: url(../images/Pattern.png), linear-gradient(180deg, #1956A8 0%, #0D3A73 100%);
 	background-position: 0 100%;
@@ -19,6 +19,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 2rem;
+	padding: 1rem;
 
 	h1,
 	h2,
@@ -31,12 +33,14 @@
 	}
 
 	&__content {
+		width: 100%;
 		max-width: 900px;
 		margin: 0 auto;
 	}
 
 	&__card {
-		width: 43.6875rem;
+		width: 100%;
+		max-width: 43.6875rem;
 		margin: 3rem auto 0;
 		border-radius: 1rem;
 		border: 1px solid rgba(255, 255, 255, 0.20);
@@ -46,10 +50,23 @@
 		padding: 1.5rem 4rem;
 		position: relative;
 
+		@include breakpoint(mobile) {
+			max-width: 100%;
+			padding: 1.5rem;
+		}
+
 		&__icon {
 			position: absolute;
 			left: 1rem;
 			top: 1rem;
+
+			@include breakpoint(mobile) {
+				position: relative;
+				left: 0;
+				right: 0;
+				margin: 0 auto 2rem;
+
+			}
 		}
 
 
@@ -112,7 +129,7 @@
 
 		&__form {
 			display: flex;
-			width: 36rem;
+			width: 100%;
 			height: 3.5rem;
 			padding: 0.25rem 0.375rem 0.25rem 1.5rem;
 			justify-content: space-between;
@@ -121,10 +138,26 @@
 			background: #FFF;
 			margin-bottom: 1rem;
 
+			@include breakpoint(mobile) {
+				flex-direction: column;
+				gap: 1.5rem;
+				background: none;
+				height: inherit;
+			}
+
 			input {
 				border: none;
 				outline: none;
 				flex: 1;
+
+				@include breakpoint(mobile) {
+					width: 100%;
+					border-radius: 0.375rem;
+					border: 1px solid #D1D5DC;
+					background: #FFF;
+					padding: 1rem;
+
+				}
 
 			}
 
@@ -148,6 +181,11 @@
 
 				i {
 					font-size: 1rem;
+				}
+
+				@include breakpoint(mobile) {
+					width: 100%;
+					justify-content: space-between;
 				}
 			}
 

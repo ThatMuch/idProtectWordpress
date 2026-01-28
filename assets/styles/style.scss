@@ -197,15 +197,10 @@ hr.custom {
 .section__area {
     position: relative;
     z-index: 2;
-    padding:0;
+    padding: 0;
     overflow: hidden;
 }
 
-@media only screen and (max-width: 768px) {
-    .section__area {
-        padding: 20px 0;
-    }
-}
 
 .home .section__area::after {
     // background: url(../images/line.svg) no-repeat scroll 0 0 / 100% 100%;
@@ -432,6 +427,7 @@ hr.custom {
     border-radius: var(--Radius-20, 1.25rem);
     padding: 2.5rem;
     height: 19.5rem;
+
     @media only screen and (max-width: 767px) {
         padding: 1.5rem;
         height: 8rem;
@@ -451,6 +447,7 @@ hr.custom {
     color: $color-secondary;
     text-transform: uppercase;
     @include responsive-font-size(40, 48, 800);
+
     @media only screen and (max-width: 767px) {
         @include responsive-font-size(30, 40);
         margin: 0 auto;
@@ -528,6 +525,7 @@ hr.custom {
     text-transform: uppercase;
 
     @include responsive-font-size(40, 48, 800);
+
     @include breakpoint(mobile) {
         text-align: center;
         @include responsive-font-size(30, 40);
@@ -662,6 +660,7 @@ hr.custom {
 }
 
 @media only screen and (max-width: 767px) {
+
     .blog__featured__text h2,
     .blog__featured__text h1 {
         @include responsive-font-size(25, 30);
@@ -753,6 +752,7 @@ hr.custom {
 }
 
 .blog__box {
+
     p,
     .blog__box__title {
         margin: 0;
@@ -927,6 +927,7 @@ hr.custom {
     background: #1956a8;
     padding: 36px 40px;
     color: #f6f7f9;
+
     h2 {
         color: #f6f7f9;
     }
@@ -1153,7 +1154,8 @@ hr.custom {
 
 .oembed-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
     max-width: 100%;
     height: 0;
     overflow: hidden;
