@@ -7,6 +7,28 @@
  */
 ?>
 
+<?php
+// Form handling logic for redirection
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['email'])) {
+	$email = sanitize_email($_POST['email']);
+
+	// Encryption configuration (AES-256)
+	// TODO: Replace with secure keys stored in environment variables or configuration for production
+	$ciphering = "AES-256-CBC";
+	$encryption_key = "12345678901234567890123456789012"; // 32 bytes test key
+	$encryption_iv = "1234567890123456"; // 16 bytes test IV
+
+	// Encrypt the email
+	$encrypted_email = openssl_encrypt($email, $ciphering, $encryption_key, 0, $encryption_iv);
+
+	// Redirect to test URL with encrypted email parameter
+	if ($encrypted_email) {
+		$test_url = "https://example.com/redirection-check?data=" . urlencode($encrypted_email);
+		wp_redirect($test_url);
+		exit;
+	}
+}
+?>
 <?php get_header(); ?>
 <?php if (has_post_thumbnail()) : ?>
 	<section>
@@ -31,7 +53,7 @@
 						<span class="corner"></span>
 						<span class="corner"></span>
 						gratuitement</span> le contrôle de vos données</p>
-				<form action="" class="heroSection__card__form">
+				<form action="" method="POST" class="heroSection__card__form">
 					<input type="email" placeholder="Votre adresse e-mail" required name="email" autocomplete="email" aria-label="Votre adresse e-mail">
 					<button class="btn" type="submit" aria-label="Activer ID Tracker">
 						<i class="fa fa-bell"></i>
