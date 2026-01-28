@@ -16,9 +16,6 @@ $template = str_replace(array('page-', '.php'), '', $template);
 ?>
 
 <!-- If the page is not the home page display the widget from the sidebar footer-1 -->
-<?php if (is_active_sidebar('footer-1')) : ?>
-	<?php dynamic_sidebar('footer-1'); ?>
-<?php endif; ?>
 
 </div><!-- #content -->
 <?php if (have_rows('rs', 'options') && $template !== "landing") : ?>
