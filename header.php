@@ -106,23 +106,32 @@ $template = str_replace(array('page-', '.php'), '', $template);
 
 					wp_nav_menu($menu_args);
 					?>
-					<?php
-					$btn_text = '';
-					$btn_link = '';
-					$btn_style = 'btn__primary';
+					<div class="d-flex gap-2">
+						<?php
+						$btn_text = '';
+						$btn_link = '';
+						$btn_style = 'btn__primary';
 
-					if ($current_menu_id) {
-						$btn_text = get_theme_mod('header_btn_text_' . $current_menu_id, '');
-						$btn_link = get_theme_mod('header_btn_link_' . $current_menu_id, '');
-						$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn__primary');
-					}
+						if ($current_menu_id) {
+							$btn_text = get_theme_mod('header_btn_text_' . $current_menu_id, '');
+							$btn_link = get_theme_mod('header_btn_link_' . $current_menu_id, '');
+							$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn__primary');
+						}
 
-					if ($btn_text && $btn_link) :
-					?>
-						<a class="btn <?php echo esc_attr($btn_style); ?> custom-btn-header ms-lg-3 my-3 my-lg-0" href="<?php echo esc_url($btn_link); ?>">
-							<?php echo esc_html($btn_text); ?>
+						if ($btn_text && $btn_link) :
+						?>
+							<a class="btn <?php echo esc_attr($btn_style); ?> custom-btn-header " href="<?php echo esc_url($btn_link); ?>">
+								<?php echo esc_html($btn_text); ?>
+							</a>
+						<?php endif; ?>
+						<a href="<?php echo site_url(); ?>/panier" class="btn ">
+							<i class="fa-solid fa-cart-shopping"></i>
 						</a>
-					<?php endif; ?>
+						<a href="https://app.idprotect.fr" class="btn ">
+							<i class="fa-solid fa-user"></i>
+
+						</a>
+					</div>
 				</div>
 				<div>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
