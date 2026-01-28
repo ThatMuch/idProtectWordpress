@@ -57,7 +57,7 @@
 
 @import "./organisms/_footer";
 @import "./organisms/_header";
-// @import "./organisms/_hero";
+@import "./organisms/_hero";
 // @import "./organisms/sections";
 
 /*=====  Templates  ======*/
@@ -197,7 +197,7 @@ hr.custom {
 .section__area {
     position: relative;
     z-index: 2;
-    padding: 50px 0 0;
+    padding:0;
     overflow: hidden;
 }
 
