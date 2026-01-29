@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['email'])) {
 
 	// Redirect to test URL with encrypted email parameter
 	if ($encrypted_email) {
-		$test_url = "https://example.com/redirection-check?data=" . urlencode($encrypted_email);
+		$test_url = "https://id-protect-v2-preprod-fee0e714ea51.herokuapp.com/fuites-donnees?email=" . urlencode($encrypted_email);
 		wp_redirect($test_url);
 		exit;
 	}
