@@ -124,10 +124,10 @@ $template = str_replace(array('page-', '.php'), '', $template);
 								<?php echo esc_html($btn_text); ?>
 							</a>
 						<?php endif; ?>
-						<a href="<?php echo site_url(); ?>/panier" class="btn ">
+						<a href="<?php echo site_url(); ?>/panier" class="btn btn__outline">
 							<i class="fa-solid fa-cart-shopping"></i>
 						</a>
-						<a href="https://app.idprotect.fr" class="btn ">
+						<a href="https://app.idprotect.fr" class="btn btn__outline">
 							<i class="fa-solid fa-user"></i>
 
 						</a>

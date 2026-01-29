@@ -66,6 +66,36 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     }
 }
 
+.btn__outline {
+    border: 1px solid $color-primary;
+    border-radius: 7px;
+    padding: 10px 15px;
+    color: $color-primary;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    img {
+        margin-left: 6px;
+        width: 16px;
+    }
+
+    &:hover {
+        background: $color-primary;
+        color: #fff;
+
+        img {
+            -webkit-filter: brightness(10);
+            filter: brightness(10);
+        }
+    }
+}
+
 .btn__white {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -87,9 +117,11 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
         margin-left: 6px;
         width: 16px;
     }
+
     &:hover {
         background: $color-primary;
         color: #fff;
+
         img {
             -webkit-filter: brightness(10);
             filter: brightness(10);
@@ -106,37 +138,46 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
+
     &.solid {
         background: $color-secondary;
         color: #fff;
+
         &:hover {
             background: $color-primary;
         }
     }
+
     &.blue {
         border-color: $color-primary;
         color: $color-primary;
+
         &:hover {
             background: $color-primary;
             color: #fff;
         }
     }
+
     &.dark {
         border-color: $color-primary;
         color: $color-primary;
+
         &:hover {
             background: $color-primary;
             color: #fff;
         }
     }
+
     &.white {
         border-color: #fff;
         color: #fff;
+
         &:hover {
             background: #fff;
             color: $color-primary;
         }
     }
+
     :hover {
         background: $color-secondary;
         color: #fff;
