@@ -1,0 +1,123 @@
+{
+	"key": "group_HeroSectionIDTracker",
+	"title": "Block - Hero Section ID Tracker",
+	"fields": [
+		{
+			"key": "field_hero_title",
+			"label": "Hero Title",
+			"name": "hero_title",
+			"type": "text",
+			"instructions": "Le titre principal de la page (H1)",
+			"required": 0,
+			"default_value": "Protégez votre identité en ligne"
+		},
+		{
+			"key": "field_hero_description",
+			"label": "Hero Description",
+			"name": "hero_description",
+			"type": "wysiwyg",
+			"instructions": "La description sous le titre",
+			"required": 0,
+			"default_value": "Si vos données sont présentées au sein de notre réseau, vous en êtes <strong>immédiatement informé</strong>, vous permettant d’agir rapidement pour protéger votre identité.",
+			"tabs": "all",
+			"toolbar": "basic",
+			"media_upload": 0
+		},
+		{
+			"key": "field_card_icon",
+			"label": "Card Icon",
+			"name": "card_icon",
+			"type": "image",
+			"instructions": "L'icône en haut de la carte",
+			"required": 0,
+			"return_format": "array",
+			"preview_size": "thumbnail",
+			"library": "all"
+		},
+		{
+			"key": "field_card_title",
+			"label": "Card Title",
+			"name": "card_title",
+			"type": "textarea",
+			"instructions": "Le titre de la carte (H2). Utiliser <br> pour les sauts de ligne.",
+			"required": 0,
+			"default_value": "600 M de données <br> personnelles ont fuité en 2025",
+			"rows": 3
+		},
+		{
+			"key": "field_card_text_start",
+			"label": "Card Text Start",
+			"name": "card_text_start",
+			"type": "text",
+			"instructions": "Texte avant le mot accentué",
+			"required": 0,
+			"default_value": "Reprenez "
+		},
+		{
+			"key": "field_card_text_accent",
+			"label": "Card Text Accent",
+			"name": "card_text_accent",
+			"type": "text",
+			"instructions": "Le mot mis en valeur (orange)",
+			"required": 0,
+			"default_value": "gratuitement"
+		},
+		{
+			"key": "field_card_text_end",
+			"label": "Card Text End",
+			"name": "card_text_end",
+			"type": "text",
+			"instructions": "Texte après le mot accentué",
+			"required": 0,
+			"default_value": " le contrôle de vos données"
+		},
+		{
+			"key": "field_input_placeholder",
+			"label": "Input Placeholder",
+			"name": "input_placeholder",
+			"type": "text",
+			"instructions": "Placeholder du champ email",
+			"required": 0,
+			"default_value": "Votre adresse e-mail"
+		},
+		{
+			"key": "field_button_text",
+			"label": "Button Text",
+			"name": "button_text",
+			"type": "text",
+			"instructions": "Texte du bouton",
+			"required": 0,
+			"default_value": "Activer ID Tracker"
+		},
+		{
+			"key": "field_footer_text",
+			"label": "Footer Text",
+			"name": "footer_text",
+			"type": "wysiwyg",
+			"instructions": "Petit texte sous le formulaire",
+			"required": 0,
+			"default_value": "Utiliser idprotect est soumis au <a href=\"#\">conditions générales d’utilisation</a>",
+			"tabs": "visual",
+			"toolbar": "basic",
+			"media_upload": 0
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "block",
+				"operator": "==",
+				"value": "acf/herosectionidtracker"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0
+}

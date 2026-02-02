@@ -156,3 +156,39 @@ function idprotect_customize_register($wp_customize)
 	}
 }
 add_action('customize_register', 'idprotect_customize_register');
+
+
+/*==================================================================================
+  FORM HANDLING
+==================================================================================*/
+function handle_id_tracker_form_submission()
+{
+	if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['email']) && isset($_POST['id_tracker_submit'])) {
+		$email = sanitize_email($_POST['email']);
+
+		// 1. Définissez vos secrets (Doivent être IDENTIQUES au .env de React)
+		$secret_key_string = "UZOZ728EUII2990EUIU29";
+		$secret_iv_string  = "PPAZI823829HHJ282jkj289";
+
+		// 2. Transformation comme dans Node.js (Hashage)
+		// SHA256 produit 32 bytes (parfait pour AES-256)
+		// MD5 produit 16 bytes (parfait pour l'IV AES)
+		// Le paramètre 'true' demande une sortie binaire brute (raw binary)
+		$key = hash('sha256', $secret_key_string, true);
+		$iv  = hash('md5', $secret_iv_string, true);
+
+		$ciphering = "AES-256-CBC";
+
+		// 3. Encryptage
+		$encrypted_email = openssl_encrypt($email, $ciphering, $key, 0, $iv);
+
+		// Redirection
+		if ($encrypted_email) {
+			// Note: encodez deux fois si nécessaire, mais urlencode suffit souvent
+			$test_url = "https://id-protect-v2-preprod-fee0e714ea51.herokuapp.com/fuites-donnees?email=" . urlencode($encrypted_email);
+			wp_redirect($test_url);
+			exit;
+		}
+	}
+}
+add_action('init', 'handle_id_tracker_form_submission');

@@ -8,6 +8,7 @@
 ?>
 
 <?php get_header(); ?>
+
 <?php if (has_post_thumbnail()) : ?>
 	<section>
 		<div class="element teaser">
