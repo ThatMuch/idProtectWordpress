@@ -185,7 +185,7 @@ function handle_id_tracker_form_submission()
 		// Redirection
 		if ($encrypted_email) {
 			// Note: encodez deux fois si nécessaire, mais urlencode suffit souvent
-			$test_url = "https://id-protect-v2-preprod-fee0e714ea51.herokuapp.com/fuites-donnees?email=" . urlencode($encrypted_email);
+			$test_url = "https://app.idprotect.fr/fuites-donnees?email=" . urlencode($encrypted_email);
 			wp_redirect($test_url);
 			exit;
 		}
