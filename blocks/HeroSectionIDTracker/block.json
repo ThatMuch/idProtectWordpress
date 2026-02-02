@@ -1,0 +1,23 @@
+{
+	"name": "heroSectionIDTracker",
+	"title": "Hero Section ID Tracker",
+	"description": "Section Hero avec formulaire ID Tracker",
+	"style": [
+		"file:./style.css"
+	],
+	"category": "theme",
+	"icon": "shield",
+	"keywords": [
+		"Id Protect",
+		"Hero",
+		"Tracker"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "./block.php"
+	},
+	"align": "full",
+	"supports": {
+		"anchor": true
+	}
+}

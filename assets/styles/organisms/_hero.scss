@@ -20,7 +20,12 @@
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 2rem;
+	margin-top: -50px;
 	padding: 1rem;
+
+	@include breakpoint(mobile) {
+		margin-top: -20px;
+	}
 
 	h1,
 	h2,

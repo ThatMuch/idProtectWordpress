@@ -197,10 +197,15 @@ hr.custom {
 .section__area {
     position: relative;
     z-index: 2;
-    padding: 0;
+    padding: 50px 0;
     overflow: hidden;
 }
 
+@media only screen and (max-width: 768px) {
+    .section__area {
+        padding: 20px 0;
+    }
+}
 
 .home .section__area::after {
     // background: url(../images/line.svg) no-repeat scroll 0 0 / 100% 100%;
