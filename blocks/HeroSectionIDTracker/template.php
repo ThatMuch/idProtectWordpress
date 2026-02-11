@@ -71,7 +71,7 @@ $footer_text = $data['footer_text'] ?: 'Utiliser idprotect est soumis au <a href
 					</button>
 					<input type="hidden" name="id_tracker_submit" value="1">
 				</form>
-				<p class="small">Utiliser idprotect est soumis au <a href="#">conditions générales d’utilisation</a></p>
+				<p class="small">Utiliser idprotect est soumis au <a href="https://idprotect.fr/cgv-cgu/">conditions générales d’utilisation</a></p>
 			</div>
 		<?php endif; ?>
 	</div>
