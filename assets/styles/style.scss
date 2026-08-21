@@ -206,23 +206,6 @@ hr.custom {
     }
 }
 
-.home .section__area::after {
-    // background: url(../images/line.svg) no-repeat scroll 0 0 / 100% 100%;
-    position: absolute;
-    top: 10%;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    content: "";
-}
-
-@media only screen and (max-width: 991px) {
-    .home .section__area::after {
-        display: none;
-    }
-}
-
 .section__area .container {
     position: relative;
     z-index: 3;
