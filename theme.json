@@ -185,6 +185,65 @@
 					"name": "neutral_70"
 				}
 			]
+		},
+		"spacing": {
+			"defaultSpacingSizes": false,
+			"customSpacingSize": false,
+			"spacingSizes": [
+				{ "slug": "xs", "size": "8px", "name": "XS" },
+				{ "slug": "s", "size": "16px", "name": "S" },
+				{ "slug": "m", "size": "24px", "name": "M" },
+				{ "slug": "l", "size": "32px", "name": "L" },
+				{ "slug": "xl", "size": "40px", "name": "XL" },
+				{ "slug": "2xl", "size": "48px", "name": "2XL" },
+				{ "slug": "3xl", "size": "56px", "name": "3XL" },
+				{ "slug": "4xl", "size": "64px", "name": "4XL" }
+			]
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"customFontSize": false,
+			"fontSizes": [
+				{ "slug": "s", "size": "14px", "name": "S" },
+				{ "slug": "m", "size": "16px", "name": "M" },
+				{ "slug": "l", "size": "24px", "name": "L" },
+				{ "slug": "xl", "size": "45px", "name": "XL" },
+				{ "slug": "2xl", "size": "60px", "name": "2XL" }
+			],
+			"fontFamilies": [
+				{
+					"slug": "headline",
+					"fontFamily": "Rubik, 'Roboto', sans-serif",
+					"name": "Headline"
+				},
+				{
+					"slug": "body",
+					"fontFamily": "Raleway, 'Open Sans', sans-serif",
+					"name": "Body"
+				},
+				{
+					"slug": "digits",
+					"fontFamily": "Rubik, 'Roboto', sans-serif",
+					"name": "Digits"
+				},
+				{
+					"slug": "label",
+					"fontFamily": "Rubik, 'Roboto', sans-serif",
+					"name": "Label"
+				}
+			]
+		},
+		"custom": {
+			"radius": {
+				"s": "4px",
+				"m": "8px",
+				"l": "100px"
+			},
+			"font-weight": {
+				"extrabold": "800",
+				"bold": "700",
+				"medium": "500"
+			}
 		}
 	}
 }
