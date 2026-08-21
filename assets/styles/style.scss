@@ -77,11 +77,8 @@ html {
 }
 
 body {
-    background:
-        url(../images/bg_default.svg) no-repeat,
-        linear-gradient(180deg, #e8effb -2.99%, #ffffff 49.58%);
-    background-size: cover;
-    color: $color-primary;
+    background-color: $background-default;
+    color: $text-body-dark;
     font-size: 1rem;
     font-family: "Raleway", sans-serif;
 }
@@ -665,7 +662,6 @@ hr.custom {
 }
 
 @media only screen and (max-width: 767px) {
-
     .blog__featured__text h2,
     .blog__featured__text h1 {
         @include responsive-font-size(25, 30);
@@ -757,7 +753,6 @@ hr.custom {
 }
 
 .blog__box {
-
     p,
     .blog__box__title {
         margin: 0;
