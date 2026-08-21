@@ -34,6 +34,135 @@ input[type="checkbox"] {
 }
 
 /*==================================================================================
+  V4 — Checkbox & Radio (Design System Figma: node 1104:333)
+==================================================================================*/
+
+.checkbox,
+.radio {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    cursor: pointer;
+
+    // Sélecteur imbriqué (".checkbox .checkbox__input") volontairement plus spécifique
+    // que la règle générique `input:not([type="submit"])` de ce même fichier (0,1,1) :
+    // sans ça, elle l'emporterait sur un simple `.checkbox__input` (0,1,0) et
+    // réintroduirait bordure/padding/width/margin, cassant la technique de masquage.
+    input.checkbox__input,
+    input.radio__input {
+        // Caché visuellement mais toujours accessible au clavier/lecteur d'écran
+        // (contrairement à display:none) : le <label> englobant garde le clic natif.
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        opacity: 0;
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.checkbox {
+    &__box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 21px;
+        height: 21px;
+        box-sizing: border-box;
+        border: 1px solid $dark-blue-40;
+        border-radius: $radius-s;
+        transition: background-color $transition_fast, border-color $transition_fast;
+    }
+
+    &__icon {
+        font-size: 12px;
+        line-height: 1;
+        color: $text-invert;
+        opacity: 0;
+    }
+
+    &__input:checked ~ &__box {
+        background: $dark-blue-40;
+        border-color: $dark-blue-40;
+
+        .checkbox__icon {
+            opacity: 1;
+        }
+    }
+
+    &__input:disabled ~ &__box {
+        border-color: $surface-disabled;
+
+        .checkbox__icon {
+            color: $text-invert;
+        }
+    }
+
+    &__input:checked:disabled ~ &__box {
+        background: $surface-disabled;
+        border-color: $surface-disabled;
+    }
+
+    /* ---- Light (sur fond sombre/coloré) ---- */
+    &--light {
+        .checkbox__box {
+            border-color: $neutral-100;
+        }
+
+        .checkbox__input:checked ~ .checkbox__box {
+            background: $neutral-100;
+            border-color: $neutral-100;
+
+            .checkbox__icon {
+                color: $dark-blue-40;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.radio {
+    &__box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 21px;
+        height: 21px;
+        box-sizing: border-box;
+        border: 1px solid $dark-blue-40;
+        border-radius: $radius-l;
+        transition: border-color $transition_fast;
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: $radius-l;
+        background: $dark-blue-40;
+        opacity: 0;
+    }
+
+    &__input:checked ~ &__box .radio__dot {
+        opacity: 1;
+    }
+
+    &__input:disabled ~ &__box {
+        border-color: $surface-disabled;
+
+        .radio__dot {
+            background: $surface-disabled;
+        }
+    }
+}
+
+/*==================================================================================
   V4 — Input (Design System Figma: node 1114:291)
 ==================================================================================*/
 
