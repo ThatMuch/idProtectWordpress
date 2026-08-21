@@ -4,7 +4,7 @@
 
 .wp-admin {
     background-repeat: no-repeat;
-    background-color: #f5f9ff;
+    background-color: $blue-80;
     font-weight: 500;
     font-family: "Raleway", sans-serif;
 
@@ -13,30 +13,30 @@
     .notice {
         border: none;
         border-radius: 8px;
-        background-color: #fff;
+        background-color: $background-light;
     }
 
     .notice {
-        background-color: #e8effb;
+        background-color: $background-dim;
     }
     a {
-        color: $color-primary;
+        color: $text-primary;
     }
 
     .alternate,
     .striped > tbody > :nth-child(odd),
     ul.striped > :nth-child(odd) {
-        background-color: #e8effb;
+        background-color: $background-dim;
     }
 
     #adminmenu,
     #adminmenu .wp-submenu,
     #adminmenuback,
     #adminmenuwrap {
-        background-color: $color-primary;
+        background-color: $dark-blue-40;
     }
     #wpadminbar {
-        background-color: $color-primary-darker;
+        background-color: $dark-blue-30;
     }
 
     #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
@@ -44,42 +44,42 @@
     #adminmenu .wp-menu-arrow div,
     #adminmenu li.current a.menu-top,
     #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
-        background: $color-primary-lighter;
-        color: #fff;
+        background: $dark-blue-50;
+        color: $text-invert;
     }
 
     #adminmenu li.menu-top:hover,
     #adminmenu li.opensub > a.menu-top,
     #adminmenu li > a.menu-top:focus {
-        background: $color-primary-lighter;
-        color: #fff;
+        background: $dark-blue-50;
+        color: $text-invert;
     }
 
     #adminmenu .wp-submenu a:focus,
     #adminmenu .wp-submenu a:hover,
     #adminmenu a:hover,
     #adminmenu li.menu-top > a:focus {
-        color: #fff;
+        color: $text-invert;
     }
 
     #adminmenu li a:focus div.wp-menu-image:before,
     #adminmenu li.opensub div.wp-menu-image:before,
     #adminmenu li:hover div.wp-menu-image:before {
-        color: #fff;
+        color: $text-invert;
     }
 }
 
 .wp-core-ui .button-primary {
-    border-color: $color-primary;
-    background: $color-primary;
+    border-color: $dark-blue-40;
+    background: $dark-blue-40;
     &:hover {
-        border-color: $color-primary-darker;
-        background: $color-primary-darker;
+        border-color: $dark-blue-30;
+        background: $dark-blue-30;
     }
 }
 
 #adminmenu .awaiting-mod,
 #adminmenu .menu-counter,
 #adminmenu .update-plugins {
-    background-color: $color-secondary;
+    background-color: $surface-accent;
 }

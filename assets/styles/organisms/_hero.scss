@@ -10,10 +10,10 @@
 .heroSection {
 	min-height: 38.875rem;
 	align-self: stretch;
-	background-image: url(../images/Pattern.png), linear-gradient(180deg, #1956A8 0%, #0D3A73 100%);
+	background-image: url(../images/Pattern.png), linear-gradient(180deg, $blue-40 0%, $blue-20 100%);
 	background-position: 0 100%;
 	background-repeat: no-repeat;
-	color: white;
+	color: $text-invert;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -30,7 +30,7 @@
 	h1,
 	h2,
 	a {
-		color: white;
+		color: $text-invert;
 	}
 
 	a {
@@ -48,8 +48,8 @@
 		max-width: 43.6875rem;
 		margin: 3rem auto 0;
 		border-radius: 1rem;
-		border: 1px solid rgba(255, 255, 255, 0.20);
-		background: rgba(255, 255, 255, 0.10);
+		border: 1px solid rgba($neutral-100, 0.20);
+		background: rgba($neutral-100, 0.10);
 		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 		backdrop-filter: blur(2.5px);
 		padding: 1.5rem 4rem;
@@ -76,7 +76,7 @@
 
 
 		h2 {
-			color: var(--Neutral-White-FFFFFF, #FFF);
+			color: var(--Neutral-White-FFFFFF, #{$text-invert});
 			text-align: center;
 			font-size: 1.75rem;
 			font-style: normal;
@@ -140,7 +140,7 @@
 			justify-content: space-between;
 			align-items: center;
 			border-radius: 6.25rem;
-			background: #FFF;
+			background: $background-light;
 			margin-bottom: 1rem;
 
 			@include breakpoint(mobile) {
@@ -159,7 +159,7 @@
 					width: 100%;
 					border-radius: 0.375rem;
 					border: 1px solid #D1D5DC;
-					background: #FFF;
+					background: $background-light;
 					padding: 1rem;
 
 				}
@@ -167,7 +167,7 @@
 			}
 
 			::placeholder {
-				color: var(--color-azure-56, #5E89C2);
+				color: var(--color-azure-56, #{$blue-50});
 				font-size: 0.875rem;
 				font-style: normal;
 				font-weight: 500;
@@ -181,7 +181,7 @@
 				align-items: center;
 				gap: 0.375rem;
 				border-radius: 838860rem;
-				background: var(--color-red-66, #FF7551);
+				background: var(--color-red-66, #{$red-50});
 				box-shadow: 0 8px 12px -2.4px rgba(0, 0, 0, 0.10), 0 3.2px 4.8px -3.2px rgba(0, 0, 0, 0.10);
 
 				i {

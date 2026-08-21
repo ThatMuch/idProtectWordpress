@@ -11,16 +11,16 @@
 }
 
 .header__area {
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    background: #fff;
+    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    background: $background-light;
     padding: 0;
 
     &.menu-menu-pro {
-        background-color: $color-primary;
+        background-color: $dark-blue-40;
 
         .nav-link {
-            color: #fff;
+            color: $text-invert;
         }
 
         .navbar-toggler-icon {
@@ -28,7 +28,7 @@
         }
 
         .navbar-collapse {
-            background-color: $color-primary;
+            background-color: $dark-blue-40;
         }
 
         .navbar-brand {
@@ -55,7 +55,7 @@
     .nav-link {
         margin: 0 30px;
         isolation: isolate;
-        color: $color-tertiary;
+        color: $text-subheading;
         font-size: 0.85rem;
         font-family: "Raleway", sans-serif;
         letter-spacing: 0.5px;
@@ -70,10 +70,10 @@
 
             &:hover {
                 cursor: pointer;
-                -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-                box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+                -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+                box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
                 border-radius: 7px;
-                background: #ffffff;
+                background: $background-light;
                 color: var(--orange);
 
             }
@@ -90,7 +90,7 @@
         border: 0;
         border-radius: 16px;
         background: transparent;
-        background: #ffffff;
+        background: $background-light;
         padding: 10px 26px;
         min-width: auto;
 
@@ -103,7 +103,7 @@
                 left: 50%;
                 transform: translate(-50%, 0);
                 border-right: 9px solid transparent;
-                border-bottom: 13px solid #fff;
+                border-bottom: 13px solid $neutral-100;
                 border-left: 9px solid transparent;
                 width: 13px;
                 height: 9px;
@@ -115,8 +115,8 @@
             top: 54px;
             -webkit-transform: translate(-25%, 13px);
             transform: translate(-29.5%, 13px);
-            -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-            box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+            -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+            box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
             padding: 1.25rem;
         }
 
@@ -124,7 +124,7 @@
             height: 100%;
 
             h2 {
-                background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
+                background: linear-gradient(278.49deg, $blue-40 0%, $dark-blue-40 88.22%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 margin: 0 0 10px;
@@ -144,7 +144,7 @@
                 -webkit-transition: 0.2s;
                 transition: 0.2s;
                 margin: 12px 0;
-                color: $color-tertiary;
+                color: $text-subheading;
                 font-size: 0.85rem;
                 font-family: "Raleway";
                 letter-spacing: 0.5px;
@@ -160,14 +160,14 @@
     .dropdown-item {
         margin-bottom: 1rem;
         padding: 0;
-        color: $color-tertiary;
+        color: $text-subheading;
         font-family: "Raleway", sans-serif;
 
         &:hover,
         &.active {
             cursor: pointer;
-            background-color: #fff;
-            color: $color-secondary;
+            background-color: $background-light;
+            color: $text-accent;
         }
     }
 
@@ -188,10 +188,10 @@
         }
 
         &.show {
-            -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-            box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+            -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+            box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
             border-radius: 7px;
-            background: #ffffff;
+            background: $background-light;
             color: var(--orange);
 
             &::after {
@@ -215,9 +215,9 @@
         top: 64px;
         right: 0;
         left: 0;
-        -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-        box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-        background: #fff;
+        -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+        box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+        background: $background-light;
         padding: 1rem;
 
         @include breakpoint(laptop) {

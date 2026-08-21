@@ -12,13 +12,13 @@ body.login h1 a {
 }
 
 body.login .button-primary {
-    border-color: $color-primary;
-    background: $color-primary;
+    border-color: $dark-blue-40;
+    background: $dark-blue-40;
 }
 
 body.login .button-primary:hover {
-    border-color: $color-primary-darker;
-    background: $color-primary-darker;
+    border-color: $dark-blue-30;
+    background: $dark-blue-30;
 }
 
 body.login form input.input,
@@ -27,8 +27,8 @@ body.login input[type="text"],
 body.login form input.input:active,
 body.login form input[type="checkbox"],
 body.login input[type="text"]:active {
-    border-color: $color-primary;
-    background-color: rgba($color: $color-primary, $alpha: 0.3) !important;
+    border-color: $dark-blue-40;
+    background-color: rgba($color: $dark-blue-40, $alpha: 0.3) !important;
     background: inherit;
 }
 
@@ -36,18 +36,18 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px rgba($color: $color-primary, $alpha: 0.3) inset !important;
-    box-shadow: 0 0 0 30px rgba($color: $color-primary, $alpha: 0.3) inset !important;
+    -webkit-box-shadow: 0 0 0 30px rgba($color: $dark-blue-40, $alpha: 0.3) inset !important;
+    box-shadow: 0 0 0 30px rgba($color: $dark-blue-40, $alpha: 0.3) inset !important;
 }
 
 .wp-core-ui .button.wp-hide-pw {
     vertical-align: top;
-    border-color: $color-primary;
+    border-color: $dark-blue-40;
     background: inherit;
-    color: $color-primary;
+    color: $dark-blue-40;
 }
 
 body.login {
-    background: linear-gradient(180deg, #e8effb -2.99%, #fff 49.58%);
+    background: linear-gradient(180deg, $blue-70 -2.99%, $background-light 49.58%);
     font-family: "Raleway", sans-serif;
 }

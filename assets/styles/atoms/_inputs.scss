@@ -7,21 +7,21 @@
  */
 
 input:not([type="submit"]), select, textarea {
-    border: 1px solid $color-grey;
+    border: 1px solid $blue-70;
     padding: 0.5rem;
     width: 100%;
     margin-bottom: 1rem;
     transition-duration: $transition_slow;
 
     &:active, &:hover, &:focus {
-        border-color: $color-primary;
+        border-color: $dark-blue-40;
     }
 }
 
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px lighten($color-primary, 37) inset !important;
+    -webkit-box-shadow: 0 0 0 1000px lighten($dark-blue-40, 37) inset !important;
 }
 
 input[type="radio"],
@@ -121,6 +121,23 @@ input[type="checkbox"] {
             // placeholder d'aide : pleine opacité (contrairement à l'état par défaut)
             color: $text-error;
             opacity: 1;
+        }
+    }
+
+    /* ---- Textarea ----
+       Absent du design system V4 fourni (inputs simple ligne uniquement) ;
+       adaptation nécessaire pour les champs multi-lignes réels du site. */
+    &--textarea {
+        .input__field {
+            height: auto;
+            min-height: 120px;
+            align-items: flex-start;
+        }
+
+        .input__control {
+            align-self: stretch;
+            resize: vertical;
+            line-height: 1.4;
         }
     }
 }
