@@ -92,7 +92,10 @@ function stanlee_register_theme_menus()
 {
 	register_nav_menus([
 		'mainmenu' => __('Mainmenu'),
-		'submenu' => __('Submenu')
+		'submenu' => __('Submenu'),
+		'footer_menu_1' => __('Footer - Colonne 1'),
+		'footer_menu_2' => __('Footer - Colonne 2'),
+		'footer_menu_3' => __('Footer - Colonne 3'),
 	]);
 }
 add_action('init', 'stanlee_register_theme_menus');

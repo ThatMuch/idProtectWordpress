@@ -9,10 +9,10 @@
  */
 
 .text-body-1 {
-    font-family: $font-family-body;
     font-weight: $font-weight-medium;
     font-size: $font-size-m;
-    line-height: normal;
+    line-height: 1.5;
+    font-family: $font-family-body;
 }
 
 .text-body-1--strong {
@@ -20,30 +20,30 @@
 }
 
 .text-body-2 {
-    font-family: $font-family-body;
     font-weight: $font-weight-medium;
     font-size: $font-size-s;
-    line-height: normal;
+    line-height: 1.5;
+    font-family: $font-family-body;
 }
 
 .text-label {
-    font-family: $font-family-label;
     font-weight: $font-weight-bold;
     font-size: $font-size-s;
-    line-height: normal;
+    line-height: 1.5;
+    font-family: $font-family-label;
     letter-spacing: 0.5px;
 }
 
 .text-digit-1 {
-    font-family: $font-family-digits;
     font-weight: $font-weight-extrabold;
     font-size: $font-size-xl;
-    line-height: normal;
+    line-height: 1.5;
+    font-family: $font-family-digits;
 }
 
 .text-digit-2 {
-    font-family: $font-family-digits;
     font-weight: $font-weight-medium;
     font-size: $font-size-m;
-    line-height: normal;
+    line-height: 1.5;
+    font-family: $font-family-digits;
 }
