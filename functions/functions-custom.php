@@ -139,7 +139,7 @@ function idprotect_customize_register($wp_customize)
 
 			// Button Style
 			$wp_customize->add_setting('header_btn_style_' . $menu_id, array(
-				'default'   => 'btn--v4 btn--primary btn--solid',
+				'default'   => 'btn btn--primary btn--solid',
 				'transport' => 'refresh',
 			));
 			$wp_customize->add_control('header_btn_style_' . $menu_id, array(
@@ -147,10 +147,10 @@ function idprotect_customize_register($wp_customize)
 				'section'  => 'idprotect_header_section_' . $menu_id,
 				'type'     => 'select',
 				'choices'  => array(
-					'btn--v4 btn--primary btn--solid'    => 'Primaire (bleu foncé, plein)',
-					'btn--v4 btn--secondary btn--solid'  => 'Secondaire (orange, plein)',
-					'btn--v4 btn--primary btn--outlined' => 'Contour (bleu foncé)',
-					'btn--v4 btn--light btn--outlined'   => 'Contour (blanc)',
+					'btn btn--primary btn--solid'    => 'Primaire (bleu foncé, plein)',
+					'btn btn--secondary btn--solid'  => 'Secondaire (orange, plein)',
+					'btn btn--primary btn--outlined' => 'Contour (bleu foncé)',
+					'btn btn--light btn--outlined'   => 'Contour (blanc)',
 				),
 			));
 		}

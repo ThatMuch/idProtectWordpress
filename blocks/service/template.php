@@ -29,7 +29,7 @@ $class_name = $args['class_name'];
 						<h3><?php echo $data['subtitle']; ?></h3>
 						<p><?php echo $data['description']; ?></p>
 						<?php if ($data['link']) : ?>
-							<a href="<?php echo esc_url($data['link']['url']); ?>" target="<?php echo esc_attr($data['link']['target']); ?>" class="btn--v4 btn--primary btn--outlined"><?php echo esc_html($data['link']['title']); ?><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite"></a>
+							<a href="<?php echo esc_url($data['link']['url']); ?>" target="<?php echo esc_attr($data['link']['target']); ?>" class="btn btn--primary btn--outlined"><?php echo esc_html($data['link']['title']); ?><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite"></a>
 						<?php endif; ?>
 					</div>
 				</div>

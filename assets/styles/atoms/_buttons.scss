@@ -6,169 +6,26 @@
  *
  */
 
-.btn,
-.single_add_to_cart_button,
-.wc-block-cart__submit-button,
-.wc-block-components-totals-coupon__button {
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    display: -ms-inline-flexbox;
-    display: -webkit-inline-box;
+.btn {
     display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 7px;
-    background: #ffffff;
-    padding: 10px 15px;
-    color: $color-primary;
-    font-weight: 700;
-    font-size: 13px;
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-transform: uppercase;
-
-    &.btn__primary {
-        background: $color-primary;
-        color: #fff;
-
-        img {
-            -webkit-filter: brightness(100);
-            filter: brightness(100);
-            margin-left: 8px;
-        }
-
-        &:hover,
-        &:active,
-        &:focus {
-            background-color: $color-primary-darker;
-            color: #fff;
-        }
-    }
-}
-
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
-body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
-    background-color: $color-primary;
-    color: #fff;
-
-    img {
-        -webkit-filter: brightness(100);
-        filter: brightness(100);
-        margin-left: 8px;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $color-primary-darker;
-        color: #fff;
-    }
-}
-
-.btn__white {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    border-radius: 7px;
-    background: #ffffff;
-    padding: 10px 15px;
-    color: $color-primary;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-transform: uppercase;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-
-    img {
-        margin-left: 6px;
-        width: 16px;
-    }
-    &:hover {
-        background: $color-primary;
-        color: #fff;
-        img {
-            -webkit-filter: brightness(10);
-            filter: brightness(10);
-        }
-    }
-}
-
-.btn__orange {
-    border: 2px solid $color-secondary;
-    border-radius: 7px;
-    padding: 13px 12px;
-    color: $color-secondary;
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-transform: uppercase;
-    &.solid {
-        background: $color-secondary;
-        color: #fff;
-        &:hover {
-            background: $color-primary;
-        }
-    }
-    &.blue {
-        border-color: $color-primary;
-        color: $color-primary;
-        &:hover {
-            background: $color-primary;
-            color: #fff;
-        }
-    }
-    &.dark {
-        border-color: $color-primary;
-        color: $color-primary;
-        &:hover {
-            background: $color-primary;
-            color: #fff;
-        }
-    }
-    &.white {
-        border-color: #fff;
-        color: #fff;
-        &:hover {
-            background: #fff;
-            color: $color-primary;
-        }
-    }
-    :hover {
-        background: $color-secondary;
-        color: #fff;
-    }
-}
-
-/*==================================================================================
-  V4 — Buttons (Design System Figma: node 1099:682)
-  Nouveau set de classes, n'affecte pas .btn__primary/.btn__white/.btn__orange
-  ci-dessus (migration des anciens templates prévue plus tard).
-==================================================================================*/
-
-.btn--v4 {
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: $spacing-xs;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    font-family: $font-family-body; // le composant Figma utilise Raleway, pas $font-family-label (Rubik)
-    font-weight: $font-weight-bold;
-    font-size: $font-size-s;
-    letter-spacing: 0.5px;
-    line-height: 1;
-    box-sizing: border-box;
     transition:
         background-color $transition_fast,
         border-color $transition_fast,
         color $transition_fast,
         box-shadow $transition_fast;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-s;
+    line-height: 1;
+    font-family: $font-family-body; // le composant Figma utilise Raleway, pas $font-family-label (Rubik)
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
 
     &__icon {
         display: inline-flex;
@@ -195,18 +52,18 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     }
 
     &.btn--link {
-        padding: 0 0 1px;
         border: none;
         border-bottom: 1px solid transparent;
         border-radius: 0;
         background: transparent;
+        padding: 0 0 1px;
     }
 
     /* ---- Primary / Solid ---- */
     &.btn--primary.btn--solid {
+        box-shadow: 0 14px 15px rgba($dark-blue-40, 0.7);
         background: $dark-blue-40;
         color: $neutral-100;
-        box-shadow: 0 14px 15px rgba($dark-blue-40, 0.7);
 
         &:hover:not(:disabled):not(.is-disabled) {
             background: $dark-blue-30;
@@ -214,18 +71,18 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 
         &:disabled,
         &.is-disabled {
+            cursor: not-allowed;
+            box-shadow: none;
             background: $background-disabled;
             color: $text-disabled;
-            box-shadow: none;
-            cursor: not-allowed;
         }
     }
 
     /* ---- Secondary / Solid ---- */
     &.btn--secondary.btn--solid {
+        box-shadow: 0 14px 15px rgba($red-40, 0.7);
         background: $surface-accent;
         color: $neutral-100;
-        box-shadow: 0 14px 15px rgba($red-40, 0.7);
 
         &:hover:not(:disabled):not(.is-disabled) {
             background: $red-40;
@@ -233,10 +90,10 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 
         &:disabled,
         &.is-disabled {
+            cursor: not-allowed;
+            box-shadow: none;
             background: $background-disabled;
             color: $text-disabled;
-            box-shadow: none;
-            cursor: not-allowed;
         }
     }
 
@@ -265,16 +122,16 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     &.btn--light.btn--outlined:disabled,
     &.btn--primary.btn--outlined.is-disabled,
     &.btn--light.btn--outlined.is-disabled {
-        border-color: rgba($text-disabled, 0.4);
-        color: $text-disabled;
-        background: transparent;
         cursor: not-allowed;
+        border-color: rgba($text-disabled, 0.4);
+        background: transparent;
+        color: $text-disabled;
     }
 
     /* ---- Primary / Link ---- */
     &.btn--primary.btn--link {
-        color: $text-primary;
         border-bottom-color: currentColor;
+        color: $text-primary;
 
         &:hover:not(:disabled):not(.is-disabled) {
             color: $text-body-dark;
@@ -283,8 +140,8 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 
     /* ---- Light / Link (sur fond sombre/coloré) ---- */
     &.btn--light.btn--link {
-        color: $text-heading-light;
         border-bottom-color: currentColor;
+        color: $text-heading-light;
 
         &:hover:not(:disabled):not(.is-disabled) {
             color: $text-body-light;

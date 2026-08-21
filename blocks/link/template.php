@@ -16,7 +16,7 @@ $pro = get_field('pro');
 						<h3><?php echo $title; ?></h3>
 						<p><?php echo $text; ?> </p>
 						<?php if ($link) : ?>
-							<a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" class="btn--v4 btn--light btn--outlined"><?php echo esc_html($link['title']); ?><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite"></a>
+							<a href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>" class="btn btn--light btn--outlined"><?php echo esc_html($link['title']); ?><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite"></a>
 						<?php endif; ?>
 					</div>
 				</div>

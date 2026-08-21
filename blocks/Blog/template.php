@@ -12,7 +12,7 @@ $the_query = new WP_Query($args);
 		<div class="row g-3">
 			<div class="col-lg-4">
 				<h2 class="section__title h1"><span class="text__orange title">Suivez</span> nos dernières actualités</h2>
-				<a href="<?php echo site_url();  ?>/community-blog" class="btn--v4 btn--primary btn--solid">Voir tous les articles</a>
+				<a href="<?php echo site_url();  ?>/community-blog" class="btn btn--primary btn--solid">Voir tous les articles</a>
 			</div>
 			<div class="col-lg-8">
 				<div class="blog__list owl-carousel">
