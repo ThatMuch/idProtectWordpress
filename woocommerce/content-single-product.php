@@ -72,7 +72,7 @@ if (post_password_required()) {
 
 			</p>
 			<p class="product__content__price"><?php echo $product->get_price_html(); ?></p>
-			<a href="<?php echo $product_addToCart; ?>" class="btn btn__primary">Souscrire</a>
+			<a href="<?php echo $product_addToCart; ?>" class="btn--v4 btn--primary btn--solid">Souscrire</a>
 		</div>
 	</div>
 	<div class="row">

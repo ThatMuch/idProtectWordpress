@@ -142,3 +142,152 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
         color: #fff;
     }
 }
+
+/*==================================================================================
+  V4 — Buttons (Design System Figma: node 1099:682)
+  Nouveau set de classes, n'affecte pas .btn__primary/.btn__white/.btn__orange
+  ci-dessus (migration des anciens templates prévue plus tard).
+==================================================================================*/
+
+.btn--v4 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: $font-family-body; // le composant Figma utilise Raleway, pas $font-family-label (Rubik)
+    font-weight: $font-weight-bold;
+    font-size: $font-size-s;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    box-sizing: border-box;
+    transition:
+        background-color $transition_fast,
+        border-color $transition_fast,
+        color $transition_fast,
+        box-shadow $transition_fast;
+
+    &__icon {
+        display: inline-flex;
+        flex-shrink: 0;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    /* ---- Styles ---- */
+
+    &.btn--solid,
+    &.btn--outlined {
+        border-radius: $radius-l;
+        padding: $spacing-s $spacing-l;
+    }
+
+    &.btn--solid {
+        border: none;
+    }
+
+    &.btn--outlined {
+        border: 1px solid transparent;
+        background: transparent;
+    }
+
+    &.btn--link {
+        padding: 0 0 1px;
+        border: none;
+        border-bottom: 1px solid transparent;
+        border-radius: 0;
+        background: transparent;
+    }
+
+    /* ---- Primary / Solid ---- */
+    &.btn--primary.btn--solid {
+        background: $dark-blue-40;
+        color: $neutral-100;
+        box-shadow: 0 14px 15px rgba($dark-blue-40, 0.7);
+
+        &:hover:not(:disabled):not(.is-disabled) {
+            background: $dark-blue-30;
+        }
+
+        &:disabled,
+        &.is-disabled {
+            background: $background-disabled;
+            color: $text-disabled;
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+
+    /* ---- Secondary / Solid ---- */
+    &.btn--secondary.btn--solid {
+        background: $surface-accent;
+        color: $neutral-100;
+        box-shadow: 0 14px 15px rgba($red-40, 0.7);
+
+        &:hover:not(:disabled):not(.is-disabled) {
+            background: $red-40;
+        }
+
+        &:disabled,
+        &.is-disabled {
+            background: $background-disabled;
+            color: $text-disabled;
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    }
+
+    /* ---- Primary / Outlined ---- */
+    &.btn--primary.btn--outlined {
+        border-color: rgba($dark-blue-40, 0.4);
+        color: $text-primary;
+
+        &:hover:not(:disabled):not(.is-disabled) {
+            background: rgba($dark-blue-40, 0.1);
+        }
+    }
+
+    /* ---- Light / Outlined (sur fond sombre/coloré) ---- */
+    &.btn--light.btn--outlined {
+        border-color: rgba($neutral-100, 0.4);
+        color: $text-heading-light;
+
+        &:hover:not(:disabled):not(.is-disabled) {
+            background: rgba($neutral-100, 0.1);
+        }
+    }
+
+    /* Primary et Light Outlined partagent le même style disabled */
+    &.btn--primary.btn--outlined:disabled,
+    &.btn--light.btn--outlined:disabled,
+    &.btn--primary.btn--outlined.is-disabled,
+    &.btn--light.btn--outlined.is-disabled {
+        border-color: rgba($text-disabled, 0.4);
+        color: $text-disabled;
+        background: transparent;
+        cursor: not-allowed;
+    }
+
+    /* ---- Primary / Link ---- */
+    &.btn--primary.btn--link {
+        color: $text-primary;
+        border-bottom-color: currentColor;
+
+        &:hover:not(:disabled):not(.is-disabled) {
+            color: $text-body-dark;
+        }
+    }
+
+    /* ---- Light / Link (sur fond sombre/coloré) ---- */
+    &.btn--light.btn--link {
+        color: $text-heading-light;
+        border-bottom-color: currentColor;
+
+        &:hover:not(:disabled):not(.is-disabled) {
+            color: $text-body-light;
+        }
+    }
+}

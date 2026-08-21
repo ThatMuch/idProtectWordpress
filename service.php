@@ -49,7 +49,7 @@ get_header(); ?>
 						<?php the_field('headline'); ?>
 						<!-- <?php $link = get_field('link'); ?>
 						<?php if ($link) : ?>
-							<a href="<?php echo esc_url($link['url']); ?>" class="btn btn__orange blue text-uppercase" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?></a>
+							<a href="<?php echo esc_url($link['url']); ?>" class="btn--v4 btn--primary btn--outlined" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?></a>
 						<?php endif; ?> -->
 					</div>
 				</div>
@@ -74,7 +74,7 @@ get_header(); ?>
 						<p><?php echo $category_description; ?></p>
 					</div>
 
-					<a href="<?php echo site_url();  ?>/category/<?php echo $category_slug; ?>" class="btn btn__orange blue text-uppercase">Tous les articles</a>
+					<a href="<?php echo site_url();  ?>/category/<?php echo $category_slug; ?>" class="btn--v4 btn--primary btn--outlined">Tous les articles</a>
 				</div> <!-- end blog left -->
 			</div>
 			<div class="col-lg-8">

@@ -84,7 +84,7 @@ $the_queryTem = new WP_Query($argsTem);
 							<h1 class="blog__box__title"><?php echo $category_description; ?></h1>
 						</div>
 
-						<a href="<?php echo site_url();  ?>/category/particulier" class="btn btn__orange blue text-uppercase">Tous les articles</a>
+						<a href="<?php echo site_url();  ?>/category/particulier" class="btn--v4 btn--primary btn--outlined">Tous les articles</a>
 					</div> <!-- end blog left -->
 				</div>
 				<div class="col-lg-8">
@@ -110,7 +110,7 @@ $the_queryTem = new WP_Query($argsTem);
 							?>
 							<p><?php echo $category_description; ?></p>
 						</div>
-						<a href="<?php echo site_url();  ?>/category/professionnel" class="btn btn__orange blue dark text-uppercase">Tous les articles</a>
+						<a href="<?php echo site_url();  ?>/category/professionnel" class="btn--v4 btn--primary btn--outlined">Tous les articles</a>
 					</div> <!-- end blog left -->
 				</div>
 				<div class="col-lg-8">

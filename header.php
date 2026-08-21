@@ -110,26 +110,25 @@ $template = str_replace(array('page-', '.php'), '', $template);
 						<?php
 						$btn_text = '';
 						$btn_link = '';
-						$btn_style = 'btn__primary';
+						$btn_style = 'btn--v4 btn--primary btn--solid';
 
 						if ($current_menu_id) {
 							$btn_text = get_theme_mod('header_btn_text_' . $current_menu_id, '');
 							$btn_link = get_theme_mod('header_btn_link_' . $current_menu_id, '');
-							$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn__primary');
+							$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn--v4 btn--primary btn--solid');
 						}
 
 						if ($btn_text && $btn_link) :
 						?>
-							<a class="btn <?php echo esc_attr($btn_style); ?> custom-btn-header " href="<?php echo esc_url($btn_link); ?>">
+							<a class="<?php echo esc_attr($btn_style); ?> custom-btn-header" href="<?php echo esc_url($btn_link); ?>">
 								<?php echo esc_html($btn_text); ?>
 							</a>
 						<?php endif; ?>
-						<a href="<?php echo site_url(); ?>/panier" class="btn ">
-							<i class="fa-solid fa-cart-shopping"></i>
+						<a href="<?php echo site_url(); ?>/panier" class="btn--v4 btn--primary btn--outlined">
+							<i class="btn--v4__icon fa-solid fa-cart-shopping"></i>
 						</a>
-						<a href="https://app.idprotect.fr" class="btn ">
-							<i class="fa-solid fa-user"></i>
-
+						<a href="https://app.idprotect.fr" class="btn--v4 btn--primary btn--outlined">
+							<i class="btn--v4__icon fa-solid fa-user"></i>
 						</a>
 					</div>
 				</div>

@@ -41,10 +41,10 @@ $footer_text = $data['footer_text'] ?: 'Utiliser idprotect est soumis au <a href
 						<?php echo esc_html($card_text_accent); ?></span><?php echo esc_html($card_text_end); ?></p>
 				<form action="" method="POST" class="heroSection__card__form">
 					<input type="email" placeholder="<?php echo esc_attr($input_placeholder); ?>" required name="email" autocomplete="email" aria-label="<?php echo esc_attr($input_placeholder); ?>">
-					<button class="btn" type="submit" aria-label="<?php echo esc_attr($button_text); ?>">
-						<i class="fa fa-bell"></i>
+					<button class="btn--v4 btn--secondary btn--solid" type="submit" aria-label="<?php echo esc_attr($button_text); ?>">
+						<i class="btn--v4__icon fa fa-bell"></i>
 						<?php echo esc_html($button_text); ?>
-						<i class="fa fa-arrow-right"></i>
+						<i class="btn--v4__icon fa fa-arrow-right"></i>
 					</button>
 					<input type="hidden" name="id_tracker_submit" value="1">
 				</form>
@@ -64,10 +64,10 @@ $footer_text = $data['footer_text'] ?: 'Utiliser idprotect est soumis au <a href
 						gratuitement</span> le contrôle de vos données</p>
 				<form action="" method="POST" class="heroSection__card__form">
 					<input type="email" placeholder="Votre adresse e-mail" required name="email" autocomplete="email" aria-label="Votre adresse e-mail">
-					<button class="btn" type="submit" aria-label="Activer ID Tracker">
-						<i class="fa fa-bell"></i>
+					<button class="btn--v4 btn--secondary btn--solid" type="submit" aria-label="Activer ID Tracker">
+						<i class="btn--v4__icon fa fa-bell"></i>
 						Activer ID Tracker
-						<i class="fa fa-arrow-right"></i>
+						<i class="btn--v4__icon fa fa-arrow-right"></i>
 					</button>
 					<input type="hidden" name="id_tracker_submit" value="1">
 				</form>
