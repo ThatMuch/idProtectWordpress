@@ -388,34 +388,6 @@ hr.custom {
     }
 }
 
-.form-control {
-    border-radius: 0;
-}
-
-::placeholder {
-    font-weight: normal;
-}
-
-.community__form input:not([type="submit"]),
-.community__form textarea {
-    margin: 10px 0 0;
-    border-width: 0 0 1px;
-    border-style: solid;
-    border-color: #384050;
-    background: transparent;
-    padding: 3px 0;
-    width: 100%;
-    color: #384050;
-    font-family: "Raleway", sans-serif;
-
-    @include responsive-font-size(16, 19, 500);
-}
-
-.community__form textarea {
-    height: 120px;
-    resize: none;
-}
-
 .community__form p.note {
     margin: 10px 0 0;
     color: #384050;
