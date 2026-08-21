@@ -124,3 +124,101 @@ $shadow:
 $shadow__soft:
     0 1px 2px 0 rgba(0, 0, 0, 0.08),
     0 1px 5px 0 rgba(0, 0, 0, 0.06);
+
+
+
+/* V4 */
+
+/* Primitives */
+$blue-20: #0F3465FF;
+$blue-30: #144586FF;
+$blue-40: #1956A8FF;
+$blue-50: #5E89C2FF;
+$blue-60: #9FC1EFFF;
+$blue-70: #E8EFFBFF;
+$blue-80: #F5F9FFFF;
+$dark-blue-20: #0C0E30FF;
+$dark-blue-30: #12164DFF;
+$dark-blue-40: #171C60FF;
+$dark-blue-50: #454980FF;
+$dark-blue-60: #8B8EB0FF;
+$dark-blue-70: #E8E8EFFF;
+$dark-blue-80: #FAFAFEFF;
+$orange-40: #FF8833FF;
+$orange-60: #FFC499FF;
+$orange-70: #FFF3EBFF;
+$neutral-100: #FFFFFFFF;
+$red-40: #FF5326FF;
+$red-50: #FF7551FF;
+$red-60: #FFA993FF;
+$red-70: #FFEEE9FF;
+$green-40: #17EB79FF;
+$green-60: #8BF5BCFF;
+$green-70: #E8FDF2FF;
+
+/* Tokens - Default */
+$text-heading-dark: $dark-blue-40;
+$text-primary: $dark-blue-40;
+$text-accent: $red-50;
+$text-success: $green-40;
+$text-error: $red-40;
+$text-inactive: $blue-50;
+$text-disabled: $blue-60;
+$text-invert: $neutral-100;
+$text-body-light: #FFFFFFD1;
+$text-heading-light: #FFFFFFFF;
+$text-subheading: $blue-40;
+$text-body-dark: $dark-blue-50;
+
+/* Surface */
+
+$surface-primary: $blue-40;
+$surface-primary-darker: $blue-30;
+$surface-accent: $red-50;
+$surface-success: $green-40;
+$surface-error: $red-40;
+$surface-inactive: $blue-50;
+$surface-disabled: $blue-60;
+
+/* Background */
+
+
+$background-default: $blue-80;
+$background-light: $neutral-100;
+$background-dim: $blue-70;
+$background-disabled: $blue-70;
+$background-success: $green-70;
+$background-error: $red-70;
+$background-warning: $orange-70;
+
+/* Spacing & Radius */
+$spacing-xs: 8px;
+$spacing-s: 16px;
+$spacing-m: 24px;
+$spacing-l: 32px;
+$spacing-xl: 40px;
+$spacing-2xl: 48px;
+$spacing-3xl: 56px;
+$spacing-4xl: 64px;
+$radius-s: 4px;
+$radius-m: 8px;
+$radius-l: 100px;
+
+
+/* Fonts */
+
+/* Font - Mode 1 */
+$font-family-headline: Rubik, 'Roboto', sans-serif;
+$font-family-body: Raleway, 'Open Sans', sans-serif;
+$font-family-digits: Rubik, 'Roboto', sans-serif;
+$font-family-label: Rubik, 'Roboto', sans-serif;
+$font-weight-extrabold: 800;
+$font-weight-bold: 700;
+$font-weight-medium: Medium;
+$font-size-2xl: 60px;
+$font-size-xl: 45px;
+$font-size-l: 24px;
+$font-size-m: 16px;
+$font-size-s: 14px;
+
+
