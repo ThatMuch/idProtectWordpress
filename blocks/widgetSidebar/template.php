@@ -20,7 +20,7 @@ $class_name = $args['class_name'];
 	<h2><?php echo $data['title']; ?></h2>
 	<p><?php echo $data['text']; ?></p>
 	<?php if ($data['file']) : ?>
-		<a href="<?php echo esc_url($data['file']['url']); ?>" target="_blank" class="btn btn__white">
+		<a href="<?php echo esc_url($data['file']['url']); ?>" target="_blank" class="btn btn--primary btn--outlined">
 			Télécharger
 		</a>
 	<?php endif; ?>

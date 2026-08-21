@@ -33,7 +33,7 @@ $class_name = $args['class_name'];
 		</div>
 		<?php if ($data['cta']) : ?>
 			<div class="cta d-flex justify-content-center">
-				<a href="<?php echo $data['cta']['url']; ?>" class="btn btn__primary"><?php echo $data['cta']['title']; ?></a>
+				<a href="<?php echo $data['cta']['url']; ?>" class="btn btn--primary btn--solid"><?php echo $data['cta']['title']; ?></a>
 			</div>
 		<?php endif; ?>
 	</div>

@@ -26,14 +26,15 @@
 
 /*=====  Atoms  ======*/
 // @import "./atoms/_alerts";
-// @import "./atoms/_badges";
+@import "./atoms/_badges";
 @import "./atoms/_buttons";
 
 // @import "./atoms/_dividers";
 @import "./atoms/_headings";
+@import "./atoms/_typography";
 
 @import "./atoms/_images";
-// @import "./atoms/_inputs";
+@import "./atoms/_inputs";
 // @import "./atoms/_labels";
 // @import "./atoms/_links";
 // @import "./atoms/_lists";
@@ -68,8 +69,8 @@
 @import "./templates/_product";
 
 :root {
-    --blue: #1956a8;
-    --orange: $color-secondary;
+    --blue: #{$blue-40};
+    --orange: #{$red-50};
 }
 
 html {
@@ -77,17 +78,14 @@ html {
 }
 
 body {
-    background:
-        url(../images/bg_default.svg) no-repeat,
-        linear-gradient(180deg, #e8effb -2.99%, #ffffff 49.58%);
-    background-size: cover;
-    color: $color-primary;
+    background-color: $background-default;
+    color: $text-body-dark;
     font-size: 1rem;
     font-family: "Raleway", sans-serif;
 }
 
 a {
-    color: $color-tertiary;
+    color: $text-subheading;
     text-decoration: none;
 }
 
@@ -105,7 +103,7 @@ textarea:focus {
 hr.custom {
     opacity: 1;
     margin: 50px auto;
-    border-color: #1956a8;
+    border-color: $surface-primary;
     max-width: 85%;
 }
 
@@ -150,7 +148,7 @@ hr.custom {
 }
 
 .g-text {
-    background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
+    background: linear-gradient(278.49deg, $blue-40 0%, $dark-blue-40 88.22%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -161,10 +159,10 @@ hr.custom {
     flex-wrap: wrap;
     justify-content: start;
     gap: 0.5rem;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
     border-radius: 100px;
-    background: #ffffff;
+    background: $background-light;
     padding: 10px 20px;
     text-transform: uppercase;
 
@@ -183,15 +181,15 @@ hr.custom {
 }
 
 .text__orange {
-    color: $color-secondary;
+    color: $text-accent;
 }
 
 .text__blue {
-    color: #1956a8;
+    color: $text-subheading;
 }
 
 .text__dark {
-    color: #171c60;
+    color: $text-heading-dark;
 }
 
 .section__area {
@@ -287,17 +285,17 @@ hr.custom {
 .community__info {
     margin-left: auto;
     border-radius: 16px;
-    background: #1956a8;
+    background: $surface-primary;
     padding: 36px 40px;
     max-width: 575px;
-    color: #fff;
+    color: $text-invert;
 
     a {
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 64px;
-        background-color: #fff;
+        background-color: $background-light;
         width: 64px;
         height: 64px;
 
@@ -321,7 +319,7 @@ hr.custom {
 
 .community__info h2 {
     margin: 0 0 20px;
-    color: #f6f7f9;
+    color: $text-heading-light;
     text-transform: uppercase;
 
     @include responsive-font-size(40, 48, 800);
@@ -364,10 +362,10 @@ hr.custom {
 
 .community__form {
     margin-bottom: 20px;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
     border-radius: 16px;
-    background: #fff3eb;
+    background: $background-warning;
     padding: 36px 40px;
 }
 
@@ -379,7 +377,7 @@ hr.custom {
 
 .community__form h2 {
     margin: 0 0 10px;
-    color: $color-secondary;
+    color: $text-accent;
     text-transform: uppercase;
 
     @include responsive-font-size(24, 30, 700);
@@ -389,34 +387,6 @@ hr.custom {
     .community__form h2 {
         @include responsive-font-size(20);
     }
-}
-
-.form-control {
-    border-radius: 0;
-}
-
-::placeholder {
-    font-weight: normal;
-}
-
-.community__form input:not([type="submit"]),
-.community__form textarea {
-    margin: 10px 0 0;
-    border-width: 0 0 1px;
-    border-style: solid;
-    border-color: #384050;
-    background: transparent;
-    padding: 3px 0;
-    width: 100%;
-    color: #384050;
-    font-family: "Raleway", sans-serif;
-
-    @include responsive-font-size(16, 19, 500);
-}
-
-.community__form textarea {
-    height: 120px;
-    resize: none;
 }
 
 .community__form p.note {
@@ -441,15 +411,15 @@ hr.custom {
 
 .page__header__title {
     margin-left: auto;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
     border-radius: 100px 16px 16px 100px;
-    background: #ffffff;
+    background: $background-light;
     padding: 10px 30px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    color: $color-secondary;
+    color: $text-accent;
     text-transform: uppercase;
     @include responsive-font-size(40, 48, 800);
 
@@ -475,10 +445,10 @@ hr.custom {
 .page__header__area.contact {
     .page__header {
         background:
-            -webkit-gradient(linear, left bottom, left top, from(rgba(255, 136, 51, 0.5)), to(rgba(255, 136, 51, 0.5))),
+            -webkit-gradient(linear, left bottom, left top, from(rgba($orange-40, 0.5)), to(rgba($orange-40, 0.5))),
             url(../images/contact.jpg) no-repeat scroll center (center / cover);
         background:
-            linear-gradient(0deg, rgba(255, 136, 51, 0.5), rgba(255, 136, 51, 0.5)),
+            linear-gradient(0deg, rgba($orange-40, 0.5), rgba($orange-40, 0.5)),
             url(../images/contact.jpg) no-repeat scroll center (center / cover);
     }
 }
@@ -553,10 +523,10 @@ hr.custom {
 
 .page__hero__text__title {
     margin-bottom: 20px;
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
     border-radius: 100px 16px 16px 100px;
-    background: #ffffff;
+    background: $background-light;
     padding: 10px 40px;
     width: fit-content;
 
@@ -579,14 +549,14 @@ hr.custom {
     }
 
     .small {
-        color: #1956a8;
+        color: $text-subheading;
 
         @include responsive-font-size(24);
     }
 }
 
 .page__hero__text h6 {
-    color: #1956a8;
+    color: $text-subheading;
 
     @include responsive-font-size(24, 30, 700);
 }
@@ -605,15 +575,15 @@ hr.custom {
     border-radius: 16px;
     height: 500px;
     overflow: hidden;
-    color: #ffffff;
+    color: $text-invert;
 }
 
 .blog__featured::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 34, 53, 0)), to(#152235));
-    background: linear-gradient(180deg, rgba(21, 34, 53, 0) 0%, #152235 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba($dark-blue-40, 0)), to($dark-blue-40));
+    background: linear-gradient(180deg, rgba($dark-blue-40, 0) 0%, $dark-blue-40 100%);
     width: 100%;
     height: 50%;
     content: "";
@@ -649,7 +619,7 @@ hr.custom {
 }
 
 .blog__featured__text h4 {
-    color: #fff;
+    color: $text-invert;
     font-family: "Raleway", sans-serif;
 
     @include responsive-font-size(16, 26, 600);
@@ -658,14 +628,13 @@ hr.custom {
 .blog__featured__text h2,
 .blog__featured__text h1 {
     margin-bottom: 25px;
-    color: #fff;
+    color: $text-invert;
     text-transform: uppercase;
 
     @include responsive-font-size(40, 48, 800);
 }
 
 @media only screen and (max-width: 767px) {
-
     .blog__featured__text h2,
     .blog__featured__text h1 {
         @include responsive-font-size(25, 30);
@@ -680,7 +649,7 @@ hr.custom {
 }
 
 .blog__featured__text a {
-    color: #fff;
+    color: $text-invert;
 }
 
 .blog__link {
@@ -689,7 +658,7 @@ hr.custom {
     display: flex;
     position: absolute;
     border-radius: 64px;
-    background: #f6f7f9;
+    background: $background-light;
     width: 64px;
     height: 64px;
     -webkit-box-orient: vertical;
@@ -721,13 +690,13 @@ hr.custom {
 .blog__box {
     margin: 0 0 20px;
     border-radius: 16px;
-    background: #1956a8;
+    background: $surface-primary;
     padding: 36px 40px;
-    color: #f6f7f9;
+    color: $text-body-light;
 }
 
 .professionnel .blog__box {
-    background: #171c60;
+    background: $dark-blue-40;
 }
 
 @media only screen and (max-width: 991px) {
@@ -737,16 +706,16 @@ hr.custom {
 }
 
 .blog__box.dark {
-    background: #171c60;
+    background: $dark-blue-40;
 }
 
 .blog__box.orange {
-    background: $color-secondary;
+    background: $surface-accent;
 }
 
 .blog__box h2 {
     margin: 0 0 25px;
-    color: #f6f7f9;
+    color: $text-heading-light;
     text-transform: uppercase;
 }
 
@@ -757,11 +726,10 @@ hr.custom {
 }
 
 .blog__box {
-
     p,
     .blog__box__title {
         margin: 0;
-        color: #f6f7f9;
+        color: $text-body-light;
         font-family: "Raleway", sans-serif;
         text-transform: uppercase;
         @include responsive-font-size(22, 36, 700);
@@ -829,14 +797,14 @@ hr.custom {
 }
 
 .blog__item__text h2 {
-    color: #152235;
+    color: $text-primary;
     font-style: normal;
     font-size: 0.875rem;
     text-transform: uppercase;
 }
 
 .blog__item__text h2 a {
-    color: #152235;
+    color: $text-primary;
 }
 
 .blog__list .owl-stage {
@@ -844,7 +812,7 @@ hr.custom {
 }
 
 .article__text {
-    color: #152235;
+    color: $text-primary;
     font-family: "Raleway";
 
     @include responsive-font-size(16, 26, 500);
@@ -912,7 +880,7 @@ hr.custom {
 }
 
 .article__body h2 {
-    color: #152235;
+    color: $text-primary;
     text-transform: uppercase;
 
     @include responsive-font-size(16, 24, 700);
@@ -924,17 +892,17 @@ hr.custom {
 
 .article__body a {
     padding: 0;
-    color: #152235;
+    color: $text-primary;
 }
 
 .article__box {
     border-radius: 16px;
-    background: #1956a8;
+    background: $surface-primary;
     padding: 36px 40px;
-    color: #f6f7f9;
+    color: $text-body-light;
 
     h2 {
-        color: #f6f7f9;
+        color: $text-heading-light;
     }
 }
 
@@ -989,7 +957,7 @@ hr.custom {
 }
 
 .professionnel .step__list ul.nav-tabs li a {
-    color: #171c60;
+    color: $text-heading-dark;
 }
 
 .step__list ul.nav-tabs li a {
@@ -1000,10 +968,10 @@ hr.custom {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     margin-bottom: 15px;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
     border-radius: 16px;
-    background: #ffffff;
+    background: $background-light;
     padding: 36px 40px;
     text-transform: uppercase;
     -webkit-box-align: center;
@@ -1058,7 +1026,7 @@ hr.custom {
     left: 5px;
     z-index: 1;
     border-radius: 100%;
-    background: #fff;
+    background: $background-light;
     content: "";
 }
 
@@ -1066,7 +1034,7 @@ hr.custom {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
+    background: linear-gradient(278.49deg, $blue-40 0%, $dark-blue-40 88.22%);
     width: 100%;
     height: 100%;
     content: "";
@@ -1096,13 +1064,13 @@ hr.custom {
 
 .step__list ul.nav-tabs li a:hover,
 .step__list ul.nav-tabs li a.active {
-    background: #1956a8;
-    color: #fff;
+    background: $surface-primary;
+    color: $text-invert;
 }
 
 .professionnel .step__list ul.nav-tabs li a:hover,
 .professionnel .step__list ul.nav-tabs li a.active {
-    background: #171c60;
+    background: $dark-blue-40;
 }
 
 .step__list ul.nav-tabs li a:hover .text::before,
@@ -1111,7 +1079,7 @@ hr.custom {
     right: 0;
     bottom: 0;
     left: 0;
-    border: 5px solid #fff;
+    border: 5px solid $neutral-100;
     background: transparent;
     content: "";
 }
@@ -1119,8 +1087,8 @@ hr.custom {
 .step__list ul.nav-tabs li a:hover .text span,
 .step__list ul.nav-tabs li a.active .text span {
     background: transparent;
-    color: #fff;
-    -webkit-text-fill-color: #fff;
+    color: $text-invert;
+    -webkit-text-fill-color: $text-invert;
 }
 
 .step__list ul.nav-tabs li:last-child a {
@@ -1128,7 +1096,7 @@ hr.custom {
 }
 
 .step__list.service ul.nav-tabs li a {
-    color: #152235;
+    color: $text-primary;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1146,15 +1114,15 @@ hr.custom {
 
 .step__list.service ul.nav-tabs li a:hover,
 .step__list.service ul.nav-tabs li a.active {
-    color: #fff;
+    color: $text-invert;
 }
 
 .bg_PRIMARY_40 {
-    background-color: $color-tertiary !important;
+    background-color: $surface-primary !important;
 }
 
 .bg_secondary_40 {
-    background-color: #171c60 !important;
+    background-color: $dark-blue-40 !important;
 }
 
 .oembed-container {
@@ -1177,7 +1145,7 @@ hr.custom {
 }
 
 .sidebar-pro .article__box {
-    background-color: #171c60;
+    background-color: $dark-blue-40;
 }
 
 .product_meta {

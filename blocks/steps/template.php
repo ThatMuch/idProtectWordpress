@@ -52,7 +52,7 @@ $class_name = $args['class_name'];
 							endwhile; ?>
 						</div>
 					<?php endif; ?>
-					<?php if ($data['cta']) : ?> <a class="btn btn__primary" href="<?php echo esc_url($data['cta']['url']); ?>"><span><?php echo esc_html($data['cta']['title']); ?></span></a> <?php endif; ?>
+					<?php if ($data['cta']) : ?> <a class="btn btn--primary btn--solid" href="<?php echo esc_url($data['cta']['url']); ?>"><span><?php echo esc_html($data['cta']['title']); ?></span></a> <?php endif; ?>
 
 				</div>
 			</div>

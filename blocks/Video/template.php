@@ -34,10 +34,10 @@ $isFirst = get_field('is_first');
 									$cta_secondary = get_sub_field('cta_secondary');
 								?>
 									<?php if ($cta_primary) : ?>
-										<a class="btn btn__primary" href="<?php echo esc_url($cta_primary['url']); ?>"><span><?php echo esc_html($cta_primary['title']); ?></span></a>
+										<a class="btn btn--primary btn--solid" href="<?php echo esc_url($cta_primary['url']); ?>"><span><?php echo esc_html($cta_primary['title']); ?></span></a>
 									<?php endif; ?>
 									<?php if ($cta_secondary) : ?>
-										<a class="btn btn__secondary" href="<?php echo esc_url($cta_secondary['url']); ?>"><span><?php echo esc_html($cta_secondary['title']); ?></span></a>
+										<a class="btn btn--secondary btn--solid" href="<?php echo esc_url($cta_secondary['url']); ?>"><span><?php echo esc_html($cta_secondary['title']); ?></span></a>
 									<?php endif; ?>
 								<?php endwhile; ?>
 							</div>

@@ -110,7 +110,7 @@ nav.navbar {
 
 
         &.active {
-            background-color: $color-primary;
+            background-color: $dark-blue-40;
             width: 100vw;
             position: absolute;
             left: 0;
@@ -119,7 +119,7 @@ nav.navbar {
             display: block;
 
             a {
-                color: #fff;
+                color: $text-invert;
             }
         }
     }

@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * @author      ThatMuch
@@ -84,7 +84,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 		<div class="container align-items-center <?= $template === "landing" && "justify-content-center" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
-							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect">
+							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<?php endif; ?>" alt="ID Protect">
 			</a>
 			<?php if ($template !== "landing") : ?>
 				<div class="collapse navbar-collapse" id="navbar">
@@ -110,26 +110,25 @@ $template = str_replace(array('page-', '.php'), '', $template);
 						<?php
 						$btn_text = '';
 						$btn_link = '';
-						$btn_style = 'btn__primary';
+						$btn_style = 'btn btn--primary btn--solid';
 
 						if ($current_menu_id) {
 							$btn_text = get_theme_mod('header_btn_text_' . $current_menu_id, '');
 							$btn_link = get_theme_mod('header_btn_link_' . $current_menu_id, '');
-							$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn__primary');
+							$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn btn--primary btn--solid');
 						}
 
 						if ($btn_text && $btn_link) :
 						?>
-							<a class="btn <?php echo esc_attr($btn_style); ?> custom-btn-header " href="<?php echo esc_url($btn_link); ?>">
+							<a class="<?php echo esc_attr($btn_style); ?> custom-btn-header" href="<?php echo esc_url($btn_link); ?>">
 								<?php echo esc_html($btn_text); ?>
 							</a>
 						<?php endif; ?>
-						<a href="<?php echo site_url(); ?>/panier" class="btn ">
-							<i class="fa-solid fa-cart-shopping"></i>
+						<a href="<?php echo site_url(); ?>/panier" class="btn btn--primary btn--outlined">
+							<i class="btn__icon fa-solid fa-cart-shopping"></i>
 						</a>
-						<a href="https://app.idprotect.fr" class="btn ">
-							<i class="fa-solid fa-user"></i>
-
+						<a href="https://app.idprotect.fr" class="btn btn--primary btn--outlined">
+							<i class="btn__icon fa-solid fa-user"></i>
 						</a>
 					</div>
 				</div>

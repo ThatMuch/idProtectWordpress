@@ -34,8 +34,6 @@
     "gulp-uglifycss": "^1.1.0",
     "gulp-wp-pot": "^2.5.0",
     "gulp-zip": "^5.1.0",
-    "gulp5-sass-plugin": "^2.0.0",
-    "node-sass": "^9.0.0",
     "postcss": "^8.4.40",
     "prettier": "^3.3.3",
     "prettier-plugin-css-order": "^2.1.2",

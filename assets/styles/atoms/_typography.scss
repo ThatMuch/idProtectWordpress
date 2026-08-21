@@ -1,0 +1,49 @@
+/**
+ * TYPOGRAPHY — Body / Label / Digits text styles
+ * Ported from Figma "Design System - ID Protect" > Typography (node 485:283)
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       idProtect_1.0.0.0
+ *
+ */
+
+.text-body-1 {
+    font-family: $font-family-body;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-m;
+    line-height: normal;
+}
+
+.text-body-1--strong {
+    font-weight: $font-weight-extrabold;
+}
+
+.text-body-2 {
+    font-family: $font-family-body;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-s;
+    line-height: normal;
+}
+
+.text-label {
+    font-family: $font-family-label;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-s;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.text-digit-1 {
+    font-family: $font-family-digits;
+    font-weight: $font-weight-extrabold;
+    font-size: $font-size-xl;
+    line-height: normal;
+}
+
+.text-digit-2 {
+    font-family: $font-family-digits;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-m;
+    line-height: normal;
+}
