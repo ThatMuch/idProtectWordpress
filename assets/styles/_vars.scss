@@ -1,3 +1,5 @@
+@use "mixins";
+
 /**
  * Variables
  * Contains re-usable variables like colors, sizes, breakpoints etc.
@@ -9,6 +11,8 @@
  * @since      idProtect_1.0.0
  *
  */
+
+@use "sass:color";
 
 /*==================================================================================
   SCALING
@@ -29,12 +33,12 @@ $element_width_mobile: 95vw; // default width of the .element content-div
 /* Presets
 /––––––––––––––––––––––––*/
 $color-primary: #171c60;
-$color-primary-darker: darken($color-primary, 7%);
-$color-primary-lighter: lighten($color-primary, 7%);
+$color-primary-darker: color.adjust($color-primary, $lightness: -7%);
+$color-primary-lighter: color.adjust($color-primary, $lightness: 7%);
 $color-secondary: #ff7551;
-$color-secondary-darker: darken($color-secondary, 7%);
+$color-secondary-darker: color.adjust($color-secondary, $lightness: -7%);
 $color-tertiary: #1956a8;
-$color-tertiary-darker: darken($color-tertiary, 7%);
+$color-tertiary-darker: color.adjust($color-tertiary, $lightness: -7%);
 $color-black: #212529;
 $color-dark: #343a40;
 $color-grey2: #495057;
@@ -63,7 +67,7 @@ $text-xl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale
 $text-xxl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio});
 $text-xxxl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio});
 
-@include breakpoint(mobile) {
+@include mixins.breakpoint(mobile) {
     $text-scale-ratio: 1.25;
 }
 
@@ -104,7 +108,7 @@ $nav__spacercolor: $color-dark;
 /* ANCHORS
 /––––––––––––––––––––––––*/
 $a__linkcolor: $color-primary;
-$a__hovercolor: darken($color-primary, 20);
+$a__hovercolor: color.adjust($color-primary, $lightness: -20%);
 $a__textdecoration: none;
 
 /*==================================================================================

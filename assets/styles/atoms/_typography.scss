@@ -1,3 +1,5 @@
+@use "../vars";
+
 /**
  * TYPOGRAPHY — Body / Label / Digits text styles
  * Ported from Figma "Design System - ID Protect" > Typography (node 485:283)
@@ -9,41 +11,41 @@
  */
 
 .text-body-1 {
-    font-weight: $font-weight-medium;
-    font-size: $font-size-m;
+    font-weight: vars.$font-weight-medium;
+    font-size: vars.$font-size-m;
     line-height: 1.5;
-    font-family: $font-family-body;
+    font-family: vars.$font-family-body;
 }
 
 .text-body-1--strong {
-    font-weight: $font-weight-extrabold;
+    font-weight: vars.$font-weight-extrabold;
 }
 
 .text-body-2 {
-    font-weight: $font-weight-medium;
-    font-size: $font-size-s;
+    font-weight: vars.$font-weight-medium;
+    font-size: vars.$font-size-s;
     line-height: 1.5;
-    font-family: $font-family-body;
+    font-family: vars.$font-family-body;
 }
 
 .text-label {
-    font-weight: $font-weight-bold;
-    font-size: $font-size-s;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-s;
     line-height: 1.5;
-    font-family: $font-family-label;
+    font-family: vars.$font-family-label;
     letter-spacing: 0.5px;
 }
 
 .text-digit-1 {
-    font-weight: $font-weight-extrabold;
-    font-size: $font-size-xl;
+    font-weight: vars.$font-weight-extrabold;
+    font-size: vars.$font-size-xl;
     line-height: 1.5;
-    font-family: $font-family-digits;
+    font-family: vars.$font-family-digits;
 }
 
 .text-digit-2 {
-    font-weight: $font-weight-medium;
-    font-size: $font-size-m;
+    font-weight: vars.$font-weight-medium;
+    font-size: vars.$font-size-m;
     line-height: 1.5;
-    font-family: $font-family-digits;
+    font-family: vars.$font-family-digits;
 }
