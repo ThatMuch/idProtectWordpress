@@ -13,24 +13,26 @@
  */
 
 .header__area .dropdown-menu.mega-menu {
-    overflow: hidden;
     padding: 0;
+    overflow: hidden;
 
     &::before {
         display: none;
     }
 
     @include mixins.breakpoint(laptop) {
+        display: none;
+        grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+        transform: translate(-33%, 13px);
+        box-shadow: 0px 30px 60px rgba(vars.$dark-blue-40, 0.28);
         border: 1px solid vars.$blue-70;
         border-radius: 18px;
-        box-shadow: 0px 30px 60px rgba(vars.$dark-blue-40, 0.28);
+        padding: 0;
         width: 847px;
         max-width: calc(100vw - 32px);
-        padding: 0;
-        transform: translate(-33%, 13px);
-
-        display: grid;
-        grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+        &.show {
+            display: grid;
+        }
     }
 }
 
@@ -44,14 +46,14 @@
     padding: vars.$spacing-m;
 
     @include mixins.breakpoint(laptop) {
-        column-count: 2;
         column-gap: vars.$spacing-m;
+        column-count: 2;
     }
 }
 
 .mega-menu__category {
-    margin-bottom: vars.$spacing-m;
     break-inside: avoid;
+    margin-bottom: vars.$spacing-m;
 
     &:last-child {
         margin-bottom: 0;
@@ -65,9 +67,9 @@
 .mega-menu__category-title {
     margin: 0 0 vars.$spacing-xs;
     color: vars.$text-subheading;
-    font-family: vars.$font-family-body;
     font-weight: vars.$font-weight-bold;
     font-size: 11px;
+    font-family: vars.$font-family-body;
     letter-spacing: 1.32px;
     text-transform: uppercase;
 }
@@ -75,10 +77,10 @@
 .mega-menu__category-quote {
     margin: 0;
     color: vars.$text-inactive;
-    font-family: vars.$font-family-body;
     font-weight: vars.$font-weight-medium;
     font-size: 11.5px;
     line-height: 1.4;
+    font-family: vars.$font-family-body;
 }
 
 .mega-menu__tools {
@@ -101,11 +103,8 @@
 .mega-menu__tool-icon {
     display: flex;
     flex-shrink: 0;
-    align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    background: vars.$background-light;
-    box-shadow: 0px 4px 12px rgba(vars.$blue-40, 0.12);
+    align-items: center;
     width: 38px;
     height: 38px;
     overflow: hidden;
@@ -124,18 +123,18 @@
 
 .mega-menu__tool-title {
     color: vars.$text-heading-dark;
-    font-family: vars.$font-family-headline;
     font-weight: vars.$font-weight-bold;
     font-size: 13.5px;
+    font-family: vars.$font-family-headline;
 }
 
 .mega-menu__tool-excerpt {
     margin-top: 2px;
     color: vars.$text-body-dark;
-    font-family: vars.$font-family-body;
     font-weight: vars.$font-weight-medium;
     font-size: 11.5px;
     line-height: 1.4;
+    font-family: vars.$font-family-body;
 }
 
 .mega-menu__tool-link:hover {
@@ -153,25 +152,27 @@
 
     @include mixins.breakpoint(phablet) {
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
     }
 }
-
+.mega-menu__mobile-text {
+    flex: 1;
+}
 .mega-menu__mobile-title {
     margin: 0;
     color: vars.$text-heading-dark;
-    font-family: vars.$font-family-headline;
     font-weight: vars.$font-weight-bold;
     font-size: 13.5px;
+    font-family: vars.$font-family-headline;
 }
 
 .mega-menu__mobile-subtitle {
     margin: 4px 0 0;
     color: vars.$text-body-dark;
-    font-family: vars.$font-family-body;
     font-weight: vars.$font-weight-medium;
     font-size: 11.5px;
+    font-family: vars.$font-family-body;
 }
 
 .mega-menu__mobile-badges {
@@ -212,30 +213,37 @@
 }
 
 .mega-menu__store-badge-label {
-    font-family: vars.$font-family-headline;
-    font-size: 14px;
     font-weight: vars.$font-weight-medium;
+    font-size: 14px;
+    font-family: vars.$font-family-headline;
 }
 
 .mega-menu__featured {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
-    background:
-        radial-gradient(
-            circle at 50% -12%,
-            vars.$blue-30 0%,
-            vars.$dark-blue-30 52%,
-            vars.$dark-blue-20 100%
-        );
+    background-image: vars.$gradient-particulier;
     padding: vars.$spacing-m;
     color: vars.$text-heading-light;
+    &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url("../images/bg-menu.svg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        content: "";
+    }
 }
 
 .mega-menu__featured-icon {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-bottom: vars.$spacing-s;
     width: 52px;
     height: 52px;
@@ -250,19 +258,19 @@
 .mega-menu__featured-title {
     margin: 0;
     color: vars.$text-heading-light;
-    font-family: vars.$font-family-headline;
     font-weight: vars.$font-weight-extrabold;
     font-size: 17px;
+    font-family: vars.$font-family-headline;
 }
 
 .mega-menu__featured-excerpt {
     flex-grow: 1;
     margin: vars.$spacing-xs 0 0;
     color: vars.$text-body-light;
-    font-family: vars.$font-family-body;
     font-weight: vars.$font-weight-medium;
     font-size: 12.5px;
     line-height: 1.5;
+    font-family: vars.$font-family-body;
 }
 
 .mega-menu__featured-cta {

@@ -41,7 +41,7 @@
     &.btn--solid,
     &.btn--outlined {
         border-radius: vars.$radius-l;
-        padding: vars.$spacing-s vars.$spacing-l;
+        padding: 12px 22px;
     }
 
     &.btn--solid {
