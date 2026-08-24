@@ -126,6 +126,13 @@ $( function() {
 		});
 	}).trigger( 'scroll' );
 
+	/* Header Scrolled State
+  /––––––––––––––––––––––––*/
+	// add "scrolled" class to the navbar once the page has scrolled past the top
+	$( window ).on( 'scroll', function() {
+		$( '.header__area' ).toggleClass( 'scrolled', $( window ).scrollTop() > 0 );
+	}).trigger( 'scroll' );
+
 	/* Pricing Tabs Functionality
   /––––––––––––––––––––––––*/
 	$('.tab-btn').click(function() {

@@ -63,11 +63,12 @@
 
     /* ---- Primary / Solid ---- */
     &.btn--primary.btn--solid {
-        box-shadow: 0 14px 15px rgba(vars.$dark-blue-40, 0.7);
+        box-shadow: 0 14px 15px rgba(vars.$dark-blue-40, 0.4);
         background: vars.$dark-blue-40;
         color: vars.$neutral-100;
 
         &:hover:not(:disabled):not(.is-disabled) {
+            box-shadow: 0 14px 15px rgba(vars.$dark-blue-40, 0.7);
             background: vars.$dark-blue-30;
         }
 
@@ -82,11 +83,12 @@
 
     /* ---- Secondary / Solid ---- */
     &.btn--secondary.btn--solid {
-        box-shadow: 0 14px 15px rgba(vars.$red-40, 0.7);
+        box-shadow: 0 14px 15px rgba(vars.$red-40, 0.4);
         background: vars.$surface-accent;
         color: vars.$neutral-100;
 
         &:hover:not(:disabled):not(.is-disabled) {
+            box-shadow: 0 14px 15px rgba(vars.$red-40, 0.7);
             background: vars.$red-40;
         }
 

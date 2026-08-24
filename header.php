@@ -80,7 +80,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 		$nav_class = 'menu-' . $menu_object->slug;
 		$current_menu_id = $menu_object->term_id;
 	}
-	?> <nav class="header__area navbar sticky-top navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
+	?> <nav class="header__area navbar navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
 		<div class="container align-items-center <?= $template === "landing" && "justify-content-center" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
@@ -119,7 +119,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 								$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn btn--primary btn--solid');
 							} ?>
 
-							<a href="https://app.idprotect.fr" class="btn btn--primary btn--outlined">
+							<a href="https://app.idprotect.fr" class="btn btn--light btn--outlined">
 								Connexion
 							</a>
 
