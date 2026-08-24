@@ -1,6 +1,6 @@
 {
     "key": "group_6a8c5d5f6cccb",
-    "title": "Image du menu",
+    "title": "Affichage dans le menu",
     "fields": [
         {
             "key": "field_6a8c5d5fab53a",
@@ -27,6 +27,47 @@
             "mime_types": "",
             "allow_in_bindings": 0,
             "preview_size": "medium"
+        },
+        {
+            "key": "field_6a8c5e1a4b2f1",
+            "label": "Afficher dans le mega menu",
+            "name": "afficher_menu",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Si décoché, cet outil n'apparaît pas dans le mega menu du header, même s'il appartient à une catégorie affichée.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6a8c5e1a4b2f2",
+            "label": "Libellé du bouton (panneau vedette)",
+            "name": "menu_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Utilisé uniquement si cet outil est dans la catégorie « Featured » (panneau bleu du mega menu). Laisser vide pour utiliser « Découvrir {titre de l'outil} ».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -57,5 +98,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1787583987
+    "modified": 1787584800
 }

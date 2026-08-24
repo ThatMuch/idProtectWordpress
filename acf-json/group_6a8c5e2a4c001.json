@@ -1,0 +1,61 @@
+{
+    "key": "group_6a8c5e2a4c001",
+    "title": "Mega Menu Outils - Applications mobiles",
+    "fields": [
+        {
+            "key": "field_6a8c5e2a4c002",
+            "label": "Lien App Store",
+            "name": "mega_menu_app_store_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Affiché dans le bandeau \"Tous vos outils sur mobile\" du mega menu Outils. Laisser vide pour masquer ce badge.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6a8c5e2a4c003",
+            "label": "Lien Google Play",
+            "name": "mega_menu_google_play_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Affiché dans le bandeau \"Tous vos outils sur mobile\" du mega menu Outils. Laisser vide pour masquer ce badge.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1787584800
+}
