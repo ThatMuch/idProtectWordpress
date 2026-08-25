@@ -67,7 +67,8 @@
         background: vars.$dark-blue-40;
         color: vars.$neutral-100;
 
-        &:hover:not(:disabled):not(.is-disabled) {
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
             box-shadow: 0 14px 15px rgba(vars.$dark-blue-40, 0.7);
             background: vars.$dark-blue-30;
         }
@@ -87,7 +88,8 @@
         background: vars.$surface-accent;
         color: vars.$neutral-100;
 
-        &:hover:not(:disabled):not(.is-disabled) {
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
             box-shadow: 0 14px 15px rgba(vars.$red-40, 0.7);
             background: vars.$red-40;
         }
@@ -106,7 +108,8 @@
         border-color: rgba(vars.$dark-blue-40, 0.4);
         color: vars.$text-primary;
 
-        &:hover:not(:disabled):not(.is-disabled) {
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
             background: rgba(vars.$dark-blue-40, 0.1);
         }
     }
@@ -116,7 +119,8 @@
         border-color: rgba(vars.$neutral-100, 0.4);
         color: vars.$text-heading-light;
 
-        &:hover:not(:disabled):not(.is-disabled) {
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
             background: rgba(vars.$neutral-100, 0.1);
         }
     }
@@ -137,7 +141,8 @@
         border-bottom-color: currentColor;
         color: vars.$text-primary;
 
-        &:hover:not(:disabled):not(.is-disabled) {
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
             color: vars.$text-body-dark;
         }
     }
@@ -147,7 +152,8 @@
         border-bottom-color: currentColor;
         color: vars.$text-heading-light;
 
-        &:hover:not(:disabled):not(.is-disabled) {
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
             color: vars.$text-body-light;
         }
     }
