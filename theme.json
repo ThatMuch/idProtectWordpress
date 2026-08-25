@@ -9,90 +9,338 @@
 			"defaultPalette": false,
 			"custom": false,
 			"palette": [
-				{ "slug": "blue-20", "color": "#0F3465", "name": "Blue 20" },
-				{ "slug": "blue-30", "color": "#144586", "name": "Blue 30" },
-				{ "slug": "blue-40", "color": "#1956A8", "name": "Blue 40" },
-				{ "slug": "blue-50", "color": "#5E89C2", "name": "Blue 50" },
-				{ "slug": "blue-60", "color": "#9FC1EF", "name": "Blue 60" },
-				{ "slug": "blue-70", "color": "#E8EFFB", "name": "Blue 70" },
-				{ "slug": "blue-80", "color": "#F5F9FF", "name": "Blue 80" },
-
-				{ "slug": "dark-blue-20", "color": "#0C0E30", "name": "Dark Blue 20" },
-				{ "slug": "dark-blue-30", "color": "#12164D", "name": "Dark Blue 30" },
-				{ "slug": "dark-blue-40", "color": "#171C60", "name": "Dark Blue 40" },
-				{ "slug": "dark-blue-50", "color": "#454980", "name": "Dark Blue 50" },
-				{ "slug": "dark-blue-60", "color": "#8B8EB0", "name": "Dark Blue 60" },
-				{ "slug": "dark-blue-70", "color": "#E8E8EF", "name": "Dark Blue 70" },
-				{ "slug": "dark-blue-80", "color": "#FAFAFE", "name": "Dark Blue 80" },
-
-				{ "slug": "orange-40", "color": "#FF8833", "name": "Orange 40" },
-				{ "slug": "orange-60", "color": "#FFC499", "name": "Orange 60" },
-				{ "slug": "orange-70", "color": "#FFF3EB", "name": "Orange 70" },
-
-				{ "slug": "red-40", "color": "#FF5326", "name": "Red 40" },
-				{ "slug": "red-50", "color": "#FF7551", "name": "Red 50" },
-				{ "slug": "red-60", "color": "#FFA993", "name": "Red 60" },
-				{ "slug": "red-70", "color": "#FFEEE9", "name": "Red 70" },
-
-				{ "slug": "green-40", "color": "#17EB79", "name": "Green 40" },
-				{ "slug": "green-60", "color": "#8BF5BC", "name": "Green 60" },
-				{ "slug": "green-70", "color": "#E8FDF2", "name": "Green 70" },
-
-				{ "slug": "neutral-100", "color": "#FFFFFF", "name": "Neutral 100" },
-
-				{ "slug": "text-heading-dark", "color": "#171C60", "name": "Text Heading Dark" },
-				{ "slug": "text-primary", "color": "#171C60", "name": "Text Primary" },
-				{ "slug": "text-subheading", "color": "#1956A8", "name": "Text Subheading" },
-				{ "slug": "text-body-dark", "color": "#454980", "name": "Text Body Dark" },
-				{ "slug": "text-accent", "color": "#FF7551", "name": "Text Accent" },
-				{ "slug": "text-success", "color": "#17EB79", "name": "Text Success" },
-				{ "slug": "text-error", "color": "#FF5326", "name": "Text Error" },
-				{ "slug": "text-inactive", "color": "#5E89C2", "name": "Text Inactive" },
-				{ "slug": "text-disabled", "color": "#9FC1EF", "name": "Text Disabled" },
-				{ "slug": "text-invert", "color": "#FFFFFF", "name": "Text Invert" },
-				{ "slug": "text-heading-light", "color": "#FFFFFF", "name": "Text Heading Light" },
-				{ "slug": "text-body-light", "color": "#FFFFFFD1", "name": "Text Body Light" },
-
-				{ "slug": "surface-primary", "color": "#1956A8", "name": "Surface Primary" },
-				{ "slug": "surface-primary-darker", "color": "#144586", "name": "Surface Primary Darker" },
-				{ "slug": "surface-accent", "color": "#FF7551", "name": "Surface Accent" },
-				{ "slug": "surface-success", "color": "#17EB79", "name": "Surface Success" },
-				{ "slug": "surface-error", "color": "#FF5326", "name": "Surface Error" },
-				{ "slug": "surface-inactive", "color": "#5E89C2", "name": "Surface Inactive" },
-				{ "slug": "surface-disabled", "color": "#9FC1EF", "name": "Surface Disabled" },
-
-				{ "slug": "background-default", "color": "#F5F9FF", "name": "Background Default" },
-				{ "slug": "background-light", "color": "#FFFFFF", "name": "Background Light" },
-				{ "slug": "background-dim", "color": "#E8EFFB", "name": "Background Dim" },
-				{ "slug": "background-disabled", "color": "#E8EFFB", "name": "Background Disabled" },
-				{ "slug": "background-success", "color": "#E8FDF2", "name": "Background Success" },
-				{ "slug": "background-error", "color": "#FFEEE9", "name": "Background Error" },
-				{ "slug": "background-warning", "color": "#FFF3EB", "name": "Background Warning" }
+				{
+					"slug": "blue-20",
+					"color": "#0F3465",
+					"name": "Blue 20"
+				},
+				{
+					"slug": "blue-30",
+					"color": "#144586",
+					"name": "Blue 30"
+				},
+				{
+					"slug": "blue-40",
+					"color": "#1956A8",
+					"name": "Blue 40"
+				},
+				{
+					"slug": "blue-50",
+					"color": "#5E89C2",
+					"name": "Blue 50"
+				},
+				{
+					"slug": "blue-60",
+					"color": "#9FC1EF",
+					"name": "Blue 60"
+				},
+				{
+					"slug": "blue-70",
+					"color": "#E8EFFB",
+					"name": "Blue 70"
+				},
+				{
+					"slug": "blue-80",
+					"color": "#F5F9FF",
+					"name": "Blue 80"
+				},
+				{
+					"slug": "dark-blue-20",
+					"color": "#0C0E30",
+					"name": "Dark Blue 20"
+				},
+				{
+					"slug": "dark-blue-30",
+					"color": "#12164D",
+					"name": "Dark Blue 30"
+				},
+				{
+					"slug": "dark-blue-40",
+					"color": "#171C60",
+					"name": "Dark Blue 40"
+				},
+				{
+					"slug": "dark-blue-50",
+					"color": "#454980",
+					"name": "Dark Blue 50"
+				},
+				{
+					"slug": "dark-blue-60",
+					"color": "#8B8EB0",
+					"name": "Dark Blue 60"
+				},
+				{
+					"slug": "dark-blue-70",
+					"color": "#E8E8EF",
+					"name": "Dark Blue 70"
+				},
+				{
+					"slug": "dark-blue-80",
+					"color": "#FAFAFE",
+					"name": "Dark Blue 80"
+				},
+				{
+					"slug": "orange-40",
+					"color": "#FF8833",
+					"name": "Orange 40"
+				},
+				{
+					"slug": "orange-60",
+					"color": "#FFC499",
+					"name": "Orange 60"
+				},
+				{
+					"slug": "orange-70",
+					"color": "#FFF3EB",
+					"name": "Orange 70"
+				},
+				{
+					"slug": "red-40",
+					"color": "#FF5326",
+					"name": "Red 40"
+				},
+				{
+					"slug": "red-50",
+					"color": "#FF7551",
+					"name": "Red 50"
+				},
+				{
+					"slug": "red-60",
+					"color": "#FFA993",
+					"name": "Red 60"
+				},
+				{
+					"slug": "red-70",
+					"color": "#FFEEE9",
+					"name": "Red 70"
+				},
+				{
+					"slug": "green-40",
+					"color": "#17EB79",
+					"name": "Green 40"
+				},
+				{
+					"slug": "green-60",
+					"color": "#8BF5BC",
+					"name": "Green 60"
+				},
+				{
+					"slug": "green-70",
+					"color": "#E8FDF2",
+					"name": "Green 70"
+				},
+				{
+					"slug": "neutral-100",
+					"color": "#FFFFFF",
+					"name": "Neutral 100"
+				},
+				{
+					"slug": "text-heading-dark",
+					"color": "#171C60",
+					"name": "Text Heading Dark"
+				},
+				{
+					"slug": "text-primary",
+					"color": "#171C60",
+					"name": "Text Primary"
+				},
+				{
+					"slug": "text-subheading",
+					"color": "#1956A8",
+					"name": "Text Subheading"
+				},
+				{
+					"slug": "text-body-dark",
+					"color": "#454980",
+					"name": "Text Body Dark"
+				},
+				{
+					"slug": "text-accent",
+					"color": "#FF7551",
+					"name": "Text Accent"
+				},
+				{
+					"slug": "text-success",
+					"color": "#17EB79",
+					"name": "Text Success"
+				},
+				{
+					"slug": "text-error",
+					"color": "#FF5326",
+					"name": "Text Error"
+				},
+				{
+					"slug": "text-inactive",
+					"color": "#5E89C2",
+					"name": "Text Inactive"
+				},
+				{
+					"slug": "text-disabled",
+					"color": "#9FC1EF",
+					"name": "Text Disabled"
+				},
+				{
+					"slug": "text-invert",
+					"color": "#FFFFFF",
+					"name": "Text Invert"
+				},
+				{
+					"slug": "text-heading-light",
+					"color": "#FFFFFF",
+					"name": "Text Heading Light"
+				},
+				{
+					"slug": "text-body-light",
+					"color": "#FFFFFFD1",
+					"name": "Text Body Light"
+				},
+				{
+					"slug": "surface-primary",
+					"color": "#1956A8",
+					"name": "Surface Primary"
+				},
+				{
+					"slug": "surface-primary-darker",
+					"color": "#144586",
+					"name": "Surface Primary Darker"
+				},
+				{
+					"slug": "surface-accent",
+					"color": "#FF7551",
+					"name": "Surface Accent"
+				},
+				{
+					"slug": "surface-success",
+					"color": "#17EB79",
+					"name": "Surface Success"
+				},
+				{
+					"slug": "surface-error",
+					"color": "#FF5326",
+					"name": "Surface Error"
+				},
+				{
+					"slug": "surface-inactive",
+					"color": "#5E89C2",
+					"name": "Surface Inactive"
+				},
+				{
+					"slug": "surface-disabled",
+					"color": "#9FC1EF",
+					"name": "Surface Disabled"
+				},
+				{
+					"slug": "background-default",
+					"color": "#F5F9FF",
+					"name": "Background Default"
+				},
+				{
+					"slug": "background-light",
+					"color": "#FFFFFF",
+					"name": "Background Light"
+				},
+				{
+					"slug": "background-dim",
+					"color": "#E8EFFB",
+					"name": "Background Dim"
+				},
+				{
+					"slug": "background-disabled",
+					"color": "#E8EFFB",
+					"name": "Background Disabled"
+				},
+				{
+					"slug": "background-success",
+					"color": "#E8FDF2",
+					"name": "Background Success"
+				},
+				{
+					"slug": "background-error",
+					"color": "#FFEEE9",
+					"name": "Background Error"
+				},
+				{
+					"slug": "background-warning",
+					"color": "#FFF3EB",
+					"name": "Background Warning"
+				}
 			]
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
 			"customSpacingSize": false,
 			"spacingSizes": [
-				{ "slug": "xs", "size": "8px", "name": "XS" },
-				{ "slug": "s", "size": "16px", "name": "S" },
-				{ "slug": "m", "size": "24px", "name": "M" },
-				{ "slug": "l", "size": "32px", "name": "L" },
-				{ "slug": "xl", "size": "40px", "name": "XL" },
-				{ "slug": "2xl", "size": "48px", "name": "2XL" },
-				{ "slug": "3xl", "size": "56px", "name": "3XL" },
-				{ "slug": "4xl", "size": "64px", "name": "4XL" }
+				{
+					"slug": "xs",
+					"size": "8px",
+					"name": "XS"
+				},
+				{
+					"slug": "s",
+					"size": "16px",
+					"name": "S"
+				},
+				{
+					"slug": "m",
+					"size": "24px",
+					"name": "M"
+				},
+				{
+					"slug": "l",
+					"size": "32px",
+					"name": "L"
+				},
+				{
+					"slug": "xl",
+					"size": "40px",
+					"name": "XL"
+				},
+				{
+					"slug": "2xl",
+					"size": "48px",
+					"name": "2XL"
+				},
+				{
+					"slug": "3xl",
+					"size": "56px",
+					"name": "3XL"
+				},
+				{
+					"slug": "4xl",
+					"size": "64px",
+					"name": "4XL"
+				}
 			]
 		},
 		"typography": {
 			"defaultFontSizes": false,
 			"customFontSize": false,
 			"fontSizes": [
-				{ "slug": "s", "size": "14px", "name": "S" },
-				{ "slug": "m", "size": "16px", "name": "M" },
-				{ "slug": "l", "size": "24px", "name": "L" },
-				{ "slug": "xl", "size": "45px", "name": "XL" },
-				{ "slug": "2xl", "size": "60px", "name": "2XL" }
+				{
+					"slug": "s",
+					"size": "14px",
+					"name": "S"
+				},
+				{
+					"slug": "m",
+					"size": "16px",
+					"name": "M"
+				},
+				{
+					"slug": "l",
+					"size": "24px",
+					"name": "L"
+				},
+				{
+					"slug": "xl",
+					"size": "45px",
+					"name": "XL"
+				},
+				{
+					"slug": "2xl",
+					"size": "60px",
+					"name": "2XL"
+				}
 			],
 			"fontFamilies": [
 				{
@@ -121,7 +369,7 @@
 			"radius": {
 				"s": "4px",
 				"m": "8px",
-				"l": "100px"
+				"l": "24px"
 			},
 			"font-weight": {
 				"extrabold": "800",
