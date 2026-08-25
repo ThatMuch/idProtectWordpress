@@ -13,9 +13,9 @@
  */
 
 .header__area .dropdown-menu.mega-menu {
+    cursor: default;
     padding: 0;
     overflow: hidden;
-
     &::before {
         display: none;
     }
@@ -200,6 +200,10 @@
     height: 40px;
     color: vars.$text-invert;
     text-decoration: none;
+    &:hover {
+        box-shadow: 0 0 0 3px rgba(vars.$blue-40, 0.25);
+        color: vars.$text-invert;
+    }
 }
 
 .mega-menu__store-badge-icon {
