@@ -97,6 +97,10 @@ body.menu-open {
 
     .dropdown-menu {
         position: relative;
+        // Bootstrap's [data-bs-popper] rule still sets top:100% even with the
+        // dropdown's Popper positioning disabled (data-bs-display="static"),
+        // which pushes this relatively-positioned panel far below the toggle.
+        top: 0;
         transform: none;
         margin: 0;
         box-shadow: 0 0 0;
