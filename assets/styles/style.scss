@@ -201,12 +201,6 @@ hr.custom {
     overflow: hidden;
 }
 
-@media only screen and (max-width: 768px) {
-    .section__area {
-        padding: 20px 0;
-    }
-}
-
 .section__area .container {
     position: relative;
     z-index: 3;

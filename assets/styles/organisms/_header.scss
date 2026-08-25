@@ -212,12 +212,15 @@ body.menu-open {
         padding: 1rem;
 
         @include mixins.breakpoint(mobile) {
-            display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
             height: calc(100vh - 64px);
             overflow-y: scroll;
+
+            &.show {
+                display: flex;
+            }
         }
 
         @include mixins.breakpoint(laptop) {
