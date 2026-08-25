@@ -6,6 +6,10 @@ align-items: center;
 align-self: stretch;
 	border-top: 1px solid rgba(255, 255, 255, 0.16);
 background:  #171C60;
+@media only screen and (max-width: 767px) {
+
+flex-direction: column;
+}
 }
 
 /* This section overrides the site-wide focus-outline reset (assets/styles/style.scss)
@@ -13,11 +17,6 @@ background:  #171C60;
 .section__logos a:focus-visible {
 	outline: 2px solid #fff;
 	outline-offset: 2px;
-}
-	@media only screen and (max-width: 767px) {
-	.sponsor {
-		margin-bottom: 30px !important;
-	}
 }
 
 .sponsor__area {
@@ -47,28 +46,14 @@ flex: none;
 	list-style: none;
 }
 
-@media only screen and (max-width: 1200px) {
-	.sponsor ul {
-		/* gap: 30px;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; */
-	}
-}
-
 .sponsor ul li img {
-	max-width: 200px;
+
 	height: 45px;
 	object-fit: contain;
 
 }
 
-@media only screen and (max-width: 767px) {
 
-	.sponsor ul li img {
-		max-width: 120px;
-	}
-}
 
 .carousel-logo {
 	position: relative;
@@ -140,6 +125,7 @@ flex: none;
 	animation: scroll 40s linear infinite;
 	display: flex;
 	width: calc(250px * 14);
+	gap : 5rem;
 }
 
 /* WCAG 2.2.2 (Pause, Stop, Hide): hovering pauses the scroll for mouse users;
@@ -153,8 +139,4 @@ flex: none;
 	.slide-track {
 		animation-play-state: paused;
 	}
-}
-
-.slide {
-	width: 250px;
 }
