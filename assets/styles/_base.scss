@@ -5,3 +5,34 @@
  * @since       idProtect_1.0.0.0
  *
  */
+
+// Standard WordPress visually-hidden utility (used e.g. by header.php's
+// screen-reader-only page title). Was referenced across the theme but never
+// actually defined, so it rendered as plain visible text.
+.screen-reader-text {
+    position: absolute !important;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    position: static;
+    z-index: 100000;
+    display: block;
+    clip: auto !important;
+    margin: 0;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 15px 23px 14px;
+    width: auto;
+    height: auto;
+    color: #21759b;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 0.875rem;
+}

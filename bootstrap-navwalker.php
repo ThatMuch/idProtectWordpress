@@ -235,6 +235,8 @@ class Bootstrap_NavWalker extends Walker_Nav_Menu
 		if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
 			$atts['class']         .= ' dropdown-toggle';
 			$atts['data-bs-toggle']   = 'dropdown';
+			// Static display skips Popper positioning; the dropdown/mega-menu panels are positioned via CSS instead.
+			$atts['data-bs-display']  = 'static';
 			$atts['id']            = 'navbar-dropdown-menu-link-' . $item->ID;
 			$atts['aria-haspopup'] = "true";
 			$atts['aria-expanded'] = "false";
