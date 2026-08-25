@@ -345,22 +345,22 @@
 			"fontFamilies": [
 				{
 					"slug": "headline",
-					"fontFamily": "Rubik, 'Roboto', sans-serif",
+					"fontFamily": "Rubik,  sans-serif",
 					"name": "Headline"
 				},
 				{
 					"slug": "body",
-					"fontFamily": "Raleway, 'Open Sans', sans-serif",
+					"fontFamily": "Raleway, sans-serif",
 					"name": "Body"
 				},
 				{
 					"slug": "digits",
-					"fontFamily": "Rubik, 'Roboto', sans-serif",
+					"fontFamily": "Rubik, sans-serif",
 					"name": "Digits"
 				},
 				{
 					"slug": "label",
-					"fontFamily": "Rubik, 'Roboto', sans-serif",
+					"fontFamily": "Raleway, sans-serif",
 					"name": "Label"
 				}
 			]
