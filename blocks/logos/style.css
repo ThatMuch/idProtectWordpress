@@ -7,6 +7,13 @@ align-self: stretch;
 	border-top: 1px solid rgba(255, 255, 255, 0.16);
 background:  #171C60;
 }
+
+/* This section overrides the site-wide focus-outline reset (assets/styles/style.scss)
+   so its links stay keyboard-focus-visible (WCAG 2.4.7). */
+.section__logos a:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
 	@media only screen and (max-width: 767px) {
 	.sponsor {
 		margin-bottom: 30px !important;
@@ -53,7 +60,7 @@ flex: none;
 	max-width: 200px;
 	height: 45px;
 	object-fit: contain;
-	    mix-blend-mode: multiply;
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -133,6 +140,19 @@ flex: none;
 	animation: scroll 40s linear infinite;
 	display: flex;
 	width: calc(250px * 14);
+}
+
+/* WCAG 2.2.2 (Pause, Stop, Hide): hovering pauses the scroll for mouse users;
+   focus-within covers keyboard users tabbing through the logo links. */
+.slider:hover .slide-track,
+.slider:focus-within .slide-track {
+	animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.slide-track {
+		animation-play-state: paused;
+	}
 }
 
 .slide {
