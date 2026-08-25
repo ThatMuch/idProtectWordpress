@@ -95,7 +95,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 							'menu_id'        => 'menu-main',
 							'container'      => false,
 							'depth'          => 3,
-							'menu_class'     => 'nav navbar-nav mx-auto',
+							'menu_class'     => 'nav navbar-nav',
 							'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
 							'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
 						);

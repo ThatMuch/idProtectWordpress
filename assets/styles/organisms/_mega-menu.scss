@@ -45,6 +45,10 @@
 .mega-menu__categories {
     padding: vars.$spacing-m;
 
+    @include mixins.breakpoint(mobile) {
+        padding: 0 vars.$spacing-m;
+    }
+
     @include mixins.breakpoint(laptop) {
         column-gap: vars.$spacing-m;
         column-count: 2;
@@ -150,6 +154,10 @@
     background: vars.$background-default;
     padding: vars.$spacing-s vars.$spacing-m;
 
+    @include mixins.breakpoint(mobile) {
+        margin-bottom: vars.$spacing-m;
+    }
+
     @include mixins.breakpoint(phablet) {
         flex-direction: row;
         justify-content: space-between;
@@ -237,6 +245,10 @@
         width: 100%;
         height: 100%;
         content: "";
+    }
+
+    @include mixins.breakpoint(mobile) {
+        margin-bottom: vars.$spacing-m;
     }
 }
 
