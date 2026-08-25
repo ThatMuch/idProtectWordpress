@@ -1,3 +1,11 @@
+@charset "UTF-8";
+
+@use "mixins";
+@use "fonts";
+@use "vars";
+@use "states";
+@use "base";
+
 /*
  * Main CSS File
  * Merges all .scss files (in the desired order) before they're processed by gulp.
@@ -9,16 +17,9 @@
  *
  */
 
-@charset "UTF-8";
-
 /*==================================================================================
   PRESETS/
 ==================================================================================*/
-@import "mixins";
-@import "fonts";
-@import "vars";
-@import "states";
-@import "base";
 
 /*==================================================================================
   ATOMIC DESIGN/
@@ -26,15 +27,15 @@
 
 /*=====  Atoms  ======*/
 // @import "./atoms/_alerts";
-@import "./atoms/_badges";
-@import "./atoms/_buttons";
+@use "atoms/_badges";
+@use "atoms/_buttons";
 
 // @import "./atoms/_dividers";
-@import "./atoms/_headings";
-@import "./atoms/_typography";
+@use "atoms/_headings";
+@use "atoms/_typography";
 
-@import "./atoms/_images";
-@import "./atoms/_inputs";
+@use "atoms/_images";
+@use "atoms/_inputs";
 // @import "./atoms/_labels";
 // @import "./atoms/_links";
 // @import "./atoms/_lists";
@@ -56,9 +57,10 @@
 
 /*=====  Organisms  ======*/
 
-@import "./organisms/_footer";
-@import "./organisms/_header";
-@import "./organisms/_hero";
+@use "organisms/_footer";
+@use "organisms/_header";
+@use "organisms/_mega-menu";
+@use "organisms/_hero";
 // @import "./organisms/sections";
 
 /*=====  Templates  ======*/
@@ -66,11 +68,11 @@
 // @import "./templates/_page";
 // @import "./templates/_post";
 // @import "./templates/_subsite";
-@import "./templates/_product";
+@use "templates/_product";
 
 :root {
-    --blue: #{$blue-40};
-    --orange: #{$red-50};
+    --blue: #{vars.$blue-40};
+    --orange: #{vars.$red-50};
 }
 
 html {
@@ -78,15 +80,15 @@ html {
 }
 
 body {
-    background-color: $background-default;
-    color: $text-body-dark;
+    background-color: vars.$background-default;
+    color: vars.$text-body-dark;
     font-size: 1rem;
     line-height: 1.5;
     font-family: "Raleway", sans-serif;
 }
 
 a {
-    color: $text-subheading;
+    color: vars.$text-subheading;
     text-decoration: none;
 }
 
@@ -104,7 +106,7 @@ textarea:focus {
 hr.custom {
     opacity: 1;
     margin: 50px auto;
-    border-color: $surface-primary;
+    border-color: vars.$surface-primary;
     max-width: 85%;
 }
 
@@ -149,7 +151,7 @@ hr.custom {
 }
 
 .g-text {
-    background: linear-gradient(278.49deg, $blue-40 0%, $dark-blue-40 88.22%);
+    background: linear-gradient(278.49deg, vars.$blue-40 0%, vars.$dark-blue-40 88.22%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -160,14 +162,14 @@ hr.custom {
     flex-wrap: wrap;
     justify-content: start;
     gap: 0.5rem;
-    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
-    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
     border-radius: 100px;
-    background: $background-light;
+    background: vars.$background-light;
     padding: 10px 20px;
     text-transform: uppercase;
 
-    @include breakpoint(laptop) {
+    @include mixins.breakpoint(laptop) {
         justify-content: center;
         border-radius: 16px 100px 100px 16px;
         padding: 10px 30px;
@@ -175,22 +177,22 @@ hr.custom {
         //font-size: 2.85rem;
     }
 
-    @include breakpoint(tablet) {
+    @include mixins.breakpoint(tablet) {
         //font-size: 2.5rem;
         padding: 10px 40px 10px 25px;
     }
 }
 
 .text__orange {
-    color: $text-accent;
+    color: vars.$text-accent;
 }
 
 .text__blue {
-    color: $text-subheading;
+    color: vars.$text-subheading;
 }
 
 .text__dark {
-    color: $text-heading-dark;
+    color: vars.$text-heading-dark;
 }
 
 .section__area {
@@ -203,23 +205,6 @@ hr.custom {
 @media only screen and (max-width: 768px) {
     .section__area {
         padding: 20px 0;
-    }
-}
-
-.home .section__area::after {
-    // background: url(../images/line.svg) no-repeat scroll 0 0 / 100% 100%;
-    position: absolute;
-    top: 10%;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    content: "";
-}
-
-@media only screen and (max-width: 991px) {
-    .home .section__area::after {
-        display: none;
     }
 }
 
@@ -264,7 +249,7 @@ hr.custom {
     .promotion__area.service .promotion__head h2 {
         letter-spacing: 0;
 
-        @include responsive-font-size(25, 30);
+        @include mixins.responsive-font-size(25, 30);
     }
 }
 
@@ -286,22 +271,22 @@ hr.custom {
 .community__info {
     margin-left: auto;
     border-radius: 16px;
-    background: $surface-primary;
+    background: vars.$surface-primary;
     padding: 36px 40px;
     max-width: 575px;
-    color: $text-invert;
+    color: vars.$text-invert;
 
     a {
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 64px;
-        background-color: $background-light;
+        background-color: vars.$background-light;
         width: 64px;
         height: 64px;
 
         i {
-            @include responsive-font-size(24);
+            @include mixins.responsive-font-size(24);
         }
     }
 }
@@ -320,22 +305,22 @@ hr.custom {
 
 .community__info h2 {
     margin: 0 0 20px;
-    color: $text-heading-light;
+    color: vars.$text-heading-light;
     text-transform: uppercase;
 
-    @include responsive-font-size(40, 48, 800);
+    @include mixins.responsive-font-size(40, 48, 800);
 }
 
 @media only screen and (max-width: 767px) {
     .community__info h2 {
-        @include responsive-font-size(30, 40);
+        @include mixins.responsive-font-size(30, 40);
     }
 }
 
 .community__info p {
     text-transform: uppercase;
 
-    @include responsive-font-size(18, 28, 700);
+    @include mixins.responsive-font-size(18, 28, 700);
 }
 
 .community__info ul {
@@ -363,10 +348,10 @@ hr.custom {
 
 .community__form {
     margin-bottom: 20px;
-    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
-    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
     border-radius: 16px;
-    background: $background-warning;
+    background: vars.$background-warning;
     padding: 36px 40px;
 }
 
@@ -378,15 +363,15 @@ hr.custom {
 
 .community__form h2 {
     margin: 0 0 10px;
-    color: $text-accent;
+    color: vars.$text-accent;
     text-transform: uppercase;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 @media only screen and (max-width: 767px) {
     .community__form h2 {
-        @include responsive-font-size(20);
+        @include mixins.responsive-font-size(20);
     }
 }
 
@@ -395,7 +380,7 @@ hr.custom {
     color: #384050;
     font-family: "Raleway", sans-serif;
 
-    @include responsive-font-size(12, 14, 400);
+    @include mixins.responsive-font-size(12, 14, 400);
 }
 
 .page__header {
@@ -412,20 +397,20 @@ hr.custom {
 
 .page__header__title {
     margin-left: auto;
-    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
-    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
     border-radius: 100px 16px 16px 100px;
-    background: $background-light;
+    background: vars.$background-light;
     padding: 10px 30px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    color: $text-accent;
+    color: vars.$text-accent;
     text-transform: uppercase;
-    @include responsive-font-size(40, 48, 800);
+    @include mixins.responsive-font-size(40, 48, 800);
 
     @media only screen and (max-width: 767px) {
-        @include responsive-font-size(30, 40);
+        @include mixins.responsive-font-size(30, 40);
         margin: 0 auto;
         border-radius: 100px;
         text-align: center;
@@ -446,10 +431,10 @@ hr.custom {
 .page__header__area.contact {
     .page__header {
         background:
-            -webkit-gradient(linear, left bottom, left top, from(rgba($orange-40, 0.5)), to(rgba($orange-40, 0.5))),
+            -webkit-gradient(linear, left bottom, left top, from(rgba(vars.$orange-40, 0.5)), to(rgba(vars.$orange-40, 0.5))),
             url(../images/contact.jpg) no-repeat scroll center (center / cover);
         background:
-            linear-gradient(0deg, rgba($orange-40, 0.5), rgba($orange-40, 0.5)),
+            linear-gradient(0deg, rgba(vars.$orange-40, 0.5), rgba(vars.$orange-40, 0.5)),
             url(../images/contact.jpg) no-repeat scroll center (center / cover);
     }
 }
@@ -460,7 +445,7 @@ hr.custom {
     //justify-content: center;
     gap: 24px;
 
-    @include breakpoint(tablet) {
+    @include mixins.breakpoint(tablet) {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -468,7 +453,7 @@ hr.custom {
         -ms-flex-pack: center;
     }
 
-    @include breakpoint(mobile) {
+    @include mixins.breakpoint(mobile) {
         .title {
             font-size: 1.3rem;
             text-align: center;
@@ -487,7 +472,7 @@ hr.custom {
         margin: 0 auto 30px;
         width: 150px;
 
-        @include breakpoint(laptop) {
+        @include mixins.breakpoint(laptop) {
             margin: 0;
             width: 170px;
         }
@@ -500,11 +485,11 @@ hr.custom {
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
 
-    @include responsive-font-size(40, 48, 800);
+    @include mixins.responsive-font-size(40, 48, 800);
 
-    @include breakpoint(mobile) {
+    @include mixins.breakpoint(mobile) {
         text-align: center;
-        @include responsive-font-size(30, 40);
+        @include mixins.responsive-font-size(30, 40);
     }
 }
 
@@ -524,19 +509,19 @@ hr.custom {
 
 .page__hero__text__title {
     margin-bottom: 20px;
-    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
-    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
     border-radius: 100px 16px 16px 100px;
-    background: $background-light;
+    background: vars.$background-light;
     padding: 10px 40px;
     width: fit-content;
 
-    @include responsive-font-size(60, 72, 800);
+    @include mixins.responsive-font-size(60, 72, 800);
 }
 
 @media only screen and (max-width: 991px) {
     .page__hero__text__title {
-        @include responsive-font-size(30, 40);
+        @include mixins.responsive-font-size(30, 40);
     }
 }
 
@@ -544,22 +529,22 @@ hr.custom {
     margin-top: 1rem;
     font-size: 1.3rem;
 
-    @include breakpoint(mobile) {
+    @include mixins.breakpoint(mobile) {
         font-size: 1.1rem;
         text-align: center;
     }
 
     .small {
-        color: $text-subheading;
+        color: vars.$text-subheading;
 
-        @include responsive-font-size(24);
+        @include mixins.responsive-font-size(24);
     }
 }
 
 .page__hero__text h6 {
-    color: $text-subheading;
+    color: vars.$text-subheading;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 .block__service.right {
@@ -576,15 +561,15 @@ hr.custom {
     border-radius: 16px;
     height: 500px;
     overflow: hidden;
-    color: $text-invert;
+    color: vars.$text-invert;
 }
 
 .blog__featured::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba($dark-blue-40, 0)), to($dark-blue-40));
-    background: linear-gradient(180deg, rgba($dark-blue-40, 0) 0%, $dark-blue-40 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(vars.$dark-blue-40, 0)), to(vars.$dark-blue-40));
+    background: linear-gradient(180deg, rgba(vars.$dark-blue-40, 0) 0%, vars.$dark-blue-40 100%);
     width: 100%;
     height: 50%;
     content: "";
@@ -620,25 +605,25 @@ hr.custom {
 }
 
 .blog__featured__text h4 {
-    color: $text-invert;
+    color: vars.$text-invert;
     font-family: "Raleway", sans-serif;
 
-    @include responsive-font-size(16, 26, 600);
+    @include mixins.responsive-font-size(16, 26, 600);
 }
 
 .blog__featured__text h2,
 .blog__featured__text h1 {
     margin-bottom: 25px;
-    color: $text-invert;
+    color: vars.$text-invert;
     text-transform: uppercase;
 
-    @include responsive-font-size(40, 48, 800);
+    @include mixins.responsive-font-size(40, 48, 800);
 }
 
 @media only screen and (max-width: 767px) {
     .blog__featured__text h2,
     .blog__featured__text h1 {
-        @include responsive-font-size(25, 30);
+        @include mixins.responsive-font-size(25, 30);
     }
 }
 
@@ -646,11 +631,11 @@ hr.custom {
     max-width: 500px;
     font-family: "Raleway", sans-serif;
 
-    @include responsive-font-size(16, 26, 500);
+    @include mixins.responsive-font-size(16, 26, 500);
 }
 
 .blog__featured__text a {
-    color: $text-invert;
+    color: vars.$text-invert;
 }
 
 .blog__link {
@@ -659,7 +644,7 @@ hr.custom {
     display: flex;
     position: absolute;
     border-radius: 64px;
-    background: $background-light;
+    background: vars.$background-light;
     width: 64px;
     height: 64px;
     -webkit-box-orient: vertical;
@@ -691,13 +676,13 @@ hr.custom {
 .blog__box {
     margin: 0 0 20px;
     border-radius: 16px;
-    background: $surface-primary;
+    background: vars.$surface-primary;
     padding: 36px 40px;
-    color: $text-body-light;
+    color: vars.$text-body-light;
 }
 
 .professionnel .blog__box {
-    background: $dark-blue-40;
+    background: vars.$dark-blue-40;
 }
 
 @media only screen and (max-width: 991px) {
@@ -707,16 +692,16 @@ hr.custom {
 }
 
 .blog__box.dark {
-    background: $dark-blue-40;
+    background: vars.$dark-blue-40;
 }
 
 .blog__box.orange {
-    background: $surface-accent;
+    background: vars.$surface-accent;
 }
 
 .blog__box h2 {
     margin: 0 0 25px;
-    color: $text-heading-light;
+    color: vars.$text-heading-light;
     text-transform: uppercase;
 }
 
@@ -730,16 +715,16 @@ hr.custom {
     p,
     .blog__box__title {
         margin: 0;
-        color: $text-body-light;
+        color: vars.$text-body-light;
         font-family: "Raleway", sans-serif;
         text-transform: uppercase;
-        @include responsive-font-size(22, 36, 700);
+        @include mixins.responsive-font-size(22, 36, 700);
     }
 }
 
 @media only screen and (max-width: 1200px) {
     .blog__box p {
-        @include responsive-font-size(16, 28);
+        @include mixins.responsive-font-size(16, 28);
     }
 }
 
@@ -798,14 +783,14 @@ hr.custom {
 }
 
 .blog__item__text h2 {
-    color: $text-primary;
+    color: vars.$text-primary;
     font-style: normal;
     font-size: 0.875rem;
     text-transform: uppercase;
 }
 
 .blog__item__text h2 a {
-    color: $text-primary;
+    color: vars.$text-primary;
 }
 
 .blog__list .owl-stage {
@@ -813,10 +798,10 @@ hr.custom {
 }
 
 .article__text {
-    color: $text-primary;
+    color: vars.$text-primary;
     font-family: "Raleway";
 
-    @include responsive-font-size(16, 26, 500);
+    @include mixins.responsive-font-size(16, 26, 500);
 }
 
 .article__text iframe {
@@ -829,14 +814,14 @@ hr.custom {
     font-family: "Rubik";
     text-transform: uppercase;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 .article__text h4 {
     font-family: "Rubik";
     text-transform: uppercase;
 
-    @include responsive-font-size(16, 24, 700);
+    @include mixins.responsive-font-size(16, 24, 700);
 }
 
 .article__text p {
@@ -877,14 +862,14 @@ hr.custom {
     margin: 0;
     font-family: "Raleway";
 
-    @include responsive-font-size(14, 26, 700);
+    @include mixins.responsive-font-size(14, 26, 700);
 }
 
 .article__body h2 {
-    color: $text-primary;
+    color: vars.$text-primary;
     text-transform: uppercase;
 
-    @include responsive-font-size(16, 24, 700);
+    @include mixins.responsive-font-size(16, 24, 700);
 
     a {
         padding: 0;
@@ -893,17 +878,17 @@ hr.custom {
 
 .article__body a {
     padding: 0;
-    color: $text-primary;
+    color: vars.$text-primary;
 }
 
 .article__box {
     border-radius: 16px;
-    background: $surface-primary;
+    background: vars.$surface-primary;
     padding: 36px 40px;
-    color: $text-body-light;
+    color: vars.$text-body-light;
 
     h2 {
-        color: $text-heading-light;
+        color: vars.$text-heading-light;
     }
 }
 
@@ -934,11 +919,11 @@ hr.custom {
     margin: 30px 0;
     text-transform: uppercase;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 .article__box p {
-    @include responsive-font-size(16, 40, 700);
+    @include mixins.responsive-font-size(16, 40, 700);
 }
 
 .article__box .btn {
@@ -958,7 +943,7 @@ hr.custom {
 }
 
 .professionnel .step__list ul.nav-tabs li a {
-    color: $text-heading-dark;
+    color: vars.$text-heading-dark;
 }
 
 .step__list ul.nav-tabs li a {
@@ -969,24 +954,24 @@ hr.custom {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     margin-bottom: 15px;
-    -webkit-box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
-    box-shadow: 0px 16px 32px rgba($blue-40, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
     border-radius: 16px;
-    background: $background-light;
+    background: vars.$background-light;
     padding: 36px 40px;
     text-transform: uppercase;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 @media only screen and (max-width: 767px) {
     .step__list ul.nav-tabs li a {
         padding: 20px;
 
-        @include responsive-font-size(16, 24);
+        @include mixins.responsive-font-size(16, 24);
     }
 }
 
@@ -1007,7 +992,7 @@ hr.custom {
     margin-right: 20px;
     overflow: hidden;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 @media only screen and (max-width: 767px) {
@@ -1015,7 +1000,7 @@ hr.custom {
         width: 40px;
         height: 40px;
 
-        @include responsive-font-size(16, 30);
+        @include mixins.responsive-font-size(16, 30);
     }
 }
 
@@ -1027,7 +1012,7 @@ hr.custom {
     left: 5px;
     z-index: 1;
     border-radius: 100%;
-    background: $background-light;
+    background: vars.$background-light;
     content: "";
 }
 
@@ -1035,7 +1020,7 @@ hr.custom {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(278.49deg, $blue-40 0%, $dark-blue-40 88.22%);
+    background: linear-gradient(278.49deg, vars.$blue-40 0%, vars.$dark-blue-40 88.22%);
     width: 100%;
     height: 100%;
     content: "";
@@ -1053,7 +1038,7 @@ hr.custom {
     flex: 1;
     text-transform: none;
 
-    @include responsive-font-size(24, 35, 500);
+    @include mixins.responsive-font-size(24, 35, 500);
 }
 
 .step__list ul.nav-tabs li a .text__body .head {
@@ -1065,13 +1050,13 @@ hr.custom {
 
 .step__list ul.nav-tabs li a:hover,
 .step__list ul.nav-tabs li a.active {
-    background: $surface-primary;
-    color: $text-invert;
+    background: vars.$surface-primary;
+    color: vars.$text-invert;
 }
 
 .professionnel .step__list ul.nav-tabs li a:hover,
 .professionnel .step__list ul.nav-tabs li a.active {
-    background: $dark-blue-40;
+    background: vars.$dark-blue-40;
 }
 
 .step__list ul.nav-tabs li a:hover .text::before,
@@ -1080,7 +1065,7 @@ hr.custom {
     right: 0;
     bottom: 0;
     left: 0;
-    border: 5px solid $neutral-100;
+    border: 5px solid vars.$neutral-100;
     background: transparent;
     content: "";
 }
@@ -1088,8 +1073,8 @@ hr.custom {
 .step__list ul.nav-tabs li a:hover .text span,
 .step__list ul.nav-tabs li a.active .text span {
     background: transparent;
-    color: $text-invert;
-    -webkit-text-fill-color: $text-invert;
+    color: vars.$text-invert;
+    -webkit-text-fill-color: vars.$text-invert;
 }
 
 .step__list ul.nav-tabs li:last-child a {
@@ -1097,7 +1082,7 @@ hr.custom {
 }
 
 .step__list.service ul.nav-tabs li a {
-    color: $text-primary;
+    color: vars.$text-primary;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1109,21 +1094,21 @@ hr.custom {
         margin-bottom: 20px;
         width: 60px;
         height: 60px;
-        @include responsive-font-size(25, 30);
+        @include mixins.responsive-font-size(25, 30);
     }
 }
 
 .step__list.service ul.nav-tabs li a:hover,
 .step__list.service ul.nav-tabs li a.active {
-    color: $text-invert;
+    color: vars.$text-invert;
 }
 
 .bg_PRIMARY_40 {
-    background-color: $surface-primary !important;
+    background-color: vars.$surface-primary !important;
 }
 
 .bg_secondary_40 {
-    background-color: $dark-blue-40 !important;
+    background-color: vars.$dark-blue-40 !important;
 }
 
 .oembed-container {
@@ -1146,7 +1131,7 @@ hr.custom {
 }
 
 .sidebar-pro .article__box {
-    background-color: $dark-blue-40;
+    background-color: vars.$dark-blue-40;
 }
 
 .product_meta {

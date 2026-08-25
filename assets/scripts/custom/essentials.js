@@ -38,6 +38,16 @@
         });
     }
 
+    function preventScrollOnMobileMenuOpen() {
+        $("#navbar")
+            .on("show.bs.collapse", function () {
+                $("body").addClass("menu-open");
+            })
+            .on("hidden.bs.collapse", function () {
+                $("body").removeClass("menu-open");
+            });
+    }
+
     function setBlockServiceClass() {
         $(".block__service").each(function (index) {
             if (index % 2 === 1) {
@@ -119,6 +129,7 @@
     $(document).ready(function () {
         setTouchAttribute();
         toggleNavbar();
+        preventScrollOnMobileMenuOpen();
         setBlockServiceClass();
         initializeOwlCarousel();
         updateArticleListItems();

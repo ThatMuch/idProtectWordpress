@@ -1,3 +1,5 @@
+@use "mixins";
+
 /**
  * Variables
  * Contains re-usable variables like colors, sizes, breakpoints etc.
@@ -9,6 +11,8 @@
  * @since      idProtect_1.0.0
  *
  */
+
+@use "sass:color";
 
 /*==================================================================================
   SCALING
@@ -29,12 +33,12 @@ $element_width_mobile: 95vw; // default width of the .element content-div
 /* Presets
 /––––––––––––––––––––––––*/
 $color-primary: #171c60;
-$color-primary-darker: darken($color-primary, 7%);
-$color-primary-lighter: lighten($color-primary, 7%);
+$color-primary-darker: color.adjust($color-primary, $lightness: -7%);
+$color-primary-lighter: color.adjust($color-primary, $lightness: 7%);
 $color-secondary: #ff7551;
-$color-secondary-darker: darken($color-secondary, 7%);
+$color-secondary-darker: color.adjust($color-secondary, $lightness: -7%);
 $color-tertiary: #1956a8;
-$color-tertiary-darker: darken($color-tertiary, 7%);
+$color-tertiary-darker: color.adjust($color-tertiary, $lightness: -7%);
 $color-black: #212529;
 $color-dark: #343a40;
 $color-grey2: #495057;
@@ -63,7 +67,7 @@ $text-xl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale
 $text-xxl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio});
 $text-xxxl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio});
 
-@include breakpoint(mobile) {
+@include mixins.breakpoint(mobile) {
     $text-scale-ratio: 1.25;
 }
 
@@ -104,7 +108,7 @@ $nav__spacercolor: $color-dark;
 /* ANCHORS
 /––––––––––––––––––––––––*/
 $a__linkcolor: $color-primary;
-$a__hovercolor: darken($color-primary, 20);
+$a__hovercolor: color.adjust($color-primary, $lightness: -20%);
 $a__textdecoration: none;
 
 /*==================================================================================
@@ -125,36 +129,34 @@ $shadow__soft:
     0 1px 2px 0 rgba(0, 0, 0, 0.08),
     0 1px 5px 0 rgba(0, 0, 0, 0.06);
 
-
-
 /* V4 */
 
 /* Primitives */
-$blue-20: #0F3465FF;
-$blue-30: #144586FF;
-$blue-40: #1956A8FF;
-$blue-50: #5E89C2FF;
-$blue-60: #9FC1EFFF;
-$blue-70: #E8EFFBFF;
-$blue-80: #F5F9FFFF;
-$dark-blue-20: #0C0E30FF;
-$dark-blue-30: #12164DFF;
-$dark-blue-40: #171C60FF;
-$dark-blue-50: #454980FF;
-$dark-blue-60: #8B8EB0FF;
-$dark-blue-70: #E8E8EFFF;
-$dark-blue-80: #FAFAFEFF;
-$orange-40: #FF8833FF;
-$orange-60: #FFC499FF;
-$orange-70: #FFF3EBFF;
-$neutral-100: #FFFFFFFF;
-$red-40: #FF5326FF;
-$red-50: #FF7551FF;
-$red-60: #FFA993FF;
-$red-70: #FFEEE9FF;
-$green-40: #17EB79FF;
-$green-60: #8BF5BCFF;
-$green-70: #E8FDF2FF;
+$blue-20: #0f3465ff;
+$blue-30: #144586ff;
+$blue-40: #1956a8ff;
+$blue-50: #5e89c2ff;
+$blue-60: #9fc1efff;
+$blue-70: #e8effbff;
+$blue-80: #f5f9ffff;
+$dark-blue-20: #0c0e30ff;
+$dark-blue-30: #12164dff;
+$dark-blue-40: #171c60ff;
+$dark-blue-50: #454980ff;
+$dark-blue-60: #8b8eb0ff;
+$dark-blue-70: #e8e8efff;
+$dark-blue-80: #fafafeff;
+$orange-40: #ff8833ff;
+$orange-60: #ffc499ff;
+$orange-70: #fff3ebff;
+$neutral-100: #ffffffff;
+$red-40: #ff5326ff;
+$red-50: #ff7551ff;
+$red-60: #ffa993ff;
+$red-70: #ffeee9ff;
+$green-40: #17eb79ff;
+$green-60: #8bf5bcff;
+$green-70: #e8fdf2ff;
 
 /* Tokens - Default */
 $text-heading-dark: $dark-blue-40;
@@ -165,10 +167,12 @@ $text-error: $red-40;
 $text-inactive: $blue-50;
 $text-disabled: $blue-60;
 $text-invert: $neutral-100;
-$text-body-light: #FFFFFFD1;
-$text-heading-light: #FFFFFFFF;
+$text-body-light: #ffffffd1;
+$text-heading-light: #ffffffff;
 $text-subheading: $blue-40;
 $text-body-dark: $dark-blue-50;
+
+$gradient-particulier: radial-gradient(92% 120% at 50% -12%, #1e5fb5 0%, #19337d 51.92%, #171c60 100%);
 
 /* Surface */
 
@@ -181,7 +185,6 @@ $surface-inactive: $blue-50;
 $surface-disabled: $blue-60;
 
 /* Background */
-
 
 $background-default: $blue-80;
 $background-light: $neutral-100;
@@ -204,14 +207,13 @@ $radius-s: 4px;
 $radius-m: 8px;
 $radius-l: 100px;
 
-
 /* Fonts */
 
 /* Font - Mode 1 */
-$font-family-headline: Rubik, 'Roboto', sans-serif;
-$font-family-body: Raleway, 'Open Sans', sans-serif;
-$font-family-digits: Rubik, 'Roboto', sans-serif;
-$font-family-label: Raleway, 'Open Sans', sans-serif;
+$font-family-headline: Rubik, "Roboto", sans-serif;
+$font-family-body: Raleway, "Open Sans", sans-serif;
+$font-family-digits: Rubik, "Roboto", sans-serif;
+$font-family-label: Raleway, "Open Sans", sans-serif;
 $font-weight-extrabold: 800;
 $font-weight-bold: 700;
 $font-weight-medium: 500;
@@ -220,5 +222,3 @@ $font-size-xl: 45px;
 $font-size-l: 24px;
 $font-size-m: 16px;
 $font-size-s: 14px;
-
-

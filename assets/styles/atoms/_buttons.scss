@@ -1,3 +1,5 @@
+@use "../vars";
+
 /**
  *
  * @author      ThatMuch
@@ -10,18 +12,18 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: $spacing-xs;
+    gap: vars.$spacing-xs;
     transition:
-        background-color $transition_fast,
-        border-color $transition_fast,
-        color $transition_fast,
-        box-shadow $transition_fast;
+        background-color vars.$transition_fast,
+        border-color vars.$transition_fast,
+        color vars.$transition_fast,
+        box-shadow vars.$transition_fast;
     cursor: pointer;
     box-sizing: border-box;
-    font-weight: $font-weight-bold;
-    font-size: $font-size-s;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-s;
     line-height: 1;
-    font-family: $font-family-body; // le composant Figma utilise Raleway, pas $font-family-label (Rubik)
+    font-family: vars.$font-family-body; // le composant Figma utilise Raleway, pas $font-family-label (Rubik)
     letter-spacing: 0.5px;
     text-align: center;
     text-decoration: none;
@@ -38,8 +40,8 @@
 
     &.btn--solid,
     &.btn--outlined {
-        border-radius: $radius-l;
-        padding: $spacing-s $spacing-l;
+        border-radius: vars.$radius-l;
+        padding: 12px 22px;
     }
 
     &.btn--solid {
@@ -61,59 +63,61 @@
 
     /* ---- Primary / Solid ---- */
     &.btn--primary.btn--solid {
-        box-shadow: 0 14px 15px rgba($dark-blue-40, 0.7);
-        background: $dark-blue-40;
-        color: $neutral-100;
+        box-shadow: 0 14px 15px rgba(vars.$dark-blue-40, 0.4);
+        background: vars.$dark-blue-40;
+        color: vars.$neutral-100;
 
         &:hover:not(:disabled):not(.is-disabled) {
-            background: $dark-blue-30;
+            box-shadow: 0 14px 15px rgba(vars.$dark-blue-40, 0.7);
+            background: vars.$dark-blue-30;
         }
 
         &:disabled,
         &.is-disabled {
             cursor: not-allowed;
             box-shadow: none;
-            background: $background-disabled;
-            color: $text-disabled;
+            background: vars.$background-disabled;
+            color: vars.$text-disabled;
         }
     }
 
     /* ---- Secondary / Solid ---- */
     &.btn--secondary.btn--solid {
-        box-shadow: 0 14px 15px rgba($red-40, 0.7);
-        background: $surface-accent;
-        color: $neutral-100;
+        box-shadow: 0 14px 15px rgba(vars.$red-40, 0.4);
+        background: vars.$surface-accent;
+        color: vars.$neutral-100;
 
         &:hover:not(:disabled):not(.is-disabled) {
-            background: $red-40;
+            box-shadow: 0 14px 15px rgba(vars.$red-40, 0.7);
+            background: vars.$red-40;
         }
 
         &:disabled,
         &.is-disabled {
             cursor: not-allowed;
             box-shadow: none;
-            background: $background-disabled;
-            color: $text-disabled;
+            background: vars.$background-disabled;
+            color: vars.$text-disabled;
         }
     }
 
     /* ---- Primary / Outlined ---- */
     &.btn--primary.btn--outlined {
-        border-color: rgba($dark-blue-40, 0.4);
-        color: $text-primary;
+        border-color: rgba(vars.$dark-blue-40, 0.4);
+        color: vars.$text-primary;
 
         &:hover:not(:disabled):not(.is-disabled) {
-            background: rgba($dark-blue-40, 0.1);
+            background: rgba(vars.$dark-blue-40, 0.1);
         }
     }
 
     /* ---- Light / Outlined (sur fond sombre/coloré) ---- */
     &.btn--light.btn--outlined {
-        border-color: rgba($neutral-100, 0.4);
-        color: $text-heading-light;
+        border-color: rgba(vars.$neutral-100, 0.4);
+        color: vars.$text-heading-light;
 
         &:hover:not(:disabled):not(.is-disabled) {
-            background: rgba($neutral-100, 0.1);
+            background: rgba(vars.$neutral-100, 0.1);
         }
     }
 
@@ -123,28 +127,28 @@
     &.btn--primary.btn--outlined.is-disabled,
     &.btn--light.btn--outlined.is-disabled {
         cursor: not-allowed;
-        border-color: rgba($text-disabled, 0.4);
+        border-color: rgba(vars.$text-disabled, 0.4);
         background: transparent;
-        color: $text-disabled;
+        color: vars.$text-disabled;
     }
 
     /* ---- Primary / Link ---- */
     &.btn--primary.btn--link {
         border-bottom-color: currentColor;
-        color: $text-primary;
+        color: vars.$text-primary;
 
         &:hover:not(:disabled):not(.is-disabled) {
-            color: $text-body-dark;
+            color: vars.$text-body-dark;
         }
     }
 
     /* ---- Light / Link (sur fond sombre/coloré) ---- */
     &.btn--light.btn--link {
         border-bottom-color: currentColor;
-        color: $text-heading-light;
+        color: vars.$text-heading-light;
 
         &:hover:not(:disabled):not(.is-disabled) {
-            color: $text-body-light;
+            color: vars.$text-body-light;
         }
     }
 }

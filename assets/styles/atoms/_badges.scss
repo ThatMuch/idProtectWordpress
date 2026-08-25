@@ -1,3 +1,5 @@
+@use "../vars";
+
 /**
  *
  * @author      ThatMuch
@@ -16,12 +18,12 @@
 .tag {
     display: inline-flex;
     align-items: center;
-    gap: $spacing-xs;
-    padding: $spacing-xs $spacing-s;
+    gap: vars.$spacing-xs;
+    padding: vars.$spacing-xs vars.$spacing-s;
     border: 1px solid transparent;
-    border-radius: $radius-l;
-    font-family: $font-family-body;
-    font-weight: $font-weight-bold;
+    border-radius: vars.$radius-l;
+    font-family: vars.$font-family-body;
+    font-weight: vars.$font-weight-bold;
     font-size: 11.5px;
     letter-spacing: 0.69px;
     line-height: normal;
@@ -34,42 +36,42 @@
 
     /* ---- Success ---- */
     &--success {
-        background: rgba($surface-success, 0.14);
-        border-color: rgba($surface-success, 0.18);
-        color: $surface-success;
+        background: rgba(vars.$surface-success, 0.14);
+        border-color: rgba(vars.$surface-success, 0.18);
+        color: vars.$surface-success;
     }
 
     /* ---- Default ---- */
     &--default {
-        border-color: rgba($dark-blue-40, 0.18);
-        color: $text-primary;
+        border-color: rgba(vars.$dark-blue-40, 0.18);
+        color: vars.$text-primary;
     }
 
     /* ---- Particulier ---- */
     &--particulier {
-        background: rgba($blue-40, 0.14);
-        border-color: rgba($blue-40, 0.18);
-        color: $text-subheading;
+        background: rgba(vars.$blue-40, 0.14);
+        border-color: rgba(vars.$blue-40, 0.18);
+        color: vars.$text-subheading;
     }
 
     /* ---- Pro ---- */
     &--pro {
-        background: rgba($dark-blue-40, 0.14);
-        border-color: rgba($dark-blue-40, 0.18);
-        color: $text-heading-dark;
+        background: rgba(vars.$dark-blue-40, 0.14);
+        border-color: rgba(vars.$dark-blue-40, 0.18);
+        color: vars.$text-heading-dark;
     }
 
     /* ---- Error ---- */
     &--error {
-        background: rgba($red-40, 0.14);
-        border-color: rgba($red-40, 0.18);
-        color: $text-error;
+        background: rgba(vars.$red-40, 0.14);
+        border-color: rgba(vars.$red-40, 0.18);
+        color: vars.$text-error;
     }
 
     /* ---- Light (sur fond sombre/coloré) ---- */
     &--light {
-        background: rgba($neutral-100, 0.1);
-        border-color: rgba($neutral-100, 0.18);
-        color: $dark-blue-70;
+        background: rgba(vars.$neutral-100, 0.1);
+        border-color: rgba(vars.$neutral-100, 0.18);
+        color: vars.$dark-blue-70;
     }
 }
