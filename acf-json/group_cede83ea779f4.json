@@ -1,0 +1,102 @@
+{
+    "key": "group_cede83ea779f4",
+    "title": "Trustpilot",
+    "fields": [
+        {
+            "key": "field_b4df3c981b07f",
+            "label": "Clé API (apikey)",
+            "name": "trustpilot_api_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Depuis le Developer Portal Trustpilot (compte Trustpilot for Business, module « Connect »). Utilisée par tous les blocks « Avis clients » du site : à renseigner une seule fois ici.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_1e7f80cbe7503",
+            "label": "Secret API",
+            "name": "trustpilot_api_secret",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Nécessaire uniquement pour afficher les avis individuels (l'API OAuth de Trustpilot exige une clé + un secret). Laisser vide si seule la note globale doit s'afficher.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_f1e44f906a32b",
+            "label": "Identifiant Business Unit",
+            "name": "trustpilot_business_unit_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Visible dans l'URL de votre tableau de bord Trustpilot Business, ou via l'endpoint /v1/business-units/find?name=votredomaine.fr de leur API.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_18151a421565d",
+            "label": "URL du profil public Trustpilot",
+            "name": "trustpilot_profile_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Ex. https://fr.trustpilot.com/review/votredomaine.fr — utilisée pour les liens « Voir sur Trustpilot ». Optionnel.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1787673482
+}

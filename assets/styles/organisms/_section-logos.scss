@@ -1,7 +1,7 @@
 .section-logos {
     .section__title {
-        color: $color-grey1;
         margin-bottom: 2rem;
+        color: $color-grey1;
     }
 
     &__grid {
@@ -16,9 +16,10 @@
         align-items: center;
 
         img {
-            max-height: 100%;
             display: block;
+            transition: opacity 0.3s ease;
             margin: 0 auto;
+            max-height: 100%;
         }
     }
 }

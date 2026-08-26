@@ -50,6 +50,11 @@ flex: none;
 
 	height: 45px;
 	object-fit: contain;
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
+	&:hover {
+                opacity: 1;
+            }
 
 }
 
