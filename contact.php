@@ -9,19 +9,9 @@
  */
 //
 get_header(); ?>
-<!-- Page Header Start -->
-<div class="page__header__area contact">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="page__header">
-					<h1 class="page__header__title"><?php the_title(); ?></h1>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Page Header End -->
+
+<?php get_template_part('template-parts/hero'); ?>
+
 <div class="page__area">
 	<div class="container">
 		<div class="col-xl-12">

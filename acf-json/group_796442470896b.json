@@ -143,11 +143,6 @@
             {
                 "param": "page_template",
                 "operator": "!=",
-                "value": "contact.php"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
                 "value": "service.php"
             },
             {

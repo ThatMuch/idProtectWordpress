@@ -38,7 +38,7 @@ $variant     = $is_app ? 'app' : 'tools';
 		<div class="hero__grid">
 			<div class="hero__content">
 				<?php if ($eyebrow) : ?>
-					<span class="tag tag--light hero__eyebrow"><?php echo esc_html($eyebrow); ?></span>
+					<span class="tag tag--light hero__badge"><?php echo esc_html($eyebrow); ?></span>
 				<?php endif; ?>
 				<h1 id="<?php echo esc_attr($heading_id); ?>" class="hero__title">
 					<?php echo esc_html($title); ?>
