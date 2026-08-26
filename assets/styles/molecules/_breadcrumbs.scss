@@ -1,7 +1,46 @@
+@use "../vars";
+
 /**
+ * Fil d'Ariane du Hero (variantes article/témoignage) — voir
+ * idprotect_the_breadcrumb() dans functions/functions-hero.php.
  *
  * @author      ThatMuch
  * @version     0.1.0
  * @since       idProtect_1.0.0.0
  *
  */
+
+.hero__breadcrumb {
+    margin-bottom: vars.$spacing-m;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: vars.$spacing-xs;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: vars.$font-size-s;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        color: vars.$dark-blue-70;
+
+        &:not(:last-child)::after {
+            content: "/";
+            margin-left: vars.$spacing-xs;
+            color: vars.$dark-blue-70;
+        }
+
+        a {
+            color: vars.$dark-blue-70;
+            text-decoration: underline;
+        }
+
+        span[aria-current] {
+            color: vars.$text-invert;
+        }
+    }
+}

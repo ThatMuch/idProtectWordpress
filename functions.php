@@ -39,6 +39,7 @@ require('functions/functions-blocks.php');
   CUSTOM
 ==================================================================================*/
 require('functions/functions-custom.php');
+require('functions/functions-hero.php');
 require get_template_directory() . '/bootstrap-navwalker.php';
 
 // Plugins

@@ -1,0 +1,201 @@
+{
+    "key": "group_03bb06dec723a",
+    "title": "Hero — Application Mobile",
+    "fields": [
+        {
+            "key": "field_c088b241832f8",
+            "label": "Badge / Eyebrow",
+            "name": "hero_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Petit label affiché au-dessus du titre (optionnel).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6dd84c2431144",
+            "label": "Titre",
+            "name": "hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Si vide, le titre de la page est utilisé.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_b683e3f7d6751",
+            "label": "Titre — mot accentué",
+            "name": "hero_title_accent",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Mot ou groupe de mots affiché en couleur d'accent, à la suite du titre (optionnel).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_362612eb39ee1",
+            "label": "Description",
+            "name": "hero_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_27dece985a694",
+            "label": "Lien App Store",
+            "name": "hero_app_store_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Laisser vide pour utiliser le lien global défini dans Réglages > Mega Menu Outils.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_61d9a5c662177",
+            "label": "Lien Google Play",
+            "name": "hero_google_play_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Laisser vide pour utiliser le lien global défini dans Réglages > Mega Menu Outils.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_3223c0d59a945",
+            "label": "Statistiques",
+            "name": "hero_stats",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Prévu pour exactement 2 statistiques.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 2,
+            "collapsed": "",
+            "button_label": "Ajouter une statistique",
+            "sub_fields": [
+                {
+                    "key": "field_83206570f6d01",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_fdf6436921ca2",
+                    "label": "Sous-texte",
+                    "name": "sublabel",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-app.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1756000000
+}
