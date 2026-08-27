@@ -1,4 +1,5 @@
 @use "../vars";
+@use "../mixins";
 
 /**
  *
@@ -143,6 +144,148 @@
         &::after {
             position: absolute;
             z-index: 3;
+            inset: 0;
+            border-radius: 24px;
+            content: "";
+        }
+
+        &:focus-visible::after {
+            outline: 2px solid vars.$color-primary;
+            outline-offset: 2px;
+        }
+    }
+}
+
+/*==================================================================================
+  V4 — Featured card ("à la une")
+  Variante horizontale (image + extrait visible) pour mettre en avant un article,
+  au-dessus de la grille .blog-card.
+==================================================================================*/
+
+.featured-card {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: vars.$spacing-m;
+    transition: box-shadow vars.$transition_fast;
+    box-shadow: vars.$shadow__soft;
+    border-radius: 24px;
+    background: vars.$background-light;
+    padding: 12px;
+
+    &:hover,
+    &:focus-within {
+        box-shadow: vars.$shadow;
+    }
+
+    @include mixins.breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr;
+        gap: vars.$spacing-l;
+    }
+
+    &__image {
+        border-radius: 16px;
+        background: vars.$gradient-particulier;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+
+        img {
+            opacity: 0.55;
+            mix-blend-mode: luminosity;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include mixins.breakpoint(tablet) {
+            aspect-ratio: auto;
+        }
+    }
+
+    &--professionnel &__image {
+        background: vars.$gradient-professionnel;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: vars.$spacing-xs vars.$spacing-s vars.$spacing-s;
+
+        @include mixins.breakpoint(tablet) {
+            justify-content: center;
+            padding: vars.$spacing-m vars.$spacing-m vars.$spacing-m 0;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: vars.$spacing-xs;
+        margin-bottom: vars.$spacing-s;
+    }
+
+    &__date {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        gap: 4px;
+        color: vars.$text-body-dark;
+        font-weight: vars.$font-weight-medium;
+        font-size: vars.$font-size-s;
+        font-family: vars.$font-family-body;
+        white-space: nowrap;
+
+        &-icon {
+            flex-shrink: 0;
+        }
+    }
+
+    &__title {
+        margin: 0 0 vars.$spacing-s;
+        color: vars.$text-primary;
+        font-weight: vars.$font-weight-bold;
+        font-size: vars.$font-size-l;
+        line-height: 1.3;
+        font-family: vars.$font-family-headline;
+        text-transform: inherit;
+    }
+
+    &__excerpt {
+        display: -webkit-box;
+        margin: 0 0 vars.$spacing-m;
+        -webkit-line-clamp: 3;
+        color: vars.$text-body-dark;
+        font-size: vars.$font-size-s;
+        line-height: 1.5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    &__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: vars.$spacing-xs;
+        margin-top: auto;
+        color: vars.$text-primary;
+        font-weight: vars.$font-weight-bold;
+        font-size: vars.$font-size-s;
+        font-family: vars.$font-family-body;
+        text-decoration: underline;
+
+        &-icon {
+            width: 14px;
+            height: 10px;
+        }
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+
+        &::after {
+            position: absolute;
+            z-index: 1;
             inset: 0;
             border-radius: 24px;
             content: "";
