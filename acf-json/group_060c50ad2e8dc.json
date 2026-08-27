@@ -3,6 +3,26 @@
     "title": "Hero — Témoignage",
     "fields": [
         {
+            "key": "field_9a13c5cd0f742",
+            "label": "Prénom",
+            "name": "prenom",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Prénom affiché à côté de la photo, dans la carte témoignage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_520ba9b8e7dde",
             "label": "Titre",
             "name": "hero_title",
@@ -81,5 +101,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1756000000
+    "modified": 1787837222
 }

@@ -10,46 +10,51 @@ $block_id = $args['block_id'];
 
 // The block class names
 $class_name = $args['class_name'];
-$args = array(
-	"post_type" => "testimony",
-	"posts_per_page" => 3,
-	'orderby' => 'date',
-	'order' => 'ASC',
-);
 
-$the_query = new WP_Query($args);
+$the_query = new WP_Query(array(
+	'post_type'      => 'testimony',
+	'posts_per_page' => 3,
+	'orderby'        => 'date',
+	'order'          => 'ASC',
+));
+
 // get post type
-$post_type = get_post_type();
-$isTestimony = $post_type === 'testimony';
+$isTestimony = get_post_type() === 'testimony';
 // the post id
-$post_id = get_the_ID();
+$current_post_id = get_the_ID();
 ?>
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<h2 class="title section__title h1"><?= $data['title'] ?></h2>
+		<span class="testimonial__eyebrow">Témoignages</span>
+		<h2 class="testimonial__title h1"><?= $data['title'] ?></h2>
 		<div class="list">
 			<?php if ($the_query->have_posts()) : ?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post();
-					$consequence = get_field('consequence', $post->ID);
-					$fraude = get_field('fraude', $post->ID);
+					$post_id     = get_the_ID();
+					$prenom      = get_field('prenom', $post_id);
+					$description = get_field('hero_description', $post_id);
 				?>
-					<a
-						href="<?php the_permalink() ?>"
-						class="testimonial__item <?php echo $isTestimony && $post_id === $post->ID ? "disabled" : "" ?>">
-						<div class="testimonial__img">
-							<?php the_post_thumbnail('large', array('class' => 'testimonial__image')); ?>
+					<article class="testimonial__item<?php echo $isTestimony && $current_post_id === $post_id ? ' disabled' : ''; ?>">
+						<div class="testimonial__header">
+							<?php the_post_thumbnail('thumbnail', array('class' => 'testimonial__avatar', 'alt' => '')); ?>
+							<span class="testimonial__name"><?php echo esc_html($prenom ?: get_the_title()); ?></span>
+							<span class="tag tag--error testimonial__badge">Témoignage</span>
 						</div>
-						<div class="content">
-							<?php
-							$title = explode(' ', get_the_title());
-							unset($title[0]);
-							$desc = implode(' ', $title);
-							?>
-							<h3 class="content__title mb-0 h4"><?php echo explode(' ', get_the_title())[0]; ?></h3>
-							<p class="content__desc"><?= $desc ?></p>
-						</div>
-					</a>
+						<h3 class="testimonial__fraude"><?php the_title(); ?></h3>
+						<?php if ($description) : ?>
+							<p class="testimonial__consequence"><?php echo esc_html(wp_trim_words($description, 24, '…')); ?></p>
+						<?php endif; ?>
+
+						<a
+							href="<?php the_permalink(); ?>"
+							class="testimonial__link"
+							aria-label="<?php echo esc_attr(sprintf("Lire l'histoire de %s", get_the_title())); ?>">
+							Lire son histoire
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="" class="testimonial__link-icon">
+						</a>
+					</article>
 				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 		</div>
 	</div>

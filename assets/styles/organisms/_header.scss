@@ -72,7 +72,9 @@ body.menu-open {
             }
         }
     }
-
+    .navbar-nav .nav-link.active {
+        color: vars.$text-accent;
+    }
     .nav-link {
         cursor: pointer;
         margin: 0 30px;
