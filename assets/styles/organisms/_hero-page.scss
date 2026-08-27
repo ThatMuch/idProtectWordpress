@@ -15,7 +15,9 @@
 .hero {
     position: relative;
     background: vars.$gradient-particulier;
-    padding: 80px 0 vars.$spacing-2xl 0;
+    /* nav.navbar (_navigation.scss) est en position: fixed par-dessus le flux :
+       on compense sa hauteur ici pour que le hero ne passe pas dessous. */
+    padding: calc(#{vars.$header_height} + #{vars.$spacing-s}) 0 vars.$spacing-2xl 0;
     overflow: hidden;
     color: vars.$text-invert;
 
@@ -166,7 +168,8 @@
 
     /* ---- Articles ---- */
     &--article {
-        padding: vars.$spacing-l 0;
+        /* padding-top hérité de .hero (compense le header fixed) */
+        padding-bottom: vars.$spacing-l;
         text-align: left;
     }
 

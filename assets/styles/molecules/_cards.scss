@@ -37,8 +37,9 @@
         aspect-ratio: 16 / 10;
         overflow: hidden;
         img:not(.blog-card__cta-icon) {
-            opacity: 0.3;
+            opacity: 0.7;
             mix-blend-mode: luminosity;
+            transition: opacity vars.$transition_medium;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -52,6 +53,10 @@
     &:hover &__image::before,
     &:focus-within &__image::before {
         opacity: 0.92;
+    }
+    &:hover &__image img:not(.blog-card__cta-icon),
+    &:focus-within &__image img:not(.blog-card__cta-icon) {
+        opacity: 0.2;
     }
 
     &__cta {

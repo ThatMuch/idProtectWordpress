@@ -24,6 +24,8 @@ if (is_page_template('page-app.php')) {
 	get_template_part('template-parts/hero/hero-testimony');
 } elseif (is_singular('post')) {
 	get_template_part('template-parts/hero/hero-article');
+} elseif (is_category()) {
+	get_template_part('template-parts/hero/hero-default');
 } elseif ((is_page() || is_home()) && !is_page_template('service.php')) {
 	$page_id = get_queried_object_id();
 
