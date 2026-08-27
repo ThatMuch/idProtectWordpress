@@ -257,6 +257,24 @@ bottom: -3.5rem;
     opacity: 1;
     transition: max-height 0.5s ease, opacity 0.3s ease, margin 0.3s ease;
     margin-bottom: 1rem;
+ul {
+    padding: 0;
+}
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap:  8px;
+
+      &:before {
+        content: "\f058";
+        flex-shrink: 0;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 1.6;
+        color:  #17eb79;
+      }
+    }
 }
 
 .offer-details.details-hidden {
