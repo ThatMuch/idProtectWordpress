@@ -12,7 +12,7 @@ get_header(); ?>
 
 <?php get_template_part('template-parts/hero'); ?>
 
-<div class="page__area">
+<div class="page__area p-4">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
