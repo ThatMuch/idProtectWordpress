@@ -133,6 +133,7 @@
         font-family: vars.$font-family-headline;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        text-transform: inherit;
     }
 
     &__link {
