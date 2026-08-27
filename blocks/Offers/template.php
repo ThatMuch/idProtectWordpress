@@ -11,6 +11,9 @@ $block_id = $args['block_id'];
 // The block class names
 $class_name = $args['class_name'];
 
+// Le champ ACF "category" (taxonomy, return_format "object") renvoie un WP_Term
+$category_term = ($data["category"] instanceof WP_Term) ? $data["category"] : false;
+
 $argsQuery = array(
 	"post_type" => "offer",
 	"posts_per_page" => 3,
@@ -20,7 +23,7 @@ $argsQuery = array(
 		array(
 			'taxonomy' => 'offer_category', // Taxonomy, in my case I need default post categories
 			'field'    => 'slug',
-			'terms'    => $data["category"], // Your category slug (I have a category 'interior')
+			'terms'    => $category_term ? $category_term->slug : '', // Your category slug (I have a category 'interior')
 		),
 	)
 );
@@ -68,9 +71,8 @@ if ($the_query->have_posts()) {
 
 		<div class="price__list">
 			<?php if ($the_query->have_posts()) : ?>
-				<?php $i = 0; ?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post();
-					$type = get_field('type', $post->ID);
+					$description = get_field('description', $post->ID);
 					$price_monthly = get_field('price_monthly', $post->ID);
 					$price_yearly = get_field('price_yearly', $post->ID);
 					$price_fixed = get_field('price_fixed', $post->ID);
@@ -84,24 +86,31 @@ if ($the_query->have_posts()) {
 					$indice_prix_fixed = get_field('indice_du_prix_fixe', $post->ID);
 					$indice_prix_monthly = get_field('indice_du_prix_mensuel', $post->ID);
 					$indice_prix_yearly = get_field('indice_du_prix_annuel', $post->ID);
+					$option_title = get_field('option_title', $post->ID);
+					$option_price = get_field('option_price', $post->ID);
+					$option_description = get_field('option_description', $post->ID);
+					$card_class = 'price__table' . ($popular ? ' price__table--highlight' : '');
 				?>
-					<div class="price__table" data-offer-id="offer-<?php echo $post->ID; ?>">
+					<article class="<?php echo $card_class; ?>" data-offer-id="offer-<?php echo $post->ID; ?>">
+						<?php if ($popular) : ?>
+							<span class="price__ribbon">Le plus demandé</span>
+						<?php endif; ?>
 						<div class="price__body">
 							<div class="price__head">
-								<?php if ($type) : ?>
-									<h3 class="type h4"><?php echo $type["label"]; ?></h3>
-								<?php endif; ?>
-								<?php if ($popular) : ?>
-									<div class="popular"><span>Le plus populaire</span> </div>
+								<?php if ($category_term) : ?>
+									<span class="price__tag">
+										<i class="fa-solid fa-bolt" aria-hidden="true"></i>
+										<?php echo esc_html($category_term->name); ?>
+									</span>
 								<?php endif; ?>
 
-								<div class="d-flex gap-2 align-items-center justify-content-center">
-									<?php if (the_post_thumbnail()) : ?>
-										<div class="price__image">
-											<?php the_post_thumbnail('medium'); ?>
-										</div>
-									<?php endif; ?>
+								<h3 class="price__name h4"><?php the_title(); ?></h3>
 
+								<?php if ($description) : ?>
+									<p class="price__description"><?php echo esc_html($description); ?></p>
+								<?php endif; ?>
+								<hr>
+								<div class="d-flex gap-2 align-items-center justify-content-start price__amount">
 									<?php if ($abonnement) : ?>
 										<!-- Offre avec abonnement - affichage mensuel/annuel -->
 										<div class="pricing-container">
@@ -118,54 +127,87 @@ if ($the_query->have_posts()) {
 										</div>
 									<?php else : ?>
 										<!-- Offre sans abonnement - prix unique -->
-										<span class="price">
-											<?php echo $price_fixed ? $price_fixed : "0"; ?> €
-										</span>
+										<div class="pricing-container">
+											<span class="price">
+												<?php echo $price_fixed ? $price_fixed : "0"; ?> €
+											</span>
+										</div>
+										<div class="abonnement">
+											<span class="period-fixed"><?php echo $indice_prix_fixed ? $indice_prix_fixed : "/ l'intervention"; ?></span>
+										</div>
 									<?php endif; ?>
 								</div>
 
 								<?php if ($infos) : ?>
 									<div class="infos"><?php echo $infos; ?></div>
 								<?php endif; ?>
+								<hr>
 							</div>
 							<div class="price__content">
-								<?php if ($block) : ?>
+								<?php if ($content) : ?>
 									<div class="offer-details <?php echo $data["hide_details"] ? 'details-hidden' : ''; ?>" data-details-for="offer-<?php echo $post->ID; ?>">
 										<?php echo $content; ?>
 									</div>
 								<?php endif; ?>
 								<?php if ($data["hide_details"]) : ?>
-									<button class="btn btn--primary btn--outlined text-center toggle-details-btn" data-target="offer-<?php echo $post->ID; ?>">
+									<button class="btn <?php echo $popular ? 'btn--light' : 'btn--primary'; ?> btn--outlined text-center toggle-details-btn" data-target="offer-<?php echo $post->ID; ?>">
 										<span class="btn-text">Voir le détail</span>
 									</button>
 								<?php endif; ?>
 							</div>
-						</div>
-						<div class="price__footer">
-							<?php if ($abonnement) : ?>
-								<!-- Offre avec abonnement - liens conditionnels -->
-								<?php if ($link_monthly) : ?>
-									<a class="btn btn--light btn--outlined payment-link payment-link-monthly" style="display: none;" href="<?php echo esc_url($link_monthly['url']); ?>" target="<?php echo esc_attr($link_monthly['target']); ?>"><?php echo esc_html($link_monthly['title']); ?>
-										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
-									</a>
-								<?php endif; ?>
-								<?php if ($link_yearly) : ?>
-									<a class="btn btn--light btn--outlined payment-link payment-link-yearly" href="<?php echo esc_url($link_yearly['url']); ?>" target="<?php echo esc_attr($link_yearly['target']); ?>"><?php echo esc_html($link_yearly['title']); ?>
-										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
-									</a>
-								<?php endif; ?>
-							<?php else : ?>
-								<!-- Offre sans abonnement - lien fixe -->
-								<?php if ($link_fixed) : ?>
-									<a class="btn btn--light btn--outlined" href="<?php echo esc_url($link_fixed['url']); ?>" target="<?php echo esc_attr($link_fixed['target']); ?>"><?php echo esc_html($link_fixed['title']); ?>
-										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite">
-									</a>
-								<?php endif; ?>
+
+							<?php if ($option_title) : ?>
+								<label class="price__option">
+									<input type="checkbox" class="price__option-checkbox">
+									<span class="price__option-box">
+										<span class="price__option-header">
+											<span class="price__option-title"><?php echo esc_html($option_title); ?></span>
+											<?php if ($option_price) : ?>
+												<span class="price__option-price">+ <?php echo esc_html($option_price); ?> €</span>
+											<?php endif; ?>
+										</span>
+										<?php if ($option_description) : ?>
+											<span class="price__option-description"><?php echo esc_html($option_description); ?></span>
+										<?php endif; ?>
+									</span>
+								</label>
 							<?php endif; ?>
 						</div>
-					</div>
-				<?php $i++;
-				endwhile; ?>
+						<div class="price__footer">
+							<?php
+							$footer_links = $abonnement
+								? array(
+									array($link_monthly, 'payment-link-monthly', true),
+									array($link_yearly, 'payment-link-yearly', false),
+								)
+								: array(
+									array($link_fixed, '', false),
+								);
+							foreach ($footer_links as $footer_link) :
+								list($link, $extra_class, $hidden) = $footer_link;
+								if (!$link) continue;
+								$is_blank = ($link['target'] ?? '') === '_blank';
+								$btn_variant = $popular ? 'btn--secondary btn--solid' : 'btn--primary btn--outlined';
+							?>
+								<a
+									class="btn <?php echo $btn_variant; ?> payment-link <?php echo $extra_class; ?>"
+									<?php echo $hidden ? 'style="display: none;"' : ''; ?>
+									href="<?php echo esc_url($link['url']); ?>"
+									<?php echo $is_blank ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>>
+									<span><?php echo esc_html($link['title']); ?></span>
+									<?php if ($popular) : ?>
+										<span class="btn__icon" aria-hidden="true">
+											<i class="fa-solid fa-arrow-right" style="color: white;"></i>
+										</span>
+									<?php endif; ?>
+									<?php if ($is_blank) : ?>
+										<span class="screen-reader-text"> (ouvre dans un nouvel onglet)</span>
+									<?php endif; ?>
+								</a>
+							<?php endforeach; ?>
+						</div>
+					</article>
+				<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
 	</div>

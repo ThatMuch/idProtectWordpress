@@ -328,11 +328,11 @@
             "delay": 0
         },
         {
-            "key": "field_66aa1661792b4",
-            "label": "Block",
-            "name": "block",
+            "key": "field_67d9e26c60e0",
+            "label": "Titre de l'option",
+            "name": "option_title",
             "aria-label": "",
-            "type": "repeater",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -341,108 +341,53 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Ajouter un élément",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_66aa166d792b5",
-                    "label": "Titre",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_66aa1661792b4"
-                },
-                {
-                    "key": "field_66aa167c792b6",
-                    "label": "Option",
-                    "name": "option",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Ajouter un élément",
-                    "rows_per_page": 20,
-                    "parent_repeater": "field_66aa1661792b4",
-                    "sub_fields": [
-                        {
-                            "key": "field_66aa1687792b7",
-                            "label": "Texte",
-                            "name": "text",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_66aa167c792b6"
-                        },
-                        {
-                            "key": "field_66aa169f792b8",
-                            "label": "Active",
-                            "name": "active",
-                            "aria-label": "",
-                            "type": "checkbox",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "active": "Active"
-                            },
-                            "default_value": [],
-                            "return_format": "value",
-                            "allow_custom": 0,
-                            "layout": "vertical",
-                            "toggle": 0,
-                            "save_custom": 0,
-                            "custom_choice_button_text": "Ajouter un nouveau choix",
-                            "parent_repeater": "field_66aa167c792b6"
-                        }
-                    ]
-                }
-            ]
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_87fad4499bb8",
+            "label": "Prix de l'option",
+            "name": "option_price",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63bde9b24b8e",
+            "label": "Description de l'option",
+            "name": "option_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_66aa1700792b9",
@@ -511,5 +456,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1767875034
+    "modified": 1787845091
 }
