@@ -19,8 +19,8 @@
         gap: vars.$spacing-xs;
         margin: 0;
         padding: 0;
-        list-style: none;
         font-size: vars.$font-size-s;
+        list-style: none;
     }
 
     &__item {
@@ -29,17 +29,22 @@
         color: vars.$dark-blue-70;
 
         &:not(:last-child)::after {
-            content: "/";
             margin-left: vars.$spacing-xs;
+            content: "/";
             color: vars.$dark-blue-70;
         }
 
         a {
-            color: vars.$text-accent;
-            text-decoration: underline;
+            color: vars.$text-invert;
+
+            &:hover {
+                outline-offset: 3px;
+                text-decoration: underline;
+            }
         }
 
         span[aria-current] {
+            opacity: 0.8;
             color: vars.$text-invert;
         }
     }

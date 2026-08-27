@@ -98,12 +98,19 @@ function idprotect_render_hero_store_buttons()
 
 /**
  * Outputs a breadcrumb trail for the Hero (article/témoignage variants).
- * Defers to RankMath when active since it already encodes this site's
+ * Defers to RankMath when its own "Breadcrumbs" setting (General Settings >
+ * Breadcrumbs) is enabled, since it already encodes this site's
  * taxonomy/hierarchy rules; falls back to a minimal manual trail otherwise.
+ * rank_math_the_breadcrumbs() stays defined even when that setting is off
+ * (it just silently outputs nothing), so function_exists() alone can't be
+ * used to decide — RankMath\Helper::is_breadcrumbs_enabled() is the actual
+ * setting check (see RankMath\Helpers\Conditional::is_breadcrumbs_enabled()).
  */
 function idprotect_the_breadcrumb()
 {
-	if (function_exists('rank_math_the_breadcrumbs')) {
+	$rank_math_enabled = class_exists('RankMath\Helper') && \RankMath\Helper::is_breadcrumbs_enabled();
+
+	if ($rank_math_enabled && function_exists('rank_math_the_breadcrumbs')) {
 		rank_math_the_breadcrumbs(array(
 			'delimiter'   => '/', // le séparateur "/" vient de _breadcrumbs.scss (::after sur .hero__breadcrumb__item), pas de RankMath
 			'wrap_before' => '<nav class="hero__breadcrumb" aria-label="Fil d\'Ariane"><ol class="hero__breadcrumb__list">',
