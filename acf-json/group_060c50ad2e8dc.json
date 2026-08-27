@@ -1,0 +1,85 @@
+{
+    "key": "group_060c50ad2e8dc",
+    "title": "Hero — Témoignage",
+    "fields": [
+        {
+            "key": "field_520ba9b8e7dde",
+            "label": "Titre",
+            "name": "hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Si vide, le titre de la page est utilisé.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_eefb6b2b7ed38",
+            "label": "Titre — mot accentué",
+            "name": "hero_title_accent",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Mot ou groupe de mots affiché en couleur d'accent, à la suite du titre (optionnel).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_dedd520f0d29e",
+            "label": "Description",
+            "name": "hero_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimony"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1756000000
+}

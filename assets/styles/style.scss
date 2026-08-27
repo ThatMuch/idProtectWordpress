@@ -41,7 +41,7 @@
 // @import "./atoms/_lists";
 
 /*=====  Molecules  ======*/
-// @import "./molecules/_breadcrumbs";
+@use "molecules/_breadcrumbs";
 // @import "./molecules/_cards";
 // @import "./molecules/_carousels";
 // @import "./molecules/_collapse";
@@ -61,6 +61,7 @@
 @use "organisms/_header";
 @use "organisms/_mega-menu";
 @use "organisms/_hero";
+@use "organisms/_hero-page";
 // @import "./organisms/sections";
 
 /*=====  Templates  ======*/

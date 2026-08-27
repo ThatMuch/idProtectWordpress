@@ -92,27 +92,16 @@ add_filter('acf/load_field/name=page_custom_menu', 'acf_load_menu_field_choices'
 
 /* Mega Menu Outils
 /––––––––––––––––––––––––*/
-// Returns the icon URL for an "outil" in the mega menu: the "Image du menu" ACF
-// field if set, otherwise the post's featured image.
+// Returns the icon URL for an "outil" in the mega menu: the "Image du menu"
+// ACF field. Deliberately does NOT fall back to the post's featured image —
+// that image is reserved for the Hero (template-parts/hero/hero-tools.php)
+// so the two stay independent (menu icon vs. hero illustration).
 function idprotect_get_outil_menu_icon($post_id)
 {
 	$image = get_field('image_menu', $post_id);
 
 	if (! empty($image['url'])) {
 		return $image;
-	}
-
-	$thumbnail_id = get_post_thumbnail_id($post_id);
-
-	if ($thumbnail_id) {
-		$thumbnail = wp_get_attachment_image_src($thumbnail_id, 'thumbnail');
-
-		if ($thumbnail) {
-			return array(
-				'url' => $thumbnail[0],
-				'alt' => get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true),
-			);
-		}
 	}
 
 	return null;
