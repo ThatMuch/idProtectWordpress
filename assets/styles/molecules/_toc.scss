@@ -1,0 +1,79 @@
+@use "../vars";
+
+/**
+ * V4 — Sommaire (sidebar.php), sur templates/wp-single.php.
+ * <details>/<summary> natif : pas de JS, le clic sur "Sommaire" replie la
+ * liste via le comportement natif du disclosure widget.
+ */
+
+/*
+ * <main id="content" class="section__area"> (header.php, commun à tous les
+ * gabarits) a overflow:hidden pour clipper les décorations plein-bord
+ * d'autres sections — le hero a déjà son propre overflow:hidden
+ * (organisms/_hero-page.scss) et n'en a pas besoin. Mais tout overflow non
+ * "visible" sur un ancêtre casse position:sticky : on le neutralise donc
+ * uniquement sur l'article (body_class() ajoute "single-post"), pas
+ * globalement.
+ */
+body.single-post .section__area {
+    overflow: visible;
+}
+
+.toc {
+    position: sticky;
+    top: calc(#{vars.$header_height} + #{vars.$spacing-m});
+    border-radius: vars.$radius-m;
+
+    padding: vars.$spacing-m;
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: vars.$spacing-xs;
+        cursor: pointer;
+        color: vars.$text-accent;
+        font-weight: vars.$font-weight-bold;
+        font-size: vars.$font-size-s;
+        letter-spacing: 0.69px;
+        list-style: none;
+        text-transform: uppercase;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &__icon {
+        font-size: vars.$font-size-s;
+    }
+
+    &[open] &__summary {
+        margin-bottom: vars.$spacing-m;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: vars.$spacing-m;
+        margin: 0;
+        border-left: 2px solid rgba(vars.$blue-40, 0.2);
+        padding-left: vars.$spacing-m;
+        list-style: none;
+    }
+
+    &__link {
+        color: vars.$text-subheading;
+        font-size: vars.$font-size-s;
+        line-height: 1.4;
+
+        &:hover,
+        &:focus-visible {
+            color: vars.$text-primary;
+        }
+    }
+
+    &__item:first-child &__link {
+        color: vars.$text-primary;
+        font-weight: vars.$font-weight-bold;
+    }
+}

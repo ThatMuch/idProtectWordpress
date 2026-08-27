@@ -41,8 +41,10 @@
 // @import "./atoms/_lists";
 
 /*=====  Molecules  ======*/
+@use "molecules/_article-meta";
 @use "molecules/_breadcrumbs";
 @use "molecules/_cards";
+@use "molecules/_toc";
 // @import "./molecules/_carousels";
 // @import "./molecules/_collapse";
 // @import "./molecules/_contact-form";
@@ -739,14 +741,14 @@ hr.custom {
     margin-bottom: 15px;
 }
 
-.article__image {
+.list__article__image {
     border-radius: 16px;
     width: 104px;
     height: 104px;
     overflow: hidden;
 }
 
-.article__image img {
+.list__article__image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;

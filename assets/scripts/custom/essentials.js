@@ -84,7 +84,7 @@
 
     function updateArticleImages() {
         $(".article__item .wp-block-latest-posts__featured-image").each(function () {
-            $(this).removeClass("wp-block-latest-posts__featured-image").addClass("article__image");
+            $(this).removeClass("wp-block-latest-posts__featured-image").addClass("list__article__image");
         });
     }
 

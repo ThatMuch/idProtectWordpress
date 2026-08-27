@@ -78,3 +78,50 @@
         list-style: none;
     }
 }
+
+/*==================================================================================
+  Related posts ("À lire aussi") — templates/wp-single.php
+==================================================================================*/
+.related-posts {
+    margin-top: vars.$spacing-2xl;
+    border-top: 1px solid rgba(vars.$dark-blue-40, 0.1);
+    padding-top: vars.$spacing-2xl;
+
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: vars.$spacing-s;
+        margin-bottom: vars.$spacing-l;
+    }
+
+    &__eyebrow {
+        display: block;
+        margin-bottom: 8px;
+        color: vars.$text-subheading;
+        font-weight: vars.$font-weight-bold;
+        font-size: vars.$font-size-s;
+        letter-spacing: 0.69px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: vars.$font-size-l;
+    }
+
+    &__link {
+        white-space: nowrap;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: vars.$spacing-l;
+
+        @include mixins.breakpoint(mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
