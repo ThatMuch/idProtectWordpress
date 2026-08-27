@@ -19,6 +19,7 @@ $queryAll = new WP_Query($argsAll);
 
 ?>
 <?php get_header(); ?>
+<?php get_template_part('template-parts/hero'); ?>
 <div class="container content-area page__area blog">
 	<main id="blog">
 		<div class="container">

@@ -42,7 +42,7 @@
 
 /*=====  Molecules  ======*/
 @use "molecules/_breadcrumbs";
-// @import "./molecules/_cards";
+@use "molecules/_cards";
 // @import "./molecules/_carousels";
 // @import "./molecules/_collapse";
 // @import "./molecules/_contact-form";
@@ -632,41 +632,6 @@ hr.custom {
     color: vars.$text-invert;
 }
 
-.blog__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    border-radius: 64px;
-    background: vars.$background-light;
-    width: 64px;
-    height: 64px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    top: 30px;
-    right: 30px;
-    align-items: center;
-    z-index: 3;
-    -webkit-transition: 0.2s ease;
-    transition: 0.2s ease;
-    padding: 5px;
-}
-
-.blog__link:hover {
-    opacity: 0.5;
-}
-
-.blog__link img {
-    width: 30px;
-}
-
 .blog__box {
     margin: 0 0 20px;
     border-radius: 16px;
@@ -730,61 +695,6 @@ hr.custom {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-}
-
-.blog__item__image {
-    position: relative;
-    border-radius: 16px;
-    width: 100%;
-    height: 275px;
-    overflow: hidden;
-}
-
-@media only screen and (max-width: 1200px) {
-    .blog__item__image {
-        height: 205px;
-    }
-}
-
-.blog__item__image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-}
-
-.blog__item__image .blog__link {
-    top: 10px;
-    right: 11px;
-    width: 32px;
-    height: 32px;
-}
-
-.blog__item__image .blog__link img {
-    width: 15px;
-    object-fit: contain;
-}
-
-.blog__item__text {
-    margin-top: 15px;
-}
-
-.blog__item__text h5 {
-    margin: 0 0 5px;
-    font-size: 0.875rem;
-}
-
-.blog__item__text h2 {
-    color: vars.$text-primary;
-    font-style: normal;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-}
-
-.blog__item__text h2 a {
-    color: vars.$text-primary;
 }
 
 .blog__list .owl-stage {
