@@ -1,3 +1,6 @@
+@use "../vars";
+@use "../mixins";
+
 /**
  *
  * @author      ThatMuch
@@ -7,34 +10,35 @@
  */
 //=> templates/wp-home.php
 
-.blog, .archive, .search {
+.blog,
+.archive,
+.search {
     .content-area {
         display: flex;
         justify-content: center;
         gap: 50px;
 
-        @include breakpoint(mobile) {
-            padding: 15px;
+        @include mixins.breakpoint(mobile) {
             flex-wrap: wrap;
+            padding: 15px;
         }
     }
 
     .article__content {
         display: grid;
-        gap: 15px;
         grid-template-columns: repeat(minmax(200px, 1fr), auto-fit);
-        margin-bottom: 1rem;
         align-items: center;
+        gap: 15px;
+        margin-bottom: 1rem;
         max-width: 100%;
 
-        @include breakpoint(tablet) {
+        @include mixins.breakpoint(tablet) {
             grid-template-columns: 200px 1fr;
         }
 
-
         .thumbnail {
+            background-color: vars.$color-grey1;
             height: 200px;
-            background-color: $color-grey1;
 
             img {
                 width: 100%;
@@ -46,15 +50,31 @@
 }
 
 .pagination {
-    padding: 15px 0;
     display: flex;
     justify-content: center;
+    gap: vars.$spacing-xs;
+    padding: 15px 0;
+    .page-numbers {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: vars.$background-dim;
+        width: 42px;
+        height: 42px;
+        color: vars.$text-body-dark;
+        &.current {
+            background-color: vars.$surface-primary;
+            color: vars.$text-invert;
+        }
+    }
 }
 
 .widget-area {
-    ul, li {
-        padding: 0;
+    ul,
+    li {
         margin: 0;
+        padding: 0;
         list-style: none;
     }
 }
