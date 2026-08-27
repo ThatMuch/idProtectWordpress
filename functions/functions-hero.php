@@ -105,6 +105,7 @@ function idprotect_the_breadcrumb()
 {
 	if (function_exists('rank_math_the_breadcrumbs')) {
 		rank_math_the_breadcrumbs(array(
+			'delimiter'   => '/', // le séparateur "/" vient de _breadcrumbs.scss (::after sur .hero__breadcrumb__item), pas de RankMath
 			'wrap_before' => '<nav class="hero__breadcrumb" aria-label="Fil d\'Ariane"><ol class="hero__breadcrumb__list">',
 			'wrap_after'  => '</ol></nav>',
 			'item_before' => '<li class="hero__breadcrumb__item">',
