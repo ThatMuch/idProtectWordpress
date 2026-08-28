@@ -1,5 +1,7 @@
 var gulp = require("gulp");
-var sass = require("gulp-sass")(require("sass"));
+var path = require("path");
+var Transform = require("stream").Transform;
+var sass = require("sass");
 //var autoprefixer = require("gulp-autoprefixer");
 var cleanCSS = require("gulp-clean-css");
 var concat = require("gulp-concat");
@@ -7,11 +9,35 @@ var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
 var browserSync = require("browser-sync").create();
 
+// Replaces gulp-sass (which still relies on Dart Sass's deprecated legacy
+// render API) with a thin wrapper around the modern sass.compile() API.
+// Partial files (leading underscore) are skipped, matching gulp-sass's
+// historic behavior.
+function compileSass() {
+	return new Transform({
+		objectMode: true,
+		transform: function (file, encoding, callback) {
+			if (file.isNull() || path.basename(file.path).charAt(0) === "_") {
+				return callback();
+			}
+			try {
+				var result = sass.compile(file.path, { style: "expanded" });
+				file.contents = Buffer.from(result.css);
+				file.path = file.path.replace(/\.scss$/, ".css");
+				callback(null, file);
+			} catch (err) {
+				console.error(err.toString());
+				callback();
+			}
+		},
+	});
+}
+
 gulp.task("styles", function () {
 	return (
         gulp
             .src("assets/styles/**/*.scss")
-            .pipe(sass().on("error", sass.logError))
+            .pipe(compileSass())
             //.pipe(autoprefixer("last 2 versions"))
             .pipe(cleanCSS())
             .pipe(rename({ suffix: ".min" }))
@@ -27,7 +53,7 @@ gulp.task("styles_admin", function () {
 	return (
         gulp
             .src("assets/styles/admin/*.scss")
-            .pipe(sass().on("error", sass.logError))
+            .pipe(compileSass())
             //.pipe(autoprefixer("last 2 versions"))
             .pipe(cleanCSS())
             .pipe(rename({ suffix: ".min" }))
