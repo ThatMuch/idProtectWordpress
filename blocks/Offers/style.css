@@ -254,9 +254,9 @@ ul {
     padding: 0;
 }
     li {
-      display: flex;
+      /* display: flex;
       align-items: center;
-      gap:  8px;
+      gap:  8px; */
       margin-bottom: 1rem;
 
       &:before {
@@ -266,6 +266,18 @@ ul {
         font-weight: 900;
         font-size: .875rem;
         color:  #17eb79;
+        margin-right: 8px;
+      }
+      ul {
+        padding-left: 22px;
+        li{
+            margin-top: 8px;
+            list-style: none;
+            &:before {
+            display: none;
+
+        }
+    }
       }
     }
 }
