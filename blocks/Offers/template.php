@@ -157,8 +157,11 @@ if ($the_query->have_posts()) {
 							</div>
 
 							<?php if ($option_title) : ?>
-								<label class="price__option">
-									<input type="checkbox" class="price__option-checkbox">
+								<label class="price__option checkbox <?php echo $popular ?  'checkbox--light' : ''; ?>">
+									<input type="checkbox" class="price__option-checkbox checkbox__input">
+									<div class="checkbox__box">
+										<i class="fa-solid fa-check checkbox__icon"></i>
+									</div>
 									<span class="price__option-box">
 										<span class="price__option-header">
 											<span class="price__option-title"><?php echo esc_html($option_title); ?></span>

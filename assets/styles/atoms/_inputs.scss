@@ -10,7 +10,7 @@
 
 @use "sass:color";
 
-input:not([type="submit"]),
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
     transition-duration: vars.$transition_slow;
@@ -57,12 +57,12 @@ input[type="checkbox"] {
         // Caché visuellement mais toujours accessible au clavier/lecteur d'écran
         // (contrairement à display:none) : le <label> englobant garde le clic natif.
         position: absolute;
+        opacity: 0;
+        margin: 0;
+        border: 0;
+        padding: 0;
         width: 1px;
         height: 1px;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        opacity: 0;
 
         &:disabled {
             cursor: not-allowed;
@@ -71,29 +71,34 @@ input[type="checkbox"] {
 }
 
 .checkbox {
+    align-items: inherit;
+    gap: 1rem;
     &__box {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
         flex-shrink: 0;
-        width: 21px;
-        height: 21px;
+        justify-content: center;
+        align-items: center;
+        transition:
+            background-color vars.$transition_fast,
+            border-color vars.$transition_fast;
         box-sizing: border-box;
+        margin-top: 4px;
         border: 1px solid vars.$dark-blue-40;
         border-radius: vars.$radius-s;
-        transition: background-color vars.$transition_fast, border-color vars.$transition_fast;
+        width: 21px;
+        height: 21px;
     }
 
     &__icon {
+        opacity: 0;
+        color: vars.$text-invert;
         font-size: 12px;
         line-height: 1;
-        color: vars.$text-invert;
-        opacity: 0;
     }
 
     &__input:checked ~ &__box {
-        background: vars.$dark-blue-40;
         border-color: vars.$dark-blue-40;
+        background: vars.$dark-blue-40;
 
         .checkbox__icon {
             opacity: 1;
@@ -109,8 +114,8 @@ input[type="checkbox"] {
     }
 
     &__input:checked:disabled ~ &__box {
-        background: vars.$surface-disabled;
         border-color: vars.$surface-disabled;
+        background: vars.$surface-disabled;
     }
 
     /* ---- Light (sur fond sombre/coloré) ---- */
@@ -120,12 +125,12 @@ input[type="checkbox"] {
         }
 
         .checkbox__input:checked ~ .checkbox__box {
-            background: vars.$neutral-100;
             border-color: vars.$neutral-100;
+            background: vars.$neutral-100;
 
             .checkbox__icon {
-                color: vars.$dark-blue-40;
                 opacity: 1;
+                color: vars.$dark-blue-40;
             }
         }
     }
@@ -134,23 +139,23 @@ input[type="checkbox"] {
 .radio {
     &__box {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
         flex-shrink: 0;
-        width: 21px;
-        height: 21px;
+        justify-content: center;
+        align-items: center;
+        transition: border-color vars.$transition_fast;
         box-sizing: border-box;
         border: 1px solid vars.$dark-blue-40;
         border-radius: vars.$radius-l;
-        transition: border-color vars.$transition_fast;
+        width: 21px;
+        height: 21px;
     }
 
     &__dot {
-        width: 10px;
-        height: 10px;
+        opacity: 0;
         border-radius: vars.$radius-l;
         background: vars.$dark-blue-40;
-        opacity: 0;
+        width: 10px;
+        height: 10px;
     }
 
     &__input:checked ~ &__box .radio__dot {
@@ -190,7 +195,9 @@ input[type="checkbox"] {
         display: flex;
         align-items: center;
         gap: vars.$spacing-xs;
-        transition: border-color vars.$transition_fast, box-shadow vars.$transition_fast;
+        transition:
+            border-color vars.$transition_fast,
+            box-shadow vars.$transition_fast;
         box-sizing: border-box;
         border: 1.5px solid vars.$blue-70;
         border-radius: vars.$radius-m;
@@ -200,8 +207,8 @@ input[type="checkbox"] {
         height: 42px;
 
         &:focus-within {
-            border-color: vars.$surface-primary;
             box-shadow: 0 0 0 3px rgba(vars.$surface-primary, 0.15);
+            border-color: vars.$surface-primary;
         }
         p {
             margin-bottom: 0;
@@ -260,8 +267,8 @@ input[type="checkbox"] {
             border-color: vars.$surface-error;
 
             &:focus-within {
-                border-color: vars.$surface-error;
                 box-shadow: 0 0 0 3px rgba(vars.$surface-error, 0.15);
+                border-color: vars.$surface-error;
             }
         }
 

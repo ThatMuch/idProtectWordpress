@@ -167,6 +167,7 @@
     flex-direction: column;
     gap: 1.5rem;
     padding: 1.69506rem 1.88338rem;
+    height: -webkit-fill-available;
 }
 
 .price__head {
@@ -217,7 +218,7 @@
 .price__description {
     margin-bottom: 0;
     color: var(--Text-Body-Dark, #454980);
-    font-size: var(--Font-Size-S, 1rem);
+    font-size: var(--Font-Size-XS, 0.875rem);
     line-height: 1.5;
     font-family: var(--Font-Family-Body, Raleway);
 }
@@ -240,29 +241,26 @@
 
 .price__table--highlight .price__amount .price {
     color: #ffffff;
+
 }
 
 .price__amount .abonnement {
     color: var(--Text-Inactive, #5e89c2);
     font-weight: 500;
-    font-size: var(--Font-Size-S, 1rem);
+    font-size: var(--Font-Size-XS, 0.875rem);
     font-family: var(--Font-Family-Body, Raleway);
-}
-
-.price__table--highlight .price__amount .abonnement {
-    color: var(--Text-Body-Light, #ffffffd1);
 }
 
 .infos {
-    color: var(--Text-Body-Dark, #454980);
-    font-style: normal;
-    font-weight: 500;
-    font-size: var(--Font-Size-XS, 0.875rem);
-    line-height: var(--Font-Size-L, 1.5rem); /* 171.429% */
-    font-family: var(--Font-Family-Body, Raleway);
-    text-align: left;
     p {
         margin-bottom: 0;
+        color: var(--Text-Inactive, #5e89c2);
+        font-style: normal;
+        font-weight: 500;
+        font-size: var(--Font-Size-XS, 0.875rem);
+        line-height: var(--Font-Size-L, 1.5rem); /* 171.429% */
+        font-family: var(--Font-Family-Body, Raleway);
+    text-align: left;
     }
 }
 
@@ -273,11 +271,12 @@
 .price__option {
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 1rem;
     cursor: pointer;
     border-radius: 12px;
     border: 1px solid var(--Text-Text-accent, #ff7551);
     padding: 1rem 1.25rem;
+    margin-top: auto;
 }
 
 .price__table--highlight .price__option {
@@ -356,12 +355,13 @@
     opacity: 1;
     transition: max-height 0.5s ease, opacity 0.3s ease, margin 0.3s ease;
     margin-bottom: 1rem;
+    font-size: var(--Font-Size-XS, 0.875rem);
 ul {
     padding: 0;
 }
     li {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap:  8px;
       margin-bottom: 1rem;
 
@@ -370,8 +370,7 @@ ul {
         flex-shrink: 0;
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
-        font-size: 20px;
-        line-height: 1.6;
+        font-size: .875rem;
         color:  #17eb79;
       }
     }

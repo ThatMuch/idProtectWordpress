@@ -35,6 +35,26 @@
             "save_options": 0
         },
         {
+            "key": "field_68b12e4a9c31",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_66c70ba4104f4",
             "label": "Abonnement",
             "name": "abonnement",
@@ -456,5 +476,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1787845091
+    "modified": 1787847038
 }
