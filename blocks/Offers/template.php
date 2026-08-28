@@ -29,24 +29,6 @@ $argsQuery = array(
 );
 
 $the_query = new WP_Query($argsQuery);
-
-// Vérifier s'il y a des offres avec abonnement
-$has_subscription_offers = false;
-if ($the_query->have_posts()) {
-	// Sauvegarder les posts pour éviter de refaire la requête
-	$posts_array = $the_query->posts;
-
-	foreach ($posts_array as $post_item) {
-		$abonnement_check = get_field('abonnement', $post_item->ID);
-		if ($abonnement_check) {
-			$has_subscription_offers = true;
-			break;
-		}
-	}
-
-	// Remettre à zéro les compteurs pour la boucle d'affichage
-	$the_query->rewind_posts();
-}
 ?>
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
@@ -54,38 +36,17 @@ if ($the_query->have_posts()) {
 			<h2 class="section__title h1"><?php echo $data["title"]; ?> <span class="title text__orange"><?php echo $data["accent"] ?></span></h2>
 		<?php endif; ?>
 
-		<?php if ($has_subscription_offers) : ?>
-			<!-- Onglets de prix -->
-			<div class="pricing-tabs">
-				<div class="tabs-navigation">
-					<button class="tab-btn active" data-tab="yearly">
-						Annuel
-						<?php if ($data["savings_percentage"]) : ?>
-							<span class="savings-badge">-<?php echo $data["savings_percentage"]; ?>%</span>
-						<?php endif; ?>
-					</button>
-					<button class="tab-btn " data-tab="monthly">Mensuel</button>
-				</div>
-			</div>
-		<?php endif; ?>
-
 		<div class="price__list">
 			<?php if ($the_query->have_posts()) : ?>
 				<?php while ($the_query->have_posts()) : $the_query->the_post();
 					$description = get_field('description', $post->ID);
-					$price_monthly = get_field('price_monthly', $post->ID);
-					$price_yearly = get_field('price_yearly', $post->ID);
 					$price_fixed = get_field('price_fixed', $post->ID);
 					$infos = get_field('infos', $post->ID);
 					$link_fixed = get_field('link_fixed', $post->ID);
-					$link_monthly = get_field('link_monthly', $post->ID);
-					$link_yearly = get_field('link_yearly', $post->ID);
+					$link_option = get_field('link_option', $post->ID);
 					$popular = get_field('populaire', $post->ID);
-					$abonnement = get_field('abonnement', $post->ID);
 					$content = get_field('content', $post->ID);
 					$indice_prix_fixed = get_field('indice_du_prix_fixe', $post->ID);
-					$indice_prix_monthly = get_field('indice_du_prix_mensuel', $post->ID);
-					$indice_prix_yearly = get_field('indice_du_prix_annuel', $post->ID);
 					$option_title = get_field('option_title', $post->ID);
 					$option_price = get_field('option_price', $post->ID);
 					$option_description = get_field('option_description', $post->ID);
@@ -111,31 +72,14 @@ if ($the_query->have_posts()) {
 								<?php endif; ?>
 								<hr>
 								<div class="d-flex gap-2 align-items-center justify-content-start price__amount">
-									<?php if ($abonnement) : ?>
-										<!-- Offre avec abonnement - affichage mensuel/annuel -->
-										<div class="pricing-container">
-											<span class="price price-monthly" style="display: none;">
-												<?php echo $price_monthly ? $price_monthly : "0"; ?> €
-											</span>
-											<span class="price price-yearly" style="display: block;">
-												<?php echo $price_yearly ? $price_yearly : "0"; ?> €
-											</span>
-										</div>
-										<div class="abonnement">
-											<span class="period-monthly" style="display: none;"><?php echo $indice_prix_monthly ? $indice_prix_monthly : "/mois"; ?></span>
-											<span class="period-yearly"><?php echo $indice_prix_yearly ? $indice_prix_yearly : "/an"; ?></span>
-										</div>
-									<?php else : ?>
-										<!-- Offre sans abonnement - prix unique -->
-										<div class="pricing-container">
-											<span class="price">
-												<?php echo $price_fixed ? $price_fixed : "0"; ?> €
-											</span>
-										</div>
-										<div class="abonnement">
-											<span class="period-fixed"><?php echo $indice_prix_fixed ? $indice_prix_fixed : "/ l'intervention"; ?></span>
-										</div>
-									<?php endif; ?>
+									<div class="pricing-container">
+										<span class="price">
+											<?php echo $price_fixed ? $price_fixed : "0"; ?> €
+										</span>
+									</div>
+									<div class="abonnement">
+										<span class="period-fixed"><?php echo $indice_prix_fixed ? $indice_prix_fixed : "/ l'intervention"; ?></span>
+									</div>
 								</div>
 
 								<?php if ($infos) : ?>
@@ -178,10 +122,10 @@ if ($the_query->have_posts()) {
 						</div>
 						<div class="price__footer">
 							<?php
-							$footer_links = $abonnement
+							$footer_links = ($option_title && $link_option)
 								? array(
-									array($link_monthly, 'payment-link-monthly', true),
-									array($link_yearly, 'payment-link-yearly', false),
+									array($link_fixed, 'payment-link-base', false),
+									array($link_option, 'payment-link-option', true),
 								)
 								: array(
 									array($link_fixed, '', false),

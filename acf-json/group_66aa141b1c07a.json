@@ -55,26 +55,6 @@
             "new_lines": ""
         },
         {
-            "key": "field_66c70ba4104f4",
-            "label": "Abonnement",
-            "name": "abonnement",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "100",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_66aa163c792b2",
             "label": "Prix fixe",
             "name": "price_fixed",
@@ -82,15 +62,7 @@
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "100",
                 "class": "",
@@ -112,15 +84,7 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -134,174 +98,16 @@
             "append": ""
         },
         {
-            "key": "field_66aa163c792b3",
-            "label": "Prix mensuel",
-            "name": "price_monthly",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_695fa12e3f686",
-            "label": "Indice du prix mensuel",
-            "name": "indice_du_prix_mensuel",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_66aa163c792b4",
-            "label": "Prix annuel",
-            "name": "price_yearly",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_695fa13f3f687",
-            "label": "Indice du prix annuel",
-            "name": "indice_du_prix_annuel",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_66aa1700792ba",
-            "label": "Lien de paiement (prix fixe)",
+            "label": "Lien de paiement (prix de base)",
             "name": "link_fixed",
             "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "100",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_66aa1700792bb",
-            "label": "Lien de paiement mensuel",
-            "name": "link_monthly",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_66aa1700792bc",
-            "label": "Lien de paiement annuel",
-            "name": "link_yearly",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -411,13 +217,21 @@
         },
         {
             "key": "field_66aa1700792b9",
-            "label": "Lien",
-            "name": "link",
+            "label": "Lien de paiement (avec option)",
+            "name": "link_option",
             "aria-label": "",
             "type": "link",
-            "instructions": "",
+            "instructions": "Utilisé à la place du lien de paiement de base quand le visiteur coche l'option.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67d9e26c60e0",
+                        "operator": "!=",
+                        "value": ""
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -476,5 +290,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1787847038
+    "modified": 1787926248
 }
