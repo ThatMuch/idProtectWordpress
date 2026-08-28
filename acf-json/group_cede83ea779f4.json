@@ -3,52 +3,12 @@
     "title": "Trustpilot",
     "fields": [
         {
-            "key": "field_b4df3c981b07f",
-            "label": "Clé API (apikey)",
-            "name": "trustpilot_api_key",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Depuis le Developer Portal Trustpilot (compte Trustpilot for Business, module « Connect »). Utilisée par tous les blocks « Avis clients » du site : à renseigner une seule fois ici.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_1e7f80cbe7503",
-            "label": "Secret API",
-            "name": "trustpilot_api_secret",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Nécessaire uniquement pour afficher les avis individuels (l'API OAuth de Trustpilot exige une clé + un secret). Laisser vide si seule la note globale doit s'afficher.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_f1e44f906a32b",
             "label": "Identifiant Business Unit",
             "name": "trustpilot_business_unit_id",
             "aria-label": "",
             "type": "text",
-            "instructions": "Visible dans l'URL de votre tableau de bord Trustpilot Business, ou via l'endpoint /v1/business-units/find?name=votredomaine.fr de leur API.",
+            "instructions": "Identifiant public du profil Trustpilot (pas de clé API/plan payant nécessaire : utilisé uniquement pour charger le widget officiel TrustBox). Visible dans l'URL de votre tableau de bord Trustpilot Business.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -98,5 +58,5 @@
     "active": true,
     "description": "",
     "show_in_rest": false,
-    "modified": 1787673482
+    "modified": 1787912068
 }
