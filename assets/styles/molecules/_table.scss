@@ -5,3 +5,54 @@
  * @since       idProtect_1.0.0.0
  *
  */
+@use "../vars";
+.wp-block-table {
+    box-shadow: 0 20px 40px 0 rgba(25, 86, 168, 0.08);
+    border-radius: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1140px;
+    th {
+        border: none;
+        background-color: vars.$dark-blue-40;
+        padding: 0.5rem 1rem;
+        color: vars.$text-invert;
+        &:first-child {
+            border-radius: 1rem 0 0 0;
+        }
+        &:last-child {
+            border-radius: 0 1rem 0 0;
+        }
+    }
+
+    td:empty {
+        &::before {
+            content: "\f058";
+            color: #17eb79;
+            font-weight: 900;
+            font-size: 0.875rem;
+            font-family: "Font Awesome 6 Free";
+        }
+    }
+    tr:last-child td {
+        border-bottom: none;
+        &:first-child {
+            border-radius: 0 0 0 1rem;
+        }
+        &:last-child {
+            border-radius: 0 0 1rem 0;
+        }
+    }
+    tr:nth-child(even) td {
+        background-color: #fff;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid vars.$blue-70;
+        padding: 0.5rem 1rem;
+    }
+    td:not(:first-child) {
+        color: vars.$text-disabled;
+        text-align: center;
+    }
+}
