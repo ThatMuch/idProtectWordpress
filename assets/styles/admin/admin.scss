@@ -83,3 +83,12 @@
 #adminmenu .update-plugins {
     background-color: vars.$color-secondary;
 }
+
+.interface-interface-skeleton__sidebar,
+.edit-post-sidebar {
+    width: 400px !important;
+}
+
+.interface-complementary-area.editor-sidebar {
+    width: 400px !important;
+}
