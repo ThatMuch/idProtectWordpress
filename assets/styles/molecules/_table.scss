@@ -8,12 +8,15 @@
 @use "../vars";
 .wp-block-table {
     margin: 0 auto 2rem;
-    box-shadow: 0 20px 40px 0 rgba(25, 86, 168, 0.08);
-    border-radius: 1rem;
-    border-collapse: collapse;
+
     padding: 0 24px;
     width: 100%;
     max-width: 1140px;
+    table {
+        box-shadow: 0 20px 40px 0 rgba(25, 86, 168, 0.08);
+        border-radius: 1rem;
+        border-collapse: collapse;
+    }
     th {
         border: none;
         background-color: vars.$dark-blue-40;
