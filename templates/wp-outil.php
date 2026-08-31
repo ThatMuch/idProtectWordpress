@@ -13,16 +13,10 @@ get_header(); ?>
 <?php get_template_part('template-parts/hero'); ?>
 
 <div class="page__area">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<?php while (have_posts()) : the_post(); ?>
-					<div class="article__text">
-						<?php the_content(); ?>
-					</div>
-				<?php endwhile; ?>
-			</div>
+	<?php while (have_posts()) : the_post(); ?>
+		<div class="article__text">
+			<?php the_content(); ?>
 		</div>
-	</div>
+	<?php endwhile; ?>
 </div>
 <?php get_footer(); ?>
