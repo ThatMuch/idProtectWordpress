@@ -1,0 +1,39 @@
+@use "../vars";
+@use "../mixins";
+
+.community__form {
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    border-radius: 16px;
+    background: vars.$background-warning;
+    padding: 36px 40px;
+}
+
+@media only screen and (max-width: 767px) {
+    .community__form {
+        padding: 20px;
+    }
+}
+
+.community__form h2 {
+    margin: 0 0 10px;
+    color: vars.$text-accent;
+    text-transform: uppercase;
+
+    @include mixins.responsive-font-size(24, 30, 700);
+}
+
+@media only screen and (max-width: 767px) {
+    .community__form h2 {
+        @include mixins.responsive-font-size(20);
+    }
+}
+
+.community__form p.note {
+    margin: 10px 0 0;
+    color: #384050;
+    font-family: "Raleway", sans-serif;
+
+    @include mixins.responsive-font-size(12, 14, 400);
+}

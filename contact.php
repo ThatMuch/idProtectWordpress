@@ -41,7 +41,7 @@ get_header(); ?>
 					</div>
 					<?php if (have_rows('card_rs')) : ?>
 						<?php while (have_rows('card_rs')) : the_row(); ?>
-							<div class="community__info">
+							<div>
 								<h2><?php the_sub_field('title'); ?></h2>
 								<p><?php the_sub_field('text'); ?></p>
 								<?php if (have_rows('rs')) : ?>
