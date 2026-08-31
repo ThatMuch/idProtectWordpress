@@ -27,11 +27,11 @@ $isFirst = get_field('is_first');
 					<?php if ($title) : ?>
 						<?php if ($isFirst) : ?>
 							<h1 class="hero-block__title h1">
-								<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
+								<?php echo $title; ?> <span class="text__orange"><?php echo $accent ?></span>
 							</h1>
 						<?php else : ?>
 							<h2 class="hero-block__title h1">
-								<?php echo $title; ?> <span class="title text__orange"><?php echo $accent ?></span>
+								<?php echo $title; ?> <span class="text__orange"><?php echo $accent ?></span>
 							</h2>
 
 						<?php endif; ?>

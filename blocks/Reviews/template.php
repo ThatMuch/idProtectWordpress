@@ -22,7 +22,7 @@ $testimony_query = new WP_Query($args);
     <div class="container">
         <h2 class="section__title h1">
             <?php the_field('titre'); ?>
-            <span class="title text__orange"><?php the_field('titre_accent'); ?></span>
+            <span class="text__orange"><?php the_field('titre_accent'); ?></span>
         </h2>
         <div id="testimony_box" class="reviews__list">
             <?php if ($testimony_query->have_posts()) : ?>

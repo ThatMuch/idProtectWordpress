@@ -42,6 +42,9 @@
 .price__table--highlight {
     background: var(--Text-Text-primary, #171c60);
     border-color: var(--Text-Text-accent, #ff7551);
+    hr {
+        opacity: .25;
+    }
 }
 
 .price__ribbon {

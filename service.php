@@ -45,7 +45,7 @@ get_header(); ?>
 						</div>
 					<?php endif; ?>
 					<div class="page__hero__text">
-						<h1 class="title mt-0"><span class="g-text"><?php the_title(); ?></span></h1>
+						<h1 class="mt-0"><span class="g-text"><?php the_title(); ?></span></h1>
 						<?php the_field('headline'); ?>
 						<!-- <?php $link = get_field('link'); ?>
 						<?php if ($link) : ?>

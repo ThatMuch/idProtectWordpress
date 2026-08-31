@@ -23,7 +23,7 @@ $class_name = $args['class_name'];
 			<div class="col-lg-7">
 				<div class="step__list">
 					<?php if ($data['title']) : ?>
-						<h2 class="section__title h1"><?= $data['title'] ?> <span class="title text__orange"><?= $data['accent'] ?></span></h2>
+						<h2 class="section__title h1"><?= $data['title'] ?> <span class="text__orange"><?= $data['accent'] ?></span></h2>
 					<?php endif; ?>
 					<!-- display the list of elements from a repeater field in acf -->
 					<?php if (have_rows('steps')) : ?>
