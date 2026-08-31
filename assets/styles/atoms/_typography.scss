@@ -49,3 +49,22 @@
     line-height: 1.5;
     font-family: vars.$font-family-digits;
 }
+
+/**
+ * Eyebrow — petit libellé au-dessus d'un titre de section (hero, en-têtes de
+ * bloc, listes liées...). Un seul style de référence pour tout le thème ;
+ * `--invert` pour l'utiliser sur un fond sombre.
+ */
+.eyebrow {
+    display: block;
+    margin-bottom: vars.$spacing-xs;
+    color: vars.$text-subheading;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-s;
+    letter-spacing: 0.69px;
+    text-transform: uppercase;
+}
+
+.eyebrow--invert {
+    color: vars.$text-invert;
+}

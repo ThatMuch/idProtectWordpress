@@ -18,6 +18,9 @@
         background-color: vars.$dark-blue-40;
         padding: 0.5rem 1rem;
         color: vars.$text-invert;
+        &:not(:first-child) {
+            text-align: center;
+        }
         &:first-child {
             border-radius: 1rem 0 0 0;
         }

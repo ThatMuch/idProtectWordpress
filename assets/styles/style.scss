@@ -475,20 +475,6 @@ hr.custom {
     }
 }
 
-.section__eyebrow {
-    display: block;
-    margin-bottom: vars.$spacing-xs;
-    color: vars.$text-primary;
-    font-weight: vars.$font-weight-bold;
-    font-size: vars.$font-size-s;
-    letter-spacing: 0.69px;
-    text-transform: uppercase;
-
-    @include mixins.breakpoint(mobile) {
-        text-align: center;
-    }
-}
-
 .section__title {
     margin-bottom: 30px;
     font-weight: 700;
@@ -510,8 +496,8 @@ hr.custom {
     font-size: vars.$font-size-m;
 
     @include mixins.breakpoint(mobile) {
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
         text-align: center;
     }
 }

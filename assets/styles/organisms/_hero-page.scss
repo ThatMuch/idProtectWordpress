@@ -40,16 +40,7 @@
         gap: vars.$spacing-l;
     }
 
-    /* Eyebrow (hero par défaut) : simple libellé, pas de pastille */
-    &__eyebrow {
-        display: block;
-        margin-bottom: vars.$spacing-s;
-        color: vars.$text-invert;
-        font-weight: vars.$font-weight-bold;
-        font-size: vars.$font-size-s;
-        letter-spacing: 0.69px;
-        text-transform: uppercase;
-    }
+    /* Eyebrow (hero par défaut) : voir atoms/_typography.scss .eyebrow / .eyebrow--invert */
 
     /* Badge (outils/app/article/témoignage) : pastille .tag, ici pour l'espacement uniquement */
     &__badge {

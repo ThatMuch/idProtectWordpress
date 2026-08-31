@@ -33,13 +33,13 @@ $the_query = new WP_Query($argsQuery);
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>" <?php echo $data["title"] ? 'aria-labelledby="' . $block_id . '-title"' : ''; ?>>
 	<div class="container">
 		<?php if ($data["eyebrow"]) : ?>
-			<span class="section__eyebrow"><?php echo esc_html($data["eyebrow"]); ?></span>
+			<span class="eyebrow"><?php echo esc_html($data["eyebrow"]); ?></span>
 		<?php endif; ?>
 		<?php if ($data["title"]) : ?>
 			<h2 id="<?php echo $block_id; ?>-title" class="section__title h1"><?php echo $data["title"]; ?> <span class="text__orange"><?php echo $data["accent"] ?></span></h2>
 		<?php endif; ?>
 		<?php if ($data["description"]) : ?>
-			<p class="section__description"><?php echo esc_html($data["description"]); ?></p>
+			<p class="section__description mb-5"><?php echo esc_html($data["description"]); ?></p>
 		<?php endif; ?>
 
 		<div class="price__list">

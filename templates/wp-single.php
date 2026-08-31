@@ -52,7 +52,7 @@ $current_category = !empty($categories) ? $categories[0] : null;
 				<section class="related-posts" aria-labelledby="related-posts-title">
 					<div class="related-posts__header">
 						<div>
-							<span class="related-posts__eyebrow"><?php echo esc_html($current_category->name); ?></span>
+							<span class="eyebrow"><?php echo esc_html($current_category->name); ?></span>
 							<h2 id="related-posts-title" class="related-posts__title h1">À lire aussi</h2>
 						</div>
 						<a href="<?php echo esc_url(get_category_link($current_category->term_id)); ?>" class="btn btn--primary btn--link related-posts__link">

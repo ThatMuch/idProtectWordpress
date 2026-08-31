@@ -25,7 +25,7 @@ $current_post_id = get_the_ID();
 ?>
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
 	<div class="container">
-		<span class="testimonial__eyebrow">Témoignages</span>
+		<span class="eyebrow">Témoignages</span>
 		<h2 class="testimonial__title h1"><?= $data['title'] ?></h2>
 		<div class="list">
 			<?php if ($the_query->have_posts()) : ?>

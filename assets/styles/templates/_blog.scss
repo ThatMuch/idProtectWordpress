@@ -96,15 +96,7 @@
         margin-bottom: vars.$spacing-l;
     }
 
-    &__eyebrow {
-        display: block;
-        margin-bottom: 8px;
-        color: vars.$text-subheading;
-        font-weight: vars.$font-weight-bold;
-        font-size: vars.$font-size-s;
-        letter-spacing: 0.69px;
-        text-transform: uppercase;
-    }
+    /* Eyebrow : voir atoms/_typography.scss .eyebrow */
 
     &__title {
         margin: 0;

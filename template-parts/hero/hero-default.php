@@ -43,7 +43,7 @@ if (is_category()) {
 		<div class="hero__grid">
 			<div class="hero__content">
 				<?php if ($eyebrow) : ?>
-					<span class="hero__eyebrow"><?php echo esc_html($eyebrow); ?></span>
+					<span class="eyebrow eyebrow--invert"><?php echo esc_html($eyebrow); ?></span>
 				<?php endif; ?>
 				<h1 id="<?php echo esc_attr($heading_id); ?>" class="hero__title">
 					<?php echo esc_html($title); ?>

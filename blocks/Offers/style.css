@@ -1,6 +1,11 @@
 .block__price {
     margin-bottom: 150px;
 }
+@media screen and (max-width: 450px) {
+    .block__price .eyebrow {
+        text-align: center;
+    }
+}
 .price__content {
     display: flex;
     flex-direction: column;
