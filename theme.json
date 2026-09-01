@@ -333,12 +333,12 @@
 				},
 				{
 					"slug": "xl",
-					"size": "45px",
+					"size": "32px",
 					"name": "XL"
 				},
 				{
 					"slug": "2xl",
-					"size": "60px",
+					"size": "45px",
 					"name": "2XL"
 				}
 			],
