@@ -36,3 +36,11 @@
     line-height: normal;
     font-size: 0.875rem;
 }
+
+// Bootstrap bump .container to 1320px past 1400px (its xxl breakpoint);
+// on ce thème on garde 1140px comme largeur max, même sur grand écran.
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
