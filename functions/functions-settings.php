@@ -128,6 +128,12 @@ function idProtect_theme_support()
   // => http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 
+  // Without this, WP core's aspect-ratio CSS for embeds (.wp-embed-responsive .wp-has-aspect-ratio ...)
+  // never applies (it's scoped under a `wp-embed-responsive` body class this support adds) — a pasted
+  // YouTube link then keeps oEmbed's raw fixed iframe height (e.g. 281px) instead of scaling with width.
+  // => https://developer.wordpress.org/reference/functions/add_theme_support/#responsive-embedded-content
+  add_theme_support('responsive-embeds');
+
   // Load the theme's fonts (Raleway/Rubik) and typography into the block editor canvas
   // => https://developer.wordpress.org/reference/functions/add_editor_style/
   add_theme_support('editor-styles');
