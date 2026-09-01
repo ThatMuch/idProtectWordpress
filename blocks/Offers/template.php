@@ -74,7 +74,7 @@ $the_query = new WP_Query($argsQuery);
 								<h3 class="price__name h4"><?php the_title(); ?></h3>
 
 								<?php if ($description) : ?>
-									<p class="price__description"><?php echo esc_html($description); ?></p>
+									<div class="price__description"><?php echo $description; ?></div>
 								<?php endif; ?>
 								<hr>
 								<div class="d-flex gap-2 align-items-center justify-content-start price__amount">
