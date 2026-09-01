@@ -1926,7 +1926,7 @@
                             },
                             "allow_null": 0,
                             "multiple": 0,
-                            "disable": ""
+                            "disable": []
                         },
                         {
                             "key": "field_5b9br57d734c5",
