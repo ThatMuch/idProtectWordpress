@@ -127,6 +127,14 @@ function idProtect_theme_support()
   // => http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // => http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+
+  // Load the theme's fonts (Raleway/Rubik) and typography into the block editor canvas
+  // => https://developer.wordpress.org/reference/functions/add_editor_style/
+  add_theme_support('editor-styles');
+  add_editor_style(array(
+    'https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Rubik:wght@500;700;800&display=swap',
+    'assets/styles/admin/editor-style.min.css',
+  ));
 }
 add_action('after_setup_theme', 'idProtect_theme_support');
 
