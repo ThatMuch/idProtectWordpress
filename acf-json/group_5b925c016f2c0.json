@@ -183,6 +183,22 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_contact_faq_link",
+            "label": "Lien FAQ",
+            "name": "faq_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Page vers laquelle pointe le bouton \"Consulter la FAQ\" (page Contact).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -203,5 +219,5 @@
     "active": true,
     "description": "",
     "show_in_rest": false,
-    "modified": 1676890787
+    "modified": 1788297968
 }
