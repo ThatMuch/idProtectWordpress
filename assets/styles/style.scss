@@ -266,20 +266,6 @@ hr {
     }
 }
 
-.section__title {
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-family: "Rubik", sans-serif;
-    text-transform: uppercase;
-
-    @include mixins.responsive-font-size(40, 48, 800);
-
-    @include mixins.breakpoint(mobile) {
-        text-align: center;
-        @include mixins.responsive-font-size(30, 40);
-    }
-}
-
 .section__description {
     margin-bottom: vars.$spacing-l;
     max-width: 640px;

@@ -1,7 +1,6 @@
 .block__blog {
 	.section__title {
 		text-align: right;
-		text-transform: uppercase;
 		@media screen and (max-width: 768px) {
 			text-align: center;
 		}

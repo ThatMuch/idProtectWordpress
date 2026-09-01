@@ -36,7 +36,7 @@ $the_query = new WP_Query($argsQuery);
 			<span class="eyebrow"><?php echo esc_html($data["eyebrow"]); ?></span>
 		<?php endif; ?>
 		<?php if ($data["title"]) : ?>
-			<h2 id="<?php echo $block_id; ?>-title" class="section__title h1"><?php echo $data["title"]; ?> <span class="text__orange"><?php echo $data["accent"] ?></span></h2>
+			<h2 id="<?php echo $block_id; ?>-title" class="section__title"><?php echo $data["title"]; ?> <span class="text__orange"><?php echo $data["accent"] ?></span></h2>
 		<?php endif; ?>
 		<?php if ($data["description"]) : ?>
 			<p class="section__description mb-5"><?php echo esc_html($data["description"]); ?></p>
