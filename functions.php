@@ -48,3 +48,14 @@ require_once get_stylesheet_directory() . '/inc/plugin-activation.php';
 
 // Post Types
 require('custom-post-type.php');
+
+
+add_filter('rest_endpoints', function ($endpoints) {
+  if (isset($endpoints['/wp/v2/comments'])) {
+    unset($endpoints['/wp/v2/comments']);
+  }
+  if (isset($endpoints['/wp/v2/comments/(?P<id>[\d]+)'])) {
+    unset($endpoints['/wp/v2/comments/(?P<id>[\d]+)']);
+  }
+  return $endpoints;
+});
