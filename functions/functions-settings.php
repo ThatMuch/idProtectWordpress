@@ -76,6 +76,20 @@ function idProtect_enqueue()
 
 add_action('wp_enqueue_scripts', 'idProtect_enqueue');
 
+// Fix CORS error blocking the block editor: the "Advanced Custom Fields: Font
+// Awesome" plugin loads its icon-picker stylesheet from the free CDN
+// use.fontawesome.com when no Kit token is configured, but that endpoint sends
+// no Access-Control-Allow-Origin header, so the editor fails to load it.
+// cdnjs.cloudflare.com serves the same Font Awesome releases with CORS enabled.
+function idProtect_fix_acffa_cors_url($url)
+{
+  if (preg_match('#^https://use\.fontawesome\.com/releases/v([\d.]+)/css/all\.css$#', $url, $matches)) {
+    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/' . $matches[1] . '/css/all.min.css';
+  }
+  return $url;
+}
+add_filter('ACFFA_get_fa_url', 'idProtect_fix_acffa_cors_url', 20);
+
 // Admin Style
 function my_custom_admin_stylesheet()
 {
