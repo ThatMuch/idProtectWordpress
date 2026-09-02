@@ -77,3 +77,22 @@ add_filter('rest_authentication_errors', function ($result) {
 
   return $result;
 });
+
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+require_once get_template_directory() . '/inc/plugin-update-checker/plugin-update-checker.php';
+
+$themeUpdateChecker = PucFactory::buildUpdateChecker(
+  'https://github.com/ThatMuch/idProtectWordpress/', // URL du repo
+  get_template_directory() . '/style.css',           // Fichier contenant l'en-tête de version
+  'idProtectWordpress'                               // Nom exact du dossier du thème
+);
+
+// Branche surveillée
+$themeUpdateChecker->setBranch('main');
+
+// Token GitHub (défini dans wp-config.php)
+if (defined('MY_GITHUB_TOKEN') && ! empty(MY_GITHUB_TOKEN)) {
+  $themeUpdateChecker->setAuthentication(MY_GITHUB_TOKEN);
+}
