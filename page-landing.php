@@ -9,4 +9,13 @@
  */
 ?>
 
-<?php get_template_part('templates/wp', 'page'); ?>
+get_header(); ?>
+
+<?php get_template_part('template-parts/hero'); ?>
+
+<div class="page__area page__landing">
+	<?php while (have_posts()) : the_post(); ?>
+		<?php the_content(); ?>
+	<?php endwhile; ?>
+</div>
+<?php get_footer(); ?>
