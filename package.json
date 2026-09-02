@@ -1,8 +1,8 @@
 {
   "name": "idProtect",
   "version": "4.0.0",
-  "description": "A great Wordrpress theme",
-  "author": "ThatMuch",
+  "description": "Wordrpress theme for ID Protect",
+  "author": "THATMUCH",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.12.1",
