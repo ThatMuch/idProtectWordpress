@@ -91,12 +91,31 @@ gulp.task("watch", function () {
 	gulp.watch("**/*.js").on("change",browserSync.reload);
 });
 gulp.task("zip", function () {
+	// "idprotect" is the theme slug used throughout the codebase (Text Domain,
+	// function/hook prefixes) — the zip must extract into a folder of that
+	// name so an admin upload installs it under wp-content/themes/idprotect.
+	var slug = "idprotect";
 	return gulp
-		.src(["**/*", "!node_modules/**", "!.git/**", "!.claude/**", "!build/**"], {
-			base: ".",
-			dot: true,
-		})
-		.pipe(zip("idprotect-theme.zip"))
+		.src(
+			[
+				"**/*",
+				"!node_modules/**",
+				"!.git/**",
+				"!.claude/**",
+				"!build/**",
+				"!**/.DS_Store",
+			],
+			{ base: ".", dot: true }
+		)
+		.pipe(
+			rename(function (filePath) {
+				filePath.dirname =
+					filePath.dirname === "."
+						? slug
+						: slug + "/" + filePath.dirname;
+			})
+		)
+		.pipe(zip(slug + ".zip"))
 		.pipe(gulp.dest("build"));
 });
 gulp.task("default", gulp.parallel("styles", "scripts", "watch"));

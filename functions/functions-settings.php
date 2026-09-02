@@ -298,7 +298,7 @@ add_action('_admin_menu', 'remove_editor_menu', 1); */
 
 /* 2.9 LOAD TEXTDOMAIN (BASED ON LOCALE)
 /––––––––––––––––––––––––––––––––––––––*/
-load_theme_textdomain('_s', get_template_directory() . '/languages');
+load_theme_textdomain('idprotect', get_template_directory() . '/languages');
 
 /* 2.10 MANAGE EXCERPT LENGTH
 /––––––––––––––––––––––––––––––––––––––*/
