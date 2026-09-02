@@ -7,6 +7,7 @@ var cleanCSS = require("gulp-clean-css");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
+var zip = require("gulp-zip");
 var browserSync = require("browser-sync").create();
 
 // Replaces gulp-sass (which still relies on Dart Sass's deprecated legacy
@@ -88,5 +89,14 @@ gulp.task("watch", function () {
 	gulp.watch("**/*.css").on("change", browserSync.reload);
 	gulp.watch("**/*.php").on("change",browserSync.reload);
 	gulp.watch("**/*.js").on("change",browserSync.reload);
+});
+gulp.task("zip", function () {
+	return gulp
+		.src(["**/*", "!node_modules/**", "!.git/**", "!.claude/**", "!build/**"], {
+			base: ".",
+			dot: true,
+		})
+		.pipe(zip("idprotect-theme.zip"))
+		.pipe(gulp.dest("build"));
 });
 gulp.task("default", gulp.parallel("styles", "scripts", "watch"));
