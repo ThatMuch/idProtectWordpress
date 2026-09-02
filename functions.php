@@ -59,3 +59,21 @@ add_filter('rest_endpoints', function ($endpoints) {
   }
   return $endpoints;
 });
+
+add_filter('rest_authentication_errors', function ($result) {
+  // Si une erreur d'authentification existe déjà, on la conserve
+  if (!empty($result)) {
+    return $result;
+  }
+
+  // Si l'utilisateur n'est pas connecté, on renvoie une erreur 401
+  if (!is_user_logged_in()) {
+    return new WP_Error(
+      'rest_not_logged_in',
+      __('Accès réservé aux utilisateurs connectés.', 'default'),
+      ['status' => 401]
+    );
+  }
+
+  return $result;
+});
