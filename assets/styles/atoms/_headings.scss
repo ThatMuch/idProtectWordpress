@@ -1,3 +1,6 @@
+@use "../mixins";
+@use "../vars";
+
 /**
  *
  * @author      ThatMuch
@@ -6,32 +9,50 @@
  *
  */
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Rubik", sans-serif;
-    color: $color-primary;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: vars.$text-heading-dark;
+    font-weight: vars.$font-weight-extrabold;
+    font-family: vars.$font-family-headline;
     text-transform: uppercase;
 }
 
-h1, .h1 {
-    @include responsive-font-size(48, 60, bold);
+h1,
+.h1 {
+    font-weight: vars.$font-weight-extrabold;
+    font-size: vars.$font-size-2xl;
+    line-height: normal;
 }
 
-h2, .h2 {
-    @include responsive-font-size(30, 48, bold);
+h2,
+.h2 {
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-xl;
+    line-height: normal;
 }
 
-h3, .h3 {
-    @include responsive-font-size(24, 36, bold);
+h3,
+.h3 {
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-m;
+    line-height: normal;
 }
 
-h4, .h4 {
-    @include responsive-font-size(20, 30, null);
+h4,
+.h4 {
+    @include mixins.responsive-font-size(20, 30, null);
 }
 
-h5, .h5 {
-    @include responsive-font-size(18, 24, null);
+h5,
+.h5 {
+    @include mixins.responsive-font-size(18, 24, null);
 }
 
-h6, .h6 {
-    @include responsive-font-size(16, 24, null);
+h6,
+.h6 {
+    @include mixins.responsive-font-size(16, 24, null);
 }

@@ -1,0 +1,82 @@
+{
+    "key": "group_google_reviews_a1b2c3d4",
+    "title": "Avis Google",
+    "fields": [
+        {
+            "key": "field_google_reviews_api_key",
+            "label": "Clé API (Google Places)",
+            "name": "google_api_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Depuis Google Cloud Console (API « Places API » activée sur un projet avec facturation activée). Restreindre la clé à l'API Places et, si possible, au référent HTTP du site. Utilisée par tous les blocks « Avis clients » du site : à renseigner une seule fois ici.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_google_reviews_place_id",
+            "label": "Place ID",
+            "name": "google_place_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Identifiant de la fiche Google Business Profile de l'établissement. À trouver via l'outil officiel Google « Place ID Finder » (developers.google.com/maps/documentation/places/web-service/place-id).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_google_reviews_profile_url",
+            "label": "URL de la fiche Google publique",
+            "name": "google_profile_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Ex. lien « Voir sur Google » de la fiche établissement — utilisée pour les liens « Voir sur Google ». Optionnel.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1787912400
+}

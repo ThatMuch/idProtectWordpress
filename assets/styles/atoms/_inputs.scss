@@ -1,3 +1,5 @@
+@use "../vars";
+
 /**
  *
  * @author      ThatMuch
@@ -6,25 +8,290 @@
  *
  */
 
-input:not([type="submit"]), select, textarea {
-    border: 1px solid $color-grey;
+@use "sass:color";
+
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    transition-duration: vars.$transition_slow;
     padding: 0.5rem;
     width: 100%;
-    margin-bottom: 1rem;
-    transition-duration: $transition_slow;
 
-    &:active, &:hover, &:focus {
-        border-color: $color-primary;
+    &:active,
+    &:hover,
+    &:focus {
+        border-color: vars.$dark-blue-40;
     }
 }
 
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px lighten($color-primary, 37) inset !important;
+    -webkit-box-shadow: 0 0 0 1000px color.adjust(vars.$dark-blue-40, $lightness: 37%) inset !important;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
     //
+}
+
+/*==================================================================================
+  V4 — Checkbox & Radio (Design System Figma: node 1104:333)
+==================================================================================*/
+
+.checkbox,
+.radio {
+    display: inline-flex;
+    align-items: center;
+    gap: vars.$spacing-xs;
+    cursor: pointer;
+
+    // Sélecteur imbriqué (".checkbox .checkbox__input") volontairement plus spécifique
+    // que la règle générique `input:not([type="submit"])` de ce même fichier (0,1,1) :
+    // sans ça, elle l'emporterait sur un simple `.checkbox__input` (0,1,0) et
+    // réintroduirait bordure/padding/width/margin, cassant la technique de masquage.
+    input.checkbox__input,
+    input.radio__input {
+        // Caché visuellement mais toujours accessible au clavier/lecteur d'écran
+        // (contrairement à display:none) : le <label> englobant garde le clic natif.
+        position: absolute;
+        opacity: 0;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.checkbox {
+    align-items: inherit;
+    gap: 1rem;
+    &__box {
+        display: inline-flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        transition:
+            background-color vars.$transition_fast,
+            border-color vars.$transition_fast;
+        box-sizing: border-box;
+        margin-top: 4px;
+        border: 1px solid vars.$dark-blue-40;
+        border-radius: vars.$radius-s;
+        width: 21px;
+        height: 21px;
+    }
+
+    &__icon {
+        opacity: 0;
+        color: vars.$text-invert;
+        font-size: 12px;
+        line-height: 1;
+    }
+
+    &__input:checked ~ &__box {
+        border-color: vars.$dark-blue-40;
+        background: vars.$dark-blue-40;
+
+        .checkbox__icon {
+            opacity: 1;
+        }
+    }
+
+    &__input:disabled ~ &__box {
+        border-color: vars.$surface-disabled;
+
+        .checkbox__icon {
+            color: vars.$text-invert;
+        }
+    }
+
+    &__input:checked:disabled ~ &__box {
+        border-color: vars.$surface-disabled;
+        background: vars.$surface-disabled;
+    }
+
+    /* ---- Light (sur fond sombre/coloré) ---- */
+    &--light {
+        .checkbox__box {
+            border-color: vars.$neutral-100;
+        }
+
+        .checkbox__input:checked ~ .checkbox__box {
+            border-color: vars.$neutral-100;
+            background: vars.$neutral-100;
+
+            .checkbox__icon {
+                opacity: 1;
+                color: vars.$dark-blue-40;
+            }
+        }
+    }
+}
+
+.radio {
+    &__box {
+        display: inline-flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        transition: border-color vars.$transition_fast;
+        box-sizing: border-box;
+        border: 1px solid vars.$dark-blue-40;
+        border-radius: vars.$radius-l;
+        width: 21px;
+        height: 21px;
+    }
+
+    &__dot {
+        opacity: 0;
+        border-radius: vars.$radius-l;
+        background: vars.$dark-blue-40;
+        width: 10px;
+        height: 10px;
+    }
+
+    &__input:checked ~ &__box .radio__dot {
+        opacity: 1;
+    }
+
+    &__input:disabled ~ &__box {
+        border-color: vars.$surface-disabled;
+
+        .radio__dot {
+            background: vars.$surface-disabled;
+        }
+    }
+}
+
+/*==================================================================================
+  V4 — Input (Design System Figma: node 1114:291)
+==================================================================================*/
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-xs;
+    width: 100%;
+
+    &__label {
+        margin: 0;
+        color: vars.$text-body-dark;
+        font-weight: vars.$font-weight-medium;
+        font-size: vars.$font-size-s;
+        line-height: 16px;
+        font-family: vars.$font-family-body;
+        letter-spacing: 0.4px;
+    }
+
+    &__field {
+        display: flex;
+        align-items: center;
+        gap: vars.$spacing-xs;
+        transition:
+            border-color vars.$transition_fast,
+            box-shadow vars.$transition_fast;
+        box-sizing: border-box;
+        border: 1.5px solid vars.$blue-70;
+        border-radius: vars.$radius-m;
+        background: vars.$background-default;
+        padding: 5px 12px;
+        width: 100%;
+        height: 42px;
+
+        &:focus-within {
+            box-shadow: 0 0 0 3px rgba(vars.$surface-primary, 0.15);
+            border-color: vars.$surface-primary;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        // Sélecteur imbriqué (".input__field .input__control") volontairement plus
+        // spécifique que la règle générique `input:not([type="submit"])` de ce même
+        // fichier (spécificité 0,1,1) : sans ça, cette dernière l'emporterait sur un
+        // simple `.input__control` (0,1,0) et réintroduirait bordure/padding/margin.
+        .input__control {
+            flex: 1 0 0;
+            margin: 0;
+            border: none;
+            background: transparent;
+            padding: 0;
+            min-width: 0;
+            color: vars.$text-body-dark;
+            font-weight: vars.$font-weight-medium;
+            font-size: vars.$font-size-m;
+            font-family: vars.$font-family-body;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                opacity: 0.5;
+                color: vars.$text-body-dark;
+            }
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        color: vars.$surface-inactive;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    &__message {
+        margin: 0;
+        font-weight: vars.$font-weight-medium;
+        font-size: vars.$font-size-s;
+        font-family: vars.$font-family-body;
+    }
+
+    /* ---- Erreur ---- */
+    &--error {
+        .input__label,
+        .input__icon,
+        .input__message,
+        .input__control {
+            color: vars.$text-error;
+        }
+
+        .input__field {
+            border-color: vars.$surface-error;
+
+            &:focus-within {
+                box-shadow: 0 0 0 3px rgba(vars.$surface-error, 0.15);
+                border-color: vars.$surface-error;
+            }
+        }
+
+        .input__control::placeholder {
+            opacity: 1;
+            // en erreur, le texte affiché est une valeur saisie invalide, pas un vrai
+            // placeholder d'aide : pleine opacité (contrairement à l'état par défaut)
+            color: vars.$text-error;
+        }
+    }
+
+    /* ---- Textarea ----
+       Absent du design system V4 fourni (inputs simple ligne uniquement) ;
+       adaptation nécessaire pour les champs multi-lignes réels du site. */
+    &--textarea {
+        .input__field {
+            align-items: flex-start;
+            height: auto;
+            min-height: 120px;
+        }
+
+        .input__control {
+            align-self: stretch;
+            resize: vertical;
+            line-height: 1.4;
+        }
+    }
 }

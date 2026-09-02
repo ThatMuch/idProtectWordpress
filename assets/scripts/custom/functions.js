@@ -126,27 +126,11 @@ $( function() {
 		});
 	}).trigger( 'scroll' );
 
-	/* Pricing Tabs Functionality
+	/* Header Scrolled State
   /––––––––––––––––––––––––*/
-	$('.tab-btn').click(function() {
-		var targetTab = $(this).data('tab');
-
-		// Remove active class from all buttons
-		$('.tab-btn').removeClass('active');
-
-		// Add active class to clicked button
-		$(this).addClass('active');
-
-		// Toggle price visibility with animation
-		if (targetTab === 'monthly') {
-			$('.price-yearly, .period-yearly').fadeOut(300, function() {
-				$('.price-monthly, .period-monthly').fadeIn(300);
-			});
-		} else {
-			$('.price-monthly, .period-monthly').fadeOut(300, function() {
-				$('.price-yearly, .period-yearly').fadeIn(300);
-			});
-		}
-	});
+	// add "scrolled" class to the navbar once the page has scrolled past the top
+	$( window ).on( 'scroll', function() {
+		$( '.header__area' ).toggleClass( 'scrolled', $( window ).scrollTop() > 0 );
+	}).trigger( 'scroll' );
 
 });

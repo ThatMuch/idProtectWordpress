@@ -92,7 +92,10 @@ function stanlee_register_theme_menus()
 {
 	register_nav_menus([
 		'mainmenu' => __('Mainmenu'),
-		'submenu' => __('Submenu')
+		'submenu' => __('Submenu'),
+		'footer_menu_1' => __('Footer - Colonne 1'),
+		'footer_menu_2' => __('Footer - Colonne 2'),
+		'footer_menu_3' => __('Footer - Colonne 3'),
 	]);
 }
 add_action('init', 'stanlee_register_theme_menus');
@@ -179,9 +182,11 @@ add_action('widgets_init', 'stanlee_widgets_init');
 function my_search_form($form)
 {
 	$form = '<form role="search" method="get" id="searchform" class="search-form" action="' . home_url('/') . '" >
-  <div><label>
-  <input class="search-field form-control" placeholder="Rechercher" type="text" value="' . get_search_query() . '" name="s" id="s" />
-  </label>
+  <div class="input">
+    <div class="input__field">
+      <i class="input__icon fa-solid fa-magnifying-glass"></i>
+      <input class="input__control" placeholder="Rechercher" type="text" value="' . get_search_query() . '" name="s" id="s" />
+    </div>
   </div>
   </form>';
 
@@ -205,10 +210,3 @@ function display_pages_in_category_archives($query)
 	}
 }
 add_action('pre_get_posts', 'display_pages_in_category_archives');
-
-
-function mytheme_add_woocommerce_support()
-{
-	add_theme_support('woocommerce');
-}
-add_action('after_setup_theme', 'mytheme_add_woocommerce_support');

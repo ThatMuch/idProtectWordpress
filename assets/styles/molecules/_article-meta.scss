@@ -1,0 +1,82 @@
+@use "../vars";
+
+/**
+ * V4 — Barre méta + partage (template-parts/article-meta.php)
+ */
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: vars.$spacing-s;
+    margin-bottom: vars.$spacing-l;
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: vars.$spacing-m;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        & + & {
+            border-left: 1px solid rgba(vars.$dark-blue-40, 0.15);
+            padding-left: vars.$spacing-m;
+        }
+    }
+
+    &__label {
+        color: vars.$text-inactive;
+        font-size: vars.$font-size-s;
+    }
+
+    &__value {
+        color: vars.$text-primary;
+        font-weight: vars.$font-weight-bold;
+        font-size: vars.$font-size-m;
+    }
+
+    &__share {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: vars.$spacing-s;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: vars.$spacing-xs;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__social-link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform vars.$transition_fast;
+        border-radius: 50%;
+        padding: 0 !important;
+        width: 40px;
+        height: 40px;
+        color: vars.$text-subheading;
+        font-size: vars.$font-size-s;
+
+        &:hover,
+        &:focus-visible {
+            transform: translateY(-2px);
+        }
+
+        &:focus-visible {
+            outline: 2px solid vars.$color-primary;
+            outline-offset: 2px;
+        }
+    }
+}

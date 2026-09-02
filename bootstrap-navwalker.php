@@ -144,6 +144,19 @@ class Bootstrap_NavWalker extends Walker_Nav_Menu
 		}
 
 		/**
+		 * A menu item tagged with the "mega-menu-outils" CSS class (set in
+		 * Apparence > Menus > Options de l'écran > Classes CSS) renders the
+		 * "Outils" mega menu (template-parts/menu/mega-menu-outils.php) as its
+		 * dropdown content instead of relying on real child menu items — see
+		 * end_el() below.
+		 */
+		$is_mega_menu = in_array('mega-menu-outils', $classes);
+
+		if ($is_mega_menu) {
+			$classes[] = 'menu-item-has-children';
+		}
+
+		/**
 		 * Add class '.dropdown' inside <li> tag for Bootstrap dropdown menu, ie, <li> having sub-menu
 		 */
 		if (in_array('menu-item-has-children', $classes)) {
@@ -222,6 +235,8 @@ class Bootstrap_NavWalker extends Walker_Nav_Menu
 		if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
 			$atts['class']         .= ' dropdown-toggle';
 			$atts['data-bs-toggle']   = 'dropdown';
+			// Static display skips Popper positioning; the dropdown/mega-menu panels are positioned via CSS instead.
+			$atts['data-bs-display']  = 'static';
 			$atts['id']            = 'navbar-dropdown-menu-link-' . $item->ID;
 			$atts['aria-haspopup'] = "true";
 			$atts['aria-expanded'] = "false";
@@ -349,6 +364,18 @@ class Bootstrap_NavWalker extends Walker_Nav_Menu
 		}
 
 		/**
+		 * Render the "Outils" mega menu as this item's dropdown content (see
+		 * start_el() above for the matching "mega-menu-outils" class handling).
+		 */
+		if ($depth === 0 && in_array('mega-menu-outils', (array) $item->classes)) {
+			$output .= '<div class="dropdown-menu mega-menu" aria-labelledby="navbar-dropdown-menu-link-' . esc_attr($item->ID) . '">';
+			ob_start();
+			get_template_part('template-parts/menu/mega-menu-outils');
+			$output .= ob_get_clean();
+			$output .= '</div>';
+		}
+
+		/**
 		 * <li> is required for parent menu only in Bootstrap
 		 */
 		if ($depth === 0) {
@@ -421,3 +448,29 @@ class Bootstrap_NavWalker extends Walker_Nav_Menu
 		}
 	}
 }
+
+/**
+ * A menu item tagged with the "mega-menu-outils" CSS class renders the
+ * "Outils" mega menu (see Bootstrap_NavWalker::end_el()) instead of its real
+ * child menu items. Drop those children here, before the walker runs, so
+ * they're not also rendered as a second, plain dropdown list.
+ */
+function idprotect_strip_mega_menu_children($sorted_menu_items)
+{
+	$mega_menu_parent_ids = array();
+
+	foreach ($sorted_menu_items as $item) {
+		if (in_array('mega-menu-outils', (array) $item->classes, true)) {
+			$mega_menu_parent_ids[] = $item->ID;
+		}
+	}
+
+	if (empty($mega_menu_parent_ids)) {
+		return $sorted_menu_items;
+	}
+
+	return array_values(array_filter($sorted_menu_items, function ($item) use ($mega_menu_parent_ids) {
+		return ! in_array((int) $item->menu_item_parent, $mega_menu_parent_ids, true);
+	}));
+}
+add_filter('wp_nav_menu_objects', 'idprotect_strip_mega_menu_children');

@@ -1,0 +1,70 @@
+@use "../vars";
+
+/**
+ * TYPOGRAPHY — Body / Label / Digits text styles
+ * Ported from Figma "Design System - ID Protect" > Typography (node 485:283)
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       idProtect_1.0.0.0
+ *
+ */
+
+.text-body-1 {
+    font-weight: vars.$font-weight-medium;
+    font-size: vars.$font-size-m;
+    line-height: 1.5;
+    font-family: vars.$font-family-body;
+}
+
+.text-body-1--strong {
+    font-weight: vars.$font-weight-extrabold;
+}
+
+.text-body-2 {
+    font-weight: vars.$font-weight-medium;
+    font-size: vars.$font-size-s;
+    line-height: 1.5;
+    font-family: vars.$font-family-body;
+}
+
+.text-label {
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-s;
+    line-height: 1.5;
+    font-family: vars.$font-family-label;
+    letter-spacing: 0.5px;
+}
+
+.text-digit-1 {
+    font-weight: vars.$font-weight-extrabold;
+    font-size: vars.$font-size-xl;
+    line-height: 1.5;
+    font-family: vars.$font-family-digits;
+}
+
+.text-digit-2 {
+    font-weight: vars.$font-weight-medium;
+    font-size: vars.$font-size-m;
+    line-height: 1.5;
+    font-family: vars.$font-family-digits;
+}
+
+/**
+ * Eyebrow — petit libellé au-dessus d'un titre de section (hero, en-têtes de
+ * bloc, listes liées...). Un seul style de référence pour tout le thème ;
+ * `--invert` pour l'utiliser sur un fond sombre.
+ */
+.eyebrow {
+    display: block;
+    margin-bottom: vars.$spacing-xs;
+    color: vars.$text-subheading;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-s;
+    letter-spacing: 0.69px;
+    text-transform: uppercase;
+}
+
+.eyebrow--invert {
+    color: vars.$text-invert;
+}

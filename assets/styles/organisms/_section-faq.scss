@@ -12,7 +12,7 @@
                 cursor: pointer;
 
                 &[aria-expanded='true'] {
-                    color: $color-primary;
+                    color: $text-primary;
 
                     .icon {
                         &::after {
@@ -29,7 +29,7 @@
                 }
 
                 &__expand {
-                    color: rgba($color: $color-primary, $alpha: 0.5);
+                    color: rgba($color: $dark-blue-40, $alpha: 0.5);
                 }
             }
 

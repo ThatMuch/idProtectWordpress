@@ -1,63 +1,45 @@
 <?php
 $term = get_queried_object();
 $category_description = category_description(get_category_by_slug($term->slug));
-$args = array(
-	'posts_per_page' => 4,
-	'category_name' => $term->slug
-);
 
-$the_query = new WP_Query($args);
-$exclude_posts = 4; // Number of posts to exclude
-$total_posts = wp_count_posts()->publish; // Total number of published posts
+$paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $argsAll = array(
 	'post_type' => 'post',
-	'posts_per_page' => $total_posts - $exclude_posts,
+	'posts_per_page' => 12,
 	'category_name' => $term->slug,
-	'offset' => $exclude_posts
+	'paged' => $paged,
 );
 $queryAll = new WP_Query($argsAll);
 
 ?>
 <?php get_header(); ?>
-<div class="container content-area page__area blog">
+<?php get_template_part('template-parts/hero'); ?>
+<div class="container content-area page__area blog pt-4 pb-4">
 	<main id="blog">
 		<div class="container">
-			<div class="row g-3">
-				<div class="col-lg-4">
-					<div class="blog__left">
-						<div class="blog__box
-						<?php echo
-						$term->slug === "professionnel" ?
-							'dark' : ($term->slug === "temoignage" ? 'orange' : ''); ?>">
-							<h1 class="h2"><?php single_cat_title(); ?></h1>
-							<?php
-
-							echo $category_description;
-							?>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<div class="blog__list owl-carousel">
-						<?php if ($the_query->have_posts()) : ?>
-							<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-								<?php get_template_part('templates/wp', 'post'); ?>
-							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-						<?php endif; ?>
-					</div> <!-- end blog list -->
-				</div>
-			</div>
 			<div class="row">
 				<?php if ($queryAll->have_posts()) : ?>
 					<?php while ($queryAll->have_posts()) : $queryAll->the_post(); ?>
-						<div class="col-md-3">
+						<div class="col-md-3 mb-4">
 							<?php get_template_part('templates/wp', 'post'); ?>
 						</div>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
 			</div>
+			<?php if ($queryAll->max_num_pages > 1) : ?>
+				<nav class="pagination" aria-label="Pagination des articles">
+					<?php
+					echo paginate_links(array(
+						'total'     => $queryAll->max_num_pages,
+						'current'   => $paged,
+						'mid_size'  => 2,
+						'prev_text' => '<span aria-hidden="true">‹</span><span class="screen-reader-text">Page précédente</span>',
+						'next_text' => '<span aria-hidden="true">›</span><span class="screen-reader-text">Page suivante</span>',
+					));
+					?>
+				</nav>
+			<?php endif; ?>
 		</div>
 	</main>
 </div>

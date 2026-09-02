@@ -1,3 +1,5 @@
+@use "mixins";
+
 /**
  * Variables
  * Contains re-usable variables like colors, sizes, breakpoints etc.
@@ -9,6 +11,8 @@
  * @since      idProtect_1.0.0
  *
  */
+
+@use "sass:color";
 
 /*==================================================================================
   SCALING
@@ -29,12 +33,12 @@ $element_width_mobile: 95vw; // default width of the .element content-div
 /* Presets
 /––––––––––––––––––––––––*/
 $color-primary: #171c60;
-$color-primary-darker: darken($color-primary, 7%);
-$color-primary-lighter: lighten($color-primary, 7%);
+$color-primary-darker: color.adjust($color-primary, $lightness: -7%);
+$color-primary-lighter: color.adjust($color-primary, $lightness: 7%);
 $color-secondary: #ff7551;
-$color-secondary-darker: darken($color-secondary, 7%);
+$color-secondary-darker: color.adjust($color-secondary, $lightness: -7%);
 $color-tertiary: #1956a8;
-$color-tertiary-darker: darken($color-tertiary, 7%);
+$color-tertiary-darker: color.adjust($color-tertiary, $lightness: -7%);
 $color-black: #212529;
 $color-dark: #343a40;
 $color-grey2: #495057;
@@ -63,7 +67,7 @@ $text-xl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale
 $text-xxl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio});
 $text-xxxl: calc(1em * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio});
 
-@include breakpoint(mobile) {
+@include mixins.breakpoint(mobile) {
     $text-scale-ratio: 1.25;
 }
 
@@ -104,7 +108,7 @@ $nav__spacercolor: $color-dark;
 /* ANCHORS
 /––––––––––––––––––––––––*/
 $a__linkcolor: $color-primary;
-$a__hovercolor: darken($color-primary, 20);
+$a__hovercolor: color.adjust($color-primary, $lightness: -20%);
 $a__textdecoration: none;
 
 /*==================================================================================
@@ -112,6 +116,7 @@ $a__textdecoration: none;
 ==================================================================================*/
 
 $transition_fast: 0.3s;
+$transition_medium: 0.5s;
 $transition_slow: 0.7s;
 
 /*==================================================================================
@@ -124,3 +129,98 @@ $shadow:
 $shadow__soft:
     0 1px 2px 0 rgba(0, 0, 0, 0.08),
     0 1px 5px 0 rgba(0, 0, 0, 0.06);
+
+/* V4 */
+
+/* Primitives */
+$blue-20: #0f3465ff;
+$blue-30: #144586ff;
+$blue-40: #1956a8ff;
+$blue-50: #5e89c2ff;
+$blue-60: #9fc1efff;
+$blue-70: #e8effbff;
+$blue-80: #f5f9ffff;
+$dark-blue-20: #0c0e30ff;
+$dark-blue-30: #12164dff;
+$dark-blue-40: #171c60ff;
+$dark-blue-50: #454980ff;
+$dark-blue-60: #8b8eb0ff;
+$dark-blue-70: #e8e8efff;
+$dark-blue-80: #fafafeff;
+$orange-40: #ff8833ff;
+$orange-60: #ffc499ff;
+$orange-70: #fff3ebff;
+$neutral-100: #ffffffff;
+$red-40: #ff5326ff;
+$red-50: #ff7551ff;
+$red-60: #ffa993ff;
+$red-70: #ffeee9ff;
+$green-40: #17eb79ff;
+$green-60: #8bf5bcff;
+$green-70: #e8fdf2ff;
+
+/* Tokens - Default */
+$text-heading-dark: $dark-blue-40;
+$text-primary: $dark-blue-40;
+$text-accent: $red-50;
+$text-success: $green-40;
+$text-error: $red-40;
+$text-inactive: $blue-50;
+$text-disabled: $blue-60;
+$text-invert: $neutral-100;
+$text-body-light: #ffffffd1;
+$text-heading-light: #ffffffff;
+$text-subheading: $blue-40;
+$text-body-dark: $dark-blue-50;
+
+$gradient-particulier: radial-gradient(92% 120% at 50% -12%, #1e5fb5 0%, #19337d 51.92%, #171c60 100%);
+$gradient-professionnel: radial-gradient(92% 120% at 50% -12%, $dark-blue-40 0%, $dark-blue-30 51.92%, $dark-blue-20 100%);
+
+/* Surface */
+
+$surface-primary: $blue-40;
+$surface-primary-darker: $blue-30;
+$surface-accent: $red-50;
+$surface-success: $green-40;
+$surface-error: $red-40;
+$surface-inactive: $blue-50;
+$surface-disabled: $blue-60;
+
+/* Background */
+
+$background-default: $blue-80;
+$background-light: $neutral-100;
+$background-dim: $blue-70;
+$background-disabled: $blue-70;
+$background-success: $green-70;
+$background-error: $red-70;
+$background-warning: $orange-70;
+
+/* Spacing & Radius */
+$spacing-xs: 8px;
+$spacing-s: 16px;
+$spacing-m: 24px;
+$spacing-l: 32px;
+$spacing-xl: 40px;
+$spacing-2xl: 48px;
+$spacing-3xl: 56px;
+$spacing-4xl: 64px;
+$radius-s: 4px;
+$radius-m: 8px;
+$radius-l: 100px;
+
+/* Fonts */
+
+/* Font - Mode 1 */
+$font-family-headline: Rubik, "Roboto", sans-serif;
+$font-family-body: Raleway, "Open Sans", sans-serif;
+$font-family-digits: Rubik, "Roboto", sans-serif;
+$font-family-label: Raleway, "Open Sans", sans-serif;
+$font-weight-extrabold: 800;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-size-2xl: 45px;
+$font-size-xl: 32px;
+$font-size-l: 24px;
+$font-size-m: 16px;
+$font-size-s: 14px;

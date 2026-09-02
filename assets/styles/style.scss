@@ -1,3 +1,11 @@
+@charset "UTF-8";
+
+@use "mixins";
+@use "fonts";
+@use "vars";
+@use "states";
+@use "base";
+
 /*
  * Main CSS File
  * Merges all .scss files (in the desired order) before they're processed by gulp.
@@ -9,38 +17,35 @@
  *
  */
 
-@charset "UTF-8";
-
 /*==================================================================================
   PRESETS/
 ==================================================================================*/
-@import "mixins";
-@import "fonts";
-@import "vars";
-@import "states";
-@import "base";
 
 /*==================================================================================
   ATOMIC DESIGN/
 ==================================================================================*/
 
 /*=====  Atoms  ======*/
-// @import "./atoms/_alerts";
-// @import "./atoms/_badges";
-@import "./atoms/_buttons";
+@use "./atoms/_alerts";
+@use "atoms/_badges";
+@use "atoms/_buttons";
 
 // @import "./atoms/_dividers";
-@import "./atoms/_headings";
+@use "atoms/_headings";
+@use "atoms/_typography";
 
-@import "./atoms/_images";
-// @import "./atoms/_inputs";
+@use "atoms/_images";
+@use "atoms/_inputs";
 // @import "./atoms/_labels";
 // @import "./atoms/_links";
 // @import "./atoms/_lists";
 
 /*=====  Molecules  ======*/
-// @import "./molecules/_breadcrumbs";
-// @import "./molecules/_cards";
+@use "molecules/_article-meta";
+@use "molecules/_breadcrumbs";
+@use "molecules/_cards";
+@use "molecules/_toc";
+@use "molecules/_table";
 // @import "./molecules/_carousels";
 // @import "./molecules/_collapse";
 // @import "./molecules/_contact-form";
@@ -51,25 +56,27 @@
 // @import "./molecules/_pop-over";
 // @import "./molecules/_search-form";
 // @import "./molecules/_slider";
-// @import "./molecules/_table";
 
 /*=====  Organisms  ======*/
 
-@import "./organisms/_footer";
-@import "./organisms/_header";
-@import "./organisms/_hero";
+@use "organisms/_footer";
+@use "organisms/_header";
+@use "organisms/_mega-menu";
+@use "organisms/_hero";
+@use "organisms/_hero-page";
 // @import "./organisms/sections";
 
 /*=====  Templates  ======*/
-// @import "./templates/_blog";
+@use "templates/_blog";
 // @import "./templates/_page";
 // @import "./templates/_post";
 // @import "./templates/_subsite";
-@import "./templates/_product";
+@use "templates/_product";
+@use "templates/_contact";
 
 :root {
-    --blue: #1956a8;
-    --orange: $color-secondary;
+    --blue: #{vars.$blue-40};
+    --orange: #{vars.$red-50};
 }
 
 html {
@@ -77,17 +84,15 @@ html {
 }
 
 body {
-    background:
-        url(../images/bg_default.svg) no-repeat,
-        linear-gradient(180deg, #e8effb -2.99%, #ffffff 49.58%);
-    background-size: cover;
-    color: $color-primary;
+    background-color: vars.$background-default;
+    color: vars.$text-body-dark;
     font-size: 1rem;
+    line-height: 1.5;
     font-family: "Raleway", sans-serif;
 }
 
 a {
-    color: $color-tertiary;
+    color: vars.$text-subheading;
     text-decoration: none;
 }
 
@@ -102,11 +107,9 @@ textarea:focus {
     outline: 0;
 }
 
-hr.custom {
+hr {
     opacity: 1;
-    margin: 50px auto;
-    border-color: #1956a8;
-    max-width: 85%;
+    border-color: vars.$blue-70;
 }
 
 .mb-20 {
@@ -150,78 +153,28 @@ hr.custom {
 }
 
 .g-text {
-    background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
+    background: linear-gradient(278.49deg, vars.$blue-40 0%, vars.$dark-blue-40 88.22%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-.title {
-    display: inline-block;
-    flex-wrap: wrap;
-    justify-content: start;
-    gap: 0.5rem;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 100px;
-    background: #ffffff;
-    padding: 10px 20px;
-    text-transform: uppercase;
-
-    @include breakpoint(laptop) {
-        justify-content: center;
-        border-radius: 16px 100px 100px 16px;
-        padding: 10px 30px;
-
-        //font-size: 2.85rem;
-    }
-
-    @include breakpoint(tablet) {
-        //font-size: 2.5rem;
-        padding: 10px 40px 10px 25px;
-    }
-}
-
 .text__orange {
-    color: $color-secondary;
+    color: vars.$text-accent;
 }
 
 .text__blue {
-    color: #1956a8;
+    color: vars.$text-subheading;
 }
 
 .text__dark {
-    color: #171c60;
+    color: vars.$text-heading-dark;
 }
 
 .section__area {
     position: relative;
     z-index: 2;
-    padding: 50px 0;
     overflow: hidden;
-}
-
-@media only screen and (max-width: 768px) {
-    .section__area {
-        padding: 20px 0;
-    }
-}
-
-.home .section__area::after {
-    // background: url(../images/line.svg) no-repeat scroll 0 0 / 100% 100%;
-    position: absolute;
-    top: 10%;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    content: "";
-}
-
-@media only screen and (max-width: 991px) {
-    .home .section__area::after {
-        display: none;
-    }
 }
 
 .section__area .container {
@@ -265,7 +218,7 @@ hr.custom {
     .promotion__area.service .promotion__head h2 {
         letter-spacing: 0;
 
-        @include responsive-font-size(25, 30);
+        @include mixins.responsive-font-size(25, 30);
     }
 }
 
@@ -284,228 +237,18 @@ hr.custom {
     }
 }
 
-.community__info {
-    margin-left: auto;
-    border-radius: 16px;
-    background: #1956a8;
-    padding: 36px 40px;
-    max-width: 575px;
-    color: #fff;
-
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 64px;
-        background-color: #fff;
-        width: 64px;
-        height: 64px;
-
-        i {
-            @include responsive-font-size(24);
-        }
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .community__info {
-        max-width: 100%;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .community__info {
-        padding: 20px;
-    }
-}
-
-.community__info h2 {
-    margin: 0 0 20px;
-    color: #f6f7f9;
-    text-transform: uppercase;
-
-    @include responsive-font-size(40, 48, 800);
-}
-
-@media only screen and (max-width: 767px) {
-    .community__info h2 {
-        @include responsive-font-size(30, 40);
-    }
-}
-
-.community__info p {
-    text-transform: uppercase;
-
-    @include responsive-font-size(18, 28, 700);
-}
-
-.community__info ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 30px 0 0;
-    padding: 0;
-    list-style: none;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.community__info ul li a {
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-}
-
-.community__info ul li a:hover {
-    opacity: 0.6;
-}
-
-.community__form {
-    margin-bottom: 20px;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 16px;
-    background: #fff3eb;
-    padding: 36px 40px;
-}
-
-@media only screen and (max-width: 767px) {
-    .community__form {
-        padding: 20px;
-    }
-}
-
-.community__form h2 {
-    margin: 0 0 10px;
-    color: $color-secondary;
-    text-transform: uppercase;
-
-    @include responsive-font-size(24, 30, 700);
-}
-
-@media only screen and (max-width: 767px) {
-    .community__form h2 {
-        @include responsive-font-size(20);
-    }
-}
-
-.form-control {
-    border-radius: 0;
-}
-
-::placeholder {
-    font-weight: normal;
-}
-
-.community__form input:not([type="submit"]),
-.community__form textarea {
-    margin: 10px 0 0;
-    border-width: 0 0 1px;
-    border-style: solid;
-    border-color: #384050;
-    background: transparent;
-    padding: 3px 0;
-    width: 100%;
-    color: #384050;
-    font-family: "Raleway", sans-serif;
-
-    @include responsive-font-size(16, 19, 500);
-}
-
-.community__form textarea {
-    height: 120px;
-    resize: none;
-}
-
-.community__form p.note {
-    margin: 10px 0 0;
-    color: #384050;
-    font-family: "Raleway", sans-serif;
-
-    @include responsive-font-size(12, 14, 400);
-}
-
-.page__header {
-    margin-bottom: 50px;
-    border-radius: var(--Radius-20, 1.25rem);
-    padding: 2.5rem;
-    height: 19.5rem;
-
-    @media only screen and (max-width: 767px) {
-        padding: 1.5rem;
-        height: 8rem;
-    }
-}
-
-.page__header__title {
-    margin-left: auto;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    border-radius: 100px 16px 16px 100px;
-    background: #ffffff;
-    padding: 10px 30px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    color: $color-secondary;
-    text-transform: uppercase;
-    @include responsive-font-size(40, 48, 800);
-
-    @media only screen and (max-width: 767px) {
-        @include responsive-font-size(30, 40);
-        margin: 0 auto;
-        border-radius: 100px;
-        text-align: center;
-    }
-}
-
-.page__header__area {
-    &--noBg {
-        .page__header__title {
-            margin: auto;
-            border-radius: 100px;
-            width: fit-content;
-            text-align: center;
-        }
-    }
-}
-
-.page__header__area.contact {
-    .page__header {
-        background:
-            -webkit-gradient(linear, left bottom, left top, from(rgba(255, 136, 51, 0.5)), to(rgba(255, 136, 51, 0.5))),
-            url(../images/contact.jpg) no-repeat scroll center (center / cover);
-        background:
-            linear-gradient(0deg, rgba(255, 136, 51, 0.5), rgba(255, 136, 51, 0.5)),
-            url(../images/contact.jpg) no-repeat scroll center (center / cover);
-    }
-}
-
 .page__hero {
     display: block;
 
     //justify-content: center;
     gap: 24px;
 
-    @include breakpoint(tablet) {
+    @include mixins.breakpoint(tablet) {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-    }
-
-    @include breakpoint(mobile) {
-        .title {
-            font-size: 1.3rem;
-            text-align: center;
-        }
-    }
-
-    .title {
-        margin-bottom: 0;
     }
 
     &__area {
@@ -516,24 +259,23 @@ hr.custom {
         margin: 0 auto 30px;
         width: 150px;
 
-        @include breakpoint(laptop) {
+        @include mixins.breakpoint(laptop) {
             margin: 0;
             width: 170px;
         }
     }
 }
 
-.section__title {
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-family: "Rubik", sans-serif;
-    text-transform: uppercase;
+.section__description {
+    margin-bottom: vars.$spacing-l;
+    max-width: 640px;
+    color: vars.$text-primary;
+    font-size: vars.$font-size-m;
 
-    @include responsive-font-size(40, 48, 800);
-
-    @include breakpoint(mobile) {
+    @include mixins.breakpoint(mobile) {
+        margin-right: auto;
+        margin-left: auto;
         text-align: center;
-        @include responsive-font-size(30, 40);
     }
 }
 
@@ -553,19 +295,19 @@ hr.custom {
 
 .page__hero__text__title {
     margin-bottom: 20px;
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
     border-radius: 100px 16px 16px 100px;
-    background: #ffffff;
+    background: vars.$background-light;
     padding: 10px 40px;
     width: fit-content;
 
-    @include responsive-font-size(60, 72, 800);
+    @include mixins.responsive-font-size(60, 72, 800);
 }
 
 @media only screen and (max-width: 991px) {
     .page__hero__text__title {
-        @include responsive-font-size(30, 40);
+        @include mixins.responsive-font-size(30, 40);
     }
 }
 
@@ -573,22 +315,22 @@ hr.custom {
     margin-top: 1rem;
     font-size: 1.3rem;
 
-    @include breakpoint(mobile) {
+    @include mixins.breakpoint(mobile) {
         font-size: 1.1rem;
         text-align: center;
     }
 
     .small {
-        color: #1956a8;
+        color: vars.$text-subheading;
 
-        @include responsive-font-size(24);
+        @include mixins.responsive-font-size(24);
     }
 }
 
 .page__hero__text h6 {
-    color: #1956a8;
+    color: vars.$text-subheading;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 .block__service.right {
@@ -605,15 +347,15 @@ hr.custom {
     border-radius: 16px;
     height: 500px;
     overflow: hidden;
-    color: #ffffff;
+    color: vars.$text-invert;
 }
 
 .blog__featured::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 34, 53, 0)), to(#152235));
-    background: linear-gradient(180deg, rgba(21, 34, 53, 0) 0%, #152235 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(vars.$dark-blue-40, 0)), to(vars.$dark-blue-40));
+    background: linear-gradient(180deg, rgba(vars.$dark-blue-40, 0) 0%, vars.$dark-blue-40 100%);
     width: 100%;
     height: 50%;
     content: "";
@@ -649,26 +391,25 @@ hr.custom {
 }
 
 .blog__featured__text h4 {
-    color: #fff;
+    color: vars.$text-invert;
     font-family: "Raleway", sans-serif;
 
-    @include responsive-font-size(16, 26, 600);
+    @include mixins.responsive-font-size(16, 26, 600);
 }
 
 .blog__featured__text h2,
 .blog__featured__text h1 {
     margin-bottom: 25px;
-    color: #fff;
+    color: vars.$text-invert;
     text-transform: uppercase;
 
-    @include responsive-font-size(40, 48, 800);
+    @include mixins.responsive-font-size(40, 48, 800);
 }
 
 @media only screen and (max-width: 767px) {
-
     .blog__featured__text h2,
     .blog__featured__text h1 {
-        @include responsive-font-size(25, 30);
+        @include mixins.responsive-font-size(25, 30);
     }
 }
 
@@ -676,58 +417,23 @@ hr.custom {
     max-width: 500px;
     font-family: "Raleway", sans-serif;
 
-    @include responsive-font-size(16, 26, 500);
+    @include mixins.responsive-font-size(16, 26, 500);
 }
 
 .blog__featured__text a {
-    color: #fff;
-}
-
-.blog__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    border-radius: 64px;
-    background: #f6f7f9;
-    width: 64px;
-    height: 64px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    top: 30px;
-    right: 30px;
-    align-items: center;
-    z-index: 3;
-    -webkit-transition: 0.2s ease;
-    transition: 0.2s ease;
-    padding: 5px;
-}
-
-.blog__link:hover {
-    opacity: 0.5;
-}
-
-.blog__link img {
-    width: 30px;
+    color: vars.$text-invert;
 }
 
 .blog__box {
     margin: 0 0 20px;
     border-radius: 16px;
-    background: #1956a8;
+    background: vars.$surface-primary;
     padding: 36px 40px;
-    color: #f6f7f9;
+    color: vars.$text-body-light;
 }
 
 .professionnel .blog__box {
-    background: #171c60;
+    background: vars.$dark-blue-40;
 }
 
 @media only screen and (max-width: 991px) {
@@ -737,16 +443,16 @@ hr.custom {
 }
 
 .blog__box.dark {
-    background: #171c60;
+    background: vars.$dark-blue-40;
 }
 
 .blog__box.orange {
-    background: $color-secondary;
+    background: vars.$surface-accent;
 }
 
 .blog__box h2 {
     margin: 0 0 25px;
-    color: #f6f7f9;
+    color: vars.$text-heading-light;
     text-transform: uppercase;
 }
 
@@ -757,20 +463,19 @@ hr.custom {
 }
 
 .blog__box {
-
     p,
     .blog__box__title {
         margin: 0;
-        color: #f6f7f9;
+        color: vars.$text-body-light;
         font-family: "Raleway", sans-serif;
         text-transform: uppercase;
-        @include responsive-font-size(22, 36, 700);
+        @include mixins.responsive-font-size(22, 36, 700);
     }
 }
 
 @media only screen and (max-width: 1200px) {
     .blog__box p {
-        @include responsive-font-size(16, 28);
+        @include mixins.responsive-font-size(16, 28);
     }
 }
 
@@ -784,70 +489,15 @@ hr.custom {
     width: fit-content;
 }
 
-.blog__item__image {
-    position: relative;
-    border-radius: 16px;
-    width: 100%;
-    height: 275px;
-    overflow: hidden;
-}
-
-@media only screen and (max-width: 1200px) {
-    .blog__item__image {
-        height: 205px;
-    }
-}
-
-.blog__item__image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-}
-
-.blog__item__image .blog__link {
-    top: 10px;
-    right: 11px;
-    width: 32px;
-    height: 32px;
-}
-
-.blog__item__image .blog__link img {
-    width: 15px;
-    object-fit: contain;
-}
-
-.blog__item__text {
-    margin-top: 15px;
-}
-
-.blog__item__text h5 {
-    margin: 0 0 5px;
-    font-size: 0.875rem;
-}
-
-.blog__item__text h2 {
-    color: #152235;
-    font-style: normal;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-}
-
-.blog__item__text h2 a {
-    color: #152235;
-}
-
 .blog__list .owl-stage {
     padding-left: 0px !important;
 }
 
 .article__text {
-    color: #152235;
+    color: vars.$text-primary;
     font-family: "Raleway";
 
-    @include responsive-font-size(16, 26, 500);
+    @include mixins.responsive-font-size(16, 26, 500);
 }
 
 .article__text iframe {
@@ -860,14 +510,14 @@ hr.custom {
     font-family: "Rubik";
     text-transform: uppercase;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 .article__text h4 {
     font-family: "Rubik";
     text-transform: uppercase;
 
-    @include responsive-font-size(16, 24, 700);
+    @include mixins.responsive-font-size(16, 24, 700);
 }
 
 .article__text p {
@@ -881,14 +531,14 @@ hr.custom {
     margin-bottom: 15px;
 }
 
-.article__image {
+.list__article__image {
     border-radius: 16px;
     width: 104px;
     height: 104px;
     overflow: hidden;
 }
 
-.article__image img {
+.list__article__image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -908,14 +558,14 @@ hr.custom {
     margin: 0;
     font-family: "Raleway";
 
-    @include responsive-font-size(14, 26, 700);
+    @include mixins.responsive-font-size(14, 26, 700);
 }
 
 .article__body h2 {
-    color: #152235;
+    color: vars.$text-primary;
     text-transform: uppercase;
 
-    @include responsive-font-size(16, 24, 700);
+    @include mixins.responsive-font-size(16, 24, 700);
 
     a {
         padding: 0;
@@ -924,17 +574,17 @@ hr.custom {
 
 .article__body a {
     padding: 0;
-    color: #152235;
+    color: vars.$text-primary;
 }
 
 .article__box {
     border-radius: 16px;
-    background: #1956a8;
+    background: vars.$surface-primary;
     padding: 36px 40px;
-    color: #f6f7f9;
+    color: vars.$text-body-light;
 
     h2 {
-        color: #f6f7f9;
+        color: vars.$text-heading-light;
     }
 }
 
@@ -965,11 +615,11 @@ hr.custom {
     margin: 30px 0;
     text-transform: uppercase;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 .article__box p {
-    @include responsive-font-size(16, 40, 700);
+    @include mixins.responsive-font-size(16, 40, 700);
 }
 
 .article__box .btn {
@@ -989,7 +639,7 @@ hr.custom {
 }
 
 .professionnel .step__list ul.nav-tabs li a {
-    color: #171c60;
+    color: vars.$text-heading-dark;
 }
 
 .step__list ul.nav-tabs li a {
@@ -1000,24 +650,24 @@ hr.custom {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     margin-bottom: 15px;
-    -webkit-box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
-    box-shadow: 0px 16px 32px rgba(25, 86, 168, 0.1);
+    -webkit-box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
+    box-shadow: 0px 16px 32px rgba(vars.$blue-40, 0.1);
     border-radius: 16px;
-    background: #ffffff;
+    background: vars.$background-light;
     padding: 36px 40px;
     text-transform: uppercase;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 @media only screen and (max-width: 767px) {
     .step__list ul.nav-tabs li a {
         padding: 20px;
 
-        @include responsive-font-size(16, 24);
+        @include mixins.responsive-font-size(16, 24);
     }
 }
 
@@ -1038,7 +688,7 @@ hr.custom {
     margin-right: 20px;
     overflow: hidden;
 
-    @include responsive-font-size(24, 30, 700);
+    @include mixins.responsive-font-size(24, 30, 700);
 }
 
 @media only screen and (max-width: 767px) {
@@ -1046,7 +696,7 @@ hr.custom {
         width: 40px;
         height: 40px;
 
-        @include responsive-font-size(16, 30);
+        @include mixins.responsive-font-size(16, 30);
     }
 }
 
@@ -1058,7 +708,7 @@ hr.custom {
     left: 5px;
     z-index: 1;
     border-radius: 100%;
-    background: #fff;
+    background: vars.$background-light;
     content: "";
 }
 
@@ -1066,7 +716,7 @@ hr.custom {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(278.49deg, #1956a8 0%, #171c60 88.22%);
+    background: linear-gradient(278.49deg, vars.$blue-40 0%, vars.$dark-blue-40 88.22%);
     width: 100%;
     height: 100%;
     content: "";
@@ -1084,7 +734,7 @@ hr.custom {
     flex: 1;
     text-transform: none;
 
-    @include responsive-font-size(24, 35, 500);
+    @include mixins.responsive-font-size(24, 35, 500);
 }
 
 .step__list ul.nav-tabs li a .text__body .head {
@@ -1096,13 +746,13 @@ hr.custom {
 
 .step__list ul.nav-tabs li a:hover,
 .step__list ul.nav-tabs li a.active {
-    background: #1956a8;
-    color: #fff;
+    background: vars.$surface-primary;
+    color: vars.$text-invert;
 }
 
 .professionnel .step__list ul.nav-tabs li a:hover,
 .professionnel .step__list ul.nav-tabs li a.active {
-    background: #171c60;
+    background: vars.$dark-blue-40;
 }
 
 .step__list ul.nav-tabs li a:hover .text::before,
@@ -1111,7 +761,7 @@ hr.custom {
     right: 0;
     bottom: 0;
     left: 0;
-    border: 5px solid #fff;
+    border: 5px solid vars.$neutral-100;
     background: transparent;
     content: "";
 }
@@ -1119,8 +769,8 @@ hr.custom {
 .step__list ul.nav-tabs li a:hover .text span,
 .step__list ul.nav-tabs li a.active .text span {
     background: transparent;
-    color: #fff;
-    -webkit-text-fill-color: #fff;
+    color: vars.$text-invert;
+    -webkit-text-fill-color: vars.$text-invert;
 }
 
 .step__list ul.nav-tabs li:last-child a {
@@ -1128,7 +778,7 @@ hr.custom {
 }
 
 .step__list.service ul.nav-tabs li a {
-    color: #152235;
+    color: vars.$text-primary;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1140,21 +790,21 @@ hr.custom {
         margin-bottom: 20px;
         width: 60px;
         height: 60px;
-        @include responsive-font-size(25, 30);
+        @include mixins.responsive-font-size(25, 30);
     }
 }
 
 .step__list.service ul.nav-tabs li a:hover,
 .step__list.service ul.nav-tabs li a.active {
-    color: #fff;
+    color: vars.$text-invert;
 }
 
 .bg_PRIMARY_40 {
-    background-color: $color-tertiary !important;
+    background-color: vars.$surface-primary !important;
 }
 
 .bg_secondary_40 {
-    background-color: #171c60 !important;
+    background-color: vars.$dark-blue-40 !important;
 }
 
 .oembed-container {
@@ -1177,7 +827,7 @@ hr.custom {
 }
 
 .sidebar-pro .article__box {
-    background-color: #171c60;
+    background-color: vars.$dark-blue-40;
 }
 
 .product_meta {

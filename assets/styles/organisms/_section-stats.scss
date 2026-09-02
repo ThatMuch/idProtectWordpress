@@ -25,10 +25,10 @@
 
         circle {
             fill: transparent;
-            stroke: #fff;
+            stroke: $neutral-100;
             stroke-dashoffset: 219.91148575129;
             stroke-width: 2;
-            stroke: $color-primary;
+            stroke: $dark-blue-40;
         }
 
         .incomplete {
@@ -41,7 +41,7 @@
 
         .percentage {
             text-anchor: middle;
-            fill: $color-primary;
+            fill: $dark-blue-40;
         }
     }
 }

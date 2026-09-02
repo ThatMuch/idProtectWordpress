@@ -1,3 +1,5 @@
+@use "../vars";
+
 /**
  *
  * @author      ThatMuch
@@ -5,3 +7,71 @@
  * @since       idProtect_1.0.0.0
  *
  */
+
+/*==================================================================================
+  V4 — Tags (Design System Figma: node 1099:900)
+  Les paddings/gap "9px/17px" que Figma affiche pour Success/Particulier/Pro/Error
+  (vs 8px/16px pour Default/Light) sont un écart d'1px entre variants, traité comme
+  du bruit d'arrondi : toutes les variantes utilisent ici les mêmes tokens d'espacement.
+==================================================================================*/
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: vars.$spacing-xs;
+    padding: vars.$spacing-xs vars.$spacing-s;
+    border: 1px solid transparent;
+    border-radius: vars.$radius-l;
+    font-family: vars.$font-family-body;
+    font-weight: vars.$font-weight-bold;
+    font-size: 11.5px;
+    letter-spacing: 0.69px;
+    line-height: normal;
+    white-space: nowrap;
+
+    &__icon {
+        font-size: 11.5px;
+        line-height: 1;
+    }
+
+    /* ---- Success ---- */
+    &--success {
+        background: rgba(vars.$surface-success, 0.14);
+        border-color: rgba(vars.$surface-success, 0.18);
+        color: vars.$surface-success;
+    }
+
+    /* ---- Default ---- */
+    &--default {
+        border-color: rgba(vars.$dark-blue-40, 0.18);
+        color: vars.$text-primary;
+    }
+
+    /* ---- Particulier ---- */
+    &--particulier {
+        background: rgba(vars.$blue-40, 0.14);
+        border-color: rgba(vars.$blue-40, 0.18);
+        color: vars.$text-subheading;
+    }
+
+    /* ---- Pro ---- */
+    &--pro {
+        background: rgba(vars.$dark-blue-40, 0.14);
+        border-color: rgba(vars.$dark-blue-40, 0.18);
+        color: vars.$text-heading-dark;
+    }
+
+    /* ---- Error ---- */
+    &--error {
+        background: rgba(vars.$red-40, 0.14);
+        border-color: rgba(vars.$red-40, 0.18);
+        color: vars.$text-error;
+    }
+
+    /* ---- Light (sur fond sombre/coloré) ---- */
+    &--light {
+        background: rgba(vars.$neutral-100, 0.1);
+        border-color: rgba(vars.$neutral-100, 0.18);
+        color: vars.$dark-blue-70;
+    }
+}

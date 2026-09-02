@@ -35,24 +35,24 @@
             "save_options": 0
         },
         {
-            "key": "field_66c70ba4104f4",
-            "label": "Abonnement",
-            "name": "abonnement",
+            "key": "field_68b12e4a9c31",
+            "label": "Description",
+            "name": "description",
             "aria-label": "",
-            "type": "true_false",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "100",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_66aa163c792b2",
@@ -62,15 +62,7 @@
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "100",
                 "class": "",
@@ -92,15 +84,7 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -114,174 +98,16 @@
             "append": ""
         },
         {
-            "key": "field_66aa163c792b3",
-            "label": "Prix mensuel",
-            "name": "price_monthly",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_695fa12e3f686",
-            "label": "Indice du prix mensuel",
-            "name": "indice_du_prix_mensuel",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_66aa163c792b4",
-            "label": "Prix annuel",
-            "name": "price_yearly",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_695fa13f3f687",
-            "label": "Indice du prix annuel",
-            "name": "indice_du_prix_annuel",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_66aa1700792ba",
-            "label": "Lien de paiement (prix fixe)",
+            "label": "Lien de paiement (prix de base)",
             "name": "link_fixed",
             "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "100",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_66aa1700792bb",
-            "label": "Lien de paiement mensuel",
-            "name": "link_monthly",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_66aa1700792bc",
-            "label": "Lien de paiement annuel",
-            "name": "link_yearly",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_66c70ba4104f4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -328,11 +154,11 @@
             "delay": 0
         },
         {
-            "key": "field_66aa1661792b4",
-            "label": "Block",
-            "name": "block",
+            "key": "field_67d9e26c60e0",
+            "label": "Titre de l'option",
+            "name": "option_title",
             "aria-label": "",
-            "type": "repeater",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -341,118 +167,71 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Ajouter un élément",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_66aa166d792b5",
-                    "label": "Titre",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_66aa1661792b4"
-                },
-                {
-                    "key": "field_66aa167c792b6",
-                    "label": "Option",
-                    "name": "option",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Ajouter un élément",
-                    "rows_per_page": 20,
-                    "parent_repeater": "field_66aa1661792b4",
-                    "sub_fields": [
-                        {
-                            "key": "field_66aa1687792b7",
-                            "label": "Texte",
-                            "name": "text",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_66aa167c792b6"
-                        },
-                        {
-                            "key": "field_66aa169f792b8",
-                            "label": "Active",
-                            "name": "active",
-                            "aria-label": "",
-                            "type": "checkbox",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "active": "Active"
-                            },
-                            "default_value": [],
-                            "return_format": "value",
-                            "allow_custom": 0,
-                            "layout": "vertical",
-                            "toggle": 0,
-                            "save_custom": 0,
-                            "custom_choice_button_text": "Ajouter un nouveau choix",
-                            "parent_repeater": "field_66aa167c792b6"
-                        }
-                    ]
-                }
-            ]
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_66aa1700792b9",
-            "label": "Lien",
-            "name": "link",
+            "key": "field_87fad4499bb8",
+            "label": "Prix de l'option",
+            "name": "option_price",
             "aria-label": "",
-            "type": "link",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63bde9b24b8e",
+            "label": "Description de l'option",
+            "name": "option_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_66aa1700792b9",
+            "label": "Lien de paiement (avec option)",
+            "name": "link_option",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Utilisé à la place du lien de paiement de base quand le visiteur coche l'option.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67d9e26c60e0",
+                        "operator": "!=",
+                        "value": ""
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -511,5 +290,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1767875034
+    "modified": 1788273319
 }

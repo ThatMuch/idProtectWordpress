@@ -23,7 +23,7 @@ $class_name = $args['class_name'];
 			<div class="col-lg-7">
 				<div class="step__list">
 					<?php if ($data['title']) : ?>
-						<h2 class="section__title h1"><?= $data['title'] ?> <span class="title text__orange"><?= $data['accent'] ?></span></h2>
+						<h2 class="section__title h1"><?= $data['title'] ?> <span class="text__orange"><?= $data['accent'] ?></span></h2>
 					<?php endif; ?>
 					<!-- display the list of elements from a repeater field in acf -->
 					<?php if (have_rows('steps')) : ?>
@@ -52,7 +52,7 @@ $class_name = $args['class_name'];
 							endwhile; ?>
 						</div>
 					<?php endif; ?>
-					<?php if ($data['cta']) : ?> <a class="btn btn__primary" href="<?php echo esc_url($data['cta']['url']); ?>"><span><?php echo esc_html($data['cta']['title']); ?></span></a> <?php endif; ?>
+					<?php if ($data['cta']) : ?> <a class="btn btn--primary btn--solid" href="<?php echo esc_url($data['cta']['url']); ?>"><span><?php echo esc_html($data['cta']['title']); ?></span></a> <?php endif; ?>
 
 				</div>
 			</div>

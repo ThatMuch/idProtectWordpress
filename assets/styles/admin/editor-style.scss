@@ -1,0 +1,25 @@
+@use "../_vars.scss" as vars;
+
+.editor-styles-wrapper {
+    color: vars.$text-body-dark;
+    font-family: vars.$font-family-body;
+    p,
+    .wp-block-paragraph,
+    table {
+        font-family: vars.$font-family-body !important;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .wp-block-post-title {
+        color: vars.$text-heading-dark;
+        font-family: vars.$font-family-headline;
+    }
+}
+
+.editor-post-title__input {
+    font-family: vars.$font-family-headline;
+}

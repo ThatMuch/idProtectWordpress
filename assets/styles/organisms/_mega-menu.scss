@@ -1,0 +1,308 @@
+@use "../mixins";
+@use "../vars";
+
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       idProtect_1.0.0.0
+ *
+ * Mega menu for the "Outils" nav item.
+ * Markup: bootstrap-navwalker.php (wrapper) + template-parts/menu/mega-menu-outils.php (content).
+ *
+ */
+
+.header__area .dropdown-menu.mega-menu {
+    cursor: default;
+    padding: 0;
+    overflow: hidden;
+    &::before {
+        display: none;
+    }
+
+    @include mixins.breakpoint(laptop) {
+        display: none;
+        grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+        transform: translate(-33%, 13px);
+        box-shadow: 0px 30px 60px rgba(vars.$dark-blue-40, 0.28);
+        border: 1px solid vars.$blue-70;
+        border-radius: 18px;
+        padding: 0;
+        width: 847px;
+        max-width: calc(100vw - 32px);
+        &.show {
+            display: grid;
+        }
+    }
+}
+
+.mega-menu__body {
+    display: flex;
+    flex-direction: column;
+    background: vars.$background-light;
+}
+
+.mega-menu__categories {
+    padding: vars.$spacing-m;
+
+    @include mixins.breakpoint(mobile) {
+        padding: 0 vars.$spacing-m;
+    }
+
+    @include mixins.breakpoint(laptop) {
+        column-gap: vars.$spacing-m;
+        column-count: 2;
+    }
+}
+
+.mega-menu__category {
+    break-inside: avoid;
+    margin-bottom: vars.$spacing-m;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.mega-menu__category-header {
+    margin-bottom: vars.$spacing-s;
+}
+
+.mega-menu__category-title {
+    margin: 0 0 vars.$spacing-xs;
+    color: vars.$text-subheading;
+    font-weight: vars.$font-weight-bold;
+    font-size: 11px;
+    font-family: vars.$font-family-body;
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
+}
+
+.mega-menu__category-quote {
+    margin: 0;
+    color: vars.$text-inactive;
+    font-weight: vars.$font-weight-medium;
+    font-size: 11.5px;
+    line-height: 1.4;
+    font-family: vars.$font-family-body;
+}
+
+.mega-menu__tools {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mega-menu__tool-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.mega-menu__tool-icon {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.mega-menu__tool-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mega-menu__tool-title {
+    color: vars.$text-heading-dark;
+    font-weight: vars.$font-weight-bold;
+    font-size: 13.5px;
+    font-family: vars.$font-family-headline;
+}
+
+.mega-menu__tool-excerpt {
+    margin-top: 2px;
+    color: vars.$text-body-dark;
+    font-weight: vars.$font-weight-medium;
+    font-size: 11.5px;
+    line-height: 1.4;
+    font-family: vars.$font-family-body;
+}
+
+.mega-menu__tool-link:hover {
+    .mega-menu__tool-title {
+        color: vars.$text-accent;
+    }
+}
+
+.mega-menu__mobile {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-s;
+    background: vars.$background-default;
+    padding: vars.$spacing-s vars.$spacing-m;
+
+    @include mixins.breakpoint(mobile) {
+        margin-bottom: vars.$spacing-m;
+    }
+
+    @include mixins.breakpoint(phablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.mega-menu__mobile-text {
+    flex: 1;
+}
+.mega-menu__mobile-title {
+    margin: 0;
+    color: vars.$text-heading-dark;
+    font-weight: vars.$font-weight-bold;
+    font-size: 13.5px;
+    font-family: vars.$font-family-headline;
+}
+
+.mega-menu__mobile-subtitle {
+    margin: 4px 0 0;
+    color: vars.$text-body-dark;
+    font-weight: vars.$font-weight-medium;
+    font-size: 11.5px;
+    font-family: vars.$font-family-body;
+}
+
+.mega-menu__mobile-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: vars.$spacing-xs;
+}
+
+.mega-menu__store-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #a6a6a6;
+    border-radius: 6px;
+    background: #000;
+    padding: 0 10px;
+    height: 40px;
+    color: vars.$text-invert;
+    text-decoration: none;
+    &:hover {
+        box-shadow: 0 0 0 3px rgba(vars.$blue-40, 0.25);
+        color: vars.$text-invert;
+    }
+}
+
+.mega-menu__store-badge-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.mega-menu__store-badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.mega-menu__store-badge-eyebrow {
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.mega-menu__store-badge-label {
+    font-weight: vars.$font-weight-medium;
+    font-size: 14px;
+    font-family: vars.$font-family-headline;
+}
+
+.mega-menu__featured {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: vars.$gradient-particulier;
+    padding: vars.$spacing-m;
+    color: vars.$text-heading-light;
+    &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url("../images/bg-menu.svg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        content: "";
+    }
+
+    @include mixins.breakpoint(mobile) {
+        margin-bottom: vars.$spacing-m;
+    }
+}
+
+.mega-menu__featured-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: vars.$spacing-s;
+    width: 52px;
+    height: 65px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.mega-menu__featured-title {
+    margin: 0;
+    color: vars.$text-heading-light;
+    font-weight: vars.$font-weight-extrabold;
+    font-size: 17px;
+    font-family: vars.$font-family-headline;
+}
+
+.mega-menu__featured-excerpt {
+    flex-grow: 1;
+    margin: vars.$spacing-xs 0 0;
+    color: vars.$text-body-light;
+    font-weight: vars.$font-weight-medium;
+    font-size: 12.5px;
+    line-height: 1.5;
+    font-family: vars.$font-family-body;
+}
+
+.mega-menu__featured-cta {
+    margin-top: vars.$spacing-s;
+    width: fit-content;
+}
+
+/* Mobile: the mega menu is just another block inside the existing
+   .navbar-collapse panel, stacked full-width like the rest of the nav. */
+@media screen and (max-width: 991px) {
+    .header__area .dropdown-menu.mega-menu {
+        border-radius: vars.$radius-m;
+    }
+
+    .mega-menu__featured {
+        border-radius: vars.$radius-m;
+    }
+}

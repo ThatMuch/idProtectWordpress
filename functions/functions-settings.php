@@ -54,7 +54,7 @@ function idProtect_enqueue()
   // styles
   wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/inc/assets/css/owl.carousel.min.css', false, null);
   wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/inc/assets/css/owl.theme.default.min.css', false, null);
-  wp_enqueue_style('ID_Protect_/styles', get_template_directory_uri() . '/assets/styles/style.min.css', false, null);
+  wp_enqueue_style('ID_Protect_/styles', get_template_directory_uri() . '/assets/styles/style.min.css', false, filemtime(get_template_directory() . '/assets/styles/style.min.css'));
   // Typekit
   global $typekit_id;
   if ($typekit_id) :
@@ -75,6 +75,20 @@ function idProtect_enqueue()
 }
 
 add_action('wp_enqueue_scripts', 'idProtect_enqueue');
+
+// Fix CORS error blocking the block editor: the "Advanced Custom Fields: Font
+// Awesome" plugin loads its icon-picker stylesheet from the free CDN
+// use.fontawesome.com when no Kit token is configured, but that endpoint sends
+// no Access-Control-Allow-Origin header, so the editor fails to load it.
+// cdnjs.cloudflare.com serves the same Font Awesome releases with CORS enabled.
+function idProtect_fix_acffa_cors_url($url)
+{
+  if (preg_match('#^https://use\.fontawesome\.com/releases/v([\d.]+)/css/all\.css$#', $url, $matches)) {
+    return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/' . $matches[1] . '/css/all.min.css';
+  }
+  return $url;
+}
+add_filter('ACFFA_get_fa_url', 'idProtect_fix_acffa_cors_url', 20);
 
 // Admin Style
 function my_custom_admin_stylesheet()
@@ -127,6 +141,20 @@ function idProtect_theme_support()
   // => http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // => http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+
+  // Without this, WP core's aspect-ratio CSS for embeds (.wp-embed-responsive .wp-has-aspect-ratio ...)
+  // never applies (it's scoped under a `wp-embed-responsive` body class this support adds) — a pasted
+  // YouTube link then keeps oEmbed's raw fixed iframe height (e.g. 281px) instead of scaling with width.
+  // => https://developer.wordpress.org/reference/functions/add_theme_support/#responsive-embedded-content
+  add_theme_support('responsive-embeds');
+
+  // Load the theme's fonts (Raleway/Rubik) and typography into the block editor canvas
+  // => https://developer.wordpress.org/reference/functions/add_editor_style/
+  add_theme_support('editor-styles');
+  add_editor_style(array(
+    'https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Rubik:wght@500;700;800&display=swap',
+    'assets/styles/admin/editor-style.min.css',
+  ));
 }
 add_action('after_setup_theme', 'idProtect_theme_support');
 

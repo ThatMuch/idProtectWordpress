@@ -5,11 +5,12 @@
  */
 // $data is what we're going to expose to our render template
 $data = array(
+	'eyebrow' => get_field('eyebrow'),
 	'title' => get_field('title'),
 	'accent' => get_field('accent'),
+	'description' => get_field('description'),
 	'category' => get_field('category'),
 	'hide_details' => get_field('hide_detail'),
-	'savings_percentage' => get_field('savings_percentage'),
 );
 
 // Dynamic block ID

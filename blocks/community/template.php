@@ -15,7 +15,7 @@ $class_name = $args['class_name'];
 	<div class="container">
 		<div class="row align-items-start">
 			<div class="col-lg-5 order-lg-1">
-				<h3 class="title text__orange community__title"><?php echo $data['title']; ?></h3>
+				<h3 class="text__orange community__title"><?php echo $data['title']; ?></h3>
 				<div class="community__image">
 					<?php $image = $data['image'];  ?>
 					<?php if (!empty($image)) : ?>
@@ -44,7 +44,7 @@ $class_name = $args['class_name'];
 								<p><?php the_sub_field('description'); ?></p>
 								<?php $link = get_sub_field('link'); ?>
 								<?php if ($link) : ?>
-									<a class="btn btn__white text__orange" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?>
+									<a class="btn btn--secondary btn--solid" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?>
 										<img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right-orange.svg" alt="Flèche vers la droite">
 									</a>
 								<?php endif; ?>

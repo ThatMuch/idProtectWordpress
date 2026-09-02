@@ -1,63 +1,122 @@
-.testimonial {
-    .list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-bottom: 50px;
-        @media screen and (max-width: 768px) {
-            display: block;
-        }
-    }
+/*
+ * V4 — Bloc Témoignages
+ * Cartes avatar + citation, alignées sur le design system (.tag, ombres/radius
+ * partagés avec .blog-card / .featured-card).
+ */
+
+/* Eyebrow : voir assets/styles/atoms/_typography.scss .eyebrow */
+
+.testimonial__title {
+    margin-bottom: 32px;
 }
 
-.testimonial__img {
-    position: relative;
+.testimonial {
+    .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
 
-    margin-bottom: 0.5rem;
-    border-radius: 1rem;
-    overflow: hidden;
-
-    &:hover {
-
-        img {
-            transform: scale(1.1);
+        @media screen and (max-width: 991px) {
+            grid-template-columns: 1fr;
         }
-    }
-    img {
-        transition: transform .8s;
-        width: 100%;
     }
 }
 
 .testimonial__item {
+    display: flex;
     position: relative;
-    width: 338px;
-    overflow: hidden;
-    &.disabled{
-            opacity: .2;
+    flex-direction: column;
+    transition: box-shadow 0.3s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 1px 5px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    background: #fff;
+    padding: 24px;
+
+    &:hover,
+    &:focus-within {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    &.disabled {
+        opacity: 0.2;
     }
 }
 
-.content {
-    padding: 0 1rem;
+.testimonial__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
 }
 
-.content__title {
-    color: var(--Text-Text-accent, #ff7551);
-    font-style: normal;
-    font-weight: 700;
-    font-size: var(--Font-Size-L, 1.5rem);
-    line-height: normal;
-    font-family: var(--Font-Family-Headline, Rubik);
+.testimonial__avatar {
+    flex-shrink: 0;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
 }
 
-.content__desc {
-    color: var(--Text-Text-primary, #171c60);
-    font-style: normal;
+.testimonial__name {
+    flex: 1;
+    color: #171c60;
     font-weight: 700;
-    font-size: var(--Font-Size-L, 1.5rem);
+    font-size: 18px;
+    font-family: Rubik, "Roboto", sans-serif;
+}
+
+.testimonial__badge {
+    flex-shrink: 0;
+}
+
+.testimonial__fraude {
+    margin: 0 0 8px;
+    color: #171c60;
+    font-weight: 700;
+    font-size: 16px;
     line-height: normal;
-    font-family: var(--Font-Family-Headline, Rubik);
+    font-family: Rubik, "Roboto", sans-serif;
+    text-transform: none;
+}
+
+.testimonial__consequence {
+    display: -webkit-box;
+    margin: 0 0 20px;
+    -webkit-line-clamp: 3;
+    color: #454980;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: Raleway, "Open Sans", sans-serif;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.testimonial__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: #171c60;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Raleway, "Open Sans", sans-serif;
+    text-decoration: underline;
+
+    &::after {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        border-radius: 24px;
+        content: "";
+    }
+
+    &:focus-visible::after {
+        outline: 2px solid #171c60;
+        outline-offset: 2px;
+    }
+}
+
+.testimonial__link-icon {
+    width: 14px;
+    height: 10px;
 }

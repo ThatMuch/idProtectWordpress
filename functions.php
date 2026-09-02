@@ -39,6 +39,8 @@ require('functions/functions-blocks.php');
   CUSTOM
 ==================================================================================*/
 require('functions/functions-custom.php');
+require('functions/functions-hero.php');
+require('functions/functions-article.php');
 require get_template_directory() . '/bootstrap-navwalker.php';
 
 // Plugins
@@ -46,3 +48,51 @@ require_once get_stylesheet_directory() . '/inc/plugin-activation.php';
 
 // Post Types
 require('custom-post-type.php');
+
+
+add_filter('rest_endpoints', function ($endpoints) {
+  if (isset($endpoints['/wp/v2/comments'])) {
+    unset($endpoints['/wp/v2/comments']);
+  }
+  if (isset($endpoints['/wp/v2/comments/(?P<id>[\d]+)'])) {
+    unset($endpoints['/wp/v2/comments/(?P<id>[\d]+)']);
+  }
+  return $endpoints;
+});
+
+add_filter('rest_authentication_errors', function ($result) {
+  // Si une erreur d'authentification existe déjà, on la conserve
+  if (!empty($result)) {
+    return $result;
+  }
+
+  // Si l'utilisateur n'est pas connecté, on renvoie une erreur 401
+  if (!is_user_logged_in()) {
+    return new WP_Error(
+      'rest_not_logged_in',
+      __('Accès réservé aux utilisateurs connectés.', 'default'),
+      ['status' => 401]
+    );
+  }
+
+  return $result;
+});
+
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+require_once get_template_directory() . '/inc/plugin-update-checker/plugin-update-checker.php';
+
+$themeUpdateChecker = PucFactory::buildUpdateChecker(
+  'https://github.com/ThatMuch/idProtectWordpress/', // URL du repo
+  get_template_directory() . '/style.css',           // Fichier contenant l'en-tête de version
+  'idProtectWordpress'                               // Nom exact du dossier du thème
+);
+
+// Branche surveillée
+$themeUpdateChecker->setBranch('main');
+
+// Token GitHub (défini dans wp-config.php)
+if (defined('MY_GITHUB_TOKEN') && ! empty(MY_GITHUB_TOKEN)) {
+  $themeUpdateChecker->setAuthentication(MY_GITHUB_TOKEN);
+}

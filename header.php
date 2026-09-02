@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * @author      ThatMuch
@@ -80,63 +80,63 @@ $template = str_replace(array('page-', '.php'), '', $template);
 		$nav_class = 'menu-' . $menu_object->slug;
 		$current_menu_id = $menu_object->term_id;
 	}
-	?> <nav class="header__area navbar sticky-top navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
+	?> <nav class="header__area navbar navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
 		<div class="container align-items-center <?= $template === "landing" && "justify-content-center" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
-							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<? endif; ?>" alt="ID Protect">
+							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<?php endif; ?>" alt="ID Protect">
 			</a>
 			<?php if ($template !== "landing") : ?>
-				<div class="collapse navbar-collapse" id="navbar">
-					<?php
-					$menu_args = array(
-						'theme_location' => 'mainmenu', // Defined when registering the menu
-						'menu_id'        => 'menu-main',
-						'container'      => false,
-						'depth'          => 3,
-						'menu_class'     => 'nav navbar-nav mx-auto',
-						'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
-						'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
-					);
-
-					// Check for custom menu
-					if ($custom_menu_id) {
-						$menu_args['menu'] = $custom_menu_id;
-					}
-
-					wp_nav_menu($menu_args);
-					?>
-					<div class="d-flex gap-2">
+				<div>
+					<div class="collapse navbar-collapse" id="navbar">
 						<?php
-						$btn_text = '';
-						$btn_link = '';
-						$btn_style = 'btn__primary';
+						$menu_args = array(
+							'theme_location' => 'mainmenu', // Defined when registering the menu
+							'menu_id'        => 'menu-main',
+							'container'      => false,
+							'depth'          => 3,
+							'menu_class'     => 'nav navbar-nav',
+							'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
+							'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
+						);
 
-						if ($current_menu_id) {
-							$btn_text = get_theme_mod('header_btn_text_' . $current_menu_id, '');
-							$btn_link = get_theme_mod('header_btn_link_' . $current_menu_id, '');
-							$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn__primary');
+						// Check for custom menu
+						if ($custom_menu_id) {
+							$menu_args['menu'] = $custom_menu_id;
 						}
 
-						if ($btn_text && $btn_link) :
+						wp_nav_menu($menu_args);
 						?>
-							<a class="btn <?php echo esc_attr($btn_style); ?> custom-btn-header " href="<?php echo esc_url($btn_link); ?>">
-								<?php echo esc_html($btn_text); ?>
-							</a>
-						<?php endif; ?>
-						<a href="<?php echo site_url(); ?>/panier" class="btn btn__outline">
-							<i class="fa-solid fa-cart-shopping"></i>
-						</a>
-						<a href="https://app.idprotect.fr" class="btn btn__outline">
-							<i class="fa-solid fa-user"></i>
+						<div class="d-flex gap-2">
+							<?php
+							$btn_text = '';
+							$btn_link = '';
+							$btn_style = 'btn btn--primary btn--solid';
 
-						</a>
+							if ($current_menu_id) {
+								$btn_text = get_theme_mod('header_btn_text_' . $current_menu_id, '');
+								$btn_link = get_theme_mod('header_btn_link_' . $current_menu_id, '');
+								$btn_style = get_theme_mod('header_btn_style_' . $current_menu_id, 'btn btn--primary btn--solid');
+							} ?>
+
+							<a href="https://app.idprotect.fr" class="btn btn--light btn--outlined">
+								Connexion
+							</a>
+
+							<?php if ($btn_text && $btn_link) :
+							?>
+								<a class="<?php echo esc_attr($btn_style); ?> custom-btn-header" href="<?php echo esc_url($btn_link); ?>">
+									<?php echo esc_html($btn_text); ?>
+								</a>
+							<?php endif; ?>
+
+						</div>
 					</div>
-				</div>
-				<div>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+					<div>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
 				</div>
 			<?php endif; ?>
 		</div>
@@ -164,4 +164,4 @@ $template = str_replace(array('page-', '.php'), '', $template);
 			</h1>
 		</header>
 	<?php endif; ?>
-	<div id="content" class="section__area">
+	<main id="content" class="section__area">

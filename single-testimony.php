@@ -8,9 +8,11 @@
  * @since idProtect 3.0
  */
 
-$titleIsHidden = get_field('hide_title');
 get_header(); ?>
-<div class="page__area">
+
+<?php get_template_part('template-parts/hero'); ?>
+
+<div class="page__area p-4">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

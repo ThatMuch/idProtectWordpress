@@ -21,15 +21,15 @@ $class_name = $args['class_name'];
 							<img src="<?php echo esc_url($data['image']['url']); ?>" alt="<?php echo esc_attr($data['image']['alt']); ?>" />
 						</div>
 					<?php endif; ?>
-					<h3 class="title d-sm-none"><span class="g-text"><?php echo $data['title']; ?></span></h3>
+					<h3 class="d-sm-none"><span class="g-text"><?php echo $data['title']; ?></span></h3>
 				</div>
 				<div class="card__text">
-					<h3 class="title d-none d-sm-flex"><span class="g-text"><?php echo $data['title']; ?></span></h3>
+					<h3 class="d-none d-sm-flex"><span class="g-text"><?php echo $data['title']; ?></span></h3>
 					<div class="card__text__box mh-auto bg_<?php echo $args['bg_color']; ?>">
 						<h3><?php echo $data['subtitle']; ?></h3>
 						<p><?php echo $data['description']; ?></p>
 						<?php if ($data['link']) : ?>
-							<a href="<?php echo esc_url($data['link']['url']); ?>" target="<?php echo esc_attr($data['link']['target']); ?>" class="btn btn__white"><?php echo esc_html($data['link']['title']); ?><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite"></a>
+							<a href="<?php echo esc_url($data['link']['url']); ?>" target="<?php echo esc_attr($data['link']['target']); ?>" class="btn btn--primary btn--outlined"><?php echo esc_html($data['link']['title']); ?><img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-right.svg" alt="Flèche vers la droite"></a>
 						<?php endif; ?>
 					</div>
 				</div>

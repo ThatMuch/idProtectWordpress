@@ -1,6 +1,6 @@
-@import "../_mixins.scss";
-@import "../_vars.scss";
-@import "./_acf.scss";
+@use "../_mixins.scss";
+@use "../_vars.scss";
+@use "_acf.scss";
 
 .wp-admin {
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
         background-color: #e8effb;
     }
     a {
-        color: $color-primary;
+        color: vars.$color-primary;
     }
 
     .alternate,
@@ -33,10 +33,10 @@
     #adminmenu .wp-submenu,
     #adminmenuback,
     #adminmenuwrap {
-        background-color: $color-primary;
+        background-color: vars.$color-primary;
     }
     #wpadminbar {
-        background-color: $color-primary-darker;
+        background-color: vars.$color-primary-darker;
     }
 
     #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
@@ -44,14 +44,14 @@
     #adminmenu .wp-menu-arrow div,
     #adminmenu li.current a.menu-top,
     #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
-        background: $color-primary-lighter;
+        background: vars.$color-primary-lighter;
         color: #fff;
     }
 
     #adminmenu li.menu-top:hover,
     #adminmenu li.opensub > a.menu-top,
     #adminmenu li > a.menu-top:focus {
-        background: $color-primary-lighter;
+        background: vars.$color-primary-lighter;
         color: #fff;
     }
 
@@ -70,16 +70,25 @@
 }
 
 .wp-core-ui .button-primary {
-    border-color: $color-primary;
-    background: $color-primary;
+    border-color: vars.$color-primary;
+    background: vars.$color-primary;
     &:hover {
-        border-color: $color-primary-darker;
-        background: $color-primary-darker;
+        border-color: vars.$color-primary-darker;
+        background: vars.$color-primary-darker;
     }
 }
 
 #adminmenu .awaiting-mod,
 #adminmenu .menu-counter,
 #adminmenu .update-plugins {
-    background-color: $color-secondary;
+    background-color: vars.$color-secondary;
+}
+
+.interface-interface-skeleton__sidebar,
+.edit-post-sidebar {
+    width: 400px !important;
+}
+
+.interface-complementary-area.editor-sidebar {
+    width: 400px !important;
 }

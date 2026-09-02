@@ -38,6 +38,16 @@
         });
     }
 
+    function preventScrollOnMobileMenuOpen() {
+        $("#navbar")
+            .on("show.bs.collapse", function () {
+                $("body").addClass("menu-open");
+            })
+            .on("hidden.bs.collapse", function () {
+                $("body").removeClass("menu-open");
+            });
+    }
+
     function setBlockServiceClass() {
         $(".block__service").each(function (index) {
             if (index % 2 === 1) {
@@ -74,7 +84,7 @@
 
     function updateArticleImages() {
         $(".article__item .wp-block-latest-posts__featured-image").each(function () {
-            $(this).removeClass("wp-block-latest-posts__featured-image").addClass("article__image");
+            $(this).removeClass("wp-block-latest-posts__featured-image").addClass("list__article__image");
         });
     }
 
@@ -119,6 +129,7 @@
     $(document).ready(function () {
         setTouchAttribute();
         toggleNavbar();
+        preventScrollOnMobileMenuOpen();
         setBlockServiceClass();
         initializeOwlCarousel();
         updateArticleListItems();

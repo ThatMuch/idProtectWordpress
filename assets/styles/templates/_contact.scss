@@ -1,0 +1,168 @@
+@use "../vars";
+@use "../mixins";
+
+/*==================================================================================
+  V4 — Colonne "coordonnées" (email / téléphone / réseaux sociaux)
+==================================================================================*/
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-m;
+    margin: 0 0 vars.$spacing-m;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-info__card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: vars.$shadow__soft;
+    border-radius: 24px;
+    background: vars.$background-light;
+    padding: vars.$spacing-l;
+}
+
+@media only screen and (max-width: 767px) {
+    .contact-info__card {
+        padding: vars.$spacing-m;
+    }
+}
+
+.contact-info__icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: vars.$spacing-s;
+    border-radius: 50%;
+    background: vars.$background-dim;
+    width: 56px;
+    height: 56px;
+    color: vars.$surface-primary;
+    font-size: 22px;
+}
+
+.contact-info__title {
+    margin: 0 0 vars.$spacing-xs;
+    color: vars.$text-primary;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-m;
+    font-family: vars.$font-family-headline;
+}
+
+.contact-info__link {
+    color: vars.$text-body-dark;
+    font-weight: vars.$font-weight-medium;
+    font-size: vars.$font-size-s;
+    font-family: vars.$font-family-body;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus-visible {
+        color: vars.$surface-primary;
+    }
+}
+
+.contact-info__hours {
+    margin: 4px 0 0;
+    color: vars.$text-body-dark;
+    font-size: vars.$font-size-s;
+    font-family: vars.$font-family-body;
+}
+
+.contact-info__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: vars.$spacing-xs;
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-info__social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition:
+        background-color vars.$transition_fast,
+        border-color vars.$transition_fast;
+    border: 1px solid vars.$background-dim;
+    border-radius: 50%;
+    background: vars.$background-light;
+    width: 40px;
+    height: 40px;
+    color: vars.$text-primary;
+    font-size: 16px;
+
+    &:hover,
+    &:focus-visible {
+        border-color: vars.$surface-primary;
+        background: vars.$background-dim;
+    }
+}
+
+/*==================================================================================
+  V4 — Bandeau CTA "FAQ"
+==================================================================================*/
+
+.contact-cta {
+    border-radius: 24px;
+    background: vars.$gradient-particulier;
+    padding: vars.$spacing-l;
+}
+
+@media only screen and (max-width: 767px) {
+    .contact-cta {
+        padding: vars.$spacing-m;
+    }
+}
+
+.contact-cta__title {
+    margin: 0 0 vars.$spacing-xs;
+    color: vars.$text-heading-light;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-m;
+    font-family: vars.$font-family-headline;
+}
+
+.contact-cta__text {
+    margin: 0 0 vars.$spacing-m;
+    color: vars.$text-body-light;
+    font-size: vars.$font-size-s;
+    font-family: vars.$font-family-body;
+}
+
+.contact__form {
+    margin-bottom: 20px;
+    box-shadow: vars.$shadow__soft;
+    border-radius: 24px;
+    background: vars.$background-light;
+    padding: 36px 40px;
+    padding: vars.$spacing-l;
+}
+
+@media only screen and (max-width: 767px) {
+    .contact__form {
+        padding: 20px;
+    }
+}
+
+.contact__form h2 {
+    margin: 0 0 10px;
+
+    @include mixins.responsive-font-size(24, 30, 700);
+}
+
+@media only screen and (max-width: 767px) {
+    .contact__form h2 {
+        @include mixins.responsive-font-size(20);
+    }
+}
+
+.contact__form p.note {
+    margin: 10px 0 0;
+    color: #384050;
+    font-family: "Raleway", sans-serif;
+
+    @include mixins.responsive-font-size(12, 14, 400);
+}

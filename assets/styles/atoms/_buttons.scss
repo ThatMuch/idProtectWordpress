@@ -1,3 +1,5 @@
+@use "../vars";
+
 /**
  *
  * @author      ThatMuch
@@ -6,180 +8,153 @@
  *
  */
 
-.btn,
-.single_add_to_cart_button,
-.wc-block-cart__submit-button,
-.wc-block-components-totals-coupon__button {
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    display: -ms-inline-flexbox;
-    display: -webkit-inline-box;
+.btn {
     display: inline-flex;
+    justify-content: center;
     align-items: center;
+    gap: vars.$spacing-xs;
+    transition:
+        background-color vars.$transition_fast,
+        border-color vars.$transition_fast,
+        color vars.$transition_fast,
+        box-shadow vars.$transition_fast;
     cursor: pointer;
-    border-radius: 7px;
-    background: #ffffff;
-    padding: 10px 15px;
-    color: $color-primary;
-    font-weight: 700;
-    font-size: 13px;
-    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    font-weight: vars.$font-weight-bold;
+    font-size: vars.$font-size-s;
+    line-height: 1;
+    font-family: vars.$font-family-body; // le composant Figma utilise Raleway, pas $font-family-label (Rubik)
     letter-spacing: 0.5px;
     text-align: center;
-    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
 
-    &.btn__primary {
-        background: $color-primary;
-        color: #fff;
+    &__icon {
+        display: inline-flex;
+        flex-shrink: 0;
+        font-size: 16px;
+        line-height: 1;
+    }
 
-        img {
-            -webkit-filter: brightness(100);
-            filter: brightness(100);
-            margin-left: 8px;
+    /* ---- Styles ---- */
+
+    &.btn--solid,
+    &.btn--outlined {
+        border-radius: vars.$radius-l;
+        padding: 12px 22px;
+    }
+
+    &.btn--solid {
+        border: none;
+    }
+
+    &.btn--outlined {
+        border: 1px solid transparent;
+        background: transparent;
+    }
+
+    &.btn--link {
+        border: none;
+        border-bottom: 1px solid transparent;
+        border-radius: 0;
+        background: transparent;
+        padding: 0 0 1px;
+    }
+
+    /* ---- Primary / Solid ---- */
+    &.btn--primary.btn--solid {
+        box-shadow: 0 14px 15px rgba(vars.$dark-blue-40, 0.4);
+        background: vars.$dark-blue-40;
+        color: vars.$neutral-100;
+
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
+            box-shadow: 0 14px 15px rgba(vars.$dark-blue-40, 0.7);
+            background: vars.$dark-blue-30;
         }
 
-        &:hover,
-        &:active,
-        &:focus {
-            background-color: $color-primary-darker;
-            color: #fff;
-        }
-    }
-}
-
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
-body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
-    background-color: $color-primary;
-    color: #fff;
-
-    img {
-        -webkit-filter: brightness(100);
-        filter: brightness(100);
-        margin-left: 8px;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $color-primary-darker;
-        color: #fff;
-    }
-}
-
-.btn__outline {
-    border: 1px solid $color-primary;
-    border-radius: 7px;
-    padding: 10px 15px;
-    color: $color-primary;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-transform: uppercase;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-
-    img {
-        margin-left: 6px;
-        width: 16px;
-    }
-
-    &:hover {
-        background: $color-primary;
-        color: #fff;
-
-        img {
-            -webkit-filter: brightness(10);
-            filter: brightness(10);
-        }
-    }
-}
-
-.btn__white {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    border-radius: 7px;
-    background: #ffffff;
-    padding: 10px 15px;
-    color: $color-primary;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-transform: uppercase;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-
-    img {
-        margin-left: 6px;
-        width: 16px;
-    }
-
-    &:hover {
-        background: $color-primary;
-        color: #fff;
-
-        img {
-            -webkit-filter: brightness(10);
-            filter: brightness(10);
-        }
-    }
-}
-
-.btn__orange {
-    border: 2px solid $color-secondary;
-    border-radius: 7px;
-    padding: 13px 12px;
-    color: $color-secondary;
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-transform: uppercase;
-
-    &.solid {
-        background: $color-secondary;
-        color: #fff;
-
-        &:hover {
-            background: $color-primary;
+        &:disabled,
+        &.is-disabled {
+            cursor: not-allowed;
+            box-shadow: none;
+            background: vars.$background-disabled;
+            color: vars.$text-disabled;
         }
     }
 
-    &.blue {
-        border-color: $color-primary;
-        color: $color-primary;
+    /* ---- Secondary / Solid ---- */
+    &.btn--secondary.btn--solid {
+        box-shadow: 0 14px 15px rgba(vars.$red-40, 0.4);
+        background: vars.$surface-accent;
+        color: vars.$neutral-100;
 
-        &:hover {
-            background: $color-primary;
-            color: #fff;
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
+            box-shadow: 0 14px 15px rgba(vars.$red-40, 0.7);
+            background: vars.$red-40;
+        }
+
+        &:disabled,
+        &.is-disabled {
+            cursor: not-allowed;
+            box-shadow: none;
+            background: vars.$background-disabled;
+            color: vars.$text-disabled;
         }
     }
 
-    &.dark {
-        border-color: $color-primary;
-        color: $color-primary;
+    /* ---- Primary / Outlined ---- */
+    &.btn--primary.btn--outlined {
+        border-color: rgba(vars.$dark-blue-40, 0.4);
+        color: vars.$text-primary;
 
-        &:hover {
-            background: $color-primary;
-            color: #fff;
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
+            background: rgba(vars.$dark-blue-40, 0.1);
         }
     }
 
-    &.white {
-        border-color: #fff;
-        color: #fff;
+    /* ---- Light / Outlined (sur fond sombre/coloré) ---- */
+    &.btn--light.btn--outlined {
+        border-color: rgba(vars.$neutral-100, 0.4);
+        color: vars.$text-heading-light;
 
-        &:hover {
-            background: #fff;
-            color: $color-primary;
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
+            background: rgba(vars.$neutral-100, 0.1);
         }
     }
 
-    :hover {
-        background: $color-secondary;
-        color: #fff;
+    /* Primary et Light Outlined partagent le même style disabled */
+    &.btn--primary.btn--outlined:disabled,
+    &.btn--light.btn--outlined:disabled,
+    &.btn--primary.btn--outlined.is-disabled,
+    &.btn--light.btn--outlined.is-disabled {
+        cursor: not-allowed;
+        border-color: rgba(vars.$text-disabled, 0.4);
+        background: transparent;
+        color: vars.$text-disabled;
+    }
+
+    /* ---- Primary / Link ---- */
+    &.btn--primary.btn--link {
+        border-bottom-color: currentColor;
+        color: vars.$text-primary;
+
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
+            color: vars.$text-body-dark;
+        }
+    }
+
+    /* ---- Light / Link (sur fond sombre/coloré) ---- */
+    &.btn--light.btn--link {
+        border-bottom-color: currentColor;
+        color: vars.$text-heading-light;
+
+        &:hover:not(:disabled):not(.is-disabled),
+        &:focus-visible:not(:disabled):not(.is-disabled) {
+            color: vars.$text-body-light;
+        }
     }
 }

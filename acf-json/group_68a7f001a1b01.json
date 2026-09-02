@@ -1,0 +1,85 @@
+{
+    "key": "group_68a7f001a1b01",
+    "title": "Footer - Colonnes de menus",
+    "fields": [
+        {
+            "key": "field_68a7f001a1b02",
+            "label": "Titre colonne 1",
+            "name": "footer_column_1_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titre affiché au-dessus du menu assigné à l'emplacement \"Footer - Colonne 1\" (Apparence > Menus).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Nos outils",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_68a7f001a1b03",
+            "label": "Titre colonne 2",
+            "name": "footer_column_2_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titre affiché au-dessus du menu assigné à l'emplacement \"Footer - Colonne 2\" (Apparence > Menus).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Offres",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_68a7f001a1b04",
+            "label": "Titre colonne 3",
+            "name": "footer_column_3_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titre affiché au-dessus du menu assigné à l'emplacement \"Footer - Colonne 3\" (Apparence > Menus).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Ressources",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1755000000
+}

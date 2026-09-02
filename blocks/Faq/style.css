@@ -2,7 +2,6 @@
     .panel-faq {
         padding: 0px;
         display: none; /* Initially hide the panel */
-        background-color: white;
         overflow: hidden;
         width: 100%; /* Make the panel take up the full width */
         box-sizing: border-box; /* Include padding in the element's total width and height */

@@ -90,6 +90,23 @@ function acf_load_menu_field_choices($field)
 }
 add_filter('acf/load_field/name=page_custom_menu', 'acf_load_menu_field_choices');
 
+/* Mega Menu Outils
+/––––––––––––––––––––––––*/
+// Returns the icon URL for an "outil" in the mega menu: the "Image du menu"
+// ACF field. Deliberately does NOT fall back to the post's featured image —
+// that image is reserved for the Hero (template-parts/hero/hero-tools.php)
+// so the two stay independent (menu icon vs. hero illustration).
+function idprotect_get_outil_menu_icon($post_id)
+{
+	$image = get_field('image_menu', $post_id);
+
+	if (! empty($image['url'])) {
+		return $image;
+	}
+
+	return null;
+}
+
 /*==================================================================================
   CUSTOMIZER SETTINGS
 ==================================================================================*/
@@ -139,7 +156,7 @@ function idprotect_customize_register($wp_customize)
 
 			// Button Style
 			$wp_customize->add_setting('header_btn_style_' . $menu_id, array(
-				'default'   => 'btn__primary',
+				'default'   => 'btn btn--primary btn--solid',
 				'transport' => 'refresh',
 			));
 			$wp_customize->add_control('header_btn_style_' . $menu_id, array(
@@ -147,9 +164,10 @@ function idprotect_customize_register($wp_customize)
 				'section'  => 'idprotect_header_section_' . $menu_id,
 				'type'     => 'select',
 				'choices'  => array(
-					'btn__primary'   => 'Primaire (Orange)',
-					'btn__secondary' => 'Secondaire (Bleu)',
-					'btn__white'     => 'Blanc',
+					'btn btn--primary btn--solid'    => 'Primaire (bleu foncé, plein)',
+					'btn btn--secondary btn--solid'  => 'Secondaire (orange, plein)',
+					'btn btn--primary btn--outlined' => 'Contour (bleu foncé)',
+					'btn btn--light btn--outlined'   => 'Contour (blanc)',
 				),
 			));
 		}
