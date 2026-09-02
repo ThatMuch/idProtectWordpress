@@ -36,7 +36,7 @@
     &__grid {
         display: grid;
         grid-template-columns: 1fr;
-        align-items: center;
+        align-items: stretch;
         gap: vars.$spacing-l;
     }
 
@@ -103,7 +103,8 @@
     }
 
     &__image {
-        height: 400px;
+        min-height: 0;
+        height: 100%;
     }
 
     &__image-img {
