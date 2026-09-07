@@ -105,7 +105,11 @@ gulp.task("zip", function () {
 				"!build/**",
 				"!**/.DS_Store",
 			],
-			{ base: ".", dot: true }
+			// encoding: false is required — the theme ships binary assets (images,
+			// fonts, the screenshot). Without it, gulp.src() decodes every file as
+			// UTF-8 text, silently corrupting any byte sequence that isn't valid
+			// UTF-8 (replaced with U+FFFD), which breaks these files in the zip.
+			{ base: ".", dot: true, encoding: false }
 		)
 		.pipe(
 			rename(function (filePath) {
