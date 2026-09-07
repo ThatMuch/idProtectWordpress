@@ -1,10 +1,36 @@
 /**
  * TYPOGRAPHY
  * Contains all fonts that need to be hosted locally.
- * » http://google-webfonts-helper.herokuapp.com/fonts (=> make sure paths start with 'fonts/' instead of '../fonts')
+ * » http://google-webfonts-helper.herokuapp.com/fonts (=> make sure paths start with 'fonts/' instead of '../fonts')
  *
  * @author      ThatMuch
  * @version     0.1.0
  * @since       idProtect_1.0.0.0
  *
  */
+
+// Font Awesome (loaded from cdnjs, see functions/functions-settings.php) ships its
+// @font-face rules with font-display:block, which can hide icons for up to 3s and
+// hurts FCP (Google PageSpeed warning). Re-declaring the same family/weight/src with
+// font-display:swap here overrides it: the browser uses the most recently defined
+// matching @font-face, and this stylesheet is enqueued after the fontawesome one.
+// Only the weights actually used on the site (solid + brands) are redeclared.
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/webfonts/fa-solid-900.woff2") format("woff2"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/webfonts/fa-brands-400.woff2") format("woff2"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/webfonts/fa-brands-400.ttf") format("truetype");
+}
