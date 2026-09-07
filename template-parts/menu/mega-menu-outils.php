@@ -21,13 +21,25 @@ $category_terms = get_terms(array(
 	'taxonomy'   => $taxonomy,
 	'hide_empty' => true,
 	'exclude'    => $exclude_term_ids,
-	'orderby'    => 'term_id',
+	'orderby'    => 'name',
 	'order'      => 'ASC',
 ));
 
 if (! is_array($category_terms)) {
 	$category_terms = array();
 }
+
+// Ordre d'affichage imposé, indépendant de l'ordre de création des termes.
+$category_order = array('detecter', 'transmettre', 'reparer');
+
+usort($category_terms, function ($term_a, $term_b) use ($category_order) {
+	$position_a = array_search($term_a->slug, $category_order);
+	$position_b = array_search($term_b->slug, $category_order);
+	$position_a = $position_a === false ? PHP_INT_MAX : $position_a;
+	$position_b = $position_b === false ? PHP_INT_MAX : $position_b;
+
+	return $position_a <=> $position_b;
+});
 
 $outils_query_args = array(
 	'post_type'      => 'outil',
