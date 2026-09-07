@@ -7,6 +7,7 @@ var cleanCSS = require("gulp-clean-css");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
+var zip = require("gulp-zip");
 var browserSync = require("browser-sync").create();
 
 // Replaces gulp-sass (which still relies on Dart Sass's deprecated legacy
@@ -88,5 +89,33 @@ gulp.task("watch", function () {
 	gulp.watch("**/*.css").on("change", browserSync.reload);
 	gulp.watch("**/*.php").on("change",browserSync.reload);
 	gulp.watch("**/*.js").on("change",browserSync.reload);
+});
+gulp.task("zip", function () {
+	// "idprotect" is the theme slug used throughout the codebase (Text Domain,
+	// function/hook prefixes) — the zip must extract into a folder of that
+	// name so an admin upload installs it under wp-content/themes/idprotect.
+	var slug = "idprotect";
+	return gulp
+		.src(
+			[
+				"**/*",
+				"!node_modules/**",
+				"!.git/**",
+				"!.claude/**",
+				"!build/**",
+				"!**/.DS_Store",
+			],
+			{ base: ".", dot: true }
+		)
+		.pipe(
+			rename(function (filePath) {
+				filePath.dirname =
+					filePath.dirname === "."
+						? slug
+						: slug + "/" + filePath.dirname;
+			})
+		)
+		.pipe(zip(slug + ".zip"))
+		.pipe(gulp.dest("build"));
 });
 gulp.task("default", gulp.parallel("styles", "scripts", "watch"));
