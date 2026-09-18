@@ -81,7 +81,7 @@ $template = str_replace(array('page-', '.php'), '', $template);
 		$current_menu_id = $menu_object->term_id;
 	}
 	?> <nav class="header__area navbar navbar-expand-lg <?php echo esc_attr($nav_class); ?>">
-		<div class="container align-items-center <?= $template === "landing" && "justify-content-center" ?>">
+		<div class="container align-items-center <?= $template === "landing" ? "justify-content-center" : "" ?>">
 			<a class="navbar-brand" href="<?php echo site_url(); ?>">
 				<img src="<?php if ($image[0]) : echo $image[0];
 							else : echo get_template_directory_uri() ?>/assets/images/stanlee_logo_texte.png<?php endif; ?>" alt="ID Protect">

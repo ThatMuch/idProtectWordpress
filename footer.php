@@ -34,12 +34,15 @@ $footer_social_icons = array(
 ?>
 <footer class="footer">
 	<div class="container">
-		<div class="footer__top">
-			<div class="footer__brand">
+		<div class="footer__top <?php echo $template === "landing" ? "footer__top--landing" : ""; ?>">
+			<div class="footer__brand <?php echo $template === "landing" ? "footer__brand--landing" : ""; ?>">
 				<a class="footer__logo" href="<?php echo esc_url(site_url()); ?>">
 					<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/idprotect-logo-footer-white.png'); ?>" alt="ID Protect">
 				</a>
-				<p class="footer__tagline text-body-1">Le bouclier moderne contre l'usurpation d'identité. La technologie entre vos mains, des experts à vos côtés.</p>
+
+				<?php if ($template !== "landing") : ?>
+					<p class="footer__tagline text-body-1">Le bouclier moderne contre l'usurpation d'identité. La technologie entre vos mains, des experts à vos côtés.</p>
+				<?php endif; ?>
 
 				<?php if (have_rows('rs', 'options')) : ?>
 					<ul class="footer__social" aria-label="Réseaux sociaux">
