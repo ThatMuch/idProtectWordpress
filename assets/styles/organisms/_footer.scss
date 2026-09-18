@@ -26,6 +26,11 @@
         @include mixins.breakpoint(laptop) {
             grid-template-columns: 1.6fr repeat(3, 1fr);
         }
+
+        &--landing {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__brand {
@@ -36,6 +41,17 @@
         @include mixins.breakpoint(mobile) {
             align-items: center;
             text-align: center;
+        }
+
+        &--landing {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: vars.$spacing-m;
+
+            .footer__social {
+                margin: 0;
+            }
         }
     }
 

@@ -7,7 +7,6 @@
  * @subpackage idProtect
  * @since idProtect 3.0
  */
-?>
 
 get_header(); ?>
 
